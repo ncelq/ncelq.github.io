@@ -6,24 +6,42 @@
 <title>Signal Arena · QQQ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #FAFAFA;
-  --ink: #111827;
-  --muted: #6b7280;
-  --line: #e5e7eb;
+  --bg: #f5f8fb;
   --panel: #ffffff;
-  --accent: #16A34A;
-  --accent-deep: #15803d;
-  --accent-soft: #dcfce7;
+  --panel-glass: rgba(255,255,255,.78);
+  --ink: #0f172a;
+  --ink-soft: #334155;
+  --muted: #64748b;
+  --faint: #94a3b8;
+  --line: #e2e8f0;
+  --line-soft: #eef2f7;
+  --up: #059669;
+  --up-bright: #10b981;
+  --up-soft: #d1fae5;
+  --up-wash: #ecfdf5;
+  --down: #e11d48;
+  --down-bright: #f43f5e;
+  --down-soft: #ffe4e6;
+  --down-wash: #fff1f2;
+  --accent: #0ea5e9;
+  --accent-deep: #0284c7;
+  --accent-soft: #e0f2fe;
+  --mint: #10b981;
+  --amber: #d97706;
+  --amber-soft: #fef3c7;
+  --radius: 18px;
+  --radius-sm: 12px;
+  --shadow: 0 1px 2px rgba(15,23,42,.04), 0 10px 30px rgba(2,132,199,.06);
+  --shadow-lift: 0 2px 6px rgba(15,23,42,.06), 0 18px 44px rgba(2,132,199,.12);
+  --font: "Inter", system-ui, -apple-system, sans-serif;
+  --display: "Fraunces", Georgia, serif;
   --teal: var(--accent);
   --teal-deep: var(--accent-deep);
-  --rise: #16A34A;
-  --drop: #dc2626;
-  --font: "Lora", Georgia, "Times New Roman", serif;
-  --display: "Lora", Georgia, "Times New Roman", serif;
-  --shadow: 0 8px 28px rgba(17, 24, 39, .05);
+  --rise: var(--up);
+  --drop: var(--down);
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -31,187 +49,191 @@ body {
   margin: 0;
   color: var(--ink);
   font-family: var(--font);
-  background: var(--bg);
+  font-size: 15px;
+  line-height: 1.55;
+  background:
+    radial-gradient(1000px 480px at 8% -8%, rgba(16,185,129,.14), transparent 60%),
+    radial-gradient(900px 460px at 96% 2%, rgba(14,165,233,.16), transparent 58%),
+    radial-gradient(700px 500px at 50% 110%, rgba(139,92,246,.07), transparent 60%),
+    var(--bg);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
-.wrap { max-width: 1280px; margin: 0 auto; padding: 28px 18px 72px; }
+.wrap { max-width: 1220px; margin: 0 auto; padding: 28px 22px 70px; }
 .status {
   display: none;
   margin: 0 0 16px;
-  padding: 10px 14px;
-  border-radius: 12px;
-  border: 1px solid #ecd99a;
-  background: #fff7e0;
-  color: #7a5b12;
-  font-size: 13px; font-weight: 600;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--amber-soft);
+  background: #fffbeb;
+  color: #92400e;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: var(--shadow);
 }
 .status.show { display: block; }
-.status.err { border-color: #f0b4b4; background: #fff1f1; color: #8a1f1f; }
+.status.err {
+  border-color: var(--down-soft);
+  background: var(--down-wash);
+  color: #9f1239;
+}
 header.hero { margin-bottom: 28px; animation: rise .55s ease both; }
 .eyebrow {
-  margin: 0 0 8px;
-  font-size: 12px; font-weight: 700; letter-spacing: .14em;
-  text-transform: uppercase; color: var(--teal);
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
 }
 h1 {
-  margin: 0 0 8px;
+  margin: 0 0 12px;
   font-family: var(--display);
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 800; letter-spacing: -.03em; line-height: 1.1;
+  font-size: clamp(2.1rem, 4.6vw, 3.1rem);
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.08;
+  background: linear-gradient(92deg, #0f172a 20%, #0284c7 55%, #10b981 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.sub { margin: 0; color: var(--muted); font-size: 15px; max-width: 56ch; }
+.sub { margin: 0; color: var(--muted); font-size: 15px; max-width: 760px; }
 .meta {
-  margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px 14px;
-  font-size: 13px; color: var(--muted);
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.meta > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--panel-glass);
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  padding: 5px 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
 }
 .meta b { color: var(--ink); }
-section { margin: 0 0 34px; animation: rise .6s ease both; }
+section { margin: 0 0 44px; animation: rise .6s ease both; }
 section h2 {
   margin: 0 0 6px;
   font-family: var(--display);
-  font-size: 1.35rem; font-weight: 700; letter-spacing: -.02em;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
 }
-.section-sub { margin: 0 0 14px; color: var(--muted); font-size: 13.5px; }
-.board {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
-  gap: 10px;
-}
-.rank-card {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 12px;
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(8px);
-  opacity: 0;
-  transform: translateY(10px);
-  animation: rise .5s ease forwards;
-}
-.rank-card.top1 { background: linear-gradient(160deg, #16A34A, #15803d); color: #fff; border-color: transparent; }
-.rank-card.top1 .tiny { color: rgba(255,255,255,.78); }
-.rank-n { font-family: var(--display); font-size: 12px; font-weight: 700; margin-bottom: 4px; }
-.rank-name { font-size: 12.5px; font-weight: 700; line-height: 1.3; min-height: 2.6em; word-break: break-word; }
-.rank-wt { margin-top: 6px; font-family: var(--display); font-size: 1.35rem; font-weight: 800; letter-spacing: -.02em; }
+.section-sub { margin: 0 0 16px; color: var(--muted); font-size: 13px; }
 .tiny { font-size: 11.5px; color: var(--muted); margin-top: 2px; }
-.table-wrap, .heat-wrap {
+.table-wrap {
   overflow: auto;
   border: 1px solid var(--line);
-  border-radius: 14px;
-  background: var(--panel);
+  border-radius: var(--radius);
+  background: var(--panel-glass);
   box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+  transition: transform .18s ease, box-shadow .18s ease;
 }
-table.acc { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 760px; }
-.acc th, .acc td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
-.acc th {
-  position: sticky; top: 0; background: #f3f4f6;
-  font-size: 11px; font-weight: 700; letter-spacing: .06em;
-  text-transform: uppercase; color: var(--muted);
+.table-wrap:hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); }
+.table-card {
+  background: var(--panel-glass); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow); backdrop-filter: blur(12px); overflow: hidden;
 }
-.acc td.num, .acc th.num { text-align: right; font-variant-numeric: tabular-nums; }
-.acc tr:last-child td { border-bottom: 0; }
+.table-scroll { overflow-x: auto; }
+.podium { display: grid; grid-template-columns: 1fr 1.15fr 1fr; gap: 14px; align-items: end; margin: 0 0 18px; }
+.pod {
+  background: var(--panel-glass); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px;
+  text-align: center; backdrop-filter: blur(12px); box-shadow: var(--shadow); position: relative;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.pod:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); }
+.pod.p1 {
+  padding-top: 26px; padding-bottom: 26px;
+  border: 1.5px solid rgba(16,185,129,.45);
+  background: linear-gradient(180deg, rgba(236,253,245,.9), rgba(255,255,255,.85));
+}
+.medal { font-size: 30px; line-height: 1; margin-bottom: 8px; }
+.pod-name { font-weight: 800; font-size: 15px; margin: 0 0 2px; }
+.pod-pipe { font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+.pod-score { font-family: var(--display); font-size: 1.8rem; font-weight: 700; margin: 0; }
+.pod-score.pos { color: var(--up); }
+.pod-score.neg { color: var(--down); }
+.pod-acc { font-size: 12.5px; color: var(--muted); margin: 4px 0 0; }
+table.acc-table { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 720px; }
+.acc-table thead th {
+  text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .07em;
+  text-transform: uppercase; color: var(--muted); padding: 12px 14px;
+  border-bottom: 1px solid var(--line); background: rgba(248,250,252,.8); white-space: nowrap;
+}
+.acc-table tbody td { padding: 10px 14px; border-bottom: 1px solid var(--line-soft); vertical-align: middle; }
+.acc-table tbody tr:hover { background: rgba(224,242,254,.3); }
+.acc-table tr.pipe-row td {
+  background: rgba(241,245,249,.7); font-weight: 800; font-size: 12px;
+  letter-spacing: .06em; text-transform: uppercase; color: var(--muted);
+}
+.acc-table tr.subtotal td { font-weight: 700; background: rgba(236,253,245,.5); border-top: 1px solid var(--line); }
+.acc-table tr.total td { font-weight: 800; background: rgba(224,242,254,.55); border-top: 2px solid var(--line); }
+.abar {
+  display: inline-block; vertical-align: middle; height: 5px; border-radius: 99px;
+  background: linear-gradient(90deg, #34d399, #10b981); margin-left: 8px; min-width: 2px;
+}
+.na { color: var(--faint); }
+.eq-spark { display: block; vertical-align: middle; }
+.eq-spark .eq-area { stroke: none; }
+.eq-spark .eq-base { fill: none; stroke: var(--line); stroke-width: 1; stroke-dasharray: 3 2; opacity: .7; }
+.eq-spark polyline { fill: none; stroke-width: 1.75; stroke-linejoin: round; stroke-linecap: round; }
 .pos { color: var(--rise); font-weight: 700; }
 .neg { color: var(--drop); font-weight: 700; }
-.heat {
-  border-collapse: separate; border-spacing: 0;
-  font-size: 11.5px; min-width: 1100px;
+.tag {
+  display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: .05em;
+  text-transform: uppercase; padding: 2.5px 7px; border-radius: 6px;
 }
-.heat th, .heat td {
-  padding: 8px 6px; text-align: center;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  min-width: 78px;
+.tg-crash { background: #fef3c7; color: #b45309; }
+.tg-llm { background: #ede9fe; color: #6d28d9; }
+.tg-ppx { background: #e0f2fe; color: #0369a1; }
+.tg-x { background: var(--line-soft); color: var(--muted); }
+.hm-wrap {
+  background: var(--panel-glass); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow); backdrop-filter: blur(12px); padding: 18px; overflow-x: auto;
 }
-.heat th.corner, .heat td.lab {
-  position: sticky; left: 0; z-index: 2;
-  background: #f9fafb; text-align: left; font-weight: 700;
-  min-width: 118px; padding-left: 12px;
+.hm-grid { display: grid; gap: 4px; min-width: max-content; }
+.hm-collabel {
+  font-size: 10.5px; font-weight: 700; color: var(--faint); text-align: center;
+  writing-mode: vertical-rl; transform: rotate(180deg); height: 64px; justify-self: center; letter-spacing: .02em;
 }
-.heat thead th {
-  position: sticky; top: 0; z-index: 3;
-  background: #f3f4f6;
-  font-size: 10px; line-height: 1.25; white-space: normal;
-  vertical-align: bottom;
+.hm-rowlabel {
+  font-size: 12.5px; font-weight: 700; color: var(--ink-soft);
+  display: flex; align-items: center; gap: 7px; padding-right: 12px; white-space: nowrap;
 }
-.heat thead th.corner { z-index: 4; }
-.heat tbody tr.overall td { background: #f0fdf4; font-weight: 700; border-top: 2px solid var(--accent); }
-.heat tbody tr.overall td.lab { background: #dcfce7; }
-.cell {
-  border-radius: 6px;
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-  animation: cellIn .45s ease both;
+.hm-cell { position: relative; width: 27px; height: 27px; border-radius: 5px; background: var(--line-soft); }
+.hm-cell .tri { position: absolute; inset: 0; border-radius: 5px; }
+.tri.pre { clip-path: polygon(0 0, 100% 0, 0 100%); }
+.tri.intra { clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+.tri.ok { background: var(--up-bright); }
+.tri.bad { background: var(--down-bright); }
+.tri.rise { background: var(--up-bright); }
+.tri.drop { background: var(--down-bright); }
+.tri.pending { background: repeating-linear-gradient(45deg, #fcd34d 0 3px, #fde68a 3px 6px); }
+.tri.none { background: transparent; }
+.hm-legend {
+  display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px;
+  font-size: 12px; color: var(--muted); align-items: center;
 }
-.cell.gold { box-shadow: 0 0 0 2px rgba(212,175,55,.55); animation: rise .45s ease both, pulseGold 2.4s ease-in-out infinite; }
-.g1 { background: #86efac; color: #14532d; }
-.g2 { background: #bbf7d0; color: #166534; }
-.g3 { background: #dcfce7; color: #16A34A; }
-.r1 { background: #fca5a5; color: #7f1d1d; }
-.r2 { background: #fecaca; color: #991b1b; }
-.r3 { background: #fee2e2; color: #b91c1c; }
-.z  { background: #f3f4f6; color: #9ca3af; font-weight: 500; }
-.medal { margin-left: 2px; }
-.dates { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
-.chip {
-  appearance: none; border: 1px solid var(--line);
-  background: var(--panel); color: var(--muted);
-  border-radius: 999px; height: 32px; padding: 0 14px;
-  font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+.hm-legend .sw {
+  display: inline-block; width: 11px; height: 11px; border-radius: 3px;
+  margin-right: 5px; vertical-align: -1px;
 }
-.chip:hover { border-color: var(--accent); color: var(--ink); }
-.chip.active {
-  color: #fff; background: var(--accent); border-color: var(--accent);
-  box-shadow: 0 6px 18px rgba(22, 163, 74, .28);
+@media (max-width: 860px) {
+  .podium { grid-template-columns: 1fr; align-items: stretch; }
 }
-.panels { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-@media (max-width: 860px) { .panels { grid-template-columns: 1fr; } }
-.panel {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: var(--shadow);
-}
-.panel h3 { margin: 0 0 4px; font-family: var(--display); font-size: 1.1rem; font-weight: 700; }
-.move {
-  font-family: var(--display);
-  font-size: 2rem; font-weight: 800; letter-spacing: -.03em;
-  margin: 4px 0 12px;
-}
-.sig {
-  display: grid;
-  grid-template-columns: 1fr auto auto auto;
-  gap: 8px; align-items: center;
-  padding: 7px 0;
-  border-top: 1px solid var(--line);
-  font-size: 12.5px;
-}
-.sig:first-of-type { border-top: 0; }
-.badge {
-  display: inline-flex; align-items: center; justify-content: center;
-  min-width: 48px; height: 22px; padding: 0 8px;
-  border-radius: 999px; font-size: 11px; font-weight: 800;
-}
-.badge.hold { background: var(--accent-soft); color: var(--accent-deep); }
-.badge.sell { background: #fee2e2; color: #991b1b; }
-.ok { color: var(--rise); font-weight: 800; }
-.bad { color: var(--drop); font-weight: 800; }
-.pend { color: var(--muted); font-weight: 700; }
 footer.note { margin-top: 8px; color: var(--muted); font-size: 12.5px; line-height: 1.5; }
 .loading { color: var(--muted); font-size: 14px; padding: 20px 0; }
-@keyframes rise {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: none; }
-}
-@keyframes cellIn {
-  from { opacity: 0; transform: scale(.96); }
-  to { opacity: 1; transform: none; }
-}
-@keyframes pulseGold {
-  0%, 100% { box-shadow: 0 0 0 2px rgba(212,175,55,.35); }
-  50% { box-shadow: 0 0 0 3px rgba(212,175,55,.7); }
-}
 </style>
 </head>
 <body>
@@ -227,41 +249,27 @@ footer.note { margin-top: 8px; color: var(--muted); font-size: 12.5px; line-heig
   </header>
 
   <section>
-    <h2>Leaderboard</h2>
-    <p class="section-sub">Sorted by total weight · all folder/model columns</p>
-    <div class="board" id="board"><div class="loading">Loading predictions…</div></div>
+    <h2>Accuracy Summary</h2>
+    <p class="section-sub">Per pipeline &amp; model — HOLD, SELL and all signals</p>
+    <div class="podium" id="accPodium"></div>
+    <div class="table-card"><div class="table-scroll">
+      <table class="acc-table" id="accTable"></table>
+    </div></div>
   </section>
 
   <section>
-    <h2>Accuracy summary</h2>
-    <p class="section-sub">All / HOLD / SELL · pending &amp; neutral excluded</p>
-    <div class="table-wrap"><table class="acc" id="acc"></table></div>
+    <h2>Backtest Simulation</h2>
+    <p class="section-sub">Start $100,000 · pre-market HOLD/SELL at open · intraday HOLD/SELL at close · Excess = PnL% − QQQ% (same window) · ranked by Excess vs QQQ</p>
+    <div class="podium" id="btPodium"></div>
+    <div class="table-card"><div class="table-scroll">
+      <table class="acc-table" id="btTable"></table>
+    </div></div>
   </section>
 
   <section>
-    <h2>Weight heatmap</h2>
-    <p class="section-sub">X = folder/model · Y = date &amp; session · medals per row · bottom = Overall</p>
-    <div class="heat-wrap"><table class="heat" id="heat"></table></div>
-  </section>
-
-  <section>
-    <h2>Date detail</h2>
-    <p class="section-sub">Pre-market vs open→close · Intraday vs close→next open</p>
-    <div class="dates" id="dates"></div>
-    <div class="panels">
-      <div class="panel">
-        <h3>Pre-market</h3>
-        <div class="tiny">QQQ open → close</div>
-        <div class="move" id="preMove">—</div>
-        <div id="preList"></div>
-      </div>
-      <div class="panel">
-        <h3>Intraday</h3>
-        <div class="tiny">QQQ close → next open</div>
-        <div class="move" id="intraMove">—</div>
-        <div id="intraList"></div>
-      </div>
-    </div>
+    <h2>Battle Heatmap</h2>
+    <p class="section-sub">Every engine × every date (LLM → PPX → Crash) — top row: QQQ move · upper-left: pre-market · lower-right: intraday</p>
+    <div class="hm-wrap" id="hmWrap"></div>
   </section>
 
   <footer class="note">
@@ -288,7 +296,6 @@ const state = {
   columns: [],
   ohlc: new Map(),
   ohlcDates: [],
-  selectedDate: null,
   priceSource: null,
 };
 
@@ -332,14 +339,42 @@ function parsePath(path) {
   return { engine, model, dateStr, session, timestamp, path };
 }
 
+function shortModel(model) {
+  const m = String(model).toLowerCase();
+  if (m.includes("claude")) return "claude";
+  if (m.includes("deepseek") || m === "ds") return "ds";
+  if (m.includes("glm")) return "glm";
+  if (m.includes("mistral")) return "mistral";
+  if (m.includes("qwen")) return "qwen";
+  return model;
+}
+
+function shortEngine(engine) {
+  return engine.replace(/^news-trader-/, "").replace(/-live$/, "");
+}
+
 function shortCol(engine, model) {
-  const e = engine.replace(/^news-trader-/, "").replace(/-live$/, "");
-  const mo = model
-    .replace(/^cursor-/, "")
-    .replace(/^claude-/, "claude-")
-    .replace("mistral-large-latest", "mistral")
-    .replace("deepseek-v4-pro", "deepseek");
-  return `${e}/${mo}`;
+  return `${shortEngine(engine)}/${shortModel(model)}`;
+}
+
+/** Engine order: llm → ppx → crash, models A–Z within each folder */
+const FOLDER_ORDER = ["llm", "ppx", "crash"];
+
+function folderKey(engine) {
+  const e = shortEngine(engine);
+  const idx = FOLDER_ORDER.indexOf(e);
+  return idx >= 0 ? idx : 100;
+}
+
+function columnsByFolder(cols = state.columns) {
+  return [...cols].sort((a, b) => {
+    const fa = folderKey(a.engine);
+    const fb = folderKey(b.engine);
+    if (fa !== fb) return fa - fb;
+    const ma = shortModel(a.model);
+    const mb = shortModel(b.model);
+    return ma.localeCompare(mb) || a.key.localeCompare(b.key);
+  });
 }
 
 function direction(r) {
@@ -450,28 +485,91 @@ function fmtPct(r) {
   return sign + p.toFixed(2) + "%";
 }
 
-function tone(v) {
-  if (v == null || Number.isNaN(v)) return ["z", "—"];
-  if (v === 0) return ["z", "0"];
-  const abs = Math.abs(v);
-  const cls = v > 0 ? (abs >= 1 ? "g1" : abs >= 0.5 ? "g2" : "g3")
-                   : (abs >= 1 ? "r1" : abs >= 0.5 ? "r2" : "r3");
-  return [cls, (v > 0 ? "+" : "") + v.toFixed(2)];
+function fmtPts(w) {
+  if (w == null || Number.isNaN(w)) return "—";
+  return (w > 0 ? "+" : "") + w.toFixed(2);
 }
 
-function medalsFor(cells) {
-  // cells: [{i, weight, confidence, key}]
-  const scored = cells.filter(c => c.weight != null && !Number.isNaN(c.weight));
-  scored.sort((a, b) => {
-    if (b.weight !== a.weight) return b.weight - a.weight;
-    if (b.confidence !== a.confidence) return b.confidence - a.confidence;
-    return a.key.localeCompare(b.key);
-  });
-  const map = {};
-  if (scored[0]) map[scored[0].i] = "🥇";
-  if (scored[1]) map[scored[1].i] = "🥈";
-  if (scored[2]) map[scored[2].i] = "🥉";
-  return map;
+function esc(s) {
+  return String(s == null ? "" : s).replace(/[&<>"']/g, c => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+  }[c]));
+}
+
+const PIPE_META = {
+  "news-trader-crash-live": { short: "Crash", cls: "tg-crash" },
+  "news-trader-llm-live": { short: "LLM", cls: "tg-llm" },
+  "news-trader-ppx-live": { short: "PPX", cls: "tg-ppx" },
+};
+const pipeMeta = (p) => PIPE_META[p] || { short: shortEngine(p), cls: "tg-x" };
+
+function triCls(p) {
+  if (!p) return "none";
+  if (p.correct == null) return "pending";
+  return p.correct ? "ok" : "bad";
+}
+
+function triTitle(p, sessLabel) {
+  if (!p) return sessLabel + ": no signal";
+  if (p.correct == null) {
+    const why = p.dir === "neutral" ? "flat session" : "pending";
+    return `${shortCol(p.engine, p.model)} · ${p.date} ${sessLabel}: ${p.signal} — ${why}`;
+  }
+  return `${shortCol(p.engine, p.model)} · ${p.date} ${sessLabel}: ${p.signal} ${p.correct ? "✓" : "✗"} · session ${fmtPct(p.return)} · ${fmtPts(p.weight)} pts`;
+}
+
+function heatDates() {
+  return [...new Set(state.predictions.map(p => p.date))].sort();
+}
+
+function moveTriCls(r) {
+  const dir = direction(r);
+  if (dir === "pending") return "pending";
+  if (dir === "neutral") return "pending";
+  return dir === "rise" ? "rise" : "drop";
+}
+
+function qqqTriTitle(date, session, r) {
+  const label = session === "pre-market" ? "pre-market open→close" : "intraday close→next open";
+  return `QQQ · ${date} ${label}: ${fmtPct(r)}`;
+}
+
+function renderHeatmap() {
+  const rows = columnsByFolder(); // LLM → PPX → Crash on Y
+  const cols = heatDates();
+  const lookup = new Map();
+  for (const p of state.predictions) {
+    lookup.set(`${p.engine}/${p.model}|${p.date}|${p.session}`, p);
+  }
+  let html = `<div class="hm-grid" style="grid-template-columns:216px repeat(${cols.length},27px)">`;
+  html += `<div></div>` + cols.map(d => `<div class="hm-collabel">${d.slice(5)}</div>`).join("");
+
+  // Top row: QQQ price change (pre-market ◤ · intraday ◢)
+  html += `<div class="hm-rowlabel"><span class="tag tg-x">STOCK</span>QQQ</div>`;
+  for (const d of cols) {
+    const pre = sessionReturn(d, "pre-market");
+    const intra = sessionReturn(d, "intraday");
+    html += `<div class="hm-cell"><span class="tri pre ${moveTriCls(pre)}" title="${esc(qqqTriTitle(d, "pre-market", pre))}"></span><span class="tri intra ${moveTriCls(intra)}" title="${esc(qqqTriTitle(d, "intraday", intra))}"></span></div>`;
+  }
+
+  for (const r of rows) {
+    const pm = pipeMeta(r.engine);
+    html += `<div class="hm-rowlabel"><span class="tag ${pm.cls}">${pm.short}</span>${esc(r.model)}</div>`;
+    for (const d of cols) {
+      const p1 = lookup.get(`${r.key}|${d}|pre-market`);
+      const p2 = lookup.get(`${r.key}|${d}|intraday`);
+      html += `<div class="hm-cell"><span class="tri pre ${triCls(p1)}" title="${esc(triTitle(p1, "pre-market"))}"></span><span class="tri intra ${triCls(p2)}" title="${esc(triTitle(p2, "intraday"))}"></span></div>`;
+    }
+  }
+  html += `</div>
+  <div class="hm-legend">
+    <span><span class="sw" style="background:#10b981"></span>correct / QQQ up</span>
+    <span><span class="sw" style="background:#f43f5e"></span>wrong / QQQ down</span>
+    <span><span class="sw" style="background:repeating-linear-gradient(45deg,#fcd34d 0 3px,#fde68a 3px 6px)"></span>pending / flat</span>
+    <span><span class="sw" style="background:var(--line-soft)"></span>no signal</span>
+    <span style="color:var(--faint)">◤ pre-market (vs open→close) · ◢ intraday (vs close→next open)</span>
+  </div>`;
+  document.getElementById("hmWrap").innerHTML = html;
 }
 
 async function loadPredictions(files) {
@@ -579,146 +677,419 @@ function renderMeta(info) {
   `;
 }
 
-function renderBoard() {
-  const el = document.getElementById("board");
-  el.innerHTML = state.columns.map((c, i) => `
-    <article class="rank-card ${i === 0 ? "top1" : ""}" style="animation-delay:${i * 40}ms">
-      <div class="rank-n">${i === 0 ? "🥇 #1" : i === 1 ? "🥈 #2" : i === 2 ? "🥉 #3" : "#" + (i + 1)}</div>
-      <div class="rank-name">${c.engine}<br>${c.model}</div>
-      <div class="rank-wt">${c.weight >= 0 ? "+" : ""}${c.weight.toFixed(2)}</div>
-      <div class="tiny">weight · acc ${pct(c.all)} (${c.all.correct}/${c.all.n})</div>
-    </article>
-  `).join("") || `<div class="loading">No columns</div>`;
+function clamp(v, a, b) {
+  return Math.max(a, Math.min(b, v));
 }
 
-function renderAccuracy() {
-  document.getElementById("acc").innerHTML = `
-    <thead><tr>
-      <th>Folder / model</th>
-      <th class="num">Weight</th>
-      <th class="num">All</th>
-      <th class="num">HOLD</th>
-      <th class="num">SELL</th>
-    </tr></thead>
-    <tbody>${state.columns.map(c => `
-      <tr>
-        <td><b>${c.short}</b><div class="tiny">${c.key}</div></td>
-        <td class="num ${c.weight >= 0 ? "pos" : "neg"}">${c.weight >= 0 ? "+" : ""}${c.weight.toFixed(2)}</td>
-        <td class="num">${c.all.correct}/${c.all.n} · ${pct(c.all)}</td>
-        <td class="num">${c.HOLD.correct}/${c.HOLD.n} · ${pct(c.HOLD)}</td>
-        <td class="num">${c.SELL.correct}/${c.SELL.n} · ${pct(c.SELL)}</td>
-      </tr>`).join("")}
-    </tbody>`;
-}
-
-function rowKeys() {
-  const set = new Set();
-  for (const p of state.predictions) set.add(`${p.date}|${p.session}`);
-  return [...set].sort((a, b) => {
-    const [da, sa] = a.split("|");
-    const [db, sb] = b.split("|");
-    if (da !== db) return db.localeCompare(da); // newest first
-    return sa === "pre-market" ? -1 : 1; // pre before intra same day
-  });
-}
-
-function renderHeatmap() {
-  const cols = state.columns;
-  const keys = rowKeys();
-  const overall = cols.map(c => c.weight);
-
-  let html = `<thead><tr><th class="corner">Date · session</th>${
-    cols.map(c => `<th title="${c.key}">${c.short}</th>`).join("")
-  }</tr></thead><tbody>`;
-
-  const rows = keys.map(k => {
-    const [date, session] = k.split("|");
-    const lab = `${date.slice(5)} · ${session === "pre-market" ? "pre" : "intra"}`;
-    const cells = cols.map((c, i) => {
-      const cell = c.byKey.get(k);
-      return {
-        i,
-        key: c.key,
-        weight: cell ? cell.weight : null,
-        confidence: cell ? cell.confidence : 0,
-      };
-    });
-    return { lab, cells, overall: false };
-  });
-  rows.push({
-    lab: "Overall",
-    overall: true,
-    cells: overall.map((w, i) => ({ i, key: cols[i].key, weight: w, confidence: 0 })),
-  });
-
-  html += rows.map((r, ri) => {
-    const medals = medalsFor(r.cells);
-    return `<tr class="${r.overall ? "overall" : ""}">
-      <td class="lab">${r.lab}</td>
-      ${r.cells.map((cell, i) => {
-        const [cls, txt] = tone(cell.weight);
-        const m = medals[i] ? `<span class="medal">${medals[i]}</span>` : "";
-        const gold = medals[i] === "🥇" ? " gold" : "";
-        return `<td><div class="cell ${cls}${gold}" style="animation-delay:${(ri * 10 + i) * 6}ms">${txt}${m}</div></td>`;
-      }).join("")}
-    </tr>`;
+/** Kimi-style podium: visual order 2nd · 1st · 3rd */
+function renderPodium(mountId, top) {
+  const wrap = document.getElementById(mountId);
+  if (!wrap) return;
+  if (!top.length) {
+    wrap.style.display = "none";
+    wrap.innerHTML = "";
+    return;
+  }
+  wrap.style.display = "";
+  const medals = ["🥇", "🥈", "🥉"];
+  const order = top.length >= 3 ? [1, 0, 2] : top.map((_, i) => i);
+  wrap.innerHTML = order.map(i => {
+    const r = top[i];
+    if (!r) return "<div></div>";
+    const pm = pipeMeta(r.pipeline);
+    return `<div class="pod p${i + 1}">
+      <div class="medal">${medals[i]}</div>
+      <p class="pod-name">${esc(r.name)}</p>
+      <p class="pod-pipe"><span class="tag ${pm.cls}">${pm.short}</span></p>
+      <p class="pod-score ${r.pos ? "pos" : "neg"}">${r.score}</p>
+      <p class="pod-acc">${r.sub}</p>
+    </div>`;
   }).join("");
-
-  document.getElementById("heat").innerHTML = html + "</tbody>";
 }
 
-function allDates() {
-  return [...new Set(state.predictions.map(p => p.date))].sort().reverse();
-}
-
-function renderDateChips() {
-  const dates = allDates();
-  if (!state.selectedDate) state.selectedDate = dates[0] || null;
-  document.getElementById("dates").innerHTML = dates.map(d =>
-    `<button type="button" class="chip ${d === state.selectedDate ? "active" : ""}" data-date="${d}">${d}</button>`
-  ).join("");
-  document.getElementById("dates").onclick = (e) => {
-    const btn = e.target.closest("[data-date]");
-    if (!btn) return;
-    state.selectedDate = btn.dataset.date;
-    renderDateChips();
-    renderDateDetail();
+function bucketWithAcc(bucket) {
+  return {
+    n: bucket.n,
+    correct: bucket.correct,
+    acc: bucket.n ? (bucket.correct / bucket.n) * 100 : null,
   };
 }
 
-function renderSessionList(session, mountId, moveId) {
-  const date = state.selectedDate;
-  const r = sessionReturn(date, session);
-  const moveEl = document.getElementById(moveId);
-  const label = fmtPct(r);
-  moveEl.textContent = label;
-  moveEl.className = "move " + (r == null ? "" : r > 0 ? "pos" : r < 0 ? "neg" : "");
-
-  const rows = state.columns.map(c => {
-    const cell = c.byKey.get(`${date}|${session}`);
-    return cell ? cell.pred : null;
-  }).filter(Boolean);
-
-  document.getElementById(mountId).innerHTML = rows.map(p => {
-    let mark = `<span class="pend">—</span>`;
-    if (p.correct === true) mark = `<span class="ok">✓</span>`;
-    else if (p.correct === false) mark = `<span class="bad">✗</span>`;
-    else if (p.dir === "neutral") mark = `<span class="pend">flat</span>`;
-    else if (p.dir === "pending") mark = `<span class="pend">pend</span>`;
-    const conf = p.confidence != null ? Number(p.confidence).toFixed(2) : "—";
-    return `<div class="sig" title="${(p.key_catalyst || "").replace(/"/g, "&quot;")}">
-      <span>${shortCol(p.engine, p.model)}</span>
-      <span class="badge ${p.signal === "HOLD" ? "hold" : "sell"}">${p.signal}</span>
-      <span class="tiny">${conf}</span>
-      ${mark}
-    </div>`;
-  }).join("") || `<div class="tiny">No signals for this session</div>`;
+function emptyAccBucket() {
+  return { n: 0, correct: 0, acc: null };
 }
 
-function renderDateDetail() {
-  if (!state.selectedDate) return;
-  renderSessionList("pre-market", "preList", "preMove");
-  renderSessionList("intraday", "intraList", "intraMove");
+function addAccBucket(into, from) {
+  into.n += from.n;
+  into.correct += from.correct;
+}
+
+function finalizeAccBucket(b) {
+  b.acc = b.n ? (b.correct / b.n) * 100 : null;
+  return b;
+}
+
+function pendingForColumn(col) {
+  let n = 0;
+  for (const { pred } of col.byKey.values()) {
+    if (pred && pred.correct == null) n += 1;
+  }
+  return n;
+}
+
+function accTD(bucket) {
+  if (!bucket || !bucket.n || bucket.acc == null) return '<span class="na">—</span>';
+  const pct = bucket.acc;
+  const w = clamp(pct, 0, 100) * 0.8;
+  const col = pct >= 50
+    ? "linear-gradient(90deg,#34d399,#10b981)"
+    : "linear-gradient(90deg,#fb7185,#f43f5e)";
+  return `<b>${pct.toFixed(1)}%</b> <span class="n" style="color:var(--faint);font-size:12px">(${bucket.correct}/${bucket.n})</span><span class="abar" style="width:${w}px;background:${col}"></span>`;
+}
+
+function renderAccuracy() {
+  const medals = ["🏆", "🥈", "🥉"];
+  const medalAt = (i) => (i >= 0 && i < 3 ? medals[i] + " " : "");
+
+  const byPipe = new Map();
+  for (const c of state.columns) {
+    if (!byPipe.has(c.engine)) byPipe.set(c.engine, []);
+    byPipe.get(c.engine).push(c);
+  }
+
+  const pipeStats = [...byPipe.entries()].map(([id, models]) => ({
+    id,
+    models,
+    score: models.reduce((s, c) => s + c.weight, 0),
+  })).sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    return a.id.localeCompare(b.id);
+  });
+
+  // Global model ranks by weighted score (top 3 get medals + podium)
+  const rankedModels = [...state.columns]
+    .slice()
+    .sort((a, b) => {
+      if (b.weight !== a.weight) return b.weight - a.weight;
+      return a.key.localeCompare(b.key);
+    });
+  const modelRank = new Map();
+  rankedModels.forEach((c, i) => { modelRank.set(c.key, i); });
+
+  renderPodium("accPodium", rankedModels.filter(c => c.all.n > 0).slice(0, 3).map(c => ({
+    name: c.model,
+    pipeline: c.engine,
+    score: fmtPts(c.weight),
+    pos: c.weight >= 0,
+    sub: `${pct(c.all)} accuracy · ${c.all.n} calls`,
+  })));
+
+  const overall = {
+    hold: emptyAccBucket(),
+    sell: emptyAccBucket(),
+    all: emptyAccBucket(),
+    scoredN: 0,
+    score: 0,
+  };
+
+  let html = `<thead><tr><th>Pipeline / Model</th><th>Acc · HOLD</th><th>Acc · SELL</th><th>Acc · ALL</th><th>Scored calls</th><th>Weighted score</th></tr></thead><tbody>`;
+  pipeStats.forEach((pipe) => {
+    const models = pipe.models.slice().sort((a, b) => {
+      if (b.weight !== a.weight) return b.weight - a.weight;
+      return a.model.localeCompare(b.model);
+    });
+    const pm = pipeMeta(pipe.id);
+    html += `<tr class="pipe-row"><td colspan="6"><span class="tag ${pm.cls}">${pm.short}</span> &nbsp;${esc(pipe.id)}</td></tr>`;
+
+    const pipeTot = {
+      hold: emptyAccBucket(),
+      sell: emptyAccBucket(),
+      all: emptyAccBucket(),
+      scoredN: 0,
+      score: 0,
+    };
+    for (const m of models) {
+      const hold = bucketWithAcc(m.HOLD);
+      const sell = bucketWithAcc(m.SELL);
+      const all = bucketWithAcc(m.all);
+      const pending = pendingForColumn(m);
+      addAccBucket(pipeTot.hold, hold);
+      addAccBucket(pipeTot.sell, sell);
+      addAccBucket(pipeTot.all, all);
+      pipeTot.scoredN += m.all.n;
+      pipeTot.score += m.weight;
+      addAccBucket(overall.hold, hold);
+      addAccBucket(overall.sell, sell);
+      addAccBucket(overall.all, all);
+      overall.scoredN += m.all.n;
+      overall.score += m.weight;
+      html += `<tr>
+        <td style="padding-left:26px;font-weight:700">${medalAt(modelRank.get(m.key))}${esc(m.model)}</td>
+        <td>${accTD(hold)}</td>
+        <td>${accTD(sell)}</td>
+        <td>${accTD(all)}</td>
+        <td><b>${m.all.n}</b>${pending ? ` <span class="n" style="color:var(--faint);font-size:12px">+${pending}⏳</span>` : ""}</td>
+        <td><b style="color:${m.weight >= 0 ? "var(--up)" : "var(--down)"}">${fmtPts(m.weight)}</b></td>
+      </tr>`;
+    }
+    finalizeAccBucket(pipeTot.hold);
+    finalizeAccBucket(pipeTot.sell);
+    finalizeAccBucket(pipeTot.all);
+    html += `<tr class="subtotal">
+      <td>Pipeline total</td>
+      <td>${accTD(pipeTot.hold)}</td>
+      <td>${accTD(pipeTot.sell)}</td>
+      <td>${accTD(pipeTot.all)}</td>
+      <td><b>${pipeTot.scoredN}</b></td>
+      <td><b style="color:${pipeTot.score >= 0 ? "var(--up)" : "var(--down)"}">${fmtPts(pipeTot.score)}</b></td>
+    </tr>`;
+  });
+  finalizeAccBucket(overall.hold);
+  finalizeAccBucket(overall.sell);
+  finalizeAccBucket(overall.all);
+  html += `<tr class="total">
+    <td>ALL ENGINES</td>
+    <td>${accTD(overall.hold)}</td>
+    <td>${accTD(overall.sell)}</td>
+    <td>${accTD(overall.all)}</td>
+    <td><b>${overall.scoredN}</b></td>
+    <td><b style="color:${overall.score >= 0 ? "var(--up)" : "var(--down)"}">${fmtPts(overall.score)}</b></td>
+  </tr></tbody>`;
+  document.getElementById("accTable").innerHTML = html;
+}
+
+const BT_START = 100000;
+
+function fmtMoney(v) {
+  if (v == null || Number.isNaN(v)) return "—";
+  return (v < 0 ? "-" : "") + "$" + Math.abs(v).toLocaleString(undefined, { maximumFractionDigits: 0 });
+}
+
+function fmtPnlPct(v) {
+  if (v == null || Number.isNaN(v)) return "—";
+  return (v > 0 ? "+" : "") + v.toFixed(2) + "%";
+}
+
+function equitySpark(series, isUp) {
+  if (!series || series.length < 2) return '<span class="na">—</span>';
+  const w = 140, h = 28, pad = 2;
+  const min = Math.min(...series);
+  const max = Math.max(...series);
+  const span = max - min || 1;
+  const coords = series.map((v, i) => {
+    const x = pad + (i / (series.length - 1)) * (w - 2 * pad);
+    const y = pad + (1 - (v - min) / span) * (h - 2 * pad);
+    return [x, y];
+  });
+  const pts = coords.map(([x, y]) => `${x.toFixed(1)},${y.toFixed(1)}`).join(" ");
+  const first = coords[0];
+  const last = coords[coords.length - 1];
+  const areaPts = `${first[0].toFixed(1)},${h} ${pts} ${last[0].toFixed(1)},${h}`;
+  const baseY = pad + (1 - (series[0] - min) / span) * (h - 2 * pad);
+  const up = isUp == null ? series[series.length - 1] >= series[0] : isUp;
+  const color = up ? "#059669" : "#e11d48";
+  const gid = `eqg-${up ? "u" : "d"}-${Math.round(series[0])}-${Math.round(series[series.length - 1])}-${series.length}`;
+  return `<svg class="eq-spark" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" aria-hidden="true"><defs><linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="${color}" stop-opacity=".35"/><stop offset="100%" stop-color="${color}" stop-opacity="0"/></linearGradient></defs><polygon class="eq-area" fill="url(#${gid})" points="${areaPts}"/><line class="eq-base" x1="${pad}" y1="${baseY.toFixed(1)}" x2="${(w - pad).toFixed(1)}" y2="${baseY.toFixed(1)}"/><polyline stroke="${color}" points="${pts}"/></svg>`;
+}
+
+function avgSeries(list) {
+  if (!list.length) return [];
+  const n = Math.max(...list.map(s => s.length));
+  if (!n) return [];
+  const out = [];
+  for (let i = 0; i < n; i++) {
+    let sum = 0, c = 0;
+    for (const s of list) {
+      const v = s[Math.min(i, s.length - 1)];
+      if (v != null) { sum += v; c++; }
+    }
+    out.push(c ? sum / c : BT_START);
+  }
+  return out;
+}
+
+function runBacktest(engine, model) {
+  const sigs = new Map();
+  const dates = new Set();
+  for (const p of state.predictions) {
+    if (p.engine !== engine || p.model !== model) continue;
+    if (p.signal !== "HOLD" && p.signal !== "SELL") continue;
+    sigs.set(`${p.date}|${p.session}`, p.signal);
+    dates.add(p.date);
+  }
+  const dayList = [...dates].sort();
+  let cash = BT_START;
+  let shares = 0;
+  const equity = [BT_START];
+  let qqqOpen = null;
+  let qqqClose = null;
+
+  const mark = (price) => (shares > 0 ? shares * price : cash);
+  const goLong = (price) => {
+    if (!(price > 0) || shares > 0) return;
+    shares = cash / price;
+    cash = 0;
+  };
+  const goCash = (price) => {
+    if (!(price > 0) || shares <= 0) return;
+    cash = shares * price;
+    shares = 0;
+  };
+
+  for (const d of dayList) {
+    const day = state.ohlc.get(d);
+    if (!day || !(day.open > 0) || !(day.close > 0)) continue;
+    if (qqqOpen == null) qqqOpen = day.open;
+    qqqClose = day.close;
+
+    const pre = sigs.get(`${d}|pre-market`);
+    if (pre === "HOLD") goLong(day.open);
+    else if (pre === "SELL") goCash(day.open);
+    equity.push(mark(day.open));
+
+    const intra = sigs.get(`${d}|intraday`);
+    if (intra === "HOLD") goLong(day.close);
+    else if (intra === "SELL") goCash(day.close);
+    equity.push(mark(day.close));
+  }
+
+  const end = equity[equity.length - 1];
+  const pnlPct = ((end - BT_START) / BT_START) * 100;
+  const qqqPct = qqqOpen != null && qqqClose != null
+    ? ((qqqClose - qqqOpen) / qqqOpen) * 100
+    : null;
+  const excessPct = qqqPct == null ? null : pnlPct - qqqPct;
+  return {
+    equity,
+    start: BT_START,
+    end,
+    pnl: end - BT_START,
+    pnlPct,
+    qqqPct,
+    excessPct,
+  };
+}
+
+function btFromEquity(equity) {
+  const start = equity[0] ?? BT_START;
+  const end = equity[equity.length - 1] ?? start;
+  return {
+    equity,
+    start,
+    end,
+    pnl: end - start,
+    pnlPct: start ? ((end - start) / start) * 100 : 0,
+    qqqPct: null,
+    excessPct: null,
+  };
+}
+
+function meanOpt(vals) {
+  const xs = vals.filter(v => v != null && !Number.isNaN(v));
+  if (!xs.length) return null;
+  return xs.reduce((s, v) => s + v, 0) / xs.length;
+}
+
+function btRowCells(bt) {
+  const pnlColor = bt.pnlPct >= 0 ? "var(--up)" : "var(--down)";
+  const xs = bt.excessPct;
+  const xsColor = xs == null ? "var(--faint)" : xs >= 0 ? "var(--up)" : "var(--down)";
+  const xsCell = xs == null
+    ? '<span class="na">—</span>'
+    : `<b style="color:${xsColor}">${fmtPnlPct(xs)}</b>`;
+  const qqqHint = bt.qqqPct == null ? "" : ` title="QQQ ${fmtPnlPct(bt.qqqPct)} over same window"`;
+  return `
+    <td>${equitySpark(bt.equity, bt.pnlPct >= 0)}</td>
+    <td>${fmtMoney(bt.start)}</td>
+    <td>${fmtMoney(bt.end)}</td>
+    <td><b style="color:${pnlColor}">${fmtMoney(bt.pnl)}</b></td>
+    <td><b style="color:${pnlColor}">${fmtPnlPct(bt.pnlPct)}</b></td>
+    <td${qqqHint}>${xsCell}</td>`;
+}
+
+function renderBacktest() {
+  const medals = ["🏆", "🥈", "🥉"];
+  const medalAt = (i) => (i >= 0 && i < 3 ? medals[i] + " " : "");
+
+  const results = state.columns.map(c => ({
+    key: c.key,
+    engine: c.engine,
+    model: c.model,
+    bt: runBacktest(c.engine, c.model),
+  }));
+
+  const byPipe = new Map();
+  for (const r of results) {
+    if (!byPipe.has(r.engine)) byPipe.set(r.engine, []);
+    byPipe.get(r.engine).push(r);
+  }
+
+  const pipeStats = [...byPipe.entries()].map(([id, models]) => {
+    const avgEq = avgSeries(models.map(m => m.bt.equity));
+    const bt = btFromEquity(avgEq);
+    const pnlPct = models.length
+      ? models.reduce((s, m) => s + m.bt.pnlPct, 0) / models.length
+      : 0;
+    const qqqPct = meanOpt(models.map(m => m.bt.qqqPct));
+    const excessPct = meanOpt(models.map(m => m.bt.excessPct));
+    const end = BT_START * (1 + pnlPct / 100);
+    return {
+      id,
+      models,
+      bt: { ...bt, end, pnl: end - BT_START, pnlPct, qqqPct, excessPct },
+    };
+  }).sort((a, b) => {
+    const ea = a.bt.excessPct == null ? -Infinity : a.bt.excessPct;
+    const eb = b.bt.excessPct == null ? -Infinity : b.bt.excessPct;
+    if (eb !== ea) return eb - ea;
+    return a.id.localeCompare(b.id);
+  });
+
+  const rankedModels = results
+    .slice()
+    .sort((a, b) => {
+      const ea = a.bt.excessPct == null ? -Infinity : a.bt.excessPct;
+      const eb = b.bt.excessPct == null ? -Infinity : b.bt.excessPct;
+      if (eb !== ea) return eb - ea;
+      return a.key.localeCompare(b.key);
+    });
+  const modelRank = new Map();
+  rankedModels.forEach((r, i) => { modelRank.set(r.key, i); });
+
+  renderPodium("btPodium", rankedModels.filter(r => r.bt.excessPct != null).slice(0, 3).map(r => ({
+    name: r.model,
+    pipeline: r.engine,
+    score: fmtPnlPct(r.bt.excessPct),
+    pos: r.bt.excessPct >= 0,
+    sub: `PnL ${fmtPnlPct(r.bt.pnlPct)} · end ${fmtMoney(r.bt.end)}`,
+  })));
+
+  let html = `<thead><tr><th>Pipeline / Model</th><th>Equity curve</th><th>Start</th><th>End</th><th>PnL</th><th>PnL%</th><th>Excess vs QQQ</th></tr></thead><tbody>`;
+
+  for (const pipe of pipeStats) {
+    const pm = pipeMeta(pipe.id);
+    html += `<tr class="pipe-row"><td colspan="7"><span class="tag ${pm.cls}">${pm.short}</span> &nbsp;${esc(pipe.id)}</td></tr>`;
+
+    const models = pipe.models.slice().sort((a, b) => {
+      const ea = a.bt.excessPct == null ? -Infinity : a.bt.excessPct;
+      const eb = b.bt.excessPct == null ? -Infinity : b.bt.excessPct;
+      if (eb !== ea) return eb - ea;
+      return a.model.localeCompare(b.model);
+    });
+    for (const m of models) {
+      html += `<tr>
+        <td style="padding-left:26px;font-weight:700">${medalAt(modelRank.get(m.key))}${esc(m.model)}</td>
+        ${btRowCells(m.bt)}
+      </tr>`;
+    }
+    html += `<tr class="subtotal">
+      <td>Pipeline total</td>
+      ${btRowCells(pipe.bt)}
+    </tr>`;
+  }
+
+  html += `</tbody>`;
+  document.getElementById("btTable").innerHTML = html;
 }
 
 async function main() {
@@ -727,7 +1098,6 @@ async function main() {
     manifest = await fetchJson(MANIFEST_URL);
   } catch (e) {
     showBanner("Missing manifest.json — run dashboard-grok/scripts/generate-input-manifest.py (reads ../input, writes here)", true);
-    document.getElementById("board").innerHTML = `<div class="loading">No manifest</div>`;
     return;
   }
 
@@ -761,11 +1131,9 @@ async function main() {
   state.columns = aggregate(predictions);
   renderMeta({ predictions: predictions.length, listed, failed });
   if (failed) showBanner(`Loaded ${predictions.length} signals; skipped ${failed} files.`);
-  renderBoard();
   renderAccuracy();
+  renderBacktest();
   renderHeatmap();
-  renderDateChips();
-  renderDateDetail();
 }
 
 main().catch(err => {
