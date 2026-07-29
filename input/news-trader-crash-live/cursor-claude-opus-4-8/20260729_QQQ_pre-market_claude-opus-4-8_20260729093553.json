@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-29",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.74,
+  "threat_level": "HIGH",
+  "key_catalyst": "Megacap AI-capex earnings anxiety with Microsoft and Meta reporting after today's close",
+  "reasoning": "The dominant catalyst — megacap AI-capex earnings — is an unresolved binary event with Microsoft and Meta reporting after the close TODAY and Apple/Amazon after the close July 30, so the market cannot have absorbed results that do not yet exist. Alphabet's precedent (negative free cash flow and a raised capex guide that sent shares down 3%+) is the template investors fear repeating, and this fear is compounded by the still-unconfirmed Nvidia ~$750B 'circular financing' story that continues to generate fresh bearish commentary. With two primary AI-linked drivers still OPEN and no clear absorption (QQQ printed -1.38% and -1.41% pre-market moves this week, and today's pre-market is flat at +0.01% right before the earnings gauntlet), forward risk is elevated."
+}

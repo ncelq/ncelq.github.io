@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-29",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "U.S.-Iran tensions escalate with unresolved Strait of Hormuz disruptions and NVIDIA slides on OpenAI financing talks adding to AI spending worries",
+  "reasoning": "Track B applies. Today's dominant theme is MACRO_SHOCK (U.S.-Iran tensions, oil price volatility, geopolitical escalation) and EARNINGS_CRISIS (NVIDIA, Apple, Microsoft earnings concerns). Recent memory shows MACRO_SHOCK responses: 0 UP, 4 DOWN, 1 FLAT, and EARNINGS_CRISIS: 1 UP, 3 DOWN, 1 FLAT. Both themes are NOT priced in and are escalating in severity, with no de-escalation in sight. The market's historical complacency to these themes has not absorbed the risks, and the threat remains live."
+}
