@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-29",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.66,
+  "threat_level": "LOW",
+  "key_catalyst": "US chip stocks sold on nervous positioning ahead of SK Hynix earnings, but Nasdaq bounced back as falling oil offset chip weakness",
+  "reasoning": "Track B applies: the dominant theme is a recurring AI/chip SECTOR_ROTATION jitter, which does print mostly DOWN in memory (1 up, 3 down, 1 flat), so I cannot dismiss it on familiarity alone. However, today's factual content is de-escalating rather than worsening \u2014 chips sold on 'nervous positioning ahead' of SK Hynix (anticipatory, not a materialized miss), yet the Nasdaq BOUNCED BACK and falling oil removed the macro-shock pillar, and the big potential catalysts (Microsoft earnings, the Fed decision) are forward events outside the 16:00-09:31 window. No escalation override triggers because nothing objectively worsened in magnitude or scope versus prior occurrences."
+}

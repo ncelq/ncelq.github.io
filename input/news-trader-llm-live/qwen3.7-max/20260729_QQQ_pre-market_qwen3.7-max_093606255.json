@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-29",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.75,
+  "threat_level": "HIGH",
+  "key_catalyst": "AI trade loses momentum and US chip stocks sold hard ahead of SK Hynix earnings, alongside a massive expected $190 billion swing in Microsoft's market value.",
+  "reasoning": "Track B applies as the AI and semiconductor earnings fears are a recurring theme. Memory shows EARNINGS_CRISIS responses are mostly DOWN (4 DOWN, 1 FLAT), indicating the market continues to actively punish this theme and it is not fully priced in, especially with ongoing chip selloffs and massive Microsoft earnings volatility ahead."
+}
