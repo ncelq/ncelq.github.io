@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QQQ Signal Arena · Live Engine Leaderboard</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+<style>
+/* ============ QQQ Signal Arena — fresh light theme ============ */
+:root{
+  --bg:#f5f8fb;
+  --panel:#ffffff;
+  --panel-glass:rgba(255,255,255,.78);
+  --ink:#0f172a;
+  --ink-soft:#334155;
+  --muted:#64748b;
+  --faint:#94a3b8;
+  --line:#e2e8f0;
+  --line-soft:#eef2f7;
+  --up:#059669;      --up-bright:#10b981;  --up-soft:#d1fae5;  --up-wash:#ecfdf5;
+  --down:#e11d48;    --down-bright:#f43f5e;--down-soft:#ffe4e6;--down-wash:#fff1f2;
+  --hold:#475569;    --hold-soft:#e2e8f0;
+  --sell:#e11d48;    --sell-soft:#ffe4e6;
+  --accent:#0ea5e9;  --accent-deep:#0284c7; --accent-soft:#e0f2fe;
+  --mint:#10b981;
+  --amber:#d97706;   --amber-soft:#fef3c7;
+  --violet:#8b5cf6;
+  --radius:18px; --radius-sm:12px;
+  --shadow:0 1px 2px rgba(15,23,42,.04), 0 10px 30px rgba(2,132,199,.06);
+  --shadow-lift:0 2px 6px rgba(15,23,42,.06), 0 18px 44px rgba(2,132,199,.12);
+  --font:"Inter",system-ui,-apple-system,sans-serif;
+  --display:"Fraunces",Georgia,serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; color:var(--ink); font-family:var(--font); font-size:15px; line-height:1.55;
+  background:
+    radial-gradient(1000px 480px at 8% -8%, rgba(16,185,129,.14), transparent 60%),
+    radial-gradient(900px 460px at 96% 2%, rgba(14,165,233,.16), transparent 58%),
+    radial-gradient(700px 500px at 50% 110%, rgba(139,92,246,.07), transparent 60%),
+    var(--bg);
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1220px;margin:0 auto;padding:0 22px}
+main.wrap{padding-bottom:70px}
+a{color:var(--accent-deep);text-decoration:none}
+.muted{color:var(--muted)}
+.faint{color:var(--faint)}
+b,strong{font-weight:700}
+
+/* ---------- loader ---------- */
+#loader{
+  position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(160deg,#f0f9ff 0%,#ecfdf5 100%);
+  transition:opacity .5s ease, visibility .5s;
+}
+#loader.done{opacity:0;visibility:hidden;pointer-events:none}
+.ld-inner{text-align:center;max-width:420px;padding:24px}
+.ld-logo{
+  width:74px;height:74px;margin:0 auto 18px;border-radius:22px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#0ea5e9,#10b981);box-shadow:0 14px 34px rgba(14,165,233,.35);
+  animation:pulse 1.6s ease-in-out infinite;font-size:34px;
+}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+.ld-title{font-family:var(--display);font-size:1.5rem;font-weight:700;margin:0 0 6px}
+.ld-step{color:var(--muted);font-size:13.5px;min-height:20px;margin:0 0 16px}
+.ld-bar{height:6px;border-radius:99px;background:rgba(15,23,42,.08);overflow:hidden}
+.ld-bar>i{display:block;height:100%;width:0%;border-radius:99px;background:linear-gradient(90deg,#0ea5e9,#10b981);transition:width .3s ease}
+.ld-err{margin-top:16px;background:#fff;border:1px solid var(--down-soft);border-radius:var(--radius-sm);padding:14px 16px;text-align:left;font-size:13.5px;color:var(--ink-soft);box-shadow:var(--shadow)}
+.ld-err code{font-family:var(--mono);font-size:12px;background:var(--down-wash);padding:1px 5px;border-radius:5px;color:var(--down)}
+
+/* ---------- hero ---------- */
+.hero{padding:46px 0 10px;position:relative}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 10px}
+.hero h1{
+  font-family:var(--display);font-weight:700;letter-spacing:-.02em;line-height:1.08;
+  font-size:clamp(2.1rem,4.6vw,3.1rem);margin:0 0 12px;
+  background:linear-gradient(92deg,#0f172a 20%,#0284c7 55%,#10b981 90%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero-sub{color:var(--muted);font-size:15px;max-width:760px;margin:0 0 18px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:var(--ink-soft);
+  background:var(--panel-glass);border:1px solid var(--line);border-radius:99px;padding:5px 12px;
+  backdrop-filter:blur(10px);box-shadow:var(--shadow);
+}
+.badge .dot{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 3px rgba(16,185,129,.18)}
+.badge.warn .dot{background:var(--amber);box-shadow:0 0 0 3px rgba(217,119,6,.16)}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.btn{
+  display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--panel);
+  color:var(--ink-soft);font:inherit;font-size:13.5px;font-weight:600;padding:9px 16px;border-radius:12px;
+  cursor:pointer;box-shadow:var(--shadow);transition:transform .15s ease, box-shadow .15s ease;
+}
+.btn:hover{transform:translateY(-1px);box-shadow:var(--shadow-lift)}
+.btn:active{transform:translateY(0)}
+.btn-primary{background:linear-gradient(135deg,#0ea5e9,#10b981);border:none;color:#fff}
+.btn-icon{padding:9px 11px}
+.switch{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--ink-soft);cursor:pointer;user-select:none;padding:8px 12px;background:var(--panel-glass);border:1px solid var(--line);border-radius:12px;backdrop-filter:blur(10px)}
+.switch input{display:none}
+.switch .trk{width:34px;height:20px;border-radius:99px;background:#cbd5e1;position:relative;transition:background .2s}
+.switch .trk::after{content:"";position:absolute;top:2.5px;left:3px;width:15px;height:15px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .2s}
+.switch input:checked+.trk{background:linear-gradient(90deg,#0ea5e9,#10b981)}
+.switch input:checked+.trk::after{transform:translateX(13px)}
+
+/* ---------- subnav ---------- */
+.subnav{position:sticky;top:0;z-index:90;margin:18px 0 6px;background:rgba(245,248,251,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-soft)}
+.sn-in{display:flex;gap:4px;overflow-x:auto;padding:9px 22px;max-width:1220px;margin:0 auto;scrollbar-width:none}
+.sn-in::-webkit-scrollbar{display:none}
+.sn-link{white-space:nowrap;font-size:13px;font-weight:600;color:var(--muted);padding:7px 14px;border-radius:99px;transition:all .2s}
+.sn-link:hover{color:var(--ink);background:#fff}
+.sn-link.active{color:var(--accent-deep);background:var(--accent-soft)}
+
+/* ---------- sections ---------- */
+.sec{margin-top:44px;scroll-margin-top:76px}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:0 0 16px}
+.sec-head h2{font-family:var(--display);font-size:1.55rem;font-weight:700;letter-spacing:-.01em;margin:0}
+.sec-note{font-size:13px;color:var(--muted)}
+
+/* reveal on scroll */
+.rv{opacity:0;transform:translateY(16px)}
+.rv.in{opacity:1;transform:none;transition:opacity .55s ease,transform .55s ease}
+
+/* ---------- KPI cards ---------- */
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+.kpi{
+  background:var(--panel-glass);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px 18px 16px;backdrop-filter:blur(12px);box-shadow:var(--shadow);
+  position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease;
+}
+.kpi:hover{transform:translateY(-2px);box-shadow:var(--shadow-lift)}
+.kpi::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#0ea5e9,#10b981);opacity:.85}
+.kpi.up::before{background:linear-gradient(90deg,#10b981,#34d399)}
+.kpi.down::before{background:linear-gradient(90deg,#f43f5e,#fb7185)}
+.kpi.amber::before{background:linear-gradient(90deg,#f59e0b,#fbbf24)}
+.kpi.violet::before{background:linear-gradient(90deg,#8b5cf6,#a78bfa)}
+.k-label{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.k-value{font-family:var(--display);font-size:1.9rem;font-weight:700;letter-spacing:-.01em;line-height:1.1;margin:0}
+.k-value .u{font-size:1rem;color:var(--muted);font-family:var(--font);font-weight:600}
+.k-sub{font-size:12.5px;color:var(--muted);margin:6px 0 0}
+.k-sub .up{color:var(--up);font-weight:700}
+.k-sub .down{color:var(--down);font-weight:700}
+
+/* ---------- leaderboard ---------- */
+.lb-tabs{display:inline-flex;gap:4px;background:var(--hold-soft);padding:4px;border-radius:12px}
+.lb-tab{border:none;background:transparent;font:inherit;font-size:13px;font-weight:600;color:var(--muted);padding:7px 16px;border-radius:9px;cursor:pointer;transition:all .18s}
+.lb-tab.active{background:#fff;color:var(--ink);box-shadow:0 1px 4px rgba(15,23,42,.12)}
+.podium{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:14px;align-items:end;margin:0 0 18px}
+.pod{
+  background:var(--panel-glass);border:1px solid var(--line);border-radius:var(--radius);padding:18px;
+  text-align:center;backdrop-filter:blur(12px);box-shadow:var(--shadow);position:relative;
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.pod:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift)}
+.pod.p1{padding-top:26px;padding-bottom:26px;border:1.5px solid rgba(16,185,129,.45);background:linear-gradient(180deg,rgba(236,253,245,.9),rgba(255,255,255,.85))}
+.medal{font-size:30px;line-height:1;margin-bottom:8px}
+.pod-name{font-weight:800;font-size:15px;margin:0 0 2px}
+.pod-pipe{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.pod-score{font-family:var(--display);font-size:1.8rem;font-weight:700;margin:0}
+.pod-score.pos{color:var(--up)} .pod-score.neg{color:var(--down)}
+.pod-acc{font-size:12.5px;color:var(--muted);margin:4px 0 0}
+.table-card{background:var(--panel-glass);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);backdrop-filter:blur(12px);overflow:hidden}
+.table-scroll{overflow-x:auto}
+table.lb-table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:860px}
+.lb-table thead th{
+  text-align:left;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);
+  padding:12px 14px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);white-space:nowrap;position:sticky;top:0;
+}
+.lb-table th.sortable{cursor:pointer;user-select:none}
+.lb-table th.sortable:hover{color:var(--ink)}
+.lb-table th .arr{opacity:.4;font-size:10px}
+.lb-table th.sorted .arr{opacity:1;color:var(--accent-deep)}
+.lb-table tbody td{padding:11px 14px;border-bottom:1px solid var(--line-soft);vertical-align:middle;white-space:nowrap}
+.lb-table tbody tr{transition:background .15s}
+.lb-table tbody tr:hover{background:rgba(224,242,254,.35)}
+.lb-table tbody tr:last-child td{border-bottom:none}
+.rank-cell{font-weight:800;color:var(--faint);width:34px}
+.rank-cell.top{color:var(--amber)}
+.engine-cell{display:flex;align-items:center;gap:9px}
+.engine-cell .nm{font-weight:700}
+.tag{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:2.5px 7px;border-radius:6px}
+.tg-crash{background:#fef3c7;color:#b45309}
+.tg-llm{background:#ede9fe;color:#6d28d9}
+.tg-ppx{background:#e0f2fe;color:#0369a1}
+.tg-x{background:var(--hold-soft);color:var(--hold)}
+.score-cell{min-width:150px}
+.score-num{font-weight:800;font-variant-numeric:tabular-nums}
+.score-num.pos{color:var(--up)} .score-num.neg{color:var(--down)}
+.sbar{height:5px;border-radius:99px;background:var(--line-soft);margin-top:5px;overflow:hidden}
+.sbar>i{display:block;height:100%;border-radius:99px;width:0;transition:width .9s cubic-bezier(.2,.8,.2,1)}
+.sbar>i.pos{background:linear-gradient(90deg,#34d399,#10b981)}
+.sbar>i.neg{background:linear-gradient(90deg,#fb7185,#f43f5e)}
+.acc-cell{font-variant-numeric:tabular-nums}
+.acc-cell b{font-weight:700}
+.acc-cell .n{color:var(--faint);font-size:12px}
+.na{color:var(--faint)}
+
+/* ---------- overview chart ---------- */
+.chart-card{background:var(--panel-glass);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);backdrop-filter:blur(12px);padding:16px 10px 8px}
+.chart-lg{width:100%;height:430px}
+.chart-hint{font-size:12.5px;color:var(--faint);padding:0 14px 8px}
+
+/* ---------- date cards ---------- */
+.date-strip{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 14px;scrollbar-width:thin}
+.ds-btn{
+  flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:3px;
+  border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:8px 13px;
+  font:inherit;font-size:12.5px;font-weight:700;color:var(--ink-soft);cursor:pointer;transition:all .15s;box-shadow:var(--shadow);
+}
+.ds-btn:hover{transform:translateY(-1px)}
+.ds-btn.active{border-color:var(--accent);background:var(--accent-soft);color:var(--accent-deep)}
+.ds-btn .d{font-size:11px;color:var(--faint);font-weight:600}
+.ds-dots{display:flex;gap:3px}
+.ds-dot{width:6px;height:6px;border-radius:50%}
+.date-card{
+  background:var(--panel-glass);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);backdrop-filter:blur(12px);margin-bottom:18px;overflow:hidden;
+}
+.dc-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:16px 20px 12px;border-bottom:1px solid var(--line-soft)}
+.dc-date{font-family:var(--display);font-size:1.25rem;font-weight:700;margin:0}
+.dc-date .wd{color:var(--faint);font-size:.95rem;font-weight:600;margin-left:8px;font-family:var(--font)}
+.dc-badges{display:flex;gap:8px;flex-wrap:wrap}
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;padding:4px 11px;border-radius:99px}
+.pill.up{background:var(--up-soft);color:var(--up)}
+.pill.down{background:var(--down-soft);color:var(--down)}
+.pill.flat{background:var(--hold-soft);color:var(--hold)}
+.pill.amber{background:var(--amber-soft);color:var(--amber)}
+.dc-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.dc-sec{padding:16px 20px 18px}
+.dc-sec:first-child{border-right:1px solid var(--line-soft)}
+.ds-title{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.readout{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:0 0 10px}
+.ro-big{font-family:var(--display);font-size:1.7rem;font-weight:700;letter-spacing:-.01em}
+.ro-big.up{color:var(--up)} .ro-big.down{color:var(--down)} .ro-big.flat{color:var(--hold)}
+.ro-sub{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.chart{width:100%;height:190px}
+.ohlc-fallback{
+  height:190px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  background:linear-gradient(180deg,rgba(248,250,252,.6),rgba(241,245,249,.35));border:1px dashed var(--line);border-radius:var(--radius-sm);
+  font-size:12.5px;color:var(--muted);text-align:center;padding:10px;
+}
+.ohlc-fallback .vals{font-family:var(--mono);font-size:12px}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.chip{
+  display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--ink-soft);
+  border:1px solid var(--line);background:#fff;border-radius:99px;padding:4.5px 11px;cursor:default;
+  transition:transform .13s ease;
+}
+.chip:hover{transform:translateY(-1px)}
+.chip.ok{border-color:rgba(16,185,129,.5);background:var(--up-wash)}
+.chip.bad{border-color:rgba(244,63,94,.4);background:var(--down-wash)}
+.chip.pending{border-style:dashed;color:var(--faint)}
+.chip .sig{font-weight:800;font-size:10.5px;letter-spacing:.04em;padding:1.5px 6px;border-radius:5px}
+.sig.hold{background:var(--hold-soft);color:var(--hold)}
+.sig.sell{background:var(--sell-soft);color:var(--sell)}
+.chip .mark{font-weight:800}
+.chip.ok .mark{color:var(--up)} .chip.bad .mark{color:var(--down)} .chip.pending .mark{color:var(--amber)}
+.chip .pts{font-variant-numeric:tabular-nums;color:var(--muted)}
+.chip.ok .pts{color:var(--up)} .chip.bad .pts{color:var(--down)}
+
+/* ---------- heatmap ---------- */
+.hm-wrap{background:var(--panel-glass);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);backdrop-filter:blur(12px);padding:18px;overflow-x:auto}
+.hm-grid{display:grid;gap:4px;min-width:max-content}
+.hm-collabel{font-size:10.5px;font-weight:700;color:var(--faint);text-align:center;writing-mode:vertical-rl;transform:rotate(180deg);height:64px;justify-self:center;letter-spacing:.02em}
+.hm-rowlabel{font-size:12.5px;font-weight:700;color:var(--ink-soft);display:flex;align-items:center;gap:7px;padding-right:12px;white-space:nowrap}
+.hm-cell{position:relative;width:27px;height:27px;border-radius:5px;background:var(--line-soft)}
+.hm-cell .tri{position:absolute;inset:0;border-radius:5px}
+.tri.pre{clip-path:polygon(0 0,100% 0,0 100%)}
+.tri.intra{clip-path:polygon(100% 0,100% 100%,0 100%)}
+.tri.ok{background:var(--up-bright)}
+.tri.bad{background:var(--down-bright)}
+.tri.pending{background:repeating-linear-gradient(45deg,#fcd34d 0 3px,#fde68a 3px 6px)}
+.tri.none{background:transparent}
+.hm-cell.has-pre{border-top-left-radius:5px}
+.hm-legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px;font-size:12px;color:var(--muted);align-items:center}
+.hm-legend .sw{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.hm-legend .tri-demo{position:relative;display:inline-block;width:14px;height:14px;vertical-align:-2px;margin-right:5px}
+
+/* ---------- accuracy table ---------- */
+table.acc-table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:720px}
+.acc-table thead th{text-align:left;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);padding:12px 14px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);white-space:nowrap}
+.acc-table tbody td{padding:10px 14px;border-bottom:1px solid var(--line-soft);vertical-align:middle}
+.acc-table tbody tr:hover{background:rgba(224,242,254,.3)}
+.acc-table tr.pipe-row td{background:rgba(241,245,249,.7);font-weight:800;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.acc-table tr.subtotal td{font-weight:700;background:rgba(236,253,245,.5);border-top:1px solid var(--line)}
+.acc-table tr.total td{font-weight:800;background:rgba(224,242,254,.55);border-top:2px solid var(--line)}
+.abar{display:inline-block;vertical-align:middle;height:5px;border-radius:99px;background:linear-gradient(90deg,#34d399,#10b981);margin-left:8px;min-width:2px}
+
+/* ---------- explorer ---------- */
+.ex-filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;align-items:center}
+.ex-filters select,.ex-filters input[type=text]{
+  font:inherit;font-size:13px;font-weight:600;color:var(--ink-soft);
+  border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 12px;box-shadow:var(--shadow);outline:none;
+}
+.ex-filters input[type=text]{min-width:210px;font-weight:500}
+.ex-filters select:focus,.ex-filters input:focus{border-color:var(--accent)}
+.ex-count{font-size:12.5px;color:var(--muted);margin-left:auto}
+.ex-list{display:grid;gap:10px}
+.pcard{
+  background:var(--panel-glass);border:1px solid var(--line);border-radius:var(--radius-sm);
+  box-shadow:var(--shadow);backdrop-filter:blur(12px);padding:14px 16px;
+}
+.pc-head{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:8px}
+.pc-date{font-weight:800;font-size:13.5px}
+.pc-sess{font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--faint)}
+.pc-engine{font-weight:700;font-size:13px;color:var(--ink-soft)}
+.pc-verdict{margin-left:auto}
+.pc-cat{font-size:13.5px;color:var(--ink);margin:0 0 8px}
+.pcard details{font-size:13px;color:var(--muted)}
+.pcard summary{cursor:pointer;font-weight:700;font-size:12.5px;color:var(--accent-deep);list-style:none;display:inline-flex;align-items:center;gap:5px}
+.pcard summary::before{content:"▸";transition:transform .15s;display:inline-block}
+.pcard details[open] summary::before{transform:rotate(90deg)}
+.pcard details p{margin:8px 0 0;line-height:1.6}
+.pc-meta{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;padding-top:9px;border-top:1px dashed var(--line);font-size:11.5px;color:var(--faint);font-variant-numeric:tabular-nums}
+.confbar{display:inline-block;width:56px;height:5px;border-radius:99px;background:var(--line-soft);vertical-align:middle;overflow:hidden;margin-left:5px}
+.confbar>i{display:block;height:100%;background:linear-gradient(90deg,#0ea5e9,#10b981)}
+.ex-more{display:block;margin:16px auto 0}
+.stub-flag{font-size:10px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;background:var(--amber-soft);color:var(--amber);padding:2px 7px;border-radius:5px}
+
+/* ---------- footer ---------- */
+.foot{border-top:1px solid var(--line-soft);margin-top:56px;padding:34px 0 46px;background:rgba(255,255,255,.5)}
+.f-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.f-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);padding:16px 18px;box-shadow:var(--shadow)}
+.f-card h3{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 10px}
+.f-card p,.f-card li{font-size:13px;color:var(--muted);line-height:1.6;margin:0}
+.f-card ul{margin:0;padding-left:18px}
+.f-card code{font-family:var(--mono);font-size:11.5px;background:var(--accent-soft);color:var(--accent-deep);padding:1px 5px;border-radius:5px}
+.f-bottom{margin-top:22px;font-size:12px;color:var(--faint);text-align:center}
+
+/* ---------- toasts ---------- */
+#toasts{position:fixed;top:16px;right:16px;z-index:300;display:flex;flex-direction:column;gap:8px}
+.toast{
+  background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;
+  padding:11px 16px;font-size:13px;font-weight:600;color:var(--ink-soft);box-shadow:var(--shadow-lift);
+  animation:tin .3s ease;max-width:340px;
+}
+.toast.ok{border-left-color:var(--up-bright)}
+.toast.err{border-left-color:var(--down-bright)}
+@keyframes tin{from{opacity:0;transform:translateX(16px)}to{opacity:1;transform:none}}
+
+/* ---------- modal ---------- */
+.modal-bg{position:fixed;inset:0;z-index:250;background:rgba(15,23,42,.32);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:20px}
+.modal-bg.open{display:flex}
+.modal{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow-lift);max-width:460px;width:100%;padding:24px;animation:tin .25s ease}
+.m-head{font-family:var(--display);font-size:1.2rem;font-weight:700;margin:0 0 6px}
+.m-body{font-size:13.5px;color:var(--muted);line-height:1.6}
+.m-body code{font-family:var(--mono);font-size:11.5px;background:var(--accent-soft);color:var(--accent-deep);padding:1px 5px;border-radius:5px}
+.key-input{width:100%;font:inherit;font-family:var(--mono);font-size:13px;border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:12px 0 4px;outline:none}
+.key-input:focus{border-color:var(--accent)}
+.m-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:16px}
+
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .dc-grid{grid-template-columns:1fr}
+  .dc-sec:first-child{border-right:none;border-bottom:1px solid var(--line-soft)}
+  .podium{grid-template-columns:1fr;align-items:stretch}
+  .chart-lg{height:360px}
+}
+@media (max-width:640px){
+  .hero{padding-top:32px}
+  .k-value{font-size:1.55rem}
+  .ro-big{font-size:1.4rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ======================= LOADER ======================= -->
+<div id="loader">
+  <div class="ld-inner">
+    <div class="ld-logo">📈</div>
+    <p class="ld-title">QQQ Signal Arena</p>
+    <p class="ld-step" id="ldStep">Warming up…</p>
+    <div class="ld-bar"><i id="ldBar"></i></div>
+    <div class="ld-err" id="ldErr" style="display:none"></div>
+  </div>
+</div>
+
+<div id="toasts"></div>
+
+<!-- ======================= HERO ======================= -->
+<header class="hero wrap">
+  <p class="eyebrow">Live · Zero-backend · GitHub Pages</p>
+  <h1>QQQ Signal Arena</h1>
+  <p class="hero-sub" id="heroSub">Ranking news-driven trading engines: every HOLD / SELL call scored against the real QQQ move it predicted — pre-market calls vs the regular session, intraday calls vs the overnight gap.</p>
+  <div class="badges" id="heroBadges"></div>
+  <div class="hero-actions">
+    <button class="btn btn-primary" id="btnRefresh">⟳ Refresh data</button>
+    <label class="switch" title="crash-live warm-up stubs (&quot;No open catalysts.&quot;) are excluded by default">
+      <input type="checkbox" id="tgStubs"><span class="trk"></span>Include placeholder stubs
+    </label>
+    <label class="switch" title="Multiply each prediction's points by its confidence (0.55–1.0)">
+      <input type="checkbox" id="tgConf"><span class="trk"></span>Confidence-weighted score
+    </label>
+    <button class="btn btn-icon" id="btnSettings" title="Price source settings">⚙️</button>
+  </div>
+</header>
+
+<!-- ======================= SUBNAV ======================= -->
+<nav class="subnav">
+  <div class="sn-in" id="snIn">
+    <a class="sn-link" href="#kpis">Overview</a>
+    <a class="sn-link" href="#leaderboard">Leaderboard</a>
+    <a class="sn-link" href="#market">QQQ Market</a>
+    <a class="sn-link" href="#dates">By Date</a>
+    <a class="sn-link" href="#heatmap">Heatmap</a>
+    <a class="sn-link" href="#accuracy">Accuracy</a>
+    <a class="sn-link" href="#explorer">Explorer</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <!-- KPI -->
+  <section class="sec" id="kpis">
+    <div class="kpi-grid rv" id="kpiGrid"></div>
+  </section>
+
+  <!-- LEADERBOARD -->
+  <section class="sec" id="leaderboard">
+    <div class="sec-head">
+      <h2>🏆 Engine Leaderboard</h2>
+      <div class="lb-tabs" id="lbTabs">
+        <button class="lb-tab active" data-tab="engine">By Engine</button>
+        <button class="lb-tab" data-tab="model">By Model</button>
+        <button class="lb-tab" data-tab="pipeline">By Pipeline</button>
+      </div>
+    </div>
+    <div class="podium rv" id="podium"></div>
+    <div class="table-card rv"><div class="table-scroll">
+      <table class="lb-table" id="lbTable"></table>
+    </div></div>
+    <p class="chart-hint" style="padding:10px 4px 0">Ranked by <b>total weighted score</b>: each correct call earns the absolute session return in points, each wrong call loses it. Click column headers to re-sort.</p>
+  </section>
+
+  <!-- MARKET OVERVIEW -->
+  <section class="sec" id="market">
+    <div class="sec-head">
+      <h2>📊 QQQ Market Overview</h2>
+      <span class="sec-note">Daily candles · lower panel = net engine verdicts per day — click to jump to a date</span>
+    </div>
+    <div class="chart-card rv">
+      <div class="chart-lg" id="ovChart"></div>
+      <p class="chart-hint" id="ovHint"></p>
+    </div>
+  </section>
+
+  <!-- BY DATE -->
+  <section class="sec" id="dates">
+    <div class="sec-head">
+      <h2>📅 Predictions vs Reality, by Date</h2>
+      <span class="sec-note">Left: pre-market call vs regular session (open→close) · Right: intraday call vs overnight (close→next open)</span>
+    </div>
+    <div class="date-strip" id="dateStrip"></div>
+    <div id="dateCards"></div>
+  </section>
+
+  <!-- HEATMAP -->
+  <section class="sec" id="heatmap">
+    <div class="sec-head">
+      <h2>🗺️ Battle Heatmap</h2>
+      <span class="sec-note">Every engine × every date — upper-left triangle: pre-market · lower-right: intraday</span>
+    </div>
+    <div class="hm-wrap rv" id="hmWrap"></div>
+  </section>
+
+  <!-- ACCURACY -->
+  <section class="sec" id="accuracy">
+    <div class="sec-head">
+      <h2>🎯 Accuracy Summary</h2>
+      <span class="sec-note">Per pipeline &amp; model — HOLD, SELL and all signals</span>
+    </div>
+    <div class="table-card rv"><div class="table-scroll">
+      <table class="acc-table" id="accTable"></table>
+    </div></div>
+  </section>
+
+  <!-- EXPLORER -->
+  <section class="sec" id="explorer">
+    <div class="sec-head">
+      <h2>🔍 Prediction Explorer</h2>
+      <span class="sec-note">Every call, with catalyst, reasoning &amp; outcome</span>
+    </div>
+    <div class="ex-filters" id="exFilters"></div>
+    <div class="ex-list" id="exList"></div>
+    <button class="btn ex-more" id="exMore" style="display:none">Show more</button>
+  </section>
+
+</main>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-card">
+        <h3>Scoring methodology</h3>
+        <ul>
+          <li><b>pre-market</b> call on day D is judged against the <b>regular session</b>: <code>open(D) → close(D)</code>.</li>
+          <li><b>intraday</b> call on day D is judged against the <b>overnight gap</b>: <code>close(D) → open(next trading day)</code>.</li>
+          <li>HOLD is correct when the session <b>rises</b>; SELL is correct when it <b>drops</b>. Exactly flat = incorrect, 0 pts.</li>
+          <li><b>Weighted score</b> = ±|session return %| per call — a correct call before a 2% move earns 4× a 0.5% move; wrong calls deduct the same magnitude.</li>
+          <li>Duplicate runs are deduped per (engine, date, session), keeping the latest file. Calls whose outcome hasn't happened yet are <b>pending</b> and excluded from stats.</li>
+        </ul>
+      </div>
+      <div class="f-card">
+        <h3>Data sources</h3>
+        <ul>
+          <li>Predictions: read live from <code>input/</code> in this repo via the GitHub API on every page load — push new files, hit refresh.</li>
+          <li>Prices: QQQ daily OHLC + 30-min bars (incl. pre/post market) from Yahoo Finance, via a CORS fallback chain.</li>
+          <li>Optional: drop <code>input/qqq-prices.json</code> in the repo to serve prices straight from GitHub Pages (format: <code>{"daily":[{"date","open","high","low","close"}…]}</code>).</li>
+        </ul>
+      </div>
+      <div class="f-card">
+        <h3>Caveats</h3>
+        <ul>
+          <li>Signals are HOLD/SELL only — this measures <b>defensive timing</b>, not long-entry skill.</li>
+          <li>Engines differ in coverage (missing dates are not penalized; accuracy is over scored calls only).</li>
+          <li>crash-live placeholder stubs (<code>"No open catalysts."</code>) are excluded unless toggled on.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="f-bottom" id="footStamp">QQQ Signal Arena · generated client-side · no backend</p>
+  </div>
+</footer>
+
+<!-- ======================= SETTINGS MODAL ======================= -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <p class="m-head">⚙️ Price data source</p>
+    <div class="m-body">
+      <p style="margin:0 0 8px">Current source: <b id="mCurSrc">—</b></p>
+      <p style="margin:0">By default prices load from Yahoo Finance through a fallback chain. If that ever fails in your network, paste a free <a href="https://finnhub.io" target="_blank" rel="noopener">Finnhub</a> API key (stored only in this browser):</p>
+      <input class="key-input" id="keyInput" placeholder="Finnhub API key (optional)" autocomplete="off">
+      <p style="margin:6px 0 0;font-size:12px">Or commit <code>input/qqq-prices.json</code> — it is checked first and always wins.</p>
+    </div>
+    <div class="m-actions">
+      <button class="btn" id="mClear">Clear key</button>
+      <button class="btn" id="mClose">Close</button>
+      <button class="btn btn-primary" id="mSave">Save &amp; reload</button>
+    </div>
+  </div>
+</div>
+
+<script>
+"use strict";
+/* =================================================================
+   QQQ Signal Arena — client-side dashboard
+   ================================================================= */
+const $  = (s, r) => (r||document).querySelector(s);
+const $$ = (s, r) => Array.from((r||document).querySelectorAll(s));
+const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const pad2 = n => String(n).padStart(2, "0");
+const clamp = (v,a,b) => Math.max(a, Math.min(b, v));
+const fmtPct  = (v,d) => (v > 0 ? "+" : "") + v.toFixed(d == null ? 2 : d) + "%";
+const fmtPts  = v => (v > 0 ? "+" : "") + v.toFixed(2);
+const fmtNum  = (v,d) => v == null ? "—" : v.toFixed(d == null ? 2 : d);
+const UP = "#10b981", DOWN = "#f43f5e", GREY = "#94a3b8";
+
+const PIPE_META = {
+  "news-trader-crash-live": { short:"Crash", cls:"tg-crash" },
+  "news-trader-llm-live":   { short:"LLM",   cls:"tg-llm"   },
+  "news-trader-ppx-live":   { short:"PPX",   cls:"tg-ppx"   },
+};
+const pipeMeta = p => PIPE_META[p] || { short:p.replace(/^news-trader-|-live$/g,""), cls:"tg-x" };
+
+const S = {
+  files: [], predictions: [], engines: [], dates: [],
+  daily: new Map(), dayList: [], barsByDate: new Map(),
+  priceSource: "—", listSource: "—", refreshedAt: null,
+  includeStubs: false, confWeight: false,
+  lbTab: "engine", sortKey: "score", sortDir: -1,
+  engRows: [], modelRows: [], pipeRows: [], overall: null,
+  ex: { engine:"all", session:"all", signal:"all", result:"all", q:"", shown:60 },
+};
+
+/* ---------------- loader & toast ---------------- */
+function ldStep(t, frac){
+  $("#ldStep").textContent = t;
+  if (frac != null) $("#ldBar").style.width = Math.round(frac*100) + "%";
+}
+function ldDone(){
+  if (/[?&]instant\b/.test(location.search)) { $("#loader").style.display = "none"; return; }
+  $("#loader").classList.add("done");
+}
+function ldFatal(title, html){
+  $("#ldStep").textContent = title;
+  const e = $("#ldErr");
+  e.innerHTML = html + '<div style="margin-top:12px;text-align:center"><button class="btn btn-primary" onclick="location.reload()">Retry</button></div>';
+  e.style.display = "block";
+}
+function toast(msg, type){
+  const t = document.createElement("div");
+  t.className = "toast " + (type || "");
+  t.innerHTML = msg;
+  $("#toasts").appendChild(t);
+  setTimeout(() => { t.style.opacity = "0"; t.style.transition = "opacity .4s"; setTimeout(() => t.remove(), 420); }, 4200);
+}
+
+/* =================================================================
+   DATA LAYER — discover & load prediction files from input/
+   ================================================================= */
+const GH_API = "https://api.github.com/repos/ncelq/ncelq.github.io/contents";
+
+async function ghList(path){
+  const r = await fetch(`${GH_API}/${path}?ref=main`, {
+    headers: { "Accept": "application/vnd.github+json" },
+    cache: "no-store",
+  });
+  if (!r.ok) throw new Error("GitHub API " + r.status);
+  return r.json();
+}
+
+function pathsToFiles(paths){
+  return paths
+    .filter(n => n.replace(/^\//, "").startsWith("input/") && n.endsWith(".json") && !n.endsWith("manifest.json"))
+    .map(n => {
+      const parts = n.replace(/^\//, "").split("/");   // input/<pipeline>/<model>/<file>
+      if (parts.length !== 4) return null;
+      return { pipeline: parts[1], model: parts[2], name: parts[3], path: parts.join("/") };
+    })
+    .filter(Boolean);
+}
+
+async function discoverFiles(){
+  const errors = [];
+  // 1) GitHub Contents API — freshest, reflects the default branch immediately
+  try {
+    const pipes = (await ghList("input")).filter(x => x.type === "dir");
+    const out = [];
+    for (const p of pipes) {
+      const models = (await ghList(p.path)).filter(x => x.type === "dir");
+      for (const m of models) {
+        const fs = (await ghList(m.path)).filter(x => x.type === "file" && x.name.endsWith(".json"));
+        for (const f of fs) out.push({ pipeline: p.name, model: m.name, name: f.name, path: f.path });
+      }
+    }
+    if (out.length) { S.listSource = "GitHub API (live)"; return out; }
+    errors.push("GitHub API: input/ not found on remote yet");
+  } catch (e) { errors.push("GitHub API: " + e.message); }
+  // 2) jsDelivr flat listing — one request, may lag behind latest push
+  try {
+    const r = await fetch("https://data.jsdelivr.com/v1/packages/gh/ncelq/ncelq.github.io@main?structure=flat", { cache: "no-store" });
+    if (!r.ok) throw new Error("http " + r.status);
+    const j = await r.json();
+    const out = pathsToFiles(j.files.map(f => f.name));
+    if (out.length) { S.listSource = "jsDelivr listing"; return out; }
+    errors.push("jsDelivr: no input/ files listed");
+  } catch (e) { errors.push("jsDelivr: " + e.message); }
+  // 3) repo-local manifest (optional: run build-manifest.ps1) — also enables local dev
+  try {
+    const r = await fetch("manifest.json?cb=" + Date.now(), { cache: "no-store" });
+    if (!r.ok) throw new Error("http " + r.status);
+    const j = await r.json();
+    const out = pathsToFiles(j.files || []);
+    if (out.length) { S.listSource = "manifest.json (local)"; return out; }
+    errors.push("manifest.json: empty");
+  } catch (e) { errors.push("manifest.json: " + e.message); }
+  throw new Error("file discovery failed — " + errors.join(" · "));
+}
+
+const STUB_RE = /^no open catalysts\.?$/i;
+
+function normalizePred(j, f){
+  const reasoning = j.reasoning || "";
+  return {
+    engine: f.pipeline + "/" + f.model,
+    pipeline: f.pipeline,
+    model: f.model,
+    modelDisp: f.model.replace(/^cursor-/, ""),
+    date: j.date,
+    session: j.session,
+    signal: j.signal,
+    confidence: +j.confidence || 0,
+    threat: j.threat_level || "—",
+    catalyst: j.key_catalyst || "",
+    reasoning,
+    stub: STUB_RE.test(reasoning.trim()),
+    file: f.name,
+    ret: null, correct: null, score: null, excluded: false, nextDate: null,
+  };
+}
+
+async function fetchPredictions(files, onProg){
+  const out = [];
+  let i = 0, done = 0;
+  const POOL = 10;
+  const workers = Array.from({ length: POOL }, async () => {
+    while (i < files.length) {
+      const f = files[i++];
+      try {
+        const r = await fetch("../" + f.path + "?cb=" + Date.now(), { cache: "no-store" });
+        if (!r.ok) throw new Error("http " + r.status);
+        const j = await r.json();
+        if (j && j.date && j.session && j.signal) out.push(normalizePred(j, f));
+      } catch (e) { /* skip unreadable file */ }
+      done++;
+      if (onProg && (done % 8 === 0 || done === files.length)) onProg(done / files.length);
+    }
+  });
+  await Promise.all(workers);
+  return out;
+}
+
+function dedupePreds(preds){
+  const m = new Map();
+  for (const p of preds) {
+    const k = p.engine + "|" + p.date + "|" + p.session;
+    const cur = m.get(k);
+    if (!cur || p.file > cur.file) m.set(k, p);   // keep latest filename suffix
+  }
+  return Array.from(m.values());
+}
+
+/* =================================================================
+   PRICE LAYER — QQQ daily OHLC + 30-min bars (Yahoo, CORS chain)
+   ================================================================= */
+const YH = "https://query1.finance.yahoo.com/v8/finance/chart/QQQ";
+
+const Y_SOURCES = [
+  { name: "Yahoo Finance (direct)",      url: u => u },
+  { name: "Yahoo Finance · jina proxy",  url: u => "https://r.jina.ai/" + u },
+  { name: "Yahoo Finance · allorigins",  url: u => "https://api.allorigins.win/raw?url=" + encodeURIComponent(u) },
+  { name: "Yahoo Finance · codetabs",    url: u => "https://api.codetabs.com/v1/proxy?quest=" + encodeURIComponent(u) },
+];
+async function yahooFrom(src, url){
+  const r = await fetch(src.url(url), { cache: "no-store" });
+  if (!r.ok) throw new Error(src.name + " http " + r.status);
+  const t = await r.text();
+  const a = t.indexOf("{"), b = t.lastIndexOf("}");
+  if (a < 0 || b <= a) throw new Error(src.name + " bad payload");
+  return { j: JSON.parse(t.slice(a, b + 1)), src: src.name };
+}
+async function yahooFetch(url){
+  let lastErr;
+  for (const s of Y_SOURCES) {
+    try { return await yahooFrom(s, url); } catch (e) { lastErr = e; }
+  }
+  throw lastErr || new Error("all price sources unreachable");
+}
+// Daily candles MUST cover the newest prediction date; if a source returns
+// stale/truncated data, fall through to the next one.
+async function yahooDaily(url, needDate){
+  let lastErr, best = null;
+  for (const s of Y_SOURCES) {
+    try {
+      const { j, src } = await yahooFrom(s, url);
+      const res = j.chart && j.chart.result && j.chart.result[0];
+      const ts = res && res.timestamp || [];
+      const off = res.meta.gmtoffset == null ? -14400 : res.meta.gmtoffset;
+      const lastBar = ts.length ? etParts(ts[ts.length - 1], off).date : "";
+      if (!best) best = { j, src };
+      if (lastBar >= needDate) return { j, src };
+      lastErr = new Error(src + " stale (last bar " + lastBar + ")");
+    } catch (e) { lastErr = e; }
+  }
+  if (best) return best;   // accept best effort (e.g. prediction dated today, bar not published yet)
+  throw lastErr || new Error("daily candles unreachable");
+}
+
+function etParts(ts, off){
+  const d = new Date((ts + off) * 1000);
+  return {
+    date: d.getUTCFullYear() + "-" + pad2(d.getUTCMonth() + 1) + "-" + pad2(d.getUTCDate()),
+    hm: pad2(d.getUTCHours()) + ":" + pad2(d.getUTCMinutes()),
+  };
+}
+
+function parseDaily(j){
+  const res = j.chart && j.chart.result && j.chart.result[0];
+  if (!res) throw new Error("bad daily payload");
+  const meta = res.meta || {};
+  const off = meta.gmtoffset == null ? -14400 : meta.gmtoffset;
+  const ts = res.timestamp || [];
+  const q = res.indicators.quote[0];
+  const livePrice = meta.regularMarketPrice != null ? meta.regularMarketPrice : null;
+  const liveDate = meta.regularMarketTime ? etParts(meta.regularMarketTime, off).date : null;
+  S.daily.clear();
+  for (let i = 0; i < ts.length; i++) {
+    const d = etParts(ts[i], off).date;
+    let o = q.open[i], h = q.high ? q.high[i] : null, l = q.low ? q.low[i] : null, c = q.close[i];
+    let live = false;
+    // Proxies sometimes serve a snapshot whose newest bar has null close
+    // (day still "in progress" in the snapshot) — backfill from meta's live price.
+    if (c == null && o != null && livePrice != null && liveDate === d) {
+      c = livePrice;
+      if (h == null) h = Math.max(o, c);
+      if (l == null) l = Math.min(o, c);
+      live = true;
+    }
+    if (o == null) continue;
+    S.daily.set(d, { open: o, high: h, low: l, close: c, volume: q.volume ? q.volume[i] : null, live });
+  }
+  S.dayList = Array.from(S.daily.keys()).sort();
+}
+
+function parseBars(j){
+  const res = j.chart && j.chart.result && j.chart.result[0];
+  if (!res) { S.barsByDate = new Map(); return; }
+  const off = res.meta.gmtoffset == null ? -14400 : res.meta.gmtoffset;
+  const ts = res.timestamp || [];
+  const q = res.indicators.quote[0];
+  const closes = q.close;
+  const map = new Map();
+  for (let i = 0; i < ts.length; i++) {
+    if (closes[i] == null) continue;
+    const p = etParts(ts[i], off);
+    if (!map.has(p.date)) map.set(p.date, []);
+    map.get(p.date).push({ hm: p.hm, c: closes[i] });
+  }
+  S.barsByDate = map;
+}
+
+async function fetchFinnhub(key, p1, p2){
+  const base = "https://finnhub.io/api/v1/stock/candle?symbol=QQQ&from=" + p1 + "&to=" + p2 + "&token=" + encodeURIComponent(key);
+  const [dR, bR] = await Promise.all([
+    fetch(base + "&resolution=D", { cache: "no-store" }),
+    fetch(base + "&resolution=30", { cache: "no-store" }),
+  ]);
+  if (!dR.ok) throw new Error("finnhub daily " + dR.status);
+  const d = await dR.json();
+  if (d.s !== "ok" || !d.t || !d.t.length) throw new Error("finnhub: no daily data");
+  S.daily.clear();
+  for (let i = 0; i < d.t.length; i++) {
+    const dt = new Date(d.t[i] * 1000);
+    const ds = dt.getUTCFullYear() + "-" + pad2(dt.getUTCMonth() + 1) + "-" + pad2(dt.getUTCDate());
+    S.daily.set(ds, { open: d.o[i], high: d.h[i], low: d.l[i], close: d.c[i], volume: d.v ? d.v[i] : null });
+  }
+  S.dayList = Array.from(S.daily.keys()).sort();
+  const b = await bR.json().catch(() => null);
+  const map = new Map();
+  if (b && b.s === "ok" && b.t) {
+    // Finnhub bars are epoch seconds in ET market time — convert with fixed EDT offset approximation via daily meta unknown; use America/New_York via Intl
+    const fmt = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false });
+    for (let i = 0; i < b.t.length; i++) {
+      if (b.c[i] == null) continue;
+      const parts = fmt.format(new Date(b.t[i] * 1000)); // "2026-07-28, 16:00"
+      const m = parts.match(/(\d{4}-\d{2}-\d{2}), (\d{2}):(\d{2})/);
+      if (!m) continue;
+      if (!map.has(m[1])) map.set(m[1], []);
+      map.get(m[1]).push({ hm: m[2] + ":" + m[3], c: b.c[i] });
+    }
+  }
+  S.barsByDate = map;
+  S.priceSource = "Finnhub (API key)";
+}
+
+async function fetchPrices(){
+  const minD = S.dates[0], maxD = S.dates[S.dates.length - 1];
+  const t0 = new Date(minD + "T00:00:00Z").getTime();
+  const t1 = new Date(maxD + "T00:00:00Z").getTime();
+  const p1 = Math.floor((t0 - 10 * 864e5) / 1000);
+  const nowDayMs = Math.floor(Date.now() / 864e5) * 864e5;           // UTC midnight today (stable URL within the day)
+  const p2 = Math.floor(Math.min(nowDayMs + 86399000, t1 + 10 * 864e5) / 1000);
+
+  // 0) repo-local override always wins
+  try {
+    const r = await fetch("../input/qqq-prices.json?cb=" + Date.now(), { cache: "no-store" });
+    if (r.ok) {
+      const j = await r.json();
+      if (j && Array.isArray(j.daily) && j.daily.length) {
+        S.daily.clear();
+        for (const d of j.daily) {
+          if (d && d.date && d.open != null && d.close != null)
+            S.daily.set(d.date, { open: d.open, high: d.high, low: d.low, close: d.close, volume: d.volume || null });
+        }
+        S.dayList = Array.from(S.daily.keys()).sort();
+        S.barsByDate = new Map();
+        S.priceSource = "input/qqq-prices.json (repo)";
+        return;
+      }
+    }
+  } catch (e) {}
+
+  // 1) optional Finnhub key
+  const key = (localStorage.getItem("qa_finnhub") || "").trim();
+  if (key) {
+    try { await fetchFinnhub(key, p1, p2); return; }
+    catch (e) { toast("Finnhub failed (" + esc(e.message) + ") — falling back to Yahoo chain", "err"); }
+  }
+
+  // 2) Yahoo chain: daily first (critical), then 30m bars (optional).
+  // Requests are serialized — parallel hits can make the reader proxy serve
+  // a stale cached body for one of them.
+  const dUrl = `${YH}?period1=${p1}&period2=${p2}&interval=1d`;
+  const bUrl = `${YH}?range=1mo&interval=30m&includePrePost=true`;
+  const dRes = await yahooDaily(dUrl, maxD);
+  parseDaily(dRes.j);
+  S.priceSource = dRes.src;
+  try {
+    const bRes = await yahooFetch(bUrl);
+    parseBars(bRes.j);
+  } catch (e) {
+    S.barsByDate = new Map();   // charts fall back to OHLC glyphs
+  }
+}
+
+function nextTradingDay(date){
+  const i = S.dayList.indexOf(date);
+  return i >= 0 && i < S.dayList.length - 1 ? S.dayList[i + 1] : null;
+}
+
+/* =================================================================
+   SCORING
+   pre-market call  → open(D) → close(D)
+   intraday call    → close(D) → open(next trading day)
+   HOLD correct if rise · SELL correct if drop · score = ±|ret%|
+   ================================================================= */
+function scoreAll(){
+  for (const p of S.predictions) {
+    p.ret = null; p.correct = null; p.score = null; p.nextDate = null;
+    p.excluded = p.stub && !S.includeStubs;
+    if (p.excluded) continue;
+    const d = S.daily.get(p.date);
+    if (p.session === "pre-market") {
+      if (!d || d.open == null || d.close == null) continue;      // pending
+      p.ret = (d.close - d.open) / d.open * 100;
+    } else {
+      const nd = nextTradingDay(p.date);
+      const n = nd ? S.daily.get(nd) : null;
+      if (!d || !n || d.close == null || n.open == null) continue; // pending
+      p.nextDate = nd;
+      p.ret = (n.open - d.close) / d.close * 100;
+    }
+    p.correct = p.signal === "HOLD" ? p.ret > 0 : p.ret < 0;
+    let sc = p.correct ? Math.abs(p.ret) : -Math.abs(p.ret);
+    if (S.confWeight) sc *= p.confidence;
+    p.score = sc;
+  }
+}
+
+function aggFor(preds){
+  const a = {
+    n: 0, scoredN: 0, correct: 0, score: 0, pending: 0,
+    hold: { n: 0, correct: 0, acc: null },
+    sell: { n: 0, correct: 0, acc: null },
+    acc: null, avg: null,
+  };
+  for (const p of preds) {
+    if (p.excluded) continue;
+    a.n++;
+    if (p.correct == null) { a.pending++; continue; }
+    a.scoredN++;
+    if (p.correct) a.correct++;
+    a.score += p.score;
+    const b = p.signal === "HOLD" ? a.hold : a.sell;
+    b.n++;
+    if (p.correct) b.correct++;
+  }
+  a.acc  = a.scoredN ? a.correct / a.scoredN * 100 : null;
+  a.avg  = a.scoredN ? a.score / a.scoredN : null;
+  a.hold.acc = a.hold.n ? a.hold.correct / a.hold.n * 100 : null;
+  a.sell.acc = a.sell.n ? a.sell.correct / a.sell.n * 100 : null;
+  return a;
+}
+
+function buildAggs(){
+  const byEng = new Map(), byModel = new Map(), byPipe = new Map();
+  for (const p of S.predictions) {
+    if (!byEng.has(p.engine)) byEng.set(p.engine, []);
+    byEng.get(p.engine).push(p);
+    if (!byModel.has(p.modelDisp)) byModel.set(p.modelDisp, []);
+    byModel.get(p.modelDisp).push(p);
+    if (!byPipe.has(p.pipeline)) byPipe.set(p.pipeline, []);
+    byPipe.get(p.pipeline).push(p);
+  }
+  S.engRows = Array.from(byEng, ([id, preds]) => ({
+    id, name: preds[0].modelDisp, pipeline: preds[0].pipeline, preds, a: aggFor(preds),
+  }));
+  S.modelRows = Array.from(byModel, ([id, preds]) => ({
+    id, name: id, pipeline: null, preds, a: aggFor(preds),
+  }));
+  S.pipeRows = Array.from(byPipe, ([id, preds]) => ({
+    id, name: pipeMeta(id).short, pipeline: id, preds, a: aggFor(preds),
+  }));
+  S.overall = aggFor(S.predictions);
+  S.engines = S.engRows.map(r => r.id).sort();
+}
+
+function dayVerdict(date){
+  let c = 0, w = 0, p = 0;
+  for (const pr of S.predictions) {
+    if (pr.date !== date || pr.excluded) continue;
+    if (pr.correct == null) p++;
+    else if (pr.correct) c++;
+    else w++;
+  }
+  return { c, w, p };
+}
+
+/* =================================================================
+   RENDER — hero & KPIs
+   ================================================================= */
+function countUp(el, target, fmt, dur){
+  const t0 = performance.now(), D = dur || 850;
+  function tick(t){
+    const k = clamp((t - t0) / D, 0, 1);
+    const e = 1 - Math.pow(1 - k, 3);
+    el.innerHTML = fmt(target * e);
+    if (k < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+function renderHero(){
+  const nFiles = S.files.length;
+  const nPreds = S.predictions.length;
+  const nStubs = S.predictions.filter(p => p.stub).length;
+  const d0 = S.dates[0], d1 = S.dates[S.dates.length - 1];
+  const first = S.daily.get(d0), last = S.daily.get(d1);
+  let move = null;
+  if (first && last) move = (last.close - first.open) / first.open * 100;
+  $("#heroBadges").innerHTML = [
+    `<span class="badge"><span class="dot"></span>${nFiles} files · ${nPreds} unique calls${nStubs ? ` · ${nStubs} stubs ${S.includeStubs ? "included" : "excluded"}` : ""} · via ${esc(S.listSource)}</span>`,
+    `<span class="badge">🗓 ${esc(d0)} → ${esc(d1)} · ${S.dates.length} sessions</span>`,
+    `<span class="badge">⚙ ${S.engRows.length} engines · ${S.pipeRows.length} pipelines</span>`,
+    `<span class="badge${S.priceSource.includes("proxy") || S.priceSource.includes("jina") ? " warn" : ""}">💹 ${esc(S.priceSource)}</span>`,
+    move != null ? `<span class="badge">QQQ period <b style="color:${move >= 0 ? "var(--up)" : "var(--down)"}">&nbsp;${fmtPct(move)}</b></span>` : "",
+    `<span class="badge">🕒 refreshed ${esc(S.refreshedAt || "")}</span>`,
+  ].join("");
+}
+
+function renderKPIs(){
+  const o = S.overall;
+  const best = S.engRows.slice().sort((x, y) => y.a.score - x.a.score)[0];
+  const d0 = S.dates[0], d1 = S.dates[S.dates.length - 1];
+  const first = S.daily.get(d0), last = S.daily.get(d1);
+  const move = first && last ? (last.close - first.open) / first.open * 100 : null;
+  const cards = [
+    { cls:"",        label:"Engines competing", value:S.engRows.length, fmt:v=>Math.round(v), sub:`${S.pipeRows.length} pipelines · ${new Set(S.predictions.map(p=>p.modelDisp)).size} models` },
+    { cls:"violet",  label:"Scored calls",      value:o.scoredN, fmt:v=>Math.round(v), sub:`${o.n} total · ${o.pending} pending outcome` },
+    { cls:o.acc >= 50 ? "up" : "down", label:"Overall accuracy", value:o.acc || 0, fmt:v=>v.toFixed(1)+'<span class="u">%</span>',
+      sub:`${o.correct}/${o.scoredN} correct · HOLD ${o.hold.acc == null ? "—" : o.hold.acc.toFixed(0)+"%"} · SELL ${o.sell.acc == null ? "—" : o.sell.acc.toFixed(0)+"%"}` },
+    { cls:o.score >= 0 ? "up" : "down", label:"Total weighted score", value:o.score, fmt:v=>fmtPts(v)+'<span class="u"> pts</span>',
+      sub:`avg ${o.avg == null ? "—" : fmtPts(o.avg)} pts per scored call${S.confWeight ? " · confidence-weighted" : ""}` },
+    { cls:"amber",   label:"Top engine", value:0, custom: best ? `<div style="font-size:1.05rem;font-weight:800;line-height:1.25">${esc(best.name)}</div><div style="margin-top:2px"><span class="tag ${pipeMeta(best.pipeline).cls}">${pipeMeta(best.pipeline).short}</span> <b style="color:${best.a.score >= 0 ? "var(--up)" : "var(--down)"}">${fmtPts(best.a.score)} pts</b></div>` : "—",
+      sub: best ? `${best.a.acc == null ? "—" : best.a.acc.toFixed(1) + "%"} acc over ${best.a.scoredN} calls` : "" },
+    { cls:move == null ? "" : move >= 0 ? "up" : "down", label:"QQQ over window", value:move || 0, fmt:v=>fmtPct(v),
+      custom: move == null ? '<span class="na">—</span>' : null,
+      sub: first && last ? `${fmtNum(first.open)} → ${fmtNum(last.close)} (${d0.slice(5)} → ${d1.slice(5)})` : "price data pending" },
+  ];
+  $("#kpiGrid").innerHTML = cards.map(c => `
+    <div class="kpi ${c.cls}">
+      <p class="k-label">${c.label}</p>
+      <p class="k-value" ${c.custom ? 'style="font-size:1rem"' : ""}></p>
+      <p class="k-sub">${c.sub}</p>
+    </div>`).join("");
+  $$(".kpi", $("#kpiGrid")).forEach((el, i) => {
+    const vEl = $(".k-value", el);
+    if (cards[i].custom) vEl.innerHTML = cards[i].custom;
+    else countUp(vEl, cards[i].value, cards[i].fmt);
+  });
+}
+
+/* =================================================================
+   RENDER — leaderboard
+   ================================================================= */
+function lbRows(){
+  return S.lbTab === "engine" ? S.engRows : S.lbTab === "model" ? S.modelRows : S.pipeRows;
+}
+function sortRows(rows){
+  const k = S.sortKey, dir = S.sortDir;
+  const get = r => {
+    switch (k) {
+      case "name": return r.name.toLowerCase();
+      case "n": return r.a.scoredN;
+      case "score": return r.a.score;
+      case "avg": return r.a.avg == null ? -Infinity : r.a.avg;
+      case "acc": return r.a.acc == null ? -Infinity : r.a.acc;
+      case "hold": return r.a.hold.acc == null ? -Infinity : r.a.hold.acc;
+      case "sell": return r.a.sell.acc == null ? -Infinity : r.a.sell.acc;
+      default: return r.a.score;
+    }
+  };
+  return rows.slice().sort((a, b) => {
+    const va = get(a), vb = get(b);
+    let cmp = typeof va === "string" ? va.localeCompare(vb) * dir : (va - vb) * dir;
+    if (cmp === 0) cmp = b.a.scoredN - a.a.scoredN;   // tie-breaks are direction-independent
+    if (cmp === 0) cmp = a.id.localeCompare(b.id);
+    return cmp;
+  });
+}
+
+function accCell(acc, correct, n){
+  if (acc == null || !n) return '<span class="na">—</span>';
+  return `<b>${acc.toFixed(0)}%</b> <span class="n">${correct}/${n}</span>`;
+}
+
+function renderPodium(rows){
+  const top = sortRows(rows).filter(r => r.a.scoredN > 0).slice(0, 3);
+  const wrap = $("#podium");
+  if (S.lbTab !== "engine" || top.length < 3) { wrap.style.display = "none"; wrap.innerHTML = ""; return; }
+  wrap.style.display = "";
+  const medals = ["🥇", "🥈", "🥉"];
+  const order = [1, 0, 2]; // silver, gold, bronze for visual layout
+  wrap.innerHTML = order.map(i => {
+    const r = top[i];
+    if (!r) return "<div></div>";
+    const pm = pipeMeta(r.pipeline);
+    return `<div class="pod p${i + 1}">
+      <div class="medal">${medals[i]}</div>
+      <p class="pod-name">${esc(r.name)}</p>
+      <p class="pod-pipe"><span class="tag ${pm.cls}">${pm.short}</span></p>
+      <p class="pod-score ${r.a.score >= 0 ? "pos" : "neg"}">${fmtPts(r.a.score)}</p>
+      <p class="pod-acc">${r.a.acc == null ? "—" : r.a.acc.toFixed(1) + "% accuracy"} · ${r.a.scoredN} calls</p>
+    </div>`;
+  }).join("");
+}
+
+function renderLeaderboard(){
+  const rows = lbRows();
+  renderPodium(rows);
+  const sorted = sortRows(rows);
+  const maxAbs = Math.max(1e-9, ...sorted.map(r => Math.abs(r.a.score)));
+  const cols = [
+    { k: null,    label: "#" },
+    { k: "name",  label: S.lbTab === "pipeline" ? "Pipeline" : S.lbTab === "model" ? "Model" : "Engine" },
+    { k: "n",     label: "Calls" },
+    { k: "score", label: "Weighted score" },
+    { k: "avg",   label: "Avg / call" },
+    { k: "acc",   label: "Acc · all" },
+    { k: "hold",  label: "Acc · HOLD" },
+    { k: "sell",  label: "Acc · SELL" },
+  ];
+  const thead = `<thead><tr>${cols.map(c =>
+    c.k ? `<th class="sortable ${S.sortKey === c.k ? "sorted" : ""}" data-k="${c.k}">${c.label} <span class="arr">${S.sortKey === c.k ? (S.sortDir < 0 ? "▼" : "▲") : "▼"}</span></th>`
+        : `<th>${c.label}</th>`).join("")}</tr></thead>`;
+  const body = sorted.map((r, i) => {
+    const pm = r.pipeline ? pipeMeta(r.pipeline) : null;
+    const nameCell = r.pipeline
+      ? `<div class="engine-cell"><span class="tag ${pm.cls}">${pm.short}</span><span class="nm">${esc(r.name)}</span></div>`
+      : `<div class="engine-cell"><span class="nm">${esc(r.name)}</span></div>`;
+    const w = clamp(Math.abs(r.a.score) / maxAbs * 100, 1.5, 100);
+    return `<tr>
+      <td class="rank-cell ${i < 3 ? "top" : ""}">${i + 1}</td>
+      <td>${nameCell}</td>
+      <td class="acc-cell"><b>${r.a.scoredN}</b>${r.a.pending ? ` <span class="n">+${r.a.pending}⏳</span>` : ""}</td>
+      <td class="score-cell"><span class="score-num ${r.a.score >= 0 ? "pos" : "neg"}">${fmtPts(r.a.score)}</span><div class="sbar"><i class="${r.a.score >= 0 ? "pos" : "neg"}" data-w="${w}"></i></div></td>
+      <td class="acc-cell">${r.a.avg == null ? '<span class="na">—</span>' : `<b class="${r.a.avg >= 0 ? "" : ""}" style="color:${r.a.avg >= 0 ? "var(--up)" : "var(--down)"}">${fmtPts(r.a.avg)}</b>`}</td>
+      <td class="acc-cell">${accCell(r.a.acc, r.a.correct, r.a.scoredN)}</td>
+      <td class="acc-cell">${accCell(r.a.hold.acc, r.a.hold.correct, r.a.hold.n)}</td>
+      <td class="acc-cell">${accCell(r.a.sell.acc, r.a.sell.correct, r.a.sell.n)}</td>
+    </tr>`;
+  }).join("");
+  $("#lbTable").innerHTML = thead + `<tbody>${body}</tbody>`;
+  requestAnimationFrame(() => $$(".sbar>i", $("#lbTable")).forEach(b => b.style.width = b.dataset.w + "%"));
+  $$("#lbTable th.sortable").forEach(th => th.addEventListener("click", () => {
+    const k = th.dataset.k;
+    if (S.sortKey === k) S.sortDir *= -1;
+    else { S.sortKey = k; S.sortDir = k === "name" ? 1 : -1; }
+    renderLeaderboard();
+  }));
+}
+
+/* =================================================================
+   RENDER — market overview (candlestick + daily verdicts)
+   ================================================================= */
+function renderOverview(){
+  const el = $("#ovChart");
+  const inst = echarts.getInstanceByDom(el) || echarts.init(el);
+  const cats = S.dayList.filter(d => d >= S.dates[0] && d <= S.dates[S.dates.length - 1]);
+  if (!cats.length) { $("#ovHint").textContent = "No price data in the prediction window."; return; }
+  const ohlc = cats.map(d => { const v = S.daily.get(d); return [v.open, v.close, v.low, v.high]; });
+  const cor = [], wrg = [], pen = [];
+  cats.forEach(d => { const v = dayVerdict(d); cor.push(v.c); wrg.push(-v.w); pen.push(v.p); });
+  $("#ovHint").textContent = `QQQ ${cats[0]} → ${cats[cats.length - 1]} · green/red bars = correct/wrong engine calls that day (both sessions, above/below zero).`;
+  inst.setOption({
+    animationDuration: 600,
+    grid: [
+      { left: 56, right: 18, top: 26, height: "56%" },
+      { left: 56, right: 18, top: "72%", height: "18%" },
+    ],
+    xAxis: [
+      { type: "category", data: cats, gridIndex: 0, axisLabel: { color: "#94a3b8", fontSize: 11 }, axisLine: { lineStyle: { color: "#e2e8f0" } } },
+      { type: "category", data: cats, gridIndex: 1, axisLabel: { show: false }, axisTick: { show: false }, axisLine: { show: false } },
+    ],
+    yAxis: [
+      { scale: true, gridIndex: 0, splitLine: { lineStyle: { color: "#eef2f7" } }, axisLabel: { color: "#94a3b8", fontSize: 11 } },
+      { gridIndex: 1, splitLine: { show: false }, axisLabel: { show: false }, splitNumber: 2 },
+    ],
+    tooltip: {
+      trigger: "axis", axisPointer: { type: "cross" },
+      backgroundColor: "rgba(255,255,255,.96)", borderColor: "#e2e8f0", textStyle: { color: "#0f172a", fontSize: 12 },
+      formatter: ps => {
+        const d = ps[0].name;
+        const v = S.daily.get(d);
+        const vd = dayVerdict(d);
+        let h = `<b>${d}</b><br>O ${fmtNum(v.open)} · H ${fmtNum(v.high)} · L ${fmtNum(v.low)} · C ${fmtNum(v.close)}`;
+        const oc = (v.close - v.open) / v.open * 100;
+        h += `<br>Session: <b style="color:${oc >= 0 ? UP : DOWN}">${fmtPct(oc)}</b>`;
+        h += `<br>Calls: <b style="color:${UP}">${vd.c} ✓</b> / <b style="color:${DOWN}">${vd.w} ✗</b>${vd.p ? ` / ${vd.p} ⏳` : ""}`;
+        return h;
+      },
+    },
+    series: [
+      {
+        name: "QQQ", type: "candlestick", data: ohlc, xAxisIndex: 0, yAxisIndex: 0,
+        itemStyle: { color: "#d1fae5", color0: "#ffe4e6", borderColor: UP, borderColor0: DOWN, borderWidth: 1.4 },
+      },
+      { name: "Correct", type: "bar", stack: "v", data: cor, xAxisIndex: 1, yAxisIndex: 1, itemStyle: { color: UP, borderRadius: [3, 3, 0, 0] }, barWidth: "55%" },
+      { name: "Wrong", type: "bar", stack: "v", data: wrg, xAxisIndex: 1, yAxisIndex: 1, itemStyle: { color: DOWN, borderRadius: [0, 0, 3, 3] }, barWidth: "55%" },
+    ],
+  }, true);
+  inst.off("click");
+  inst.on("click", p => {
+    if (p.name) {
+      const t = document.getElementById("dc-" + p.name);
+      if (t) { t.scrollIntoView({ behavior: "smooth", block: "start" }); flashCard(t); }
+    }
+  });
+}
+
+function flashCard(el){
+  el.style.transition = "box-shadow .3s";
+  el.style.boxShadow = "0 0 0 3px rgba(14,165,233,.5)";
+  setTimeout(() => el.style.boxShadow = "", 1400);
+}
+
+/* =================================================================
+   RENDER — per-date cards (pre-market vs intraday sections)
+   ================================================================= */
+function datePretty(iso, withYear){
+  return new Date(iso + "T12:00:00Z").toLocaleDateString("en-US",
+    { weekday: "short", month: "short", day: "numeric", ...(withYear ? { year: "numeric" } : {}), timeZone: "UTC" });
+}
+
+function sigPill(sig){ return `<b class="sig ${sig.toLowerCase()}">${sig}</b>`; }
+
+function chipsHTML(date, session){
+  const ps = S.predictions
+    .filter(p => p.date === date && p.session === session)
+    .sort((a, b) => (b.score == null ? -1e9 : b.score) - (a.score == null ? -1e9 : a.score));
+  if (!ps.length) return '<span class="faint" style="font-size:12.5px">No signals</span>';
+  return ps.map(p => {
+    if (p.excluded)
+      return `<span class="chip pending" title="${esc(p.file)} — placeholder stub excluded from scoring"><i class="tag ${pipeMeta(p.pipeline).cls}">${pipeMeta(p.pipeline).short}</i>${esc(p.modelDisp)} ${sigPill(p.signal)}<span class="mark">◌</span><span class="pts">stub</span></span>`;
+    const cls = p.correct == null ? "pending" : p.correct ? "ok" : "bad";
+    const mark = p.correct == null ? "⏳" : p.correct ? "✓" : "✗";
+    const pts = p.score == null ? "" : fmtPts(p.score);
+    const tip = (p.catalyst || p.reasoning || "").slice(0, 220);
+    return `<span class="chip ${cls}" title="${esc(tip)}"><i class="tag ${pipeMeta(p.pipeline).cls}">${pipeMeta(p.pipeline).short}</i>${esc(p.modelDisp)} ${sigPill(p.signal)}<span class="mark">${mark}</span><span class="pts">${pts}</span></span>`;
+  }).join("");
+}
+
+function readoutA(date){
+  const d = S.daily.get(date);
+  if (!d) return `<div class="readout"><span class="ro-big flat">⏳ no price bar</span></div>`;
+  const r = (d.close - d.open) / d.open * 100;
+  const cls = r > 0 ? "up" : r < 0 ? "down" : "flat";
+  return `<div class="readout">
+    <span class="ro-big ${cls}">${fmtPct(r)}</span>
+    <span class="ro-sub">open <b>${fmtNum(d.open)}</b> → close <b>${fmtNum(d.close)}</b> · hi ${fmtNum(d.high)} · lo ${fmtNum(d.low)}</span>
+  </div>`;
+}
+
+function readoutB(date){
+  const d = S.daily.get(date);
+  const nd = nextTradingDay(date);
+  const n = nd ? S.daily.get(nd) : null;
+  if (!d || !n || n.open == null)
+    return `<div class="readout"><span class="ro-big flat">⏳ awaiting next open</span><span class="ro-sub">close <b>${d ? fmtNum(d.close) : "—"}</b> → open of next trading day not available yet</span></div>`;
+  const r = (n.open - d.close) / d.close * 100;
+  const cls = r > 0 ? "up" : r < 0 ? "down" : "flat";
+  return `<div class="readout">
+    <span class="ro-big ${cls}">${fmtPct(r)}</span>
+    <span class="ro-sub">close <b>${fmtNum(d.close)}</b> → open <b>${fmtNum(n.open)}</b> <span class="faint">(${esc(nd)})</span></span>
+  </div>`;
+}
+
+function fallbackGlyph(date, kind){
+  const d = S.daily.get(date);
+  const nd = nextTradingDay(date);
+  const n = nd ? S.daily.get(nd) : null;
+  if (kind === "B" && (!n || n.open == null)) {
+    return `<div class="ohlc-fallback"><div>🌙 overnight outcome pending<br><span class="faint">(next trading day's open hasn't happened yet)</span></div><div class="vals">${d ? "C " + fmtNum(d.close) + " → next open pending" : ""}</div></div>`;
+  }
+  let vals = "";
+  if (kind === "A" && d) vals = `O ${fmtNum(d.open)} · H ${fmtNum(d.high)} · L ${fmtNum(d.low)} · C ${fmtNum(d.close)}`;
+  else if (kind === "B" && d) vals = `C ${fmtNum(d.close)} → O ${fmtNum(n.open)} (${nd})`;
+  return `<div class="ohlc-fallback"><div>📉 intraday curve unavailable<br><span class="faint">(30-min bars could not be loaded)</span></div><div class="vals">${esc(vals)}</div></div>`;
+}
+
+function hasECharts(){ return typeof echarts !== "undefined"; }
+
+function chartA(el, date){
+  if (!hasECharts()) { el.innerHTML = fallbackGlyph(date, "A"); return; }
+  const bars = (S.barsByDate.get(date) || []).filter(b => b.hm >= "04:00" && b.hm <= "15:30");
+  const d = S.daily.get(date);
+  if (bars.length < 4 || !d) { el.innerHTML = fallbackGlyph(date, "A"); return; }
+  const cats = bars.map(b => b.hm);
+  const pre = bars.map(b => b.hm <= "09:30" ? b.c : null);
+  const reg = bars.map(b => b.hm >= "09:30" ? b.c : null);
+  const r = (d.close - d.open) / d.open * 100;
+  const col = r >= 0 ? UP : DOWN;
+  const inst = echarts.getInstanceByDom(el) || echarts.init(el);
+  inst.setOption({
+    animationDuration: 500,
+    grid: { left: 46, right: 12, top: 14, bottom: 20 },
+    xAxis: { type: "category", data: cats, boundaryGap: false,
+      axisLabel: { color: "#94a3b8", fontSize: 10, interval: (i, v) => ["04:00","07:00","09:30","12:00","14:30","15:30"].includes(v) },
+      axisLine: { lineStyle: { color: "#e2e8f0" } }, axisTick: { show: false } },
+    yAxis: { scale: true, splitLine: { lineStyle: { color: "#eef2f7" } }, axisLabel: { color: "#94a3b8", fontSize: 10, formatter: v => v.toFixed(1) } },
+    tooltip: { trigger: "axis", backgroundColor: "rgba(255,255,255,.96)", borderColor: "#e2e8f0", textStyle: { color: "#0f172a", fontSize: 12 },
+      formatter: ps => { const p = ps.find(x => x.value != null); return p ? `<b>${esc(date)}</b> ${esc(p.name)}<br><b>${fmtNum(p.value)}</b>` : ""; } },
+    series: [
+      { name: "Pre-market", type: "line", data: pre, symbol: "none", connectNulls: false,
+        lineStyle: { color: "#94a3b8", width: 1.4, type: "dashed" }, z: 2 },
+      { name: "Regular", type: "line", data: reg, symbol: "none", connectNulls: false,
+        lineStyle: { color: col, width: 2.6 }, z: 3,
+        areaStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1,
+          colorStops: [{ offset: 0, color: col + "33" }, { offset: 1, color: col + "05" }] } },
+        markLine: { silent: true, symbol: "none", label: { show: true, position: "insideStartTop", formatter: "open {c}", color: "#94a3b8", fontSize: 10 },
+          lineStyle: { color: "#94a3b8", type: "dashed", width: 1 },
+          data: [{ yAxis: +d.open.toFixed(2) }] } },
+    ],
+  }, true);
+}
+
+function chartB(el, date){
+  if (!hasECharts()) { el.innerHTML = fallbackGlyph(date, "B"); return; }
+  const d = S.daily.get(date);
+  const nd = nextTradingDay(date);
+  const n = nd ? S.daily.get(nd) : null;
+  if (!d || !n || n.open == null) { el.innerHTML = fallbackGlyph(date, "B"); return; }
+  const barsD = (S.barsByDate.get(date) || []).filter(b => b.hm >= "16:00");
+  const barsN = (S.barsByDate.get(nd) || []).filter(b => b.hm <= "09:30");
+  if (barsD.length + barsN.length < 2) { el.innerHTML = fallbackGlyph(date, "B"); return; }
+  const cats = ["close", ...barsD.map(b => b.hm), ...barsN.map(b => "+1 " + b.hm), "open"];
+  const ctx = [d.close, ...barsD.map(b => b.c), ...barsN.map(b => b.c), n.open];
+  const seg = new Array(cats.length).fill(null);
+  seg[0] = d.close; seg[cats.length - 1] = n.open;
+  const r = (n.open - d.close) / d.close * 100;
+  const col = r >= 0 ? UP : DOWN;
+  const inst = echarts.getInstanceByDom(el) || echarts.init(el);
+  inst.setOption({
+    animationDuration: 500,
+    grid: { left: 46, right: 12, top: 14, bottom: 20 },
+    xAxis: { type: "category", data: cats, boundaryGap: false,
+      axisLabel: { color: "#94a3b8", fontSize: 10, interval: (i, v) => i === 0 || i === cats.length - 1 },
+      axisLine: { lineStyle: { color: "#e2e8f0" } }, axisTick: { show: false } },
+    yAxis: { scale: true, splitLine: { lineStyle: { color: "#eef2f7" } }, axisLabel: { color: "#94a3b8", fontSize: 10, formatter: v => v.toFixed(1) } },
+    tooltip: { trigger: "axis", backgroundColor: "rgba(255,255,255,.96)", borderColor: "#e2e8f0", textStyle: { color: "#0f172a", fontSize: 12 },
+      formatter: ps => { const p = ps.find(x => x.value != null); return p ? `<b>${esc(date)} → ${esc(nd)}</b> ${esc(p.name)}<br><b>${fmtNum(p.value)}</b>` : ""; } },
+    series: [
+      { name: "Overnight", type: "line", data: ctx, symbol: "none",
+        lineStyle: { color: "#b6c2d1", width: 1.4, type: "dashed" }, z: 2 },
+      { name: "Scored window", type: "line", data: seg, connectNulls: true, symbol: "circle", symbolSize: 7,
+        lineStyle: { color: col, width: 3.4 }, itemStyle: { color: col, borderColor: "#fff", borderWidth: 2 }, z: 3,
+        areaStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1,
+          colorStops: [{ offset: 0, color: col + "2e" }, { offset: 1, color: col + "04" }] } } },
+    ],
+  }, true);
+}
+
+const chartIO = new IntersectionObserver(entries => {
+  for (const en of entries) {
+    if (!en.isIntersecting) continue;
+    const el = en.target;
+    chartIO.unobserve(el);
+    const date = el.dataset.date, kind = el.dataset.kind;
+    if (kind === "A") chartA(el, date); else chartB(el, date);
+  }
+}, { rootMargin: "260px" });
+
+function renderDates(){
+  // strip
+  $("#dateStrip").innerHTML = S.dates.map(d => {
+    const v = dayVerdict(d);
+    const dots = [
+      v.c ? `<span class="ds-dot" style="background:${UP}"></span>` : "",
+      v.w ? `<span class="ds-dot" style="background:${DOWN}"></span>` : "",
+      v.p ? `<span class="ds-dot" style="background:#f59e0b"></span>` : "",
+    ].join("");
+    return `<button class="ds-btn" data-date="${d}"><span>${d.slice(5)}</span><span class="d">${new Date(d + "T12:00:00Z").toLocaleDateString("en-US", { weekday: "short", timeZone: "UTC" })}</span><span class="ds-dots">${dots}</span></button>`;
+  }).join("");
+  $$("#dateStrip .ds-btn").forEach(b => b.addEventListener("click", () => {
+    $$("#dateStrip .ds-btn").forEach(x => x.classList.remove("active"));
+    b.classList.add("active");
+    const t = document.getElementById("dc-" + b.dataset.date);
+    if (t) { t.scrollIntoView({ behavior: "smooth", block: "start" }); flashCard(t); }
+  }));
+
+  // cards (latest first)
+  const datesDesc = S.dates.slice().reverse();
+  $("#dateCards").innerHTML = datesDesc.map(d => {
+    const v = dayVerdict(d);
+    const tot = v.c + v.w;
+    const accPill = tot ? `<span class="pill ${v.c / tot >= .5 ? "up" : "down"}">${v.c}/${tot} ✓</span>` : "";
+    const pendPill = v.p ? `<span class="pill amber">${v.p} pending</span>` : "";
+    const dayBar = S.daily.get(d);
+    const dayMove = dayBar ? (dayBar.close - dayBar.open) / dayBar.open * 100 : null;
+    const movePill = dayMove == null ? "" : `<span class="pill ${dayMove >= 0 ? "up" : "down"}">QQQ ${fmtPct(dayMove)}</span>`;
+    return `<article class="date-card rv in" id="dc-${d}">
+      <div class="dc-head">
+        <h3 class="dc-date">${datePretty(d)}<span class="wd">${esc(d)}</span></h3>
+        <div class="dc-badges">${movePill}${accPill}${pendPill}</div>
+      </div>
+      <div class="dc-grid">
+        <div class="dc-sec">
+          <p class="ds-title">☀️ Pre-market call → regular session <span class="faint" style="text-transform:none;letter-spacing:0;font-weight:600">open→close</span></p>
+          ${readoutA(d)}
+          <div class="chart" data-date="${d}" data-kind="A"></div>
+          <div class="chips">${chipsHTML(d, "pre-market")}</div>
+        </div>
+        <div class="dc-sec">
+          <p class="ds-title">🌙 Intraday call → overnight <span class="faint" style="text-transform:none;letter-spacing:0;font-weight:600">close→next open</span></p>
+          ${readoutB(d)}
+          <div class="chart" data-date="${d}" data-kind="B"></div>
+          <div class="chips">${chipsHTML(d, "intraday")}</div>
+        </div>
+      </div>
+    </article>`;
+  }).join("");
+  $$("#dateCards .chart").forEach(el => chartIO.observe(el));
+}
+
+/* =================================================================
+   RENDER — heatmap (engines × dates, split cells)
+   ================================================================= */
+function triCls(p){
+  if (!p || p.excluded) return "none";
+  if (p.correct == null) return "pending";
+  return p.correct ? "ok" : "bad";
+}
+function triTitle(p, sessLabel){
+  if (!p) return sessLabel + ": no signal";
+  if (p.excluded) return `${p.engine} · ${p.date} ${sessLabel}: stub excluded`;
+  if (p.correct == null) return `${p.engine} · ${p.date} ${sessLabel}: ${p.signal} — pending`;
+  return `${p.engine} · ${p.date} ${sessLabel}: ${p.signal} ${p.correct ? "✓" : "✗"} · session ${fmtPct(p.ret)} · ${fmtPts(p.score)} pts`;
+}
+function renderHeatmap(){
+  const rows = sortRows(S.engRows);
+  const cols = S.dates;
+  const lookup = new Map();
+  for (const p of S.predictions) lookup.set(p.engine + "|" + p.date + "|" + p.session, p);
+  let html = `<div class="hm-grid" style="grid-template-columns:216px repeat(${cols.length},27px)">`;
+  html += `<div></div>` + cols.map(d => `<div class="hm-collabel">${d.slice(5)}</div>`).join("");
+  for (const r of rows) {
+    const pm = pipeMeta(r.pipeline);
+    html += `<div class="hm-rowlabel"><span class="tag ${pm.cls}">${pm.short}</span>${esc(r.name)}</div>`;
+    for (const d of cols) {
+      const p1 = lookup.get(r.id + "|" + d + "|pre-market");
+      const p2 = lookup.get(r.id + "|" + d + "|intraday");
+      html += `<div class="hm-cell"><span class="tri pre ${triCls(p1)}" title="${esc(triTitle(p1, "pre-market"))}"></span><span class="tri intra ${triCls(p2)}" title="${esc(triTitle(p2, "intraday"))}"></span></div>`;
+    }
+  }
+  html += `</div>
+  <div class="hm-legend">
+    <span><span class="sw" style="background:${UP}"></span>correct</span>
+    <span><span class="sw" style="background:${DOWN}"></span>wrong</span>
+    <span><span class="sw" style="background:repeating-linear-gradient(45deg,#fcd34d 0 3px,#fde68a 3px 6px)"></span>pending outcome</span>
+    <span><span class="sw" style="background:var(--line-soft)"></span>no signal</span>
+    <span class="faint">◤ pre-market (vs open→close) · ◢ intraday (vs close→next open)</span>
+  </div>`;
+  $("#hmWrap").innerHTML = html;
+}
+
+/* =================================================================
+   RENDER — accuracy summary table
+   ================================================================= */
+function accTD(bucket){
+  if (!bucket.n) return '<span class="na">—</span>';
+  const pct = bucket.acc;
+  const w = clamp(pct, 0, 100) * .8;
+  const col = pct >= 50 ? "linear-gradient(90deg,#34d399,#10b981)" : "linear-gradient(90deg,#fb7185,#f43f5e)";
+  return `<b>${pct.toFixed(1)}%</b> <span class="n" style="color:var(--faint);font-size:12px">(${bucket.correct}/${bucket.n})</span><span class="abar" style="width:${w}px;background:${col}"></span>`;
+}
+function renderAccuracy(){
+  const lookupEng = id => S.engRows.find(r => r.id === id);
+  let html = `<thead><tr><th>Pipeline / Model</th><th>Acc · HOLD</th><th>Acc · SELL</th><th>Acc · ALL</th><th>Scored calls</th><th>Weighted score</th></tr></thead><tbody>`;
+  for (const pr of S.pipeRows.slice().sort((a, b) => b.a.score - a.a.score)) {
+    html += `<tr class="pipe-row"><td colspan="6"><span class="tag ${pipeMeta(pr.id).cls}">${pipeMeta(pr.id).short}</span> &nbsp;${esc(pr.id)}</td></tr>`;
+    const models = S.engRows.filter(r => r.pipeline === pr.id).sort((a, b) => b.a.score - a.a.score);
+    for (const m of models) {
+      html += `<tr>
+        <td style="padding-left:26px;font-weight:700">${esc(m.name)}</td>
+        <td>${accTD(m.a.hold)}</td>
+        <td>${accTD(m.a.sell)}</td>
+        <td>${accTD({ n: m.a.scoredN, correct: m.a.correct, acc: m.a.acc })}</td>
+        <td><b>${m.a.scoredN}</b>${m.a.pending ? ` <span class="n" style="color:var(--faint);font-size:12px">+${m.a.pending}⏳</span>` : ""}</td>
+        <td><b style="color:${m.a.score >= 0 ? "var(--up)" : "var(--down)"}">${fmtPts(m.a.score)}</b></td>
+      </tr>`;
+    }
+    html += `<tr class="subtotal">
+      <td>Pipeline total</td>
+      <td>${accTD(pr.a.hold)}</td>
+      <td>${accTD(pr.a.sell)}</td>
+      <td>${accTD({ n: pr.a.scoredN, correct: pr.a.correct, acc: pr.a.acc })}</td>
+      <td><b>${pr.a.scoredN}</b></td>
+      <td><b style="color:${pr.a.score >= 0 ? "var(--up)" : "var(--down)"}">${fmtPts(pr.a.score)}</b></td>
+    </tr>`;
+  }
+  const o = S.overall;
+  html += `<tr class="total">
+    <td>ALL ENGINES</td>
+    <td>${accTD(o.hold)}</td>
+    <td>${accTD(o.sell)}</td>
+    <td>${accTD({ n: o.scoredN, correct: o.correct, acc: o.acc })}</td>
+    <td><b>${o.scoredN}</b></td>
+    <td><b style="color:${o.score >= 0 ? "var(--up)" : "var(--down)"}">${fmtPts(o.score)}</b></td>
+  </tr></tbody>`;
+  $("#accTable").innerHTML = html;
+}
+
+/* =================================================================
+   RENDER — prediction explorer
+   ================================================================= */
+const THREAT_STYLE = {
+  CRITICAL: "background:var(--down-soft);color:var(--down)",
+  HIGH: "background:var(--amber-soft);color:var(--amber)",
+  MODERATE: "background:var(--accent-soft);color:var(--accent-deep)",
+  LOW: "background:var(--hold-soft);color:var(--hold)",
+  NONE: "background:var(--line-soft);color:var(--faint)",
+};
+function renderExFilters(){
+  const engines = S.engRows.slice().sort((a, b) => a.id.localeCompare(b.id));
+  $("#exFilters").innerHTML = `
+    <select id="exEngine">
+      <option value="all">All engines</option>
+      ${engines.map(e => `<option value="${esc(e.id)}">${pipeMeta(e.pipeline).short} · ${esc(e.name)}</option>`).join("")}
+    </select>
+    <select id="exSession">
+      <option value="all">Both sessions</option><option value="pre-market">pre-market</option><option value="intraday">intraday</option>
+    </select>
+    <select id="exSignal">
+      <option value="all">All signals</option><option value="HOLD">HOLD</option><option value="SELL">SELL</option>
+    </select>
+    <select id="exResult">
+      <option value="all">All results</option><option value="correct">✓ correct</option><option value="wrong">✗ wrong</option><option value="pending">⏳ pending</option>${S.includeStubs ? "" : '<option value="stub">◌ excluded stubs</option>'}
+    </select>
+    <input type="text" id="exQ" placeholder="Search catalyst / reasoning…">
+    <span class="ex-count" id="exCount"></span>`;
+  const cur = S.ex;
+  $("#exEngine").value = cur.engine; $("#exSession").value = cur.session;
+  $("#exSignal").value = cur.signal; $("#exResult").value = cur.result;
+  $("#exQ").value = cur.q;
+  $("#exEngine").addEventListener("change", e => { cur.engine = e.target.value; cur.shown = 60; renderExList(); });
+  $("#exSession").addEventListener("change", e => { cur.session = e.target.value; cur.shown = 60; renderExList(); });
+  $("#exSignal").addEventListener("change", e => { cur.signal = e.target.value; cur.shown = 60; renderExList(); });
+  $("#exResult").addEventListener("change", e => { cur.result = e.target.value; cur.shown = 60; renderExList(); });
+  $("#exQ").addEventListener("input", e => { cur.q = e.target.value; cur.shown = 60; renderExList(); });
+}
+function exFiltered(){
+  const q = S.ex.q.trim().toLowerCase();
+  return S.predictions.filter(p => {
+    if (S.ex.engine !== "all" && p.engine !== S.ex.engine) return false;
+    if (S.ex.session !== "all" && p.session !== S.ex.session) return false;
+    if (S.ex.signal !== "all" && p.signal !== S.ex.signal) return false;
+    if (S.ex.result === "correct" && !(p.correct === true && !p.excluded)) return false;
+    if (S.ex.result === "wrong" && !(p.correct === false && !p.excluded)) return false;
+    if (S.ex.result === "pending" && !(p.correct == null && !p.excluded)) return false;
+    if (S.ex.result === "stub" && !p.excluded) return false;
+    if (S.ex.result === "all" && p.excluded) return false;   // keep list clean by default
+    if (q && !(p.catalyst.toLowerCase().includes(q) || p.reasoning.toLowerCase().includes(q))) return false;
+    return true;
+  }).sort((a, b) => b.date.localeCompare(a.date) || a.engine.localeCompare(b.engine) || (a.session === "pre-market" ? -1 : 1));
+}
+function renderExList(){
+  const all = exFiltered();
+  const shown = all.slice(0, S.ex.shown);
+  $("#exCount").textContent = `showing ${shown.length} of ${all.length}`;
+  $("#exList").innerHTML = shown.map(p => {
+    const pm = pipeMeta(p.pipeline);
+    let verdict;
+    if (p.excluded) verdict = `<span class="pill flat">◌ stub · excluded</span>`;
+    else if (p.correct == null) verdict = `<span class="pill amber">⏳ pending</span>`;
+    else verdict = `<span class="pill ${p.correct ? "up" : "down"}">${p.correct ? "✓ correct" : "✗ wrong"} · ${fmtPts(p.score)} pts</span>`;
+    const tStyle = THREAT_STYLE[p.threat] || THREAT_STYLE.NONE;
+    const retLine = p.ret == null ? "" : `<span>session <b style="color:${p.ret >= 0 ? "var(--up)" : "var(--down)"}">${fmtPct(p.ret)}</b>${p.nextDate ? " · close→open " + p.nextDate : " · open→close"}</span>`;
+    return `<div class="pcard">
+      <div class="pc-head">
+        <span class="pc-date">${esc(p.date)}</span>
+        <span class="pc-sess">${p.session === "pre-market" ? "☀️ pre-market" : "🌙 intraday"}</span>
+        <span class="tag ${pm.cls}">${pm.short}</span>
+        <span class="pc-engine">${esc(p.modelDisp)}</span>
+        ${sigPill(p.signal)}
+        <span class="pill" style="${tStyle};font-size:11px;padding:3px 9px">${esc(p.threat)}</span>
+        ${p.stub ? '<span class="stub-flag">stub</span>' : ""}
+        <span class="pc-verdict">${verdict}</span>
+      </div>
+      ${p.catalyst ? `<p class="pc-cat">${esc(p.catalyst)}</p>` : ""}
+      ${p.reasoning ? `<details><summary>Reasoning</summary><p>${esc(p.reasoning)}</p></details>` : ""}
+      <div class="pc-meta">
+        <span>confidence <b>${p.confidence.toFixed(2)}</b><span class="confbar"><i style="width:${clamp(p.confidence * 100, 0, 100)}%"></i></span></span>
+        ${retLine}
+        <span class="faint">${esc(p.file)}</span>
+      </div>
+    </div>`;
+  }).join("") || '<p class="muted" style="text-align:center;padding:26px">No predictions match the filters.</p>';
+  $("#exMore").style.display = all.length > S.ex.shown ? "" : "none";
+}
+
+/* =================================================================
+   ORCHESTRATION
+   ================================================================= */
+function renderDynamic(){
+  renderHero();
+  renderKPIs();
+  renderLeaderboard();
+  renderOverview();
+  renderDates();
+  renderHeatmap();
+  renderAccuracy();
+  renderExList();
+}
+
+const rvIO = new IntersectionObserver(es => {
+  for (const e of es) if (e.isIntersecting) { e.target.classList.add("in"); rvIO.unobserve(e.target); }
+}, { rootMargin: "80px" });
+
+async function boot(isRefresh){
+  const btn = $("#btnRefresh");
+  try {
+    if (isRefresh) { btn.disabled = true; btn.innerHTML = "⟳ Refreshing…"; }
+    else { $("#loader").classList.remove("done"); }
+    ldStep("Discovering prediction files in input/…", .03);
+    S.files = await discoverFiles();
+    if (!S.files.length) throw new Error("no prediction files found under input/");
+    ldStep(`Fetching ${S.files.length} prediction files…`, .06);
+    const raw = await fetchPredictions(S.files, f => ldStep(`Fetching predictions… ${Math.round(f * 100)}%`, .06 + f * .44));
+    S.predictions = dedupePreds(raw);
+    S.dates = Array.from(new Set(S.predictions.map(p => p.date))).sort();
+    if (!S.dates.length) throw new Error("prediction files contained no valid records");
+    ldStep("Fetching QQQ prices…", .56);
+    await fetchPrices();
+    ldStep("Scoring engines…", .9);
+    S.refreshedAt = new Date().toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+    scoreAll();
+    buildAggs();
+    renderExFilters();
+    renderDynamic();
+    $$(".rv").forEach(el => rvIO.observe(el));
+    ldStep("Done", 1);
+    ldDone();
+    if (isRefresh) toast("✅ Data refreshed — " + S.predictions.length + " unique calls scored", "ok");
+  } catch (e) {
+    console.error(e);
+    ldDone();
+    const hint = location.protocol === "file:"
+      ? 'This page fetches <code>input/</code> over HTTP. Serve the repo folder (e.g. <code>python -m http.server</code>) or open it via <code>ncelq.github.io/dashboard.html</code>.'
+      : esc(e.message || String(e));
+    if (isRefresh) toast("❌ Refresh failed: " + hint, "err");
+    else {
+      $("#loader").classList.remove("done");
+      ldFatal("Could not load dashboard data", `<b>Error:</b> ${hint}`);
+    }
+  } finally {
+    btn.disabled = false; btn.innerHTML = "⟳ Refresh data";
+  }
+}
+
+function wireUI(){
+  $("#btnRefresh").addEventListener("click", () => boot(true));
+  $("#tgStubs").addEventListener("change", e => {
+    S.includeStubs = e.target.checked;
+    scoreAll(); buildAggs(); renderExFilters(); renderDynamic();
+    toast(S.includeStubs ? "Placeholder stubs included in scoring" : "Placeholder stubs excluded", "ok");
+  });
+  $("#tgConf").addEventListener("change", e => {
+    S.confWeight = e.target.checked;
+    scoreAll(); buildAggs(); renderDynamic();
+    toast(S.confWeight ? "Scores now multiplied by signal confidence" : "Scores are pure return magnitude", "ok");
+  });
+  $$("#lbTabs .lb-tab").forEach(t => t.addEventListener("click", () => {
+    $$("#lbTabs .lb-tab").forEach(x => x.classList.remove("active"));
+    t.classList.add("active");
+    S.lbTab = t.dataset.tab;
+    renderLeaderboard();
+  }));
+  $("#exMore").addEventListener("click", () => { S.ex.shown += 60; renderExList(); });
+
+  // settings modal
+  const bg = $("#modalBg");
+  $("#btnSettings").addEventListener("click", () => {
+    $("#mCurSrc").textContent = S.priceSource;
+    $("#keyInput").value = localStorage.getItem("qa_finnhub") || "";
+    bg.classList.add("open");
+  });
+  $("#mClose").addEventListener("click", () => bg.classList.remove("open"));
+  bg.addEventListener("click", e => { if (e.target === bg) bg.classList.remove("open"); });
+  $("#mClear").addEventListener("click", () => { localStorage.removeItem("qa_finnhub"); $("#keyInput").value = ""; toast("Finnhub key cleared", "ok"); });
+  $("#mSave").addEventListener("click", () => {
+    const k = $("#keyInput").value.trim();
+    if (k) localStorage.setItem("qa_finnhub", k); else localStorage.removeItem("qa_finnhub");
+    bg.classList.remove("open");
+    boot(true);
+  });
+
+  // subnav active tracking
+  const links = $$("#snIn .sn-link");
+  const secs = links.map(l => $(l.getAttribute("href"))).filter(Boolean);
+  const navIO = new IntersectionObserver(es => {
+    for (const e of es) {
+      if (!e.isIntersecting) continue;
+      links.forEach(l => l.classList.toggle("active", l.getAttribute("href") === "#" + e.target.id));
+    }
+  }, { rootMargin: "-35% 0px -55% 0px" });
+  secs.forEach(s => navIO.observe(s));
+
+  // chart resize
+  let rzT;
+  window.addEventListener("resize", () => {
+    clearTimeout(rzT);
+    rzT = setTimeout(() => {
+      if (!hasECharts()) return;
+      $$(".chart, .chart-lg").forEach(el => { const i = echarts.getInstanceByDom(el); if (i) i.resize(); });
+    }, 180);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  wireUI();
+  boot(false);
+});
+</script>
+</body>
+</html>
