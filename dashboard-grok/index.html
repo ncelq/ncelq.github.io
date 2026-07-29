@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signal Arena · QQQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FAFAFA;
+  --ink: #111827;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --panel: #ffffff;
+  --accent: #16A34A;
+  --accent-deep: #15803d;
+  --accent-soft: #dcfce7;
+  --teal: var(--accent);
+  --teal-deep: var(--accent-deep);
+  --rise: #16A34A;
+  --drop: #dc2626;
+  --font: "Lora", Georgia, "Times New Roman", serif;
+  --display: "Lora", Georgia, "Times New Roman", serif;
+  --shadow: 0 8px 28px rgba(17, 24, 39, .05);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font);
+  background: var(--bg);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1280px; margin: 0 auto; padding: 28px 18px 72px; }
+.status {
+  display: none;
+  margin: 0 0 16px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #ecd99a;
+  background: #fff7e0;
+  color: #7a5b12;
+  font-size: 13px; font-weight: 600;
+}
+.status.show { display: block; }
+.status.err { border-color: #f0b4b4; background: #fff1f1; color: #8a1f1f; }
+header.hero { margin-bottom: 28px; animation: rise .55s ease both; }
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 12px; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--teal);
+}
+h1 {
+  margin: 0 0 8px;
+  font-family: var(--display);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800; letter-spacing: -.03em; line-height: 1.1;
+}
+.sub { margin: 0; color: var(--muted); font-size: 15px; max-width: 56ch; }
+.meta {
+  margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px 14px;
+  font-size: 13px; color: var(--muted);
+}
+.meta b { color: var(--ink); }
+section { margin: 0 0 34px; animation: rise .6s ease both; }
+section h2 {
+  margin: 0 0 6px;
+  font-family: var(--display);
+  font-size: 1.35rem; font-weight: 700; letter-spacing: -.02em;
+}
+.section-sub { margin: 0 0 14px; color: var(--muted); font-size: 13.5px; }
+.board {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+  gap: 10px;
+}
+.rank-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: rise .5s ease forwards;
+}
+.rank-card.top1 { background: linear-gradient(160deg, #16A34A, #15803d); color: #fff; border-color: transparent; }
+.rank-card.top1 .tiny { color: rgba(255,255,255,.78); }
+.rank-n { font-family: var(--display); font-size: 12px; font-weight: 700; margin-bottom: 4px; }
+.rank-name { font-size: 12.5px; font-weight: 700; line-height: 1.3; min-height: 2.6em; word-break: break-word; }
+.rank-wt { margin-top: 6px; font-family: var(--display); font-size: 1.35rem; font-weight: 800; letter-spacing: -.02em; }
+.tiny { font-size: 11.5px; color: var(--muted); margin-top: 2px; }
+.table-wrap, .heat-wrap {
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+table.acc { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 760px; }
+.acc th, .acc td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.acc th {
+  position: sticky; top: 0; background: #f3f4f6;
+  font-size: 11px; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--muted);
+}
+.acc td.num, .acc th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.acc tr:last-child td { border-bottom: 0; }
+.pos { color: var(--rise); font-weight: 700; }
+.neg { color: var(--drop); font-weight: 700; }
+.heat {
+  border-collapse: separate; border-spacing: 0;
+  font-size: 11.5px; min-width: 1100px;
+}
+.heat th, .heat td {
+  padding: 8px 6px; text-align: center;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  min-width: 78px;
+}
+.heat th.corner, .heat td.lab {
+  position: sticky; left: 0; z-index: 2;
+  background: #f9fafb; text-align: left; font-weight: 700;
+  min-width: 118px; padding-left: 12px;
+}
+.heat thead th {
+  position: sticky; top: 0; z-index: 3;
+  background: #f3f4f6;
+  font-size: 10px; line-height: 1.25; white-space: normal;
+  vertical-align: bottom;
+}
+.heat thead th.corner { z-index: 4; }
+.heat tbody tr.overall td { background: #f0fdf4; font-weight: 700; border-top: 2px solid var(--accent); }
+.heat tbody tr.overall td.lab { background: #dcfce7; }
+.cell {
+  border-radius: 6px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  animation: cellIn .45s ease both;
+}
+.cell.gold { box-shadow: 0 0 0 2px rgba(212,175,55,.55); animation: rise .45s ease both, pulseGold 2.4s ease-in-out infinite; }
+.g1 { background: #86efac; color: #14532d; }
+.g2 { background: #bbf7d0; color: #166534; }
+.g3 { background: #dcfce7; color: #16A34A; }
+.r1 { background: #fca5a5; color: #7f1d1d; }
+.r2 { background: #fecaca; color: #991b1b; }
+.r3 { background: #fee2e2; color: #b91c1c; }
+.z  { background: #f3f4f6; color: #9ca3af; font-weight: 500; }
+.medal { margin-left: 2px; }
+.dates { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.chip {
+  appearance: none; border: 1px solid var(--line);
+  background: var(--panel); color: var(--muted);
+  border-radius: 999px; height: 32px; padding: 0 14px;
+  font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+}
+.chip:hover { border-color: var(--accent); color: var(--ink); }
+.chip.active {
+  color: #fff; background: var(--accent); border-color: var(--accent);
+  box-shadow: 0 6px 18px rgba(22, 163, 74, .28);
+}
+.panels { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 860px) { .panels { grid-template-columns: 1fr; } }
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+.panel h3 { margin: 0 0 4px; font-family: var(--display); font-size: 1.1rem; font-weight: 700; }
+.move {
+  font-family: var(--display);
+  font-size: 2rem; font-weight: 800; letter-spacing: -.03em;
+  margin: 4px 0 12px;
+}
+.sig {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 8px; align-items: center;
+  padding: 7px 0;
+  border-top: 1px solid var(--line);
+  font-size: 12.5px;
+}
+.sig:first-of-type { border-top: 0; }
+.badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 48px; height: 22px; padding: 0 8px;
+  border-radius: 999px; font-size: 11px; font-weight: 800;
+}
+.badge.hold { background: var(--accent-soft); color: var(--accent-deep); }
+.badge.sell { background: #fee2e2; color: #991b1b; }
+.ok { color: var(--rise); font-weight: 800; }
+.bad { color: var(--drop); font-weight: 800; }
+.pend { color: var(--muted); font-weight: 700; }
+footer.note { margin-top: 8px; color: var(--muted); font-size: 12.5px; line-height: 1.5; }
+.loading { color: var(--muted); font-size: 14px; padding: 20px 0; }
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes cellIn {
+  from { opacity: 0; transform: scale(.96); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes pulseGold {
+  0%, 100% { box-shadow: 0 0 0 2px rgba(212,175,55,.35); }
+  50% { box-shadow: 0 0 0 3px rgba(212,175,55,.7); }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div id="banner" class="status" role="status"></div>
+  <header class="hero">
+    <p class="eyebrow">Signal Arena</p>
+    <h1>QQQ prediction scoreboard</h1>
+    <p class="sub">Project-wide rank across every folder/model. Weight rewards bigger correct moves and deducts bigger wrong ones.</p>
+    <div class="meta" id="meta">
+      <span>Loading…</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>Leaderboard</h2>
+    <p class="section-sub">Sorted by total weight · all folder/model columns</p>
+    <div class="board" id="board"><div class="loading">Loading predictions…</div></div>
+  </section>
+
+  <section>
+    <h2>Accuracy summary</h2>
+    <p class="section-sub">All / HOLD / SELL · pending &amp; neutral excluded</p>
+    <div class="table-wrap"><table class="acc" id="acc"></table></div>
+  </section>
+
+  <section>
+    <h2>Weight heatmap</h2>
+    <p class="section-sub">X = folder/model · Y = date &amp; session · medals per row · bottom = Overall</p>
+    <div class="heat-wrap"><table class="heat" id="heat"></table></div>
+  </section>
+
+  <section>
+    <h2>Date detail</h2>
+    <p class="section-sub">Pre-market vs open→close · Intraday vs close→next open</p>
+    <div class="dates" id="dates"></div>
+    <div class="panels">
+      <div class="panel">
+        <h3>Pre-market</h3>
+        <div class="tiny">QQQ open → close</div>
+        <div class="move" id="preMove">—</div>
+        <div id="preList"></div>
+      </div>
+      <div class="panel">
+        <h3>Intraday</h3>
+        <div class="tiny">QQQ close → next open</div>
+        <div class="move" id="intraMove">—</div>
+        <div id="intraList"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="note">
+    Scoring: HOLD+rise / SELL+drop = correct · weight = ±|return%| · neutral if |r| &lt; 0.01% ·
+    Data from <code>manifest.json</code> (CI) · predictions under <code>../input/</code> (read-only) · QQQ Yahoo + local OHLC cache.
+  </footer>
+</div>
+
+<script>
+const NEUTRAL_PCT = 0.01;
+const CONCURRENCY = 12;
+const DATA_ROOT = ".."; // repo root relative to this page (dashboard-grok/) — for prediction JSON only
+const MANIFEST_URL = "manifest.json";
+const OHLC_CACHE_URL = "qqq-ohlc.json";
+
+function dataUrl(path) {
+  if (!path) return path;
+  if (/^https?:\/\//i.test(path)) return path;
+  // Manifest lists repo-root paths like input/...
+  return `${DATA_ROOT}/${path.replace(/^\.\//, "")}`;
+}
+const state = {
+  predictions: [],
+  columns: [],
+  ohlc: new Map(),
+  ohlcDates: [],
+  selectedDate: null,
+  priceSource: null,
+};
+
+function showBanner(msg, isErr = false) {
+  const el = document.getElementById("banner");
+  el.textContent = msg;
+  el.classList.add("show");
+  el.classList.toggle("err", isErr);
+}
+
+async function fetchJson(url) {
+  const res = await fetch(url, { cache: "no-store" });
+  if (!res.ok) throw new Error(`${url} → ${res.status}`);
+  return res.json();
+}
+
+async function mapPool(items, limit, fn) {
+  const out = new Array(items.length);
+  let i = 0;
+  async function worker() {
+    while (i < items.length) {
+      const idx = i++;
+      out[idx] = await fn(items[idx], idx);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, () => worker()));
+  return out;
+}
+
+function parsePath(path) {
+  // input/{engine}/{model}/{file}
+  const parts = path.split("/");
+  const engine = parts[1] || "?";
+  const model = parts[2] || "?";
+  const file = parts[parts.length - 1] || "";
+  const m = file.match(/^(\d{8})_QQQ_(pre-market|intraday)_/);
+  const dateStr = m ? `${m[1].slice(0,4)}-${m[1].slice(4,6)}-${m[1].slice(6,8)}` : null;
+  const session = m ? m[2] : null;
+  const tsMatch = file.match(/_(\d+)\.json$/);
+  const timestamp = tsMatch ? tsMatch[1] : "0";
+  return { engine, model, dateStr, session, timestamp, path };
+}
+
+function shortCol(engine, model) {
+  const e = engine.replace(/^news-trader-/, "").replace(/-live$/, "");
+  const mo = model
+    .replace(/^cursor-/, "")
+    .replace(/^claude-/, "claude-")
+    .replace("mistral-large-latest", "mistral")
+    .replace("deepseek-v4-pro", "deepseek");
+  return `${e}/${mo}`;
+}
+
+function direction(r) {
+  if (r == null || Number.isNaN(r)) return "pending";
+  const pct = Math.abs(r) * 100;
+  if (pct < NEUTRAL_PCT) return "neutral";
+  return r > 0 ? "rise" : "drop";
+}
+
+function scoreSignal(signal, r) {
+  const dir = direction(r);
+  if (dir === "pending" || dir === "neutral") {
+    return { dir, outcome: dir, weight: null, correct: null };
+  }
+  const wantRise = signal === "HOLD";
+  const correct = wantRise ? dir === "rise" : dir === "drop";
+  const mag = Math.abs(r) * 100;
+  return { dir, outcome: correct ? "correct" : "wrong", weight: correct ? mag : -mag, correct };
+}
+
+function nextTradingDay(dateStr) {
+  const idx = state.ohlcDates.indexOf(dateStr);
+  if (idx < 0 || idx >= state.ohlcDates.length - 1) return null;
+  return state.ohlcDates[idx + 1];
+}
+
+function sessionReturn(dateStr, session) {
+  const day = state.ohlc.get(dateStr);
+  if (!day) return null;
+  if (session === "pre-market") {
+    if (!day.open || !day.close) return null;
+    return (day.close - day.open) / day.open;
+  }
+  if (session === "intraday") {
+    const nd = nextTradingDay(dateStr);
+    if (!nd) return null;
+    const next = state.ohlc.get(nd);
+    if (!next || !day.close || !next.open) return null;
+    return (next.open - day.close) / day.close;
+  }
+  return null;
+}
+
+function emptyBucket() {
+  return {
+    all: { correct: 0, n: 0 },
+    HOLD: { correct: 0, n: 0 },
+    SELL: { correct: 0, n: 0 },
+    weight: 0,
+    byKey: new Map(), // `${date}|${session}` -> { weight, confidence, pred }
+  };
+}
+
+function aggregate(predictions) {
+  const cols = new Map();
+  for (const p of predictions) {
+    const key = `${p.engine}/${p.model}`;
+    if (!cols.has(key)) {
+      cols.set(key, {
+        key,
+        engine: p.engine,
+        model: p.model,
+        short: shortCol(p.engine, p.model),
+        ...emptyBucket(),
+      });
+    }
+    const col = cols.get(key);
+    const r = sessionReturn(p.date, p.session);
+    const scored = scoreSignal(p.signal, r);
+    p.return = r;
+    p.dir = scored.dir;
+    p.outcome = scored.outcome;
+    p.weight = scored.weight;
+    p.correct = scored.correct;
+    const cellKey = `${p.date}|${p.session}`;
+    col.byKey.set(cellKey, { weight: scored.weight, confidence: p.confidence ?? 0, pred: p });
+    if (scored.correct == null) continue;
+    col.weight += scored.weight;
+    col.all.n += 1;
+    col.all.correct += scored.correct ? 1 : 0;
+    if (col[p.signal]) {
+      col[p.signal].n += 1;
+      col[p.signal].correct += scored.correct ? 1 : 0;
+    }
+  }
+  const list = [...cols.values()];
+  list.sort((a, b) => {
+    if (b.weight !== a.weight) return b.weight - a.weight;
+    const aa = a.all.n ? a.all.correct / a.all.n : -1;
+    const ba = b.all.n ? b.all.correct / b.all.n : -1;
+    if (ba !== aa) return ba - aa;
+    if (b.all.n !== a.all.n) return b.all.n - a.all.n;
+    return a.key.localeCompare(b.key);
+  });
+  return list;
+}
+
+function pct(bucket) {
+  if (!bucket.n) return "—";
+  return ((bucket.correct / bucket.n) * 100).toFixed(0) + "%";
+}
+
+function fmtPct(r) {
+  if (r == null || Number.isNaN(r)) return "pending";
+  const p = r * 100;
+  if (Math.abs(p) < NEUTRAL_PCT) return "flat";
+  const sign = p > 0 ? "+" : "";
+  return sign + p.toFixed(2) + "%";
+}
+
+function tone(v) {
+  if (v == null || Number.isNaN(v)) return ["z", "—"];
+  if (v === 0) return ["z", "0"];
+  const abs = Math.abs(v);
+  const cls = v > 0 ? (abs >= 1 ? "g1" : abs >= 0.5 ? "g2" : "g3")
+                   : (abs >= 1 ? "r1" : abs >= 0.5 ? "r2" : "r3");
+  return [cls, (v > 0 ? "+" : "") + v.toFixed(2)];
+}
+
+function medalsFor(cells) {
+  // cells: [{i, weight, confidence, key}]
+  const scored = cells.filter(c => c.weight != null && !Number.isNaN(c.weight));
+  scored.sort((a, b) => {
+    if (b.weight !== a.weight) return b.weight - a.weight;
+    if (b.confidence !== a.confidence) return b.confidence - a.confidence;
+    return a.key.localeCompare(b.key);
+  });
+  const map = {};
+  if (scored[0]) map[scored[0].i] = "🥇";
+  if (scored[1]) map[scored[1].i] = "🥈";
+  if (scored[2]) map[scored[2].i] = "🥉";
+  return map;
+}
+
+async function loadPredictions(files) {
+  const results = await mapPool(files, CONCURRENCY, async (path) => {
+    try {
+      const data = await fetchJson(dataUrl(path));
+      const meta = parsePath(path);
+      return {
+        path,
+        engine: meta.engine,
+        model: meta.model,
+        timestamp: meta.timestamp,
+        date: data.date || meta.dateStr,
+        session: data.session || meta.session,
+        signal: data.signal,
+        confidence: data.confidence ?? 0,
+        threat_level: data.threat_level,
+        key_catalyst: data.key_catalyst || "",
+        reasoning: data.reasoning || "",
+      };
+    } catch (e) {
+      return { error: String(e), path };
+    }
+  });
+  const ok = results.filter(r => r && !r.error && r.signal && r.date && r.session);
+  const failed = results.length - ok.length;
+
+  // dedupe latest timestamp per engine/model/date/session
+  const best = new Map();
+  for (const p of ok) {
+    const k = `${p.engine}|${p.model}|${p.date}|${p.session}`;
+    const prev = best.get(k);
+    if (!prev || String(p.timestamp) > String(prev.timestamp)) best.set(k, p);
+  }
+  return { predictions: [...best.values()], failed, listed: files.length };
+}
+
+async function loadYahooOhlc(minDate, maxDate) {
+  const start = Math.floor(new Date(minDate + "T00:00:00Z").getTime() / 1000) - 7 * 86400;
+  const end = Math.floor(new Date(maxDate + "T23:59:59Z").getTime() / 1000) + 14 * 86400;
+  const yahoo = `https://query2.finance.yahoo.com/v8/finance/chart/QQQ?interval=1d&period1=${start}&period2=${end}`;
+  const proxies = [
+    yahoo,
+    `https://api.allorigins.win/raw?url=${encodeURIComponent(yahoo)}`,
+    `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(yahoo)}`,
+  ];
+  let lastErr;
+  for (const url of proxies) {
+    try {
+      const data = await fetchJson(url);
+      const result = data?.chart?.result?.[0];
+      if (!result) throw new Error("empty chart");
+      return parseYahooResult(result);
+    } catch (e) {
+      lastErr = e;
+    }
+  }
+  throw lastErr || new Error("Yahoo failed");
+}
+
+function parseYahooResult(result) {
+  const ts = result.timestamp || [];
+  const q = result.indicators.quote[0];
+  const map = new Map();
+  for (let i = 0; i < ts.length; i++) {
+    const o = q.open[i], c = q.close[i];
+    if (o == null || c == null) continue;
+    const date = new Date(ts[i] * 1000);
+    // Use America/New_York calendar date
+    const day = date.toLocaleDateString("en-CA", { timeZone: "America/New_York" });
+    map.set(day, {
+      date: day,
+      open: o,
+      high: q.high[i],
+      low: q.low[i],
+      close: c,
+    });
+  }
+  return map;
+}
+
+async function loadOhlcCache() {
+  const data = await fetchJson(OHLC_CACHE_URL);
+  const map = new Map();
+  for (const d of data.days || []) {
+    map.set(d.date, d);
+  }
+  return map;
+}
+
+function applyOhlc(map, source) {
+  state.ohlc = map;
+  state.ohlcDates = [...map.keys()].sort();
+  state.priceSource = source;
+}
+
+function renderMeta(info) {
+  const dates = [...new Set(state.predictions.map(p => p.date))].sort();
+  document.getElementById("meta").innerHTML = `
+    <span>QQQ range <b>${dates[0] || "—"} → ${dates[dates.length - 1] || "—"}</b></span>
+    <span>Columns <b>${state.columns.length}</b></span>
+    <span>Signals <b>${info.predictions}</b> / ${info.listed} files</span>
+    <span>Prices <b>${state.priceSource || "—"}</b></span>
+    <span>Loaded <b>${new Date().toLocaleString()}</b></span>
+  `;
+}
+
+function renderBoard() {
+  const el = document.getElementById("board");
+  el.innerHTML = state.columns.map((c, i) => `
+    <article class="rank-card ${i === 0 ? "top1" : ""}" style="animation-delay:${i * 40}ms">
+      <div class="rank-n">${i === 0 ? "🥇 #1" : i === 1 ? "🥈 #2" : i === 2 ? "🥉 #3" : "#" + (i + 1)}</div>
+      <div class="rank-name">${c.engine}<br>${c.model}</div>
+      <div class="rank-wt">${c.weight >= 0 ? "+" : ""}${c.weight.toFixed(2)}</div>
+      <div class="tiny">weight · acc ${pct(c.all)} (${c.all.correct}/${c.all.n})</div>
+    </article>
+  `).join("") || `<div class="loading">No columns</div>`;
+}
+
+function renderAccuracy() {
+  document.getElementById("acc").innerHTML = `
+    <thead><tr>
+      <th>Folder / model</th>
+      <th class="num">Weight</th>
+      <th class="num">All</th>
+      <th class="num">HOLD</th>
+      <th class="num">SELL</th>
+    </tr></thead>
+    <tbody>${state.columns.map(c => `
+      <tr>
+        <td><b>${c.short}</b><div class="tiny">${c.key}</div></td>
+        <td class="num ${c.weight >= 0 ? "pos" : "neg"}">${c.weight >= 0 ? "+" : ""}${c.weight.toFixed(2)}</td>
+        <td class="num">${c.all.correct}/${c.all.n} · ${pct(c.all)}</td>
+        <td class="num">${c.HOLD.correct}/${c.HOLD.n} · ${pct(c.HOLD)}</td>
+        <td class="num">${c.SELL.correct}/${c.SELL.n} · ${pct(c.SELL)}</td>
+      </tr>`).join("")}
+    </tbody>`;
+}
+
+function rowKeys() {
+  const set = new Set();
+  for (const p of state.predictions) set.add(`${p.date}|${p.session}`);
+  return [...set].sort((a, b) => {
+    const [da, sa] = a.split("|");
+    const [db, sb] = b.split("|");
+    if (da !== db) return db.localeCompare(da); // newest first
+    return sa === "pre-market" ? -1 : 1; // pre before intra same day
+  });
+}
+
+function renderHeatmap() {
+  const cols = state.columns;
+  const keys = rowKeys();
+  const overall = cols.map(c => c.weight);
+
+  let html = `<thead><tr><th class="corner">Date · session</th>${
+    cols.map(c => `<th title="${c.key}">${c.short}</th>`).join("")
+  }</tr></thead><tbody>`;
+
+  const rows = keys.map(k => {
+    const [date, session] = k.split("|");
+    const lab = `${date.slice(5)} · ${session === "pre-market" ? "pre" : "intra"}`;
+    const cells = cols.map((c, i) => {
+      const cell = c.byKey.get(k);
+      return {
+        i,
+        key: c.key,
+        weight: cell ? cell.weight : null,
+        confidence: cell ? cell.confidence : 0,
+      };
+    });
+    return { lab, cells, overall: false };
+  });
+  rows.push({
+    lab: "Overall",
+    overall: true,
+    cells: overall.map((w, i) => ({ i, key: cols[i].key, weight: w, confidence: 0 })),
+  });
+
+  html += rows.map((r, ri) => {
+    const medals = medalsFor(r.cells);
+    return `<tr class="${r.overall ? "overall" : ""}">
+      <td class="lab">${r.lab}</td>
+      ${r.cells.map((cell, i) => {
+        const [cls, txt] = tone(cell.weight);
+        const m = medals[i] ? `<span class="medal">${medals[i]}</span>` : "";
+        const gold = medals[i] === "🥇" ? " gold" : "";
+        return `<td><div class="cell ${cls}${gold}" style="animation-delay:${(ri * 10 + i) * 6}ms">${txt}${m}</div></td>`;
+      }).join("")}
+    </tr>`;
+  }).join("");
+
+  document.getElementById("heat").innerHTML = html + "</tbody>";
+}
+
+function allDates() {
+  return [...new Set(state.predictions.map(p => p.date))].sort().reverse();
+}
+
+function renderDateChips() {
+  const dates = allDates();
+  if (!state.selectedDate) state.selectedDate = dates[0] || null;
+  document.getElementById("dates").innerHTML = dates.map(d =>
+    `<button type="button" class="chip ${d === state.selectedDate ? "active" : ""}" data-date="${d}">${d}</button>`
+  ).join("");
+  document.getElementById("dates").onclick = (e) => {
+    const btn = e.target.closest("[data-date]");
+    if (!btn) return;
+    state.selectedDate = btn.dataset.date;
+    renderDateChips();
+    renderDateDetail();
+  };
+}
+
+function renderSessionList(session, mountId, moveId) {
+  const date = state.selectedDate;
+  const r = sessionReturn(date, session);
+  const moveEl = document.getElementById(moveId);
+  const label = fmtPct(r);
+  moveEl.textContent = label;
+  moveEl.className = "move " + (r == null ? "" : r > 0 ? "pos" : r < 0 ? "neg" : "");
+
+  const rows = state.columns.map(c => {
+    const cell = c.byKey.get(`${date}|${session}`);
+    return cell ? cell.pred : null;
+  }).filter(Boolean);
+
+  document.getElementById(mountId).innerHTML = rows.map(p => {
+    let mark = `<span class="pend">—</span>`;
+    if (p.correct === true) mark = `<span class="ok">✓</span>`;
+    else if (p.correct === false) mark = `<span class="bad">✗</span>`;
+    else if (p.dir === "neutral") mark = `<span class="pend">flat</span>`;
+    else if (p.dir === "pending") mark = `<span class="pend">pend</span>`;
+    const conf = p.confidence != null ? Number(p.confidence).toFixed(2) : "—";
+    return `<div class="sig" title="${(p.key_catalyst || "").replace(/"/g, "&quot;")}">
+      <span>${shortCol(p.engine, p.model)}</span>
+      <span class="badge ${p.signal === "HOLD" ? "hold" : "sell"}">${p.signal}</span>
+      <span class="tiny">${conf}</span>
+      ${mark}
+    </div>`;
+  }).join("") || `<div class="tiny">No signals for this session</div>`;
+}
+
+function renderDateDetail() {
+  if (!state.selectedDate) return;
+  renderSessionList("pre-market", "preList", "preMove");
+  renderSessionList("intraday", "intraList", "intraMove");
+}
+
+async function main() {
+  let manifest;
+  try {
+    manifest = await fetchJson(MANIFEST_URL);
+  } catch (e) {
+    showBanner("Missing manifest.json — run dashboard-grok/scripts/generate-input-manifest.py (reads ../input, writes here)", true);
+    document.getElementById("board").innerHTML = `<div class="loading">No manifest</div>`;
+    return;
+  }
+
+  const files = (manifest.files || []).filter(f => f !== "input/manifest.json" && f !== "input/qqq-ohlc.json");
+  const { predictions, failed, listed } = await loadPredictions(files);
+  state.predictions = predictions;
+
+  if (!predictions.length) {
+    showBanner("No prediction files loaded", true);
+    return;
+  }
+
+  const dates = predictions.map(p => p.date).sort();
+  const minDate = dates[0];
+  const maxDate = dates[dates.length - 1];
+
+  try {
+    const live = await loadYahooOhlc(minDate, maxDate);
+    applyOhlc(live, "Yahoo live");
+  } catch (e) {
+    try {
+      const cache = await loadOhlcCache();
+      applyOhlc(cache, "OHLC cache");
+      showBanner("Yahoo live unavailable in browser — using qqq-ohlc.json cache (refreshed by CI).");
+    } catch (e2) {
+      showBanner("Could not load QQQ prices — signals shown without scores.", true);
+      applyOhlc(new Map(), "none");
+    }
+  }
+
+  state.columns = aggregate(predictions);
+  renderMeta({ predictions: predictions.length, listed, failed });
+  if (failed) showBanner(`Loaded ${predictions.length} signals; skipped ${failed} files.`);
+  renderBoard();
+  renderAccuracy();
+  renderHeatmap();
+  renderDateChips();
+  renderDateDetail();
+}
+
+main().catch(err => {
+  console.error(err);
+  showBanner(String(err), true);
+});
+</script>
+</body>
+</html>
