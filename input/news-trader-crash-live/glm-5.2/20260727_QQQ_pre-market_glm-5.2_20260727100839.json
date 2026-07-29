@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-27",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.82,
+  "threat_level": "HIGH",
+  "key_catalyst": "AI capex fears from Tesla/Alphabet earnings spreading into this week's Microsoft, Amazon, Meta, and Apple results",
+  "reasoning": "Three interconnected catalysts remain active primary drivers of the QQQ drawdown with no evidence of absorption: Treasury yields at 4.71% (highest since January 2025) ahead of this week's FOMC meeting, acute AI capex anxiety following Tesla/Alphabet earnings with four more megacap earnings due this week, and elevated oil prices fueling inflation fears. The Nasdaq posted its second straight weekly loss (-2%) and the semiconductor index fell 4.5% on Friday, with pre-market on 7/27 essentially flat at +0.09% showing no recovery."
+}

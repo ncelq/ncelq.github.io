@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-10",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.8,
+  "threat_level": "HIGH",
+  "key_catalyst": "Japan's 10-year yields hit 2.88% as the yen sinks, raising yen carry trade unwind risk for U.S. equities (MARKET_STRUCTURE)",
+  "reasoning": "Today's session saw a modest +0.67% gain despite persistent unresolved risks, notably MARKET_STRUCTURE (Japan's rising yields and yen carry trade unwind risk) and lingering POLICY_SHIFT pressures. The market's positive response to sector-specific or residual geopolitical stability (U.S.-Iran ceasefire) masks complacency toward these unresolved themes, which have historically triggered negative reactions. Late-session headlines show no de-escalation in MARKET_STRUCTURE risks, and recent memory for this theme is mixed but leans negative when combined with other live risks (e.g., Fed policy uncertainty)."
+}

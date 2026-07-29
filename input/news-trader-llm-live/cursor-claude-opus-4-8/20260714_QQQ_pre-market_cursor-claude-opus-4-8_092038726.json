@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-14",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.7,
+  "threat_level": "HIGH",
+  "key_catalyst": "Trump's surprise Strait of Hormuz toll announcement driving a fresh oil spike (new supply-disruption mechanism, not just renewed strikes)",
+  "reasoning": "TRACK B (recurring Iran/oil MACRO_SHOCK) with an ESCALATION OVERRIDE that pushes it toward Track A: the theme has appeared repeatedly, but Trump's surprise Strait of Hormuz TOLL is a concrete, novel supply-disruption mechanism that is objectively more severe than prior 'strikes/ceasefire' headlines, and it is layered on a chip selloff (SK Hynix). Cross-checking memory, recent same-theme MACRO_SHOCK days are DOWN-dominant (4 down vs 3 up) and SECTOR_ROTATION is DOWN-dominant (3 of 5), so neither is priced in, and the prior session's summary confirms crude is STILL rising with the Hormuz/oil tail unresolved. Cool-down after wrong SELLs is waived because the active theme is still printing mostly DOWN."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-13",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.95,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "U.S.-Iran Military Escalation and Strait of Hormuz Closure",
+  "reasoning": "The sudden escalation of a direct military conflict between the U.S. and Iran, including the closure of the Strait of Hormuz, is a novel and critical geopolitical shock that has triggered a severe risk-off environment. This has simultaneously spiked oil prices and inflation expectations, pressuring interest rates and long-duration tech assets, leaving multiple high-severity catalysts unresolved ahead of the open."
+}

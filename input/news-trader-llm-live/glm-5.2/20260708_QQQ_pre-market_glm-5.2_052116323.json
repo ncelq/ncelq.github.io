@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-08",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.58,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Trump declares Iran ceasefire is 'over', sending S&P/Dow/Nasdaq futures lower",
+  "reasoning": "Track B applies \u2014 today's dominant theme is MACRO_SHOCK (Iran ceasefire declared 'over'), which is a recurring theme in memory. MACRO_SHOCK responses are MIXED (4 up, 2 down, 2 flat over 8 occurrences), not DOWN-dominant, so the theme is not clearly a live punishing risk. While the reversal of yesterday's +1.70% Iran peace rally is a genuine negative, it fits an established whipsaw pattern (T-2: escalation \u2192 -1.52%, T-1: peace \u2192 +1.70%), and cool-down is active after a false SELL two days ago. The absence of DOWN-dominance in the MACRO_SHOCK theme and the market's demonstrated capacity to absorb Iran headlines without sustained selling argue for HOLD despite the abrupt reversal."
+}

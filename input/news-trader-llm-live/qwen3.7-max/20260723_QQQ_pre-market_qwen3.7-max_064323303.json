@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-23",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "GOOGL drops nearly 5% after-hours on a massive $205B capex hike, compounding TSLA's capex warnings and ongoing Houthi-driven oil shocks.",
+  "reasoning": "Track B applies to the recurring MACRO_SHOCK and EARNINGS_CRISIS themes. Memory shows MACRO_SHOCK responses are mostly DOWN (3 DOWN, 1 UP, 1 FLAT), meaning the geopolitical risk is not priced in and the wrong-SELL cool-down does not apply. Furthermore, the AI capex theme is escalating in magnitude with GOOGL dropping 5% after-hours on a massive $205B spending hike, directly threatening index heavyweights."
+}

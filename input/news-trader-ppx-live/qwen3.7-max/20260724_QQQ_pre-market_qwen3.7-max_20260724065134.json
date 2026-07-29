@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-24",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "Brent crude surges past $100 alongside sweeping 10-12.5% tariffs on 60 countries, driving Fed September rate-hike odds to 80%.",
+  "reasoning": "Despite critical escalations—including Brent crude breaking $100, sweeping new tariffs on 60 countries, and Fed rate-hike odds spiking to 80%—QQQ is only down 0.30% in pre-market, indicating a severe underreaction to compounding stagflation risks. With the AI capex ROI narrative already fractured from yesterday's Mag-7 earnings, this massive macro shock is likely to trigger a delayed but aggressive intraday sell-off as rate-sensitive growth multiples reprice."
+}

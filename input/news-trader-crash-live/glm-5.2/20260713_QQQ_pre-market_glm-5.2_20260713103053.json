@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-13",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.88,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "Escalating US-Iran Conflict Triggers Fresh Strait of Hormuz Crisis, Driving Risk-Off Sentiment",
+  "reasoning": "All six open catalysts are dated today and driven by an actively intensifying US-Iran military conflict with no resolution in sight. The US has bombed Iranian cities again, the Strait of Hormuz standoff is worsening, oil is surging 4%+, Treasury yields are at 4.58%, and Asian equities are in freefall (KOSPI -7.3%). QQQ's pre-market decline of -1.11% with no intraday session yet to absorb the shock indicates the market has not had time to digest this escalating geopolitical risk."
+}

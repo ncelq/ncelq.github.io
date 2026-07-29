@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-08",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.78,
+  "threat_level": "HIGH",
+  "key_catalyst": "Broad decline in semiconductor stocks and UBS report indicating smart money is reallocating away from AI.",
+  "reasoning": "Track B applies as SECTOR_ROTATION is a recurring theme. Recent memory shows 3 DOWN and 2 UP responses for this theme, meaning DOWN > UP and the risk is not priced in. The cool-down from recent wrong SELLs does not apply here because the theme is still printing mostly negative responses, and today's news of broad chip declines and smart money exiting AI represents a persistent, worsening headwind."
+}

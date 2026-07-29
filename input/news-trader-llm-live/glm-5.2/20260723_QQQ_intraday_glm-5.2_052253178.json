@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-23",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.62,
+  "threat_level": "HIGH",
+  "key_catalyst": "Oil prices surge towards $100, Brent nears $95 as Middle East conflict deepens, yen hits record low, bond yields spike",
+  "reasoning": "Oil prices surged towards $100 with Brent near $95 as Middle East conflict visibly deepened intraday, while the yen hit a record low and bond yields spiked \u2014 a multi-vector macro deterioration that the -0.39% session decline has not adequately priced in. The MACRO_SHOCK theme remains DOWN-dominant in recent memory (3 DOWN, 1 UP, 1 FLAT in last 5), and oil approaching the $100 psychological threshold represents an escalation override beyond prior sessions' $81-90 range. The complacent intraday response to worsening macro risk, combined with overnight Asian trading likely to react to record-low yen and surging oil, creates material gap-down risk."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-24",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "The world\u2019s most important market is flashing red about the Iran war [4 sources] \u2014 rising oil prices, persistent inflation fears, and shifting rate hike expectations rattling Treasury yields.",
+  "reasoning": "Track B applies. Today's dominant theme is MACRO_SHOCK (Iran war escalation, oil prices flashing red). Recent same-theme responses (last 10 days) show 3 DOWN, 1 UP, 1 FLAT \u2014 predominantly negative. The theme is visibly worsening (oil at $100, persistent inflation fears, Treasury yields rising), triggering the escalation override. This is not priced in."
+}

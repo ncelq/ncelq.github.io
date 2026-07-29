@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-15",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.62,
+  "threat_level": "HIGH",
+  "key_catalyst": "IBM's enterprise-capex-shift warning triggering a broadening selloff in traditional software megacaps within QQQ",
+  "reasoning": "The dominant catalyst is a novel, structural rotation out of traditional software after IBM's ~25% plunge and CEO commentary that enterprise capex is shifting from software to AI infrastructure, which today broadened across QQQ heavyweights (ServiceNow -5%, Adobe -4.3%, Salesforce -2.2%, Intuit -2.5%) and pulled QQQ to -0.96% even as the broader Nasdaq Composite rose ~0.9%. This is the market catching up to a theme it shrugged off on 2026-07-14 (QQQ +1.12% despite the IBM warning), and it is compounded by hawkish Warsh testimony keeping September hike odds at 63% and renewed U.S.-Iran/Hormuz oil escalation. The catalyst is unresolved and developing into an ongoing Q2 earnings season, creating material overnight gap-down risk in the largest software constituents."
+}

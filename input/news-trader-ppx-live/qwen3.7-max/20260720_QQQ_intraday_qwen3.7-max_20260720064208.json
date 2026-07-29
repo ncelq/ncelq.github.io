@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-20",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Impending mega-cap earnings (Alphabet, Tesla, Intel) coinciding with Brent crude breaching $90 on escalating US-Iran strikes.",
+  "reasoning": "QQQ faces material overnight gap-down risk from a convergence of escalating geopolitical tensions pushing Brent crude above $90 and impending binary earnings reports from mega-cap heavyweights like Alphabet and Tesla. The market's inability to hold an early semiconductor rebound, combined with rising rate-hike odds on oil-driven inflation, indicates fragile sentiment ahead of a critical stress test for the AI capex thesis."
+}

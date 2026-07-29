@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-24",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.85,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Tesla and Alphabet earnings drag combined with de-escalating US-Iran peace talk hopes",
+  "reasoning": "The market sold off materially intraday due to severe earnings and capex shocks from mega-caps Tesla and Alphabet, but this panic appears largely priced in by the close. Concurrently, the macro environment improved significantly as oil prices dropped 4% on renewed US-Iran peace talk hopes, reducing the likelihood of further overnight gap-down risk."
+}

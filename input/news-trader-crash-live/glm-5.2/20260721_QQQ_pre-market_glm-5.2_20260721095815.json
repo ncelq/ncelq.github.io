@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-21",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.75,
+  "threat_level": "HIGH",
+  "key_catalyst": "Mechanical Deleveraging and Margin Calls in Leveraged AI Trades",
+  "reasoning": "Two catalysts remain OPEN with HIGH threat: the semiconductor sector is still in bear market territory with unresolved regulatory pressures and a critical earnings week ahead, and mechanical deleveraging risks persist with record leveraged ETF AUM and no structural fixes. The market pattern of pre-market gains fading intraday (July 20: +1.26% pre-market then -0.88% intraday) indicates these risks have not been absorbed."
+}

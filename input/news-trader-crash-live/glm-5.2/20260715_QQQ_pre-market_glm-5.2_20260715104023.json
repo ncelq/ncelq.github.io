@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-15",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.82,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "U.S.-Iran military escalation and closure of the Strait of Hormuz",
+  "reasoning": "The U.S.-Iran military escalation remains an active, unresolved CRITICAL catalyst with ongoing hostilities, a naval blockade, collapsed tanker traffic, and a ~9.6% surge in Brent crude. While QQQ has partially recovered over two sessions (+0.82% and +0.47% pre-market), this bounce is modest relative to the severity of the geopolitical shock and does not constitute clear absorption. Rising Treasury yields and the semiconductor selloff remain additional OPEN risks, with pending Fed Chair testimony and CPI data this week that could further pressure rates and tech valuations."
+}

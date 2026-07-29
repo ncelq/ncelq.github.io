@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-20",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.6,
+  "threat_level": "MODERATE",
+  "key_catalyst": "AMD's expanded Microsoft Azure partnership for Helios AI inference racks \u2014 a positive semiconductor/AI infrastructure catalyst that offset macro headwinds intraday",
+  "reasoning": "The morning SELL thesis centered on Iran/Hormuz escalation, semi weakness, and liquidity drain, but the intraday session produced NO fresh negative headlines on any of these catalysts \u2014 instead the news trajectory was constructive, with AMD surging ~5% on a Microsoft Azure partnership and Alphabet gaining on its new 'Frozen' AI chip. The -0.87% decline partially priced in the morning's macro risk, but the absence of intraday escalation combined with positive tech catalysts suggests the negative setup is absorbing rather than actively deteriorating into the close."
+}

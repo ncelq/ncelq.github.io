@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-24",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.63,
+  "threat_level": "LOW",
+  "key_catalyst": "Oil sinks ~4% on renewed US-Iran talk hopes, easing yields and fueling a broad market rally",
+  "reasoning": "The morning SELL rested on an ESCALATING Iran/oil MACRO_SHOCK (crude toward $100, risk-off FX/yields), but the intraday window inverted that premise: the sole live catalyst was oil SINKING ~4% on renewed US-Iran talk hopes, easing yields and driving a broad rally \u2014 a clear de-escalation of the exact catalyst that justified the short. QQQ's -0.90% reflects sector rotation (rate-sensitive/real estate led the tape higher while tech lagged), not panic on a live escalating shock. What remains unresolved is whether the US-Iran talks hold overnight in the Asia/Europe session, but the objective trajectory into the close is resolving, not worsening."
+}

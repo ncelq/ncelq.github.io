@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-23",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.63,
+  "threat_level": "HIGH",
+  "key_catalyst": "Oil surging toward $100 (Brent near $95) as the Middle East conflict deepens, with a record-low yen and spiking yields",
+  "reasoning": "The dominant intraday catalyst \u2014 the Iran/Middle East oil shock \u2014 did not stay familiar-and-absorbed today; it ESCALATED in objective magnitude, with crude pushing toward $100 and Brent near $95 versus the $80\u201390 range that recurred across recent memory, plus a record-low yen and spiking bond yields signaling broad risk-off rather than an idiosyncratic single-name AI wobble. Yet QQQ drifted only -0.39% into the close, a muted response that leaves the fresh supply/FX shock largely unpriced. What remains unresolved is where oil and the yen settle in the Asia/Europe overnight session, precisely the window where this escalating premium tends to re-price."
+}

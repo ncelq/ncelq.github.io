@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-23",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.62,
+  "threat_level": "MODERATE",
+  "key_catalyst": "GOOGL drops nearly 5% after-hours on $205B 2026 capex hike with even higher 2027 spending guidance",
+  "reasoning": "Track B applies for both dominant themes. EARNINGS_CRISIS (GOOGL -5% on $205B capex, TSLA capex warnings) is MIXED in recent memory (2 UP, 2 DOWN, 1 FLAT) \u2014 not DOWN-dominant, so not a reliable sell signal. MACRO_SHOCK (Iran energy shock) is DOWN-dominant (1 UP, 3 DOWN, 1 FLAT in recent 5), but today's specific news is an analysis piece about lagged fuel price consequences rather than a fresh military escalation \u2014 the previous session confirmed no fresh Iran/Houthi headlines emerged intraday and the market has been resilient (T-1 +1.66%, T-2 +0.31%). GOOGL's ~5% after-hours drop translates to only ~0.3% QQQ drag given its ~6% weight."
+}

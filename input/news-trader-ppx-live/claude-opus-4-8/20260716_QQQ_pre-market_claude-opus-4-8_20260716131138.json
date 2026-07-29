@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-16",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.62,
+  "threat_level": "HIGH",
+  "key_catalyst": "Memory/storage chip rout on supercycle-durability doubts (Micron -8%, SK Hynix -9%) despite TSMC's strong beat",
+  "reasoning": "The dominant catalyst is a novel memory/storage 'supercycle doubt' rout (Micron -8%, SK Hynix -9%, WDC/SanDisk -8-9%, impact 8-9 across all sources) that is selling off HARD even though TSMC posted a blowout Q2 and raised FY26 capex to $60-64B — a 'sell the news' divergence that signals investors are questioning AI-hardware durability rather than reacting to a passing macro shock. This is compounded by an escalating Iran catalyst (first vessel/supertanker strike since the blockade was reimposed, Brent >$85) lifting yields, and the bullish offsets are narrow single-name/known items (Apple ATH, already-digested TSMC beat, PPI disinflation). Unlike the 07-13 semi plunge that was macro/oil-driven and fully rebounded on 07-14's cool CPI, today's weakness is fundamental and QQQ-mechanical via top-10 holding Micron."
+}

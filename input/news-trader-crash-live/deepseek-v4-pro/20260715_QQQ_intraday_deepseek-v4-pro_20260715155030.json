@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-15",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "U.S.-Iran Military Escalation and Strait of Hormuz Closure",
+  "reasoning": "The Strait of Hormuz military escalation remains a critical, unresolved catalyst driving oil prices higher and Treasury yields up, with no signs of absorption. Today's intraday -1.03% decline and broad semiconductor rout confirm the market is still pricing in forward risk, and the threat level is high."
+}

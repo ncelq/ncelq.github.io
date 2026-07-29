@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-23",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Surging oil prices revive inflation concerns amid Middle East tensions",
+  "reasoning": "Multiple HIGH-severity catalysts are actively escalating into the overnight: Treasury yields surged to 4.707% (highest since Jan 2025) with rate-hike odds doubling in a week, and oil prices spiked 7% to $100.69/bbl amid a 12th consecutive day of US-Iran exchanges and a Houthi naval blockade threatening Saudi exports. The intraday session closed down -0.39% with no sign of absorption, and major QQQ components Alphabet (-5-7%) and Tesla (-8-14.5%) are both still under active selling pressure with no stabilization."
+}

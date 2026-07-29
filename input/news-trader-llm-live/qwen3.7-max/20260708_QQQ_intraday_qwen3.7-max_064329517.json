@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-08",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.85,
+  "threat_level": "LOW",
+  "key_catalyst": "SpaceX's official inclusion in the Nasdaq-100 triggering $4.3 billion in passive inflows.",
+  "reasoning": "The market demonstrated strong resilience by rallying +0.92% intraday, overriding morning sector rotation fears and fully absorbing the geopolitical shock of the Iran ceasefire collapse. The structural bid from SpaceX's Nasdaq-100 inclusion and record ETF inflows provided substantial support, indicating that the index is well-bid and overnight gap-down risk remains contained."
+}

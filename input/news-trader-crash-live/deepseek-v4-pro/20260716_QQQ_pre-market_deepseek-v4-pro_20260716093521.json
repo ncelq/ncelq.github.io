@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-16",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Escalating U.S.-Iran military tensions with Hormuz naval blockade and oil price spike",
+  "reasoning": "The semiconductor selloff continues overnight with memory chip stocks down 0.6%-4%, and U.S.-Iran tensions escalated sharply with a naval blockade and oil price spike. QQQ pre-market is down -0.76% after Wednesday's -1.03% intraday drop, showing no absorption of these risks. Both active catalysts carry high forward risk, exceeding the SELL threshold."
+}

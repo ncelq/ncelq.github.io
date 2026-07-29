@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-28",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.68,
+  "threat_level": "LOW",
+  "key_catalyst": "Asian equities fall on AI-spending/chipmaker selloff jitters while crude oil extends its decline",
+  "reasoning": "Track B applies: today's dominant theme (AI-capex/chip jitters, SECTOR_ROTATION/EARNINGS_CRISIS) is a heavily recurring theme, but today's instance is MILD and de-escalating rather than worsening \u2014 'AI jitters' with no concrete fundamental miss, plus oil EXTENDING ITS DROP, which collapses the MACRO_SHOCK pillar that drove prior sessions. There is no novel HIGH/CRITICAL catalyst and no fresh escalation headline in the window; the Microsoft print is not until July 29 (outside the window and forward-looking), so it is not a factual event today."
+}

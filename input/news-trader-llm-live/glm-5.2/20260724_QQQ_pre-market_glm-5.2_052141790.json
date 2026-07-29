@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-24",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.65,
+  "threat_level": "HIGH",
+  "key_catalyst": "Bond market flashing red about Iran war \u2014 rising Treasury yields, inflation fears, and rate-hike expectations broadening the macro shock to the world's most important financial market",
+  "reasoning": "Track B applies with escalation override. The dominant MACRO_SHOCK theme (Iran/oil) is DOWN-dominant in recent memory (3 DOWN, 1 UP, 1 FLAT in last 5 occurrences), so cool-down does NOT apply. Today's news represents a visible escalation: the world's most important bond market is now 'flashing red' with rising Treasury yields, inflation fears, and shifting rate-hike expectations \u2014 broadening the macro shock beyond oil/equities into the core discount-rate mechanism for QQQ valuations. This is compounded by GOOGL -6.5% and TSLA's worst single-day fall in over a year (two top QQQ components crashing simultaneously on earnings), plus new Trump tariffs adding a fresh policy risk vector. The prior session's summary explicitly warned the -0.39% decline 'has not adequately priced in' the macro deterioration and flagged 'material gap-down risk' \u2014 today's pre-market news confirms that risk is materializing."
+}

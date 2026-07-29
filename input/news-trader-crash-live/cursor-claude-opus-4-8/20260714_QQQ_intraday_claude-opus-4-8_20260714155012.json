@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-14",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.74,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "US naval blockade of Iran goes live, ceasefire dead, oil spikes to near-month high",
+  "reasoning": "The US-Iran conflict escalated materially into July 14: a full naval blockade of Iran's entire coastline went live at 4 p.m. ET, the June 17 ceasefire is now technically dead, and Brent surged another 3.7% to $86.40 (up ~13% over two sessions) to a near-month high. This is a novel, CRITICAL catalyst that is actively escalating rather than resolving, and QQQ's essentially flat intraday response (+0.03%) shows the market has shrugged off risk that can still catch up overnight. The concurrent semiconductor selloff (SK Hynix -15.4% Seoul, ADR near offering price) remains an unabsorbed, volatile pressure on QQQ's largest holdings."
+}

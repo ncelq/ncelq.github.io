@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-08",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.62,
+  "threat_level": "LOW",
+  "key_catalyst": "Market rallied +0.92% despite Trump declaring Iran ceasefire 'over' and threatening fresh strikes, absorbing the bearish MACRO_SHOCK headline while structural inflows from SpaceX Nasdaq-100 inclusion provided support.",
+  "reasoning": "Despite the morning's bearish Iran catalyst (ceasefire declared 'over', strike threats), QQQ rallied +0.92% intraday, signaling strong absorption of the MACRO_SHOCK headline with support from structural positives \u2014 SpaceX's Nasdaq-100 inclusion driving $4.3B in passive inflows and record $1T H1 ETF inflows. No late-session escalation or fresh negative catalysts emerged during 9:30-15:45, and the MACRO_SHOCK theme shows mixed (not DOWN-dominant) memory responses (4 up, 2 down, 2 flat across 8 occurrences), so overnight gap-down risk is not clearly material. The primary overnight tail risk is Trump translating strike threats into actual military action, but the market's strong same-day response suggests it is pricing this as posturing rather than imminent escalation."
+}

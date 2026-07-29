@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-24",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.92,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "Surging oil prices revive inflation concerns amid Middle East tensions — Brent tops $100, Iran nears Strait of Hormuz closure",
+  "reasoning": "Multiple HIGH-to-CRITICAL catalysts remain OPEN and actively escalating. Oil prices surged past $100 with Iran nearing closure of the Strait of Hormuz and Trump vowing 'major military' action—a CRITICAL, novel escalation with no resolution in sight. Treasury yields hit their highest since January 2025 at 4.69-4.71% with markets now pricing a 36% chance of a Fed hike. Tesla's 14.5% collapse and Alphabet's 7% drop add compounding QQQ-specific pressure. The market showed no recovery on 20260723 (pre-market -1.38%, intraday -0.39%) and only flat pre-market on 20260724, indicating these risks have not been absorbed."
+}

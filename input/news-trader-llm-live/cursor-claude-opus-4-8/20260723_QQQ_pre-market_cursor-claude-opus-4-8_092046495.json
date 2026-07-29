@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-23",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.62,
+  "threat_level": "MODERATE",
+  "key_catalyst": "GOOGL -5% after-hours on 2026 capex hike to $205B with higher spending guided into 2027",
+  "reasoning": "Track B applies: both of today's catalysts are recurring themes already deep in memory \u2014 AI-capex/earnings angst (GOOGL -5% AH on a $205B capex hike, TSLA warning of rising capex) mirrors META T-8/T-7 and IBM T-5, and the Iran/oil MACRO_SHOCK is the same tail present every day. GOOGL actually BEAT on earnings/revenue and its higher capex is feeding, not fighting, the AI buildout \u2014 Asian chipmakers are rising today on exactly that \u2014 so the drop reads as idiosyncratic rather than a broad-tape breakdown. In the immediate recent window the market has repeatedly absorbed these themes (previous session +0.25% despite an active Bab el-Mandeb blockade; T-1 +1.66%, T-2 +0.31%, T-4 +1.12%, T-9 +1.85%), so I do not have the conviction to override the HOLD default."
+}

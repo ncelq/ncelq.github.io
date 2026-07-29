@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-08",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.61,
+  "threat_level": "MODERATE",
+  "key_catalyst": "President Trump declared the U.S.-Iran ceasefire 'over' and threatened fresh strikes, lifting oil prices (re-escalation of the Iran MACRO_SHOCK).",
+  "reasoning": "The morning SELL thesis (semis SECTOR_ROTATION + Iran MACRO_SHOCK) failed to follow through intraday: no fresh chip-selloff headline hit the 9:30\u201315:45 window and QQQ rallied +0.92%, showing the market absorbed rather than extended the feared damage. The one genuinely new negative \u2014 Trump declaring the Iran ceasefire 'over' with strike threats and firmer oil \u2014 hit early and dinged only non-tech names (Kyndryl, DXC, Equifax) while the tech tape rallied through it, so it was not escalating into the close. What remains unresolved is residual Middle East re-escalation risk that could re-price in Asia/oil overnight."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-20",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.75,
+  "threat_level": "HIGH",
+  "key_catalyst": "Continued Semiconductor & AI Chip Selloff Weighs on Nasdaq-100",
+  "reasoning": "The broad semiconductor selloff intensified intraday, with QQQ reversing from a +1.21% pre‑market gain to close -0.88%, showing no absorption of the tech rout. Major AI/semi names remain under heavy pressure, and with Alphabet, Tesla, and Intel earnings due July 22–23, downside risk is unresolved. Geopolitical tensions and SpaceX’s continued decline add to the elevated overnight threat."
+}

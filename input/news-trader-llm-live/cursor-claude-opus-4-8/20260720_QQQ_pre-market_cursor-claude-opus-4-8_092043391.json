@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-20",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.7,
+  "threat_level": "HIGH",
+  "key_catalyst": "US-Iran conflict escalates: Strait of Hormuz shipping blocked, WTI crude breaks $81 (+3%)",
+  "reasoning": "Track B applies: both dominant themes \u2014 MACRO_SHOCK (Iran/oil/Hormuz) and SECTOR_ROTATION (AI-trade selloff) \u2014 are recurring in memory and are printing mostly DOWN responses, so neither is priced in. An escalation override also applies: prior Iran days featured Hormuz 'threats' and a 'toll,' but today reports Strait of Hormuz shipping actually BLOCKED with WTI breaking $81 (+3%), a concrete supply disruption more severe than prior occurrences, which shifts this toward a Track A worsening catalyst."
+}

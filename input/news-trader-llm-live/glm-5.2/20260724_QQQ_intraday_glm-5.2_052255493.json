@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-24",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.65,
+  "threat_level": "LOW",
+  "key_catalyst": "Oil sinks 4% on renewed US-Iran talk hopes, easing the MACRO_SHOCK overhang",
+  "reasoning": "The morning SELL thesis centered on Iran/oil escalation as the dominant macro risk, but intraday developments show the opposite trajectory \u2014 crude fell 4% on renewed US-Iran talk hopes, and the S&P 500 actually rose, indicating the macro risk is resolving rather than escalating. QQQ's -0.90% decline is almost entirely attributable to GOOGL's -7% earnings-driven selloff (a single-stock event), with the broad market demonstrating resilience. With the primary catalyst de-escalating and the earnings drag largely absorbed during today's session, overnight gap-down risk is not material."
+}

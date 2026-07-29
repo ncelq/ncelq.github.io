@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-13",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.58,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Oil prices rise amid renewed Middle East tensions, extending the unresolved Iran/MACRO_SHOCK narrative into overnight risk",
+  "reasoning": "The session declined -0.83% as oil prices rose on renewed Middle East tensions and a 'Why SK hynix Will Drag Down Markets, Again' article added semiconductor competitive-pressure concerns. Both dominant themes \u2014 MACRO_SHOCK (Iran/oil) and SECTOR_ROTATION (semis) \u2014 show DOWN-dominant memory responses (2 DOWN vs 1 UP and 1 UP vs 2 DOWN respectively) and neither catalyst is resolving: oil is rising not falling, and the SK hynix $26.5B debut intensifies the capital-drain and competitive-pressure narrative that has been pressuring chip stocks. With no positive counter-catalyst emerging intraday to stabilize sentiment, overnight gap-down risk is material as Asian trading could extend oil's rise and react to the SK hynix competitive pressure."
+}

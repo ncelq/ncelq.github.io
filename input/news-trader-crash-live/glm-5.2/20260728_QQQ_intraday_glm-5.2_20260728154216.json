@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-28",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.65,
+  "threat_level": "HIGH",
+  "key_catalyst": "Concerns over circular financing in the AI ecosystem — Nvidia's ~$250B guarantee for OpenAI data center plus potential $350B chip financing",
+  "reasoning": "The pre-market drop of -1.71% on July 28 reflected the market's initial shock to the circular financing news, but the flat intraday close (+0.02%) shows the market paused rather than resolved its concerns. With Big Tech earnings (Microsoft/Meta Wednesday, Apple/Amazon Thursday) and a Fed decision still pending, the circular financing and AI-capex scrutiny catalysts remain unresolved and carry meaningful overnight event risk into the next session."
+}

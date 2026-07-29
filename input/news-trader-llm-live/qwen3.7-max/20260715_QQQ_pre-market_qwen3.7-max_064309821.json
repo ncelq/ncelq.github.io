@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-15",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.85,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Renewed US-Iran fighting and better-than-expected CPI data",
+  "reasoning": "Track B applies as the renewed US-Iran tensions and chip sector weakness are recurring themes. Memory shows MACRO_SHOCK and SECTOR_ROTATION responses are mixed with DOWN not dominant, indicating the market has largely absorbed these headlines. Combined with an active cool-down from a recent false SELL signal and positive CPI data, the default HOLD is warranted."
+}

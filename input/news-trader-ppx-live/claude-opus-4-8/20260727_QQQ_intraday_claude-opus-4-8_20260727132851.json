@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-27",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.74,
+  "threat_level": "HIGH",
+  "key_catalyst": "Mega-cap tech earnings week (Apple, Microsoft, Amazon, Meta) beginning amid intensified AI capex-vs-returns scrutiny",
+  "reasoning": "QQQ is in a persistent, multi-day drawdown driven by escalating, unresolved themes—AI capex fear (Alphabet/Tesla on 07-23/07-24), oil/Iran, rising yields, and Fed hawkishness—and today's -1.39% shows the market is still actively selling rather than absorbing the news. Into the next session the catalyst set worsens rather than resolves: Apple/Microsoft/Amazon/Meta report against the same AI-capex scrutiny that already erased Mag-7 value, and Wednesday's FOMC carries a ~30% surprise-hike probability. These are material overnight/this-week binary risks stacked on a tape that has fallen four of the last five sessions, making gap-down risk non-trivial."
+}

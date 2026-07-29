@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-14",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Geopolitical tensions flaring in the Strait of Hormuz alongside global bond repricing",
+  "reasoning": "The market faded a strong CPI-driven pre-market rally, ending essentially flat (-0.07%) as escalating geopolitical tensions in the Strait of Hormuz and rising Japanese bond yields offset inflation relief. Because the session did not sell off sharply to price in these renewed macro shocks, and memory shows MACRO_SHOCK reactions remain mostly negative or flat, staying long overnight carries material gap-down risk as global markets digest the geopolitical flare-up."
+}

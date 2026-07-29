@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-09",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "Escalating US-Iran tensions disrupt oil shipments in the Strait of Hormuz, driving oil prices up amid persistent 3.9% super-core inflation.",
+  "reasoning": "Track A (Escalation Override) applies because the US-Iran conflict has escalated from diplomatic breakdowns and localized strikes to the physical disruption of oil shipments in the Strait of Hormuz. This is a novel, CRITICAL supply shock that directly exacerbates the persistent 3.9% super-core inflation reported in today's CPI preview, creating a severe macro headwind for QQQ that the market has not previously absorbed."
+}

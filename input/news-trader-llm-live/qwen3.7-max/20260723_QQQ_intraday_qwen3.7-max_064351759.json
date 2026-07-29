@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-23",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Oil prices surging towards $100 as Middle East conflict deepens, compounded by revived AI spending fears from Alphabet and Tesla earnings.",
+  "reasoning": "The market exhibited complacency with only a mild -0.39% intraday decline despite severe escalations in the Middle East driving oil towards $100 and revived AI capex fears from heavyweight earnings. Given that recent memory shows MACRO_SHOCK and EARNINGS_CRISIS themes consistently trigger negative reactions, this muted session response fails to price in the deteriorating geopolitical and sector-specific risks. Consequently, staying long carries material gap-down risk as global markets digest the oil surge and spiking yields overnight."
+}

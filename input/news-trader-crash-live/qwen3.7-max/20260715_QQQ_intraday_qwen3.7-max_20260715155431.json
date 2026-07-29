@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-15",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.95,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "Reinstatement and active enforcement of Naval Blockade in the Strait of Hormuz",
+  "reasoning": "The active enforcement of a U.S. naval blockade on Iranian ports and ongoing military escalation in the Strait of Hormuz represent a critical, unresolved geopolitical threat. Combined with a broad semiconductor selloff and surging oil prices driving up yields, the market closed down intraday, indicating these severe catalysts are not yet absorbed."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-23",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.82,
+  "threat_level": "HIGH",
+  "key_catalyst": "Alphabet's raised AI capex guidance ($195-205B) triggering a ~4-5% after-hours drop in QQQ's largest holding, alongside Tesla's earnings miss",
+  "reasoning": "Two of QQQ's largest holdings dropped hard after today's close (Alphabet -4-5% on a $195-205B capex guide that revived AI-ROI fears, Tesla -4-8% on an 18% profit drop and 35% EPS miss with negative FCF), and those after-hours declines are not yet reflected in today's -0.72% regular-session close, creating direct mechanical gap-down risk at tomorrow's open. This compounds with an escalating macro shock as Brent surged near/above $96-100 on Houthi Red Sea tanker attacks and the 10-year yield hit its highest since January (~4.66-4.7%), repricing Fed expectations toward a hike (~30% odds). The recent history (7/22 slightly down into earnings, 7/21's dovish yield-driven rally now fully reversed) shows sentiment flipping from priced-in dovishness to a hawkish, capex-skeptical regime just as the marquee prints disappointed."
+}

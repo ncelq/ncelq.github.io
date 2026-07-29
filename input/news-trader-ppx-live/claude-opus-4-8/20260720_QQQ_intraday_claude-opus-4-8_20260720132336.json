@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-20",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.61,
+  "threat_level": "HIGH",
+  "key_catalyst": "Brent crude spiking above $90 on the ninth day of U.S.-Iran strikes and Strait of Hormuz disruption, reigniting inflation and Fed-tightening fears",
+  "reasoning": "Oil is actively escalating with Brent topping $90 on the ninth consecutive day of U.S.-Iran strikes and Hormuz disruption, an unresolved catalyst that is worsening rather than winding down and directly lifting rate-hike odds (~53% September) against QQQ's long-duration mega-caps. The market did not shrug this off cleanly: QQQ faded to -0.54% as an early semiconductor rebound reversed and investors visibly de-risked ahead of Alphabet/Tesla/Intel, showing the tape is absorbing bad news poorly rather than fully pricing it. With an escalating geopolitical/inflation catalyst plus binary mega-cap earnings looming, overnight gap-down risk into the next open is material."
+}

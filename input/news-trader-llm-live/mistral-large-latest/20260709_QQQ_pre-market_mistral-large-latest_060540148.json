@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-09",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Escalating US-Iran tensions in the Strait of Hormuz disrupting oil shipments, driving oil prices up sharply",
+  "reasoning": "Track B applies. Today's dominant theme is MACRO_SHOCK (US-Iran tensions escalating in Strait of Hormuz, oil price surge). Recent memory for MACRO_SHOCK shows 4 DOWN vs. 3 UP responses, with the most recent occurrence (T-10) being flat but unresolved. The theme is not priced in, and the escalation in geopolitical risk (oil disruption) is materially worse than prior occurrences, warranting a SELL despite cool-down."
+}

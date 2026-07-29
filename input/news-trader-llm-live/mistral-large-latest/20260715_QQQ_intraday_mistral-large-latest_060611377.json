@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-15",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.9,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "IBM's AI spending warning and escalating U.S.-Iran hostilities disrupting oil shipments in the Strait of Hormuz",
+  "reasoning": "Today's session saw a modest -0.84% decline amid escalating MACRO_SHOCK (Strait of Hormuz disruptions) and EARNINGS_CRISIS (IBM's AI spending warning triggering a historic selloff). The market's muted response to these worsening catalysts\u2014despite their historical tendency to gap down overnight\u2014suggests complacency rather than absorption. Late-session headlines show no de-escalation in geopolitical or earnings risks, leaving both themes live and unpriced for overnight exposure."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-28",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Escalating concerns over circular financing in the AI ecosystem as Nvidia backs $250B OpenAI guarantee and $750B in new deals",
+  "reasoning": "Multiple HIGH-threat catalysts remain OPEN and actively driving the QQQ drawdown. The AI circular financing concern is escalating with Nvidia's $250B OpenAI guarantee and $750B in new deals raising questions about artificially inflated demand, while Chinese chip competition intensifies with CXMT's massive debut and domestic lithography production threatening US semiconductor dominance. The market shows no absorption — QQQ has declined in four of the last five sessions including a -1.71% pre-market drop today — and with Big Tech earnings and a Fed decision looming this week, forward risk remains elevated."
+}

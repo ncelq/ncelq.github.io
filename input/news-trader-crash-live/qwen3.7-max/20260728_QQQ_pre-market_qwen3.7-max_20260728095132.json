@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-28",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.92,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "Concerns Over Circular Financing in the AI Ecosystem",
+  "reasoning": "Multiple novel and escalating catalysts are threatening the core AI investment thesis, including a massive circular financing report involving Nvidia and OpenAI, alongside rising Chinese chip competition and hawkish Fed rate odds. The market has not absorbed these shocks, evidenced by an accelerating -1.88% pre-market decline following a -1.39% intraday drop, indicating severe forward risk ahead of mega-cap earnings."
+}

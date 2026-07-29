@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-17",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "China's AI breakthrough triggering a semiconductor selloff alongside Meta's 4.5% drop and renewed US-Iran strikes.",
+  "reasoning": "Despite severe negative headlines\u2014including Meta's 4.5% drop on AI spending fears, a China-driven semiconductor selloff, and renewed US-Iran strikes\u2014the market complacently rallied +0.53%. This disconnect between deteriorating risk-off conditions and the positive intraday return indicates the market is mispricing overnight gap-down risk as global sessions digest the tech weakness and geopolitical shocks."
+}

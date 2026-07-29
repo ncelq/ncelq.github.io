@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-21",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.6,
+  "threat_level": "HIGH",
+  "key_catalyst": "War clouds darken \u2014 Middle East tensions send Wall Street lower with oil and bond yields spiking simultaneously",
+  "reasoning": "TRACK B applies: today's 'War clouds darken' headline is a recurring Middle East/Iran-Hormuz MACRO_SHOCK theme layered on AI SECTOR_ROTATION, both of which have appeared repeatedly in memory. Cross-checking the same-theme responses shows DOWN dominates UP, so the theme is NOT priced in, and with oil AND bond yields now spiking together (a broadening/escalating condition versus prior occurrences), the escalation override reinforces SELL. Cool-down from prior wrong SELLs is explicitly suspended because the active MACRO_SHOCK theme is still printing mostly DOWN."
+}

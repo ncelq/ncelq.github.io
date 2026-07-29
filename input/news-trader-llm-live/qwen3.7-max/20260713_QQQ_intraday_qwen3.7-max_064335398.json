@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-13",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Renewed Middle East tensions driving oil prices higher alongside persistent AI/chip sector credit weakness.",
+  "reasoning": "The market has only moderately declined (-0.83%) despite the renewal of US-Iran hostilities, rising oil prices, and novel credit warnings for hyperscalers. This muted intraday response to escalating geopolitical and sector-specific risks suggests complacency, leaving QQQ vulnerable to an overnight gap-down as global markets price in the deteriorating macro and tech credit conditions."
+}

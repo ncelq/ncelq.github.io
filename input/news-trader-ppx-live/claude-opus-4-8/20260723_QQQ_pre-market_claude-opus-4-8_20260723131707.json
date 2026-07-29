@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-23",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.78,
+  "threat_level": "HIGH",
+  "key_catalyst": "Alphabet's raised AI capex guidance to $195-205B triggering a 4%+ after-hours decline and questioning hyperscaler spending ROI",
+  "reasoning": "Multiple bearish catalysts are converging and escalating rather than resolving: Alphabet's raised capex guidance ($195-205B) triggered a 4%+ after-hours drop in a top-QQQ holding, directly souring the AI-spending thesis, while oil topping $95 (Iran rejecting talks, Red Sea blockade) is driving a hawkish Fed repricing (September hike odds surging to ~83%) and pushing the 30-year yield above 5%. Unlike 2026-07-22 when SMCI/AMD deal optimism offset oil and yield pressure, today the mega-cap earnings reaction is itself the new negative catalyst with no bullish counterweight, and the -1.58% pre-market print shows the market is actively repricing risk lower rather than absorbing it."
+}

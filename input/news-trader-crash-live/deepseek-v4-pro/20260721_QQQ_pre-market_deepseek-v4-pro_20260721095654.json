@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-21",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Semiconductors entered a bear market as AI 'sell the news' intensified",
+  "reasoning": "All three catalysts remain unresolved and escalating: semis are in a bear market with no stabilization, oil is surging on fresh Iran tensions fueling risk-off rotation, and record leveraged ETF positions amplify mechanical selling risk. The market's +1.21% pre-market bounce on July 20 was fully reversed intraday (-0.88%), indicating sell-into-strength behavior, and today's similar +1.19% pre-market spike lacks evidence of absorption."
+}

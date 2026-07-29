@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-28",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.82,
+  "threat_level": "HIGH",
+  "key_catalyst": "Nvidia's $250B data-center guarantee revives circular financing fears in AI",
+  "reasoning": "Novel catalysts — Nvidia’s potential $250B circular financing backstop and a Chinese lithography breakthrough — are driving a severe, unresolved chip selloff. Pre-market QQQ is down -1.48% following a -1.38% intraday slide, with no sign of absorption; both threats remain primary downside drivers."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-22",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.65,
+  "threat_level": "HIGH",
+  "key_catalyst": "Alphabet and Tesla post-close earnings — first Magnificent Seven reports of the season with negative pre-expectations amid rising yields and escalating oil",
+  "reasoning": "Tonight's Alphabet and Tesla earnings represent the first Magnificent Seven prints of the season with clearly negative pre-expectations — Tesla facing its first quarterly cash burn in over two years and Alphabet under scrutiny for delayed Gemini — and this binary event hits against a deteriorating macro backdrop (oil escalating from $90 on 7/20 to above $95 today, 10-year yields at 4.64% exceeding the 4.60% level that contributed to the -1.64% selloff on 7/16). Today's +0.41% close was driven by AI-specific catalysts (SMCI's $60B orders, AMD-Anthropic deal) that are now fully absorbed, leaving overnight exposure anchored to earnings outcomes in a hostile rate-and-oil environment."
+}

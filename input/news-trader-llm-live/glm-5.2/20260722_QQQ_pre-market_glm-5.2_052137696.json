@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-22",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.72,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Houthi rebels blockaded Bab el-Mandeb strait, broadening Middle East shipping disruption beyond Hormuz",
+  "reasoning": "Track B applies \u2014 MACRO_SHOCK is a recurring theme. The Houthi blockade of Bab el-Mandeb is a broadening of scope beyond Hormuz, but the underlying condition (Houthi naval blockade threats to Middle East shipping) appeared in the previous session's summary and throughout the memory window. Counting actual MACRO_SHOCK responses in the detailed memory: 3 UP (T-10 +1.85%, T-5 +1.12%, T-2 +1.66%), 3 DOWN (T-8 -1.50%, T-7 -1.64%, T-4 -1.90%), 3 FLAT (T-9 +0.10%, T-3 +0.31%, T-1 +0.28%) \u2014 this is MIXED, not DOWN-dominant. The most recent 3 same-theme sessions were FLAT, UP, FLAT, indicating increasing market absorption. Since DOWN is not > UP, cool-down IS active after 1/10 correct SELL signals, raising the bar. Strong positive counter-catalysts (Micron +12%, constructive PMI data) further support HOLD."
+}

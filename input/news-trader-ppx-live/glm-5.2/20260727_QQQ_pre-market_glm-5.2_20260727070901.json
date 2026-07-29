@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-27",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.62,
+  "threat_level": "MODERATE",
+  "key_catalyst": "US-Iran diplomatic breakthrough easing oil prices from $100, combined with mega-cap earnings week positioning ahead of MSFT/META/AAPL/AMZN reports",
+  "reasoning": "After a 3-day cumulative decline of ~3.5% driven by AI capex concerns (Alphabet -7%, Tesla -14.5% on 7/23-7/24), oil above $100, and rising yields, several bearish catalysts are showing signs of resolution with US-Iran diplomatic talks easing crude from the $100 level and 10Y yields pulling back from 4.7%. However, this week brings MSFT, META, AAPL, and AMZN earnings alongside an FOMC decision with a 35.8% hike probability, creating significant binary event risk that could revive the AI capex sell-off pattern seen last week. The pre-market +0.97% bounce reflects dip-buying optimism, but last week demonstrated that earnings disappointments can override macro tailwinds sharply."
+}

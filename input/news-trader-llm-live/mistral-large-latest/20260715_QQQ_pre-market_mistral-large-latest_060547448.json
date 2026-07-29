@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-15",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Renewed U.S.-Iran fighting disrupting oil markets and IBM's Q2 revenue warning sparking software/consulting selloff",
+  "reasoning": "Track B applies. Today's dominant theme is MACRO_SHOCK (U.S.-Iran hostilities escalating, oil rally) and EARNINGS_CRISIS (IBM warning, chip selloff). Recent memory for MACRO_SHOCK shows mixed responses (2 UP, 1 DOWN, 2 FLAT), but EARNINGS_CRISIS has 3 DOWN responses out of 5, indicating it is NOT priced in. The escalation in geopolitical risk (Strait of Hormuz disruptions) and the negative market response to earnings warnings (IBM, chip sector) warrant a SELL despite mixed MACRO_SHOCK history."
+}

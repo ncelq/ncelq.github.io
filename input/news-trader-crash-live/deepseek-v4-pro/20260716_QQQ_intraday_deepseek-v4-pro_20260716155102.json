@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-16",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "TSMC's Capex Guidance Overshadowed Strong Earnings, Sparking Sector-Wide Concerns",
+  "reasoning": "The chip sector selloff, driven by TSMC's raised capex sparking overcapacity fears and crowded positioning, continues to intensify with no signs of absorption; QQQ fell another 1.29% intraday. With geopolitical tensions adding to defensive rotation, multiple HIGH-severity catalysts remain unresolved, creating active overnight downside risk."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-15",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.72,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Cooler-than-expected June CPI slashing July Fed rate-hike odds to ~17%",
+  "reasoning": "The dominant catalysts are decisively bullish: a cooler June CPI (-0.4% MoM, 3.5% YoY) that collapsed July hike odds to ~17%, ASML's raised 2026 guidance validating AI chip demand, and a PayPal takeover offer plus BlackRock's beat. The Iran strikes and Warsh's hawkish pushback are real but low-to-moderate impact, and the tape is already absorbing them (futures up, QQQ +0.57% pre-market) rather than repricing risk. This mirrors the 07-14 session where soft CPI overwhelmed elevated oil and geopolitics."
+}

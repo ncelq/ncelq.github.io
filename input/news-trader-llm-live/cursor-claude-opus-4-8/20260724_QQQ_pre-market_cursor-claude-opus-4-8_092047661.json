@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-24",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.72,
+  "threat_level": "HIGH",
+  "key_catalyst": "Escalating Iran war oil shock (crude toward $100, record-low yen, spiking bond yields flashing broad risk-off)",
+  "reasoning": "Track B with an ESCALATION override that pushes it into Track A treatment: the Iran/Middle East oil shock is a recurring MACRO_SHOCK theme, and recent same-theme days are mostly DOWN (5 DOWN, 2 UP, 3 FLAT over the last 10), so it is NOT priced in. Today's news is not a repeat but an objective worsening \u2014 crude toward $100 and Brent near $95 versus the recurring $80\u201390 range, plus a record-low yen and spiking Treasury yields signaling broad risk-off \u2014 which the previous session left largely unpriced with only a muted -0.39% drift."
+}

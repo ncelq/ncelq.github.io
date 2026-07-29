@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-27",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.85,
+  "threat_level": "MODERATE",
+  "key_catalyst": "NVIDIA slides and broad chip rout on AI spending worries erasing geopolitical relief.",
+  "reasoning": "The session saw a material -1.38% selloff driven by a chip rout and AI spending fears, effectively pricing in the sector-specific panic intraday. Concurrently, the dominant MACRO_SHOCK theme explicitly resolved with an 8% oil crash and paused US-Iran strikes, removing the primary overnight gap-down risk that has punished the market in recent weeks."
+}

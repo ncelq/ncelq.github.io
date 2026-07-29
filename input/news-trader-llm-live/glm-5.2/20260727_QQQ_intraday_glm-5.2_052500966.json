@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-27",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.55,
+  "threat_level": "MODERATE",
+  "key_catalyst": "NVIDIA slides 3.8% as OpenAI financing talks add to AI spending worries, triggering a chip rout that overrides oil's 8% crash",
+  "reasoning": "Oil crashed 8% as the US paused Iran strikes \u2014 a genuine resolution of the dominant MACRO_SHOCK theme \u2014 yet QQQ still fell -1.38% because a NEW catalyst emerged: NVIDIA -3.8% on OpenAI financing talks amplifying AI spending worries, triggering a chip rout that erased Wall Street's oil-relief entirely. The market's refusal to rally on a major positive macro development shows the AI/semiconductor spending concern is the dominant force heading into the close, and with SECTOR_ROTATION DOWN-dominant in recent memory (1 UP, 2 DOWN, 2 FLAT in last 5 occurrences) and this specific catalyst not resolving, overnight gap-down risk via Asian semiconductor contagion is material."
+}

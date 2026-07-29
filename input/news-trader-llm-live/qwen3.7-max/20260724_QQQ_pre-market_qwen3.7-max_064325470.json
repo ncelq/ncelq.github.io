@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-24",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Bond market flashing red over the Iran war and rising oil prices, combined with severe Q2 earnings misses and sell-offs for Alphabet and Tesla.",
+  "reasoning": "Track B applies as MACRO_SHOCK and EARNINGS_CRISIS are recurring themes, but recent memory shows they are mostly met with DOWN responses (3 DOWN, 1 UP, 1 FLAT), meaning they are not priced in. Today's news escalates the macro threat as the bond market flashes red over the Iran war and oil-driven inflation, compounded by severe earnings sell-offs in mega-caps Alphabet and Tesla, justifying a SELL despite the active cool-down period."
+}

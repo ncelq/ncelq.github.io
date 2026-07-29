@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-27",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.65,
+  "threat_level": "MODERATE",
+  "key_catalyst": "US-Iran diplomatic breakthrough sending oil lower vs. Houthi attacks on Saudi oil installations pushing crude back toward $100",
+  "reasoning": "The pre-market bounce is fueled by US-Iran de-escalation hopes and mega-cap earnings positioning, but the contradictory Houthi escalation over the weekend and looming FOMC decision introduce significant uncertainty. Given last week's pattern where early optimism was reversed by oil spikes and AI capex fears, it is prudent to hold rather than sell into this relief rally until the geopolitical and earnings picture crystallizes."
+}

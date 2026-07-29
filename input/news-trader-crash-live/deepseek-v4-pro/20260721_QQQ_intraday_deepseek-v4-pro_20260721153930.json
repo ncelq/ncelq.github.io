@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-21",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.82,
+  "threat_level": "HIGH",
+  "key_catalyst": "Semiconductors in a bear market as AI sell-the-news intensifies, compounded by escalating geopolitical risk",
+  "reasoning": "The semiconductor bear market and AI sell-off remain unresolved with no signs of stabilization, while escalating U.S.-Iran airstrikes drive oil above $90 and fuel a risk-off rotation away from tech. Today’s minor bounce (+0.63% intraday) does not indicate absorption given the severity and ongoing nature of these catalysts."
+}

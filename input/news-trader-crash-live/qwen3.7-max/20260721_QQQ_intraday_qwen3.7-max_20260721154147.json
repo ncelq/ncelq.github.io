@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-21",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "Escalating U.S.-Iran Geopolitical Tensions and Oil Price Surge",
+  "reasoning": "The U.S.-Iran geopolitical conflict is rapidly escalating, marked by nine consecutive nights of strikes, the deaths of three U.S. service members, and Brent crude surging past $90. Despite the market's intraday gains today, this critical and unresolved geopolitical threat carries severe forward risk and energy-driven inflation concerns that the market has not fully absorbed."
+}

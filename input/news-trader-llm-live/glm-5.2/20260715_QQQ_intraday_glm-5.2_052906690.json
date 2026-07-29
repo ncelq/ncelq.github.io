@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-15",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.62,
+  "threat_level": "MODERATE",
+  "key_catalyst": "June CPI cooling more than expected but Fed Chair Warsh delivers hawkish remarks, warning Middle East conflict risks could ignite next month's inflation report",
+  "reasoning": "The -0.84% intraday decline reflects a mix of offsetting catalysts \u2014 cooling June CPI (positive) countered by hawkish Fed Chair Warsh, Apple iPhone build warnings, and the aftermath of IBM's historic 25% selloff \u2014 with no late-session escalation or panic visible. ASML's lifted 2026 outlook provides a semiconductor counterweight, and the moderate selloff suggests partial absorption rather than unresolved deterioration. No catalyst is visibly worsening into the close, and overnight gap-down risk is not clearly material given the mixed news trajectory."
+}

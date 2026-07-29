@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-22",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Escalating US-Iran Tensions and Surging Oil Prices Trigger Risk-Off Sentiment",
+  "reasoning": "Ongoing US strikes on Iran and an attack on a tanker in the Strait of Hormuz pushed oil to $94, a novel geopolitical shock. The Nasdaq-100 pre-market decline of -0.52% indicates the market has not absorbed this risk, especially with unresolved tensions likely to escalate further."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-10",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.63,
+  "threat_level": "LOW",
+  "key_catalyst": "Japan 10-year yields hit 2.88% with yen sinking, raising yen carry trade unwind risk for U.S. equities",
+  "reasoning": "The session delivered a constructive +0.67% rally driven by NVDA's +3.02% surge on Blackwell demand exceeding supply, extending the semiconductor recovery trajectory from prior sessions. The main new intraday development is a Japan macro risk \u2014 10-year JGB yields hitting 2.88% with the yen sinking, raising carry-trade unwind concerns \u2014 but this is a slow-moving narrative conveyed via an opinion piece rather than a confirmed market disruption, and no late-session deterioration or panic selling emerged. The ETF leverage structural warning is a background concern with no actionable trigger today."
+}

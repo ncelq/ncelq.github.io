@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-15",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.8,
+  "threat_level": "HIGH",
+  "key_catalyst": "IBM's earnings warning triggers software stock selloff as enterprise spending rotates to AI infrastructure",
+  "reasoning": "IBM's warning about enterprise capex shifting to AI infrastructure triggered a sector-wide selloff in traditional software stocks (ServiceNow -5%, Adobe -4.3%) that dragged QQQ down 0.96% even as the Nasdaq Composite rose 0.90%. This rotation is novel and escalating, while hawkish Fed commentary and elevated oil prices add to overnight gap-down risk."
+}

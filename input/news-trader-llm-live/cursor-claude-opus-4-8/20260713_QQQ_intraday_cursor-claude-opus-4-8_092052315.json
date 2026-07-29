@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-13",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.6,
+  "threat_level": "HIGH",
+  "key_catalyst": "Oil prices rise amid renewed Middle East tensions while U.S. stocks slip into earnings season",
+  "reasoning": "The morning's Iran/oil MACRO_SHOCK escalation thesis was not invalidated by the session \u2014 the sole intraday catalyst confirmed crude is STILL rising on renewed Middle East tensions, and QQQ drifted -0.83% without capitulating, so the Hormuz/oil-supply tail is neither resolved nor fully priced. What changed is that tension persisted into the close (unlike prior Iran days where afternoons saw no fresh oil surge); what remains unresolved is where oil settles in the Asia/Europe overnight session."
+}

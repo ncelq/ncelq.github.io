@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-20",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Oil prices rise above $90 amid escalating US-Iran tensions and Strait of Hormuz supply disruptions.",
+  "reasoning": "Despite positive intraday catalysts for specific chipmakers, the broader market sold off -0.87% as escalating US-Iran tensions drove oil prices above $90. This moderate decline fails to fully price in the severe macro shock of a prolonged energy supply disruption, leaving QQQ vulnerable to an overnight gap-down as global markets digest the deteriorating geopolitical and inflation risks."
+}

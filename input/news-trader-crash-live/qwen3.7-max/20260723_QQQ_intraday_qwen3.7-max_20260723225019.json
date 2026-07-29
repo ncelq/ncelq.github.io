@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-23",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.95,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "Surging Crude Oil Prices and Middle East Escalation",
+  "reasoning": "The market faces a severe confluence of escalating risks, including $100 oil driven by Middle East naval blockades, hardening Fed rate-hike expectations, and massive post-earnings sell-offs in megacap tech over AI cash burn. With the session closing down and these critical catalysts showing no signs of resolution, overnight risk remains exceptionally high."
+}

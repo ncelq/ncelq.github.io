@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-23",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "Iran war energy shock hits the U.S. economy as gas and diesel prices climb, with a new asymmetry preventing quick price declines even if hostilities cease",
+  "reasoning": "Track B applies. Today's dominant theme is MACRO_SHOCK (Iran war energy shock, fuel price asymmetry), which has recurred in memory with recent same-theme responses mostly DOWN (3 DOWN, 1 UP, 1 FLAT). The threat is HIGH/CRITICAL, and the news describes a worsening asymmetry in fuel price dynamics, escalating the theme beyond prior occurrences. Cool-down does not apply because MACRO_SHOCK is still printing mostly DOWN responses in memory."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-13",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.68,
+  "threat_level": "HIGH",
+  "key_catalyst": "Renewed U.S.-Iran hostilities with attacks on commercial vessels driving crude sharply higher (oil-supply shock now materializing), alongside a credit-market/CDS warning on AI and chip names.",
+  "reasoning": "Track B (recurring Iran/oil MACRO_SHOCK) triggers the ESCALATION OVERRIDE, so it is treated as Track A: prior Iran episodes were absorbed ONLY because oil did NOT surge and shipping was untouched, but today attacks on commercial vessels plus a sharp crude spike mean the Hormuz/oil-supply tail has actually materialized \u2014 broader in scope and higher in magnitude than any prior occurrence in memory. This is compounded by a genuinely novel catalyst (credit-market CDS spreads widening on hyperscalers/chip giants) with 'chips down' this morning, breaking the tech-decoupling that justified recent HOLDs. Recent MACRO_SHOCK responses are DOWN-dominant (2 DOWN, 1 UP, 2 FLAT \u2192 not priced in), and cool-down after prior wrong SELLs is explicitly suspended for a theme still printing mostly DOWN."
+}

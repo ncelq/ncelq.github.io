@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-17",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.72,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Gas prices nearly $4 and diesel topping $5 as lagged consequence of ongoing Iran tensions, threatening to reverse June's inflation relief",
+  "reasoning": "Track B applies \u2014 all of today's themes are recurring. The MACRO_SHOCK theme (gas/oil/Iran) has appeared repeatedly and shows MIXED responses across the full memory window (4 UP, 2 DOWN, 1 FLAT in T-16 to T-6; in the detailed 5 days: 1 UP, 2 DOWN, 2 FLAT \u2014 DOWN-leaning but not DOWN-dominant). ECONOMIC_DATA is perfectly MIXED (4 UP, 4 DOWN broader). EARNINGS_CRISIS (GOOGL AI delay) is MIXED (3 UP, 2 DOWN). SECTOR_ROTATION is MIXED (4 UP, 4 DOWN, 1 FLAT). No theme is DOWN-dominant across the full memory, so cool-down applies given 7 wrong SELLs in the last 8 signals. Today's news is relatively mild: recycled June inflation data with a 'fading relief' framing, lagging gas/diesel price consequences of the already-absorbed Iran situation, a single-stock GOOGL AI delay already priced as -5% pre-market, and observational sector divergence. No novel catalyst, no visible escalation beyond what the market has been processing for multiple sessions."
+}

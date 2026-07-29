@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-22",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "US-Iran diplomatic talks stall and military strikes continue, driving Brent crude above $93 and pushing the 10-year Treasury yield back to 4.62%.",
+  "reasoning": "The escalation of the US-Iran conflict, marked by stalled diplomacy and continued military strikes, has driven oil above $93 and pushed the 10-year yield back to 4.62%, completely reversing the prior session's yield-driven relief rally. This resurgence of inflation fears, combined with heavy profit-taking in semiconductors and broad de-risking ahead of pivotal Alphabet and Tesla earnings, creates a high-risk environment that favors selling."
+}

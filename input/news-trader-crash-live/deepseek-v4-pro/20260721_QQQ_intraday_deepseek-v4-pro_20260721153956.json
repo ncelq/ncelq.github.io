@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-21",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.82,
+  "threat_level": "HIGH",
+  "key_catalyst": "Escalating U.S.-Iran Military Tensions Drive Risk-Off Sentiment",
+  "reasoning": "U.S.-Iran military hostilities are intensifying with no ceasefire in sight, keeping oil prices elevated and stoking inflation fears that directly compress high-growth tech valuations in QQQ. Today's intraday rebound did not neutralize this fundamental risk, and unresolved earnings uncertainty adds to overnight exposure risk."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-20",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Resumption of US-Iran missile strikes combined with a broad semiconductor selloff and Meta's AI spending fears.",
+  "reasoning": "Track B applies as US-Iran geopolitical shocks and tech sector rotation are recurring themes. Memory shows MACRO_SHOCK (3 DOWN, 1 UP) and EARNINGS_CRISIS (2 DOWN, 1 UP) are reacting negatively, meaning these risks are not priced in. The previous session's complacent rally despite severe headlines indicates the market is mispricing the gap-down risk, warranting a SELL."
+}

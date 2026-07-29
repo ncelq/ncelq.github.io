@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-22",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.78,
+  "threat_level": "HIGH",
+  "key_catalyst": "Escalating US-Iran Tensions and Surging Oil Prices Trigger Risk-Off Sentiment",
+  "reasoning": "Escalating US-Iran tensions and oil price surge present a high-severity, unresolved catalyst with no diplomatic breakthrough. While the session closed slightly higher, the conflict is actively intensifying, and the market has not priced in a resolution, leaving significant overnight risk."
+}

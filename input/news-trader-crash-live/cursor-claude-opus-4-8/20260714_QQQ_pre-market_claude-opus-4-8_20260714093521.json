@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-14",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.8,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "US-Iran military strikes escalate; Iran re-closes Strait of Hormuz, oil surges 9%+",
+  "reasoning": "A novel, escalating US-Iran military conflict has led to Iran re-closing the Strait of Hormuz, a proposed 20% cargo fee, three consecutive nights of US strikes, and a 9%+ oil surge — a CRITICAL geopolitical shock still actively developing into today's session. Although QQQ's pre-market ticked up +0.93% on July 14 after Monday's -1.21% drop, this is a shallow bounce against catalysts that are intensifying, not resolving, and it coincides with today's live CPI print and hawkish Warsh testimony. The chip-sector overhang from the SK Hynix earnings-miss shock also remains unresolved, so the risk-off backdrop has not been absorbed."
+}

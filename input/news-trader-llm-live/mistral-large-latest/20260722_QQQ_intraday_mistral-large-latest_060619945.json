@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-22",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.9,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "Bab el-Mandeb blockade and Middle East war escalation (MACRO_SHOCK)",
+  "reasoning": "Today's session saw a muted +0.25% gain despite the dominant MACRO_SHOCK theme (Bab el-Mandeb blockade, Middle East war escalation) remaining unresolved and materially worsening in scope (2.5MM bpd at risk, new chokepoint). The market's complacent response to this escalating geopolitical risk\u2014flat despite a live and unabsorbed catalyst\u2014suggests overnight gap-down risk remains material. Late-session headlines show no de-escalation, leaving the theme primed for negative overnight reaction."
+}

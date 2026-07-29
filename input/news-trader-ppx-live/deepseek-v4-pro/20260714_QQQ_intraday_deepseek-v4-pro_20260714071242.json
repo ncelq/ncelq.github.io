@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-14",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.75,
+  "threat_level": "HIGH",
+  "key_catalyst": "Escalating US-Iran military strikes and Strait of Hormuz shipping blockade driving oil prices sharply higher",
+  "reasoning": "Despite a very bullish CPI print that crushed rate-hike expectations, QQQ closed flat as escalating US-Iran tensions and IBM's 26% crash offset the good news. The market's inability to rally on strong macro data signals underlying fragility, and with oil surging above $86 on a shipping blockade, overnight gap-down risk is material."
+}

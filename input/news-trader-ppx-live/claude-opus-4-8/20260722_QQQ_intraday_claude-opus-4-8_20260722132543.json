@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-22",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.72,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Alphabet and Tesla Q2 earnings reported after Wednesday's close (first Magnificent Seven prints of the season)",
+  "reasoning": "Today's dominant catalysts are bullish AI-infrastructure confirmations (Super Micro +14% on $60B in Q4 orders, AMD's up-to-2GW Anthropic deal), which drove QQQ to recover from morning weakness and close +0.41% despite oil topping $95 and the 10-year yield near two-month highs at 4.64%. The bearish factors (Middle East oil spike, rising yields) are recurring themes the market has repeatedly absorbed, and the primary forward risk—Alphabet and Tesla earnings—lands after the close as a discrete binary event rather than a persistent overnight gap-down catalyst. Overnight gap risk is genuine but two-sided (earnings could beat or miss), which does not meet the bar for a directional SELL under a HOLD-default framework."
+}

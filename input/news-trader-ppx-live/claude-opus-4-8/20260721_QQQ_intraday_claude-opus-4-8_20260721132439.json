@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-21",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.82,
+  "threat_level": "LOW",
+  "key_catalyst": "Falling 10-year yield (4.36%) plus broad semiconductor rally driving Nasdaq 100 to record highs",
+  "reasoning": "Today's session was broadly risk-on: the 10-year yield fell 6bp to 4.36%, chip stocks rallied (ARM +3%, AVGO/QCOM +2%), and the Nasdaq 100 pushed to record highs with QQQ up +0.61% intraday. The only bearish item—Trump's tariff letters to 150+ countries and a 50% copper tariff—is a low-impact (4) recurring trade-policy theme the market absorbed while rallying, not a novel escalating shock. This is the opposite of the 07-16 chip-led selloff (-1.64%); the semiconductor complex that dragged the index then is now leading it higher."
+}

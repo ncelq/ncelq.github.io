@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-16",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.7,
+  "threat_level": "HIGH",
+  "key_catalyst": "Memory/storage chip stocks plunge 8-9% on supercycle doubts, coupled with CENTCOM strikes on Iran driving oil above $85",
+  "reasoning": "A sector-wide memory/storage chip rout (Micron -8%, SK Hynix -9%) is a novel negative catalyst heavily weighing on QQQ, while escalating US-Iran strikes and oil above $85 rekindle the risk-off dynamic that drove a -1.90% QQQ drop on July 13. Despite offsets from TSMC's blowout earnings and Apple's all-time high, the severity and novelty of the memory supercycle doubts, combined with an unresolved geopolitical escalation, signal that downside is not fully absorbed."
+}

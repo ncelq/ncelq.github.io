@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-27",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "MACRO_SHOCK (Iran war energy shock, oil volatility, and geopolitical escalation)",
+  "reasoning": "Today's session saw a -1.38% decline, driven by a late-session oil crash (8%) on U.S. pausing Iran strikes, but the underlying MACRO_SHOCK theme (Strait of Hormuz disruptions, geopolitical escalation) remains unresolved and materially worse than prior occurrences. The chip rout (NVIDIA -3.8%, SanDisk -14%) and AI spending concerns compound the risk, with no de-escalation in sight. The market's muted response to these escalating risks\u2014despite their historical tendency to gap down overnight\u2014suggests complacency rather than absorption."
+}

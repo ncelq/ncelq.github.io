@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-21",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Rystad Warns 2.5MM Bpd of Saudi Oil is at Risk as Houthis threaten naval blockade",
+  "reasoning": "The market is complacently rallying on a semiconductor bounce while completely ignoring a severe escalation in the Middle East, with a Houthi naval blockade threat putting 2.5MM bpd of Saudi oil at risk. This disconnect between a massive energy supply shock and a positive intraday return indicates the market is mispricing overnight gap-down risk as global sessions digest the geopolitical deterioration."
+}

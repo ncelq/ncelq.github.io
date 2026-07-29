@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-15",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.82,
+  "threat_level": "HIGH",
+  "key_catalyst": "U.S.-Iran military escalation and active naval blockade of Strait of Hormuz",
+  "reasoning": "The U.S.-Iran military escalation is actively worsening, with a reimposed naval blockade being enforced, airstrikes killing Iranian troops, and Iran threatening to halt all regional energy exports. Brent crude remains above $85/barrel and rising, sustaining inflation and rate-hike fears that pressure QQQ's long-duration tech holdings. The market attempted to bounce on 7/14 and 7/15 pre-market but reversed to close down -0.96% intraday on 7/15, indicating the risk has not been absorbed."
+}

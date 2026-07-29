@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-27",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "Oil Prices Breaching $100 and Reigniting Inflation Fears",
+  "reasoning": "The ongoing Middle East escalation and oil shock above $100/bbl remain unresolved and continue to drive inflation fears and hawkish Fed expectations. These primary catalysts pose a critical threat to rate-sensitive tech stocks, and the market has not shown clear absorption as severe intraday declines persisted recently with negligible pre-market recovery."
+}

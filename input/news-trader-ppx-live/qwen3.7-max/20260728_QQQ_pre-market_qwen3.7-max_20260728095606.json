@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-28",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Nvidia's reported $250B OpenAI backstop reviving circular-financing fears and undermining the sustainability of AI demand.",
+  "reasoning": "The revelation of Nvidia's potential $250B backstop for OpenAI introduces a novel, structural 'circular financing' threat to the AI demand narrative, escalating the AI capex scrutiny that triggered severe sell-offs on July 23 and 24. This fundamental doubt coincides with surging Fed rate hike probabilities and a Chinese semiconductor equipment breakthrough, creating a compounding bearish setup ahead of binary megacap earnings and the Fed decision this week."
+}

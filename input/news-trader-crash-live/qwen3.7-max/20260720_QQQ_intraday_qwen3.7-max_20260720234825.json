@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-20",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.92,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "Escalating U.S.-Iran Geopolitical Tensions and Oil Price Surge",
+  "reasoning": "The U.S.-Iran conflict has escalated dramatically with 10 consecutive nights of strikes, Iranian attacks on U.S. assets in Kuwait, and a Houthi maritime blockade. This critical geopolitical threat remains highly active and unresolved, driving a risk-off intraday reversal despite a strong pre-market open."
+}

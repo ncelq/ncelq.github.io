@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-16",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Chip stock selloff following TSMC's record earnings, with memory names down 6-10% and the semiconductor rout showing no stabilization",
+  "reasoning": "TSMC's record earnings triggered a severe chip-sector selloff, dragging QQQ down -2.11% intraday with no signs of stabilization. Simultaneous escalation of U.S.-Iran military conflict is injecting fresh geopolitical risk, driving oil higher and weighing on rate-sensitive tech names. Both catalysts are novel, carry HIGH threat, and remain unresolved, making a SELL signal warranted for overnight exposure."
+}

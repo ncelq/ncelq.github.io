@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-21",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Escalating U.S.-Iran Geopolitical Tensions and Oil Price Surge",
+  "reasoning": "The U.S. has conducted nine consecutive nights of strikes on Iran, pushing Brent crude above $90 with no ceasefire agreement in place, representing a severe and escalating geopolitical threat. Although the market is attempting a pre-market bounce on ceasefire hopes, the ongoing military escalation and surging oil prices pose an unresolved risk to tech and risk assets."
+}

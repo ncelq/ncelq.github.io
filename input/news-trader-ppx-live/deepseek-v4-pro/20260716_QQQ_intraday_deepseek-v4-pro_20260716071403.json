@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-16",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.75,
+  "threat_level": "HIGH",
+  "key_catalyst": "TSMC record earnings triggers semiconductor and memory chip crash (Micron -8%, SK Hynix -9%) on capex and valuation fears, compounded by 10-year yield hitting 4.60% near cycle high on strong jobless claims",
+  "reasoning": "Today's market action reveals a dangerous pattern: stellar TSMC earnings were met with selling on capex fears, triggering a 8-9% crash in memory chip stocks (Micron, SK Hynix, SanDisk). This is a novel sentiment shift where strong fundamentals are no longer rewarded, compounded by the 10-year yield surging to 4.60%—just 2bps below the cycle high—after jobless claims crushed rate-cut hopes. With the KOSPI already down 6.4% overnight and memory stocks likely facing further Asian-session contagion, overnight gap-down risk is material."
+}

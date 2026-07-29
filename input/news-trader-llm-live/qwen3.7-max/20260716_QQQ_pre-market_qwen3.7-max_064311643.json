@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-16",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.85,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Dow Jones Drops 1.4% as Trump Declares Iran Deal \"Over\"",
+  "reasoning": "Track B applies as the US-Iran geopolitical tension is a recurring theme. Recent memory shows the market has mostly shrugged off these macro shocks (mostly UP/FLAT responses), and today's cooling PPI data provides a positive disinflationary offset. Given the active cool-down from poor recent SELL accuracy and the lack of dominant DOWN responses to this theme, HOLD is the default and most logical choice."
+}

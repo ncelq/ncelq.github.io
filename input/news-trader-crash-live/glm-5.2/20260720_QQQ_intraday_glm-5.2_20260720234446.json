@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-20",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "Mechanical Deleveraging and Margin Calls in Leveraged AI Trades",
+  "reasoning": "All three open catalysts remain actively unresolved and escalating. The semiconductor bear market (SOX down 24-25%) shows no signs of stabilization, the leveraged AI trade is mechanically unwinding with record $1.5T margin debt and confirmed margin calls in South Korea, and multiple tech giants delivered disappointing guidance with key earnings still ahead this week. The intraday pattern of pre-market gains fading into session losses (July 15: -0.96%, July 16: -1.12%, July 20: -0.88%) confirms persistent selling pressure that has not been absorbed."
+}

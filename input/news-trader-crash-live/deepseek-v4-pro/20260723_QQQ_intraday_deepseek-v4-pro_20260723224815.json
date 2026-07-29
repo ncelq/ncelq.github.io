@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-23",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.95,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "Convergence of mega-cap earnings shocks (GOOGL, TSLA negative FCF) and escalating geopolitical/oil shock ($100+ Brent)",
+  "reasoning": "Multiple OPEN catalysts with HIGH to CRITICAL threat levels are actively escalating: Alphabet reported its first-ever negative free cash flow, Tesla's operating margin collapsed with negative FCF, SpaceX is in a -35% confirmed downtrend, and U.S.-Iran conflict pushed oil above $100 with no ceasefire in sight. The QQQ closed down -0.39% intraday despite a -1.55% pre-market drop, indicating the market has not absorbed the severity of these concurrent macro and mega-cap shocks, creating substantial overnight risk."
+}

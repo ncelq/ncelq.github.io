@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-09",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.72,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Escalating US-Iran tensions disrupt Strait of Hormuz oil shipments; offset by SpaceX Nasdaq-100 ETF inclusion ($800B passive flows) and Broadcom $30B Apple partnership",
+  "reasoning": "Track B applies \u2014 the dominant MACRO_SHOCK/Iran theme is recurring in memory with mixed responses (4 UP, 2 DOWN, 2 FLAT across 8 occurrences), so DOWN is not dominant and the theme shows absorption capacity. While today's Iran news escalates from threats to actual Strait of Hormuz shipment disruption, the market already absorbed a near-identical 'ceasefire over' catalyst with a +0.92% rally yesterday, and today brings strong structural positives (SpaceX $800B passive flows, BlackRock Nasdaq-100 ETF launch, Broadcom $30B Apple deal, PMI showing inflation peaking). The SECTOR_ROTATION theme is DOWN-dominant (1 up, 3 down, 1 flat) but today's semiconductor news is positive (Broadcom-Apple deal), not negative."
+}

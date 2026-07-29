@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-10",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.9,
+  "threat_level": "LOW",
+  "key_catalyst": "Broadcom stock jumps on $30 billion Apple chip deal alongside recurring U.S.-Iran strikes.",
+  "reasoning": "Track B applies as today's news consists of recurring themes (U.S.-Iran strikes, SpaceX inclusion, and previously reported NFP data) that the market has consistently shrugged off or responded positively to in recent sessions. Additionally, a strong positive earnings catalyst for Broadcom provides fundamental support, making a SELL signal unwarranted amidst active cool-down."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-14",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.88,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "U.S.-Iran Military Escalation and Strait of Hormuz Closure",
+  "reasoning": "The U.S.-Iran military escalation and Strait of Hormuz blockade represent a critical, novel geopolitical threat with active escalation risk. Despite a muted intraday market response, the unresolved nature of the naval blockade and surging oil prices pose severe forward risks to inflation and tech valuations that have not yet been fully absorbed."
+}

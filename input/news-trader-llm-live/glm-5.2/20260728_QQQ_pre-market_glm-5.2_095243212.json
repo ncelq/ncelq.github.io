@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-28",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.62,
+  "threat_level": "MODERATE",
+  "key_catalyst": "NVIDIA slides on OpenAI financing talks amplifying AI spending worries, with Asian chip selloff confirming overnight contagion predicted in prior session",
+  "reasoning": "Track B applies. The dominant theme is SECTOR_ROTATION (AI spending worries / semiconductor selloff), which is DOWN-dominant in recent memory (2 DOWN, 1 UP, 2 FLAT in last 5 \u2014 DOWN > UP). Yesterday's afternoon summary explicitly flagged that the AI spending catalyst was 'not resolving' and warned of 'overnight gap-down risk via Asian semiconductor contagion' \u2014 today's news confirms exactly that: Asian stocks fell on AI jitters, NVIDIA continues sliding on OpenAI financing talks, and chipmaker selloffs spread internationally. With MSFT earnings tomorrow (options signal 7% move) adding uncertainty to the same AI capex narrative, and the market having refused to rally on oil's 8% crash yesterday, the AI spending concern remains the dominant unresolved force. Cool-down does not apply because the active theme is still printing mostly DOWN responses."
+}

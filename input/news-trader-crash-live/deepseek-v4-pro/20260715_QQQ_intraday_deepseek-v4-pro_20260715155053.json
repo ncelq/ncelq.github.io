@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-15",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.92,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "US-Iran military strikes escalate, Strait of Hormuz closure and naval blockade reimposed",
+  "reasoning": "The US-Iran military conflict has escalated to a CRITICAL threat with the Strait of Hormuz effectively closed, a naval blockade imposed, and Trump threatening expanded strikes. This reignites oil-driven inflation fears and the 'higher for longer' rate narrative, directly damaging QQQ's high-valuation tech holdings. The -1.03% intraday drop on July 15 shows the market has not absorbed the escalation risk, and further deterioration overnight is likely."
+}

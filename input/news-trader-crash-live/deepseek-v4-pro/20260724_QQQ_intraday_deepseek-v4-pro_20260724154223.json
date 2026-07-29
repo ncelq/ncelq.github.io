@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-24",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.92,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "Alphabet and Tesla Earnings Spark AI Spending Fears, Triggering Sharp Tech Selloff",
+  "reasoning": "Today's tech selloff is driven by novel, escalating catalysts with CRITICAL threat levels: Alphabet's massive capex raise and Tesla's negative cash flow spark fears of AI spending without near-term returns, while Brent crude above $100 on U.S.-Iran strikes reignites inflation and rate-hike fears. The Nasdaq fell -2.15% intraday with no recovery, indicating the market has not absorbed these risks."
+}

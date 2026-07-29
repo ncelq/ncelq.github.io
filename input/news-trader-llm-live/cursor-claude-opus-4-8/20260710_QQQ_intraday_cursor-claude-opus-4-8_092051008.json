@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-10",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.7,
+  "threat_level": "LOW",
+  "key_catalyst": "Japan 10-year yields at 2.88% / weak yen raising yen carry-trade unwind risk for U.S. equities",
+  "reasoning": "The session closed UP +0.67%, confirming the market absorbed the morning's Iran MACRO_SHOCK with zero intraday continuation \u2014 no fresh oil surge or geopolitical headline hit the 9:30\u201315:45 window. The only new intraday items are two speculative/structural OUTLOOK pieces (yen carry-trade unwind risk, passive-ETF/leverage systemic risk), not live escalating events, and the tape rallied straight through them. What remains unresolved is a latent Japan/yen-carry tail that lives specifically in the Asia overnight session, but nothing objectively escalated into the close."
+}
