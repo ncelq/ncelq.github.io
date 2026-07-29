@@ -1,11 +1,6 @@
 name: Update dashboard-grok data
 
 on:
-  push:
-    paths:
-      - "input/**"
-      - "dashboard-grok/scripts/generate-input-manifest.py"
-      - "dashboard-grok/scripts/fetch-qqq-ohlc.py"
   workflow_dispatch:
 
 permissions:
