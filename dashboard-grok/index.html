@@ -191,10 +191,109 @@ table.acc-table { width: 100%; border-collapse: collapse; font-size: 16px; min-w
   display: inline-block; font-size: 15px; font-weight: 800; letter-spacing: .05em;
   text-transform: uppercase; padding: 2.5px 7px; border-radius: 6px;
 }
-.tg-crash { background: var(--amber-soft); color: var(--amber); }
-.tg-llm { background: #dcfce7; color: #166534; }
-.tg-ppx { background: #e0f2fe; color: #0369a1; }
+.tg-crash { background: #ffe0a3; color: #78350f; }
+.tg-llm { background: #ddd6fe; color: #4c1d95; }
+.tg-ppx { background: #bae6fd; color: #0c4a6e; }
 .tg-x { background: var(--line-soft); color: var(--muted); }
+
+/* Latest signal KPI cards */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  align-items: stretch;
+}
+.kpi {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 18px 16px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 220px;
+}
+.kpi:hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); }
+.kpi::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #94a3b8, #cbd5e1);
+  opacity: .85;
+}
+.kpi.up::before { background: linear-gradient(90deg, #10b981, #34d399); }
+.kpi.down::before { background: linear-gradient(90deg, #f43f5e, #fb7185); }
+.kpi.up {
+  border-color: rgba(22,163,74,.35);
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 55%, rgba(220,252,231,.55) 80%, #dcfce7 100%);
+}
+.kpi.down {
+  border-color: rgba(225,29,72,.3);
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 55%, rgba(255,228,230,.55) 80%, #ffe4e6 100%);
+}
+.k-head {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin: 0;
+}
+.k-value {
+  font-family: var(--display);
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1;
+  margin: 0;
+}
+.kpi.up .k-value { color: var(--up); }
+.kpi.down .k-value { color: var(--down); }
+.k-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+.kpi .tag {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 99px;
+  letter-spacing: .04em;
+}
+.k-threat {
+  display: inline-flex;
+  align-items: center;
+  font-variant-numeric: tabular-nums;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 99px;
+}
+.k-threat.threat-low { background: var(--up-soft); color: var(--up); }
+.k-threat.threat-moderate { background: var(--amber-soft); color: var(--amber); }
+.k-threat.threat-high { background: #ffedd5; color: #c2410c; }
+.k-threat.threat-critical { background: var(--down-soft); color: var(--down); }
+.k-model {
+  margin: 10px 0 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--ink);
+}
+.k-sub {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin: 10px 0 0;
+  line-height: 1.45;
+  flex: 1;
+}
 .hm-wrap {
   background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
   box-shadow: var(--shadow); padding: 18px; overflow-x: auto;
@@ -217,6 +316,7 @@ table.acc-table { width: 100%; border-collapse: collapse; font-size: 16px; min-w
 .tri.bad { background: #f43f5e; }
 .tri.rise { background: #10b981; }
 .tri.drop { background: #f43f5e; }
+.tri.flat { background: #cbd5e1; }
 .tri.pending { background: repeating-linear-gradient(45deg, #fcd34d 0 3px, #fde68a 3px 6px); }
 .tri.none { background: transparent; }
 .hm-legend {
@@ -249,6 +349,11 @@ table.acc-table { width: 100%; border-collapse: collapse; font-size: 16px; min-w
     </div>
   </header>
 
+  <section id="latestSignals">
+    <h2 id="latestSignalsTitle">Latest signals</h2>
+    <div class="kpi-grid" id="latestSignalGrid"><p class="loading">Loading signals…</p></div>
+  </section>
+
   <section>
     <h2>Accuracy Summary</h2>
     <p class="section-sub">Per pipeline &amp; model — HOLD, SELL and all signals</p>
@@ -276,7 +381,6 @@ table.acc-table { width: 100%; border-collapse: collapse; font-size: 16px; min-w
 </div>
 
 <script>
-const NEUTRAL_PCT = 0.01;
 const CONCURRENCY = 12;
 const DATA_ROOT = ".."; // repo root relative to this page (dashboard-grok/) — for prediction JSON only
 const MANIFEST_URL = "manifest.json";
@@ -376,8 +480,7 @@ function columnsByFolder(cols = state.columns) {
 
 function direction(r) {
   if (r == null || Number.isNaN(r)) return "pending";
-  const pct = Math.abs(r) * 100;
-  if (pct < NEUTRAL_PCT) return "neutral";
+  if (r === 0) return "neutral";
   return r > 0 ? "rise" : "drop";
 }
 
@@ -477,9 +580,12 @@ function pct(bucket) {
 function fmtPct(r) {
   if (r == null || Number.isNaN(r)) return "pending";
   const p = r * 100;
-  if (Math.abs(p) < NEUTRAL_PCT) return "flat";
+  if (p === 0) return "flat";
   const sign = p > 0 ? "+" : "";
-  return sign + p.toFixed(2) + "%";
+  const abs = Math.abs(p);
+  // Keep enough decimals so tiny moves (e.g. -0.004%) don't round to 0.00%
+  const digits = abs >= 1 ? 2 : abs >= 0.01 ? 2 : abs >= 0.0001 ? 4 : 6;
+  return sign + p.toFixed(digits) + "%";
 }
 
 function fmtPts(w) {
@@ -494,23 +600,86 @@ function esc(s) {
 }
 
 const PIPE_META = {
-  "news-trader-crash-live": { short: "Crash", cls: "tg-crash" },
+  "news-trader-crash-live": { short: "CRASH", cls: "tg-crash" },
   "news-trader-llm-live": { short: "LLM", cls: "tg-llm" },
   "news-trader-ppx-live": { short: "PPX", cls: "tg-ppx" },
 };
 const pipeMeta = (p) => PIPE_META[p] || { short: shortEngine(p), cls: "tg-x" };
 
+function threatCls(level) {
+  const k = String(level || "").toUpperCase();
+  if (k === "LOW") return "threat-low";
+  if (k === "MODERATE") return "threat-moderate";
+  if (k === "HIGH") return "threat-high";
+  if (k === "CRITICAL") return "threat-critical";
+  return "threat-moderate";
+}
+
+function latestPerModel(predictions = state.predictions) {
+  const best = new Map();
+  for (const p of predictions) {
+    const k = `${p.engine}/${p.model}`;
+    const prev = best.get(k);
+    if (!prev) { best.set(k, p); continue; }
+    const a = `${p.date}|${String(p.timestamp).padStart(20, "0")}`;
+    const b = `${prev.date}|${String(prev.timestamp).padStart(20, "0")}`;
+    if (a > b) best.set(k, p);
+  }
+  return [...best.values()].sort((a, b) => {
+    const fa = folderKey(a.engine);
+    const fb = folderKey(b.engine);
+    if (fa !== fb) return fa - fb;
+    return shortModel(a.model).localeCompare(shortModel(b.model)) || a.model.localeCompare(b.model);
+  });
+}
+
+function renderLatestSignals() {
+  const rows = latestPerModel();
+  const titleEl = document.getElementById("latestSignalsTitle");
+  const grid = document.getElementById("latestSignalGrid");
+  if (!rows.length) {
+    titleEl.textContent = "Latest signals";
+    grid.innerHTML = '<p class="loading">No signals loaded</p>';
+    return;
+  }
+  const newest = rows.slice().sort((a, b) => {
+    const aK = `${a.date}|${String(a.timestamp).padStart(20, "0")}`;
+    const bK = `${b.date}|${String(b.timestamp).padStart(20, "0")}`;
+    return bK.localeCompare(aK);
+  })[0];
+  titleEl.textContent = `${newest.date} - ${newest.session}`;
+  grid.innerHTML = rows.map(p => {
+    const pm = pipeMeta(p.engine);
+    const hold = p.signal === "HOLD";
+    const conf = Math.round((Number(p.confidence) || 0) * 100);
+    const threat = String(p.threat_level || "—").toUpperCase();
+    return `<article class="kpi ${hold ? "up" : "down"}">
+      <div class="k-head">
+        <p class="k-value">${esc(p.signal)}</p>
+        <div class="k-side">
+          <span class="tag ${pm.cls}">${esc(pm.short)}</span>
+          <span class="k-threat ${threatCls(threat)}">${esc(threat)}/${conf}%</span>
+        </div>
+      </div>
+      <p class="k-model">${esc(p.model)}</p>
+      <p class="k-sub">${esc(p.key_catalyst || "—")}</p>
+    </article>`;
+  }).join("");
+}
+
 function triCls(p) {
   if (!p) return "none";
-  if (p.correct == null) return "pending";
+  if (p.correct == null) return p.dir === "neutral" ? "flat" : "pending";
   return p.correct ? "ok" : "bad";
 }
 
 function triTitle(p, sessLabel) {
   if (!p) return sessLabel + ": no signal";
   if (p.correct == null) {
-    const why = p.dir === "neutral" ? "flat session" : "pending";
-    return `${shortCol(p.engine, p.model)} · ${p.date} ${sessLabel}: ${p.signal} — ${why}`;
+    if (p.dir === "neutral") {
+      return `${shortCol(p.engine, p.model)} · ${p.date} ${sessLabel}: ${p.signal} — flat session ${fmtPct(p.return)} (excluded)`;
+    }
+    return `${shortCol(p.engine, p.model)} · ${p.date} ${sessLabel}: ${p.signal} — pending (waiting for next open)`;
   }
   return `${shortCol(p.engine, p.model)} · ${p.date} ${sessLabel}: ${p.signal} ${p.correct ? "✓" : "✗"} · session ${fmtPct(p.return)} · ${fmtPts(p.weight)} pts`;
 }
@@ -522,7 +691,7 @@ function heatDates() {
 function moveTriCls(r) {
   const dir = direction(r);
   if (dir === "pending") return "pending";
-  if (dir === "neutral") return "pending";
+  if (dir === "neutral") return "flat";
   return dir === "rise" ? "rise" : "drop";
 }
 
@@ -562,7 +731,8 @@ function renderHeatmap() {
   <div class="hm-legend">
     <span><span class="sw" style="background:#10b981"></span>correct / QQQ up</span>
     <span><span class="sw" style="background:#f43f5e"></span>wrong / QQQ down</span>
-    <span><span class="sw" style="background:repeating-linear-gradient(45deg,#fcd34d 0 3px,#fde68a 3px 6px)"></span>pending / flat</span>
+    <span><span class="sw" style="background:#cbd5e1"></span>flat (exactly 0%)</span>
+    <span><span class="sw" style="background:repeating-linear-gradient(45deg,#fcd34d 0 3px,#fde68a 3px 6px)"></span>pending (no next open yet)</span>
     <span><span class="sw" style="background:var(--line-soft)"></span>no signal</span>
     <span style="color:var(--faint)">◤ pre-market (vs open→close) · ◢ intraday (vs close→next open)</span>
   </div>`;
@@ -1105,6 +1275,7 @@ async function main() {
   state.columns = aggregate(predictions);
   renderMeta({ predictions: predictions.length, listed, failed });
   if (failed) showBanner(`Loaded ${predictions.length} signals; skipped ${failed} files.`);
+  renderLatestSignals();
   renderAccuracy();
   renderBacktest();
   renderHeatmap();
