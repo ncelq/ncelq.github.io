@@ -359,7 +359,7 @@ Pill row under the hero subtitle. White surface, hairline border, soft shadow. V
 Latest-signal atoms. White base with a 3px top gradient rail (neutral / green / rose by direction). Up/down variants tint the lower half with soft green or rose washes — decorative only; score text sits on white. Large Lora signal word; pipeline + threat pills; model name bold; catalyst as muted body.
 
 ### Podium
-Kimi-style visual order (2nd · 1st · 3rd). Three cards; first place taller with gold wash and gold border. Medal emoji, Lora name, uppercase pipeline tag, Lora score colored by sign, muted accuracy line.
+Left-to-right rank order (1st · 2nd · 3rd). Three cards; first place taller with gold wash and gold border. Medal emoji, Lora name, uppercase pipeline tag, Lora score colored by sign, muted accuracy line.
 
 ### Tables
 White scroll shell with border hairline. Uppercase muted headers on surface-muted. Pipe rows are slate uppercase; subtotals wash green; grand total stronger green wash + thicker top border. Row hover uses a faint green tint. Positive/negative numbers use primary/tertiary at bold weight. Inline accuracy bars are green gradient capsules.

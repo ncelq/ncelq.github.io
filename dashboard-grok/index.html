@@ -142,7 +142,7 @@ section h2 {
   box-shadow: var(--shadow); overflow: hidden;
 }
 .table-scroll { overflow-x: auto; }
-.podium { display: grid; grid-template-columns: 1fr 1.15fr 1fr; gap: 14px; align-items: end; margin: 0 0 18px; }
+.podium { display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: 14px; align-items: end; margin: 0 0 18px; }
 .pod {
   background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px;
   text-align: center; box-shadow: var(--shadow); position: relative;
@@ -804,7 +804,7 @@ function clamp(v, a, b) {
   return Math.max(a, Math.min(b, v));
 }
 
-/** Kimi-style podium: visual order 2nd · 1st · 3rd */
+/** Rank order left → right: 1st · 2nd · 3rd */
 function renderPodium(mountId, top) {
   const wrap = document.getElementById(mountId);
   if (!wrap) return;
@@ -815,9 +815,7 @@ function renderPodium(mountId, top) {
   }
   wrap.style.display = "";
   const medals = ["🥇", "🥈", "🥉"];
-  const order = top.length >= 3 ? [1, 0, 2] : top.map((_, i) => i);
-  wrap.innerHTML = order.map(i => {
-    const r = top[i];
+  wrap.innerHTML = top.map((r, i) => {
     if (!r) return "<div></div>";
     const pm = pipeMeta(r.pipeline);
     return `<div class="pod p${i + 1}">
