@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-27",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.72,
+  "threat_level": "HIGH",
+  "key_catalyst": "Escalating Houthi attacks on Saudi oil installations and renewed Middle East energy-supply risk",
+  "reasoning": "Escalating Houthi attacks on Saudi oil installations, with crude returning toward $100 and Treasury yields above 4.69%, represent a high-severity continuation of the oil and inflation shock. Similar developments were followed by QQQ weakness on July 23 and July 24; although a reported US-Iran diplomatic breakthrough and pre-market resilience provide offsets, they do not establish de-escalation. Binary FOMC risk further increases the chance that the market reprices this unresolved catalyst."
+}

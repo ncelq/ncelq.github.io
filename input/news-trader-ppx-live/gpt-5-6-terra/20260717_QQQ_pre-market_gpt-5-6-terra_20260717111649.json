@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-17",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.82,
+  "threat_level": "HIGH",
+  "key_catalyst": "Anthropic ban triggering a broader reassessment of AI regulatory and political risk",
+  "reasoning": "The Anthropic ban is a novel, high-severity regulatory catalyst for QQQ’s AI-heavy constituents, compounded by uniformly reported hawkish Fed commentary and continued chip weakness despite strong TSMC results. Recent sessions show the AI/semiconductor repricing has broadened—from software on July 15 to semiconductors on July 16—while today adds unresolved regulatory risk rather than a stabilizing offset."
+}

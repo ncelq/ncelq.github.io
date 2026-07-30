@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-23",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.84,
+  "threat_level": "HIGH",
+  "key_catalyst": "Escalating Middle East oil-supply disruption driving inflation fears and higher Treasury yields",
+  "reasoning": "The Iran-linked oil supply threat is escalating rather than resolving, while higher yields compound valuation pressure on QQQ’s growth-heavy holdings. Alphabet’s post-earnings capex backlash adds a fresh, directly relevant mega-cap catalyst, and Tesla weakness broadens the earnings-related risk."
+}

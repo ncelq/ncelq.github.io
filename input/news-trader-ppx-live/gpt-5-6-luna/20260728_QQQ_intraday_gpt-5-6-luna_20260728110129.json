@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-28",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.72,
+  "threat_level": "HIGH",
+  "key_catalyst": "China reportedly mass-producing domestic DUV lithography machines",
+  "reasoning": "China's reported mass production of domestic DUV lithography machines is a novel, unresolved threat that escalates the existing AI-chip valuation and capex concerns. QQQ recovered to roughly flat as oil and geopolitical risks eased, but that resilience appears to offset rather than resolve the semiconductor catalyst, leaving material overnight repricing risk."
+}

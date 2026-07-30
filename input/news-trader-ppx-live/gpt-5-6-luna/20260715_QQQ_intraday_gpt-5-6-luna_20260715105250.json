@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-15",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.86,
+  "threat_level": "HIGH",
+  "key_catalyst": "IBM’s earnings warning and enterprise-capex shift away from traditional software toward AI infrastructure",
+  "reasoning": "IBM’s 25% plunge and warning that enterprise spending is shifting from traditional software to AI infrastructure triggered broad contagion across QQQ software holdings, and unlike July 14, softer CPI did not offset the damage. The renewed Iran blockade and hawkish Warsh testimony add unresolved inflation and valuation risks, making overnight gap-down risk material."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-30",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.75,
+  "threat_level": "HIGH",
+  "key_catalyst": "U.S. military strikes against Iran targeting Qeshm Island with a CENTCOM blockade",
+  "reasoning": "The key risk is a fresh escalation: U.S. strikes on Qeshm Island with a CENTCOM blockade, while the Strait of Hormuz remains unresolved. Although Microsoft's strong results and a possible diplomatic off-ramp drive a positive pre-market response, similar Iran/oil shocks on July 24 and 27 and persistent semiconductor weakness on July 28-29 show unresolved downside risk."
+}

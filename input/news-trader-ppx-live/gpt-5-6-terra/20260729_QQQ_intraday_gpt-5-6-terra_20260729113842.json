@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-29",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.77,
+  "threat_level": "HIGH",
+  "key_catalyst": "Escalating fears that China's chipmaking-equipment progress threatens U.S. semiconductor leaders",
+  "reasoning": "China's advancing domestic chipmaking capability is a high-severity competitive threat to semiconductor leaders, and today's Nasdaq-specific selloff showed the risk was not fully absorbed despite falling yields and a firm broader market. It extends the July 28 lithography shock and joins unresolved AI-capex scrutiny from July 23-24, while Meta/Microsoft earnings and the Fed decision leave a near-term catalyst window for further repricing."
+}

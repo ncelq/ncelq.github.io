@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-20",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.72,
+  "threat_level": "HIGH",
+  "key_catalyst": "Escalating U.S.-Iran conflict driving Brent crude above $90 and renewed inflation risk",
+  "reasoning": "The Iran conflict has escalated beyond the prior pattern, with a ninth day of strikes and Brent briefly above $90, while QQQ's key AI semiconductor holdings reversed lower after an early rebound. Today's modest decline may not fully reflect the combined inflation, rate, geopolitical, and pre-earnings risks, creating material overnight gap-down exposure."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-23",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.91,
+  "threat_level": "HIGH",
+  "key_catalyst": "Alphabet shares fell more than 4% after raising full-year capital-expenditure guidance to $195–205 billion despite beating Q2 estimates.",
+  "reasoning": "Alphabet's post-earnings selloff despite strong results makes AI-capex return skepticism an active, high-severity catalyst rather than an earnings risk merely awaiting resolution. That shock is compounded by Tesla's deterioration and an escalating oil-and-rate threat, while the pre-market decline indicates only partial absorption of risks that remain unresolved."
+}

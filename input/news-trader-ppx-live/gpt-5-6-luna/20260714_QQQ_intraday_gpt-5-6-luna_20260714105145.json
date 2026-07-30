@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-14",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.79,
+  "threat_level": "HIGH",
+  "key_catalyst": "Escalating U.S.-Iran conflict and Strait of Hormuz shipping-blockade risk",
+  "reasoning": "U.S.-Iran strikes and Strait of Hormuz shipping-blockade risk, with Brent above $86, extend the severe geopolitical shock that drove QQQ sharply lower on July 13. Softer CPI and the semiconductor rebound provide offsets, but the geopolitical catalyst is escalating and remains insufficiently absorbed, creating material overnight gap-down risk."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-16",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.76,
+  "threat_level": "HIGH",
+  "key_catalyst": "TSMC's higher $60–$64 billion capex outlook triggering a broad semiconductor and memory-sector valuation unwind",
+  "reasoning": "A novel semiconductor valuation reset emerged despite exceptional TSMC results, with raised capex triggering broad chip and memory liquidation while resilient labor data pushed yields near cycle highs. This compounds the unresolved Hormuz-driven inflation and rate-risk backdrop seen on July 13 and July 15; the July 14 rebound was driven by a softer CPI print but did not resolve those pressures."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-28",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.72,
+  "threat_level": "HIGH",
+  "key_catalyst": "Reports that China has begun mass-producing domestic DUV lithography machines, triggering a global semiconductor sell-off and renewed AI-chip demand concerns.",
+  "reasoning": "China's reported mass production of domestic DUV lithography is a novel, high-severity semiconductor competitive and capex catalyst, arriving while AI-demand and hyperscaler-spending concerns remain unresolved. QQQ held near flat only because the Iran strike pause and lower oil offset chip weakness, which looks like a temporary macro relief rather than resolution of the tech-specific threat. With major QQQ earnings and the Fed decision immediately ahead, the incomplete semiconductor repricing creates material overnight gap-down risk."
+}

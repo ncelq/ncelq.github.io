@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-15",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.76,
+  "threat_level": "HIGH",
+  "key_catalyst": "IBM’s AI-infrastructure-driven enterprise software spending warning and the resulting broad software selloff",
+  "reasoning": "IBM’s warning has evolved from an isolated earnings miss into a broad, unresolved repricing of enterprise-software demand as spending shifts toward AI infrastructure. QQQ weakened despite supportive CPI news and strength in AI hardware, while fresh Iran strikes, a naval blockade, elevated oil, and hawkish Fed messaging add overnight gap-down risk. The combined catalysts are escalating rather than fully absorbed."
+}
