@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-15",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.65,
+  "threat_level": "HIGH",
+  "key_catalyst": "U.S. launches fresh strikes on Iran and reimposes naval blockade, pushing oil prices higher.",
+  "reasoning": "The escalating U.S.-Iran military strikes and rising oil prices pose a high-severity risk that the market is currently shrugging off, similar to the pre-selloff conditions on July 13. Despite positive CPI data and earnings, the Fed Chair's hawkish pushback and unresolved geopolitical tensions suggest the market may not have fully absorbed the potential for further downside."
+}

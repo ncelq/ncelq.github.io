@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-29",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.8,
+  "threat_level": "HIGH",
+  "key_catalyst": "Impending Microsoft and Meta earnings amid AI spending scrutiny, alongside Fed rate decision",
+  "reasoning": "Today's pre-market decline of -1.12% reflects elevated risk from Microsoft and Meta earnings after close, which are critical for QQQ given AI spending scrutiny, combined with Fed meeting uncertainty and accelerating rotation out of AI/semiconductor stocks. Recent history shows bearish catalysts like earnings misses and geopolitical tensions have led to further declines (e.g., QQQ -1.90% on July 23), and these unresolved events have high severity with escalation risk into the next session."
+}

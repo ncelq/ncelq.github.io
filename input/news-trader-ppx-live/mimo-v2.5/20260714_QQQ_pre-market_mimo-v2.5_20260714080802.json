@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-14",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.7,
+  "threat_level": "HIGH",
+  "key_catalyst": "Trump's Hormuz blockade announcement and 20% cargo fee, sending oil surging 9%",
+  "reasoning": "The novel and severe escalation of geopolitical risk with the Hormuz blockade announcement, combined with rising Fed rate-hike odds to 41%, poses a HIGH threat likely to worsen and overshadow the anticipated CPI decline. Yesterday's sharp selloff (-1.90%) on similar tensions shows market sensitivity, and today's pre-market bounce (+0.95%) may not absorb this escalating crisis."
+}

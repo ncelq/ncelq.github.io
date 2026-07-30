@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-15",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.7,
+  "threat_level": "HIGH",
+  "key_catalyst": "IBM's earnings warning and enterprise spending shift to AI infrastructure",
+  "reasoning": "Today's novel IBM earnings warning, a high-severity event, triggered a software selloff and signals enterprise spending shifts to AI infrastructure, posing contagion risk. Geopolitical tensions are escalating with the U.S. naval blockade on Iran, and Fed Warsh's hawkish testimony keeps rate-hike expectations elevated at 63%, creating unresolved overnight risks."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-20",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.7,
+  "threat_level": "HIGH",
+  "key_catalyst": "Geopolitical escalation: U.S. strikes on Iran for ninth consecutive night pushing Brent crude above $90 and 30-year yield to 5%, reigniting inflation and rate-hike fears.",
+  "reasoning": "Geopolitical escalation with Brent crude above $90 and 30-year yield breaking 5% poses a high threat to tech valuations, as seen in recent bearish responses on 2026-07-15 and 2026-07-16 when similar pressures led to QQQ declines. The market's pre-market optimism on earnings anticipation may underprice this escalating risk, which could catch up intraday or in subsequent sessions."
+}

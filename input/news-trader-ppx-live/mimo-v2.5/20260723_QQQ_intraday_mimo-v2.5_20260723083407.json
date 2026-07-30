@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-23",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.8,
+  "threat_level": "HIGH",
+  "key_catalyst": "Alphabet's earnings report with raised full-year capex guidance to $195-205 billion, overshadowing strong cloud revenue and igniting concerns over AI investment returns.",
+  "reasoning": "Today's earnings misses from Alphabet and Tesla, particularly Alphabet's raised capex guidance and Tesla's profit shortfall, directly challenge the AI spending thesis and have triggered significant after-hours selling. Combined with a sharp oil spike to $96/bbl due to Houthi attacks, reigniting inflation fears and pushing Treasury yields to 4.66-4.7%, the market faces multiple high-severity catalysts that are escalating intraday and likely to pressure QQQ further overnight."
+}

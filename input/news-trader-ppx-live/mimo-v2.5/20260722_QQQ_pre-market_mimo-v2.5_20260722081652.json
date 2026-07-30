@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-22",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.8,
+  "threat_level": "HIGH",
+  "key_catalyst": "Escalating US-Iran conflict and oil price surge driving inflation fears",
+  "reasoning": "The escalating US-Iran conflict, with oil surging above $90 and diplomatic talks stalling, is a novel high-severity catalyst that the market is only beginning to price in, as evidenced by pre-market selling. Recent history shows oil spikes have pressured QQQ (e.g., 2026-07-20), but today's rise in yields to 4.62% on inflation fears adds renewed downward pressure. With the trajectory worsening and no resolution in sight, further downside risk is likely."
+}

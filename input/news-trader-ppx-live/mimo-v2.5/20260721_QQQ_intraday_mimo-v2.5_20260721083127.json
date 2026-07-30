@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-21",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.7,
+  "threat_level": "LOW",
+  "key_catalyst": "10-Year Treasury Yield Drop to 4.36%",
+  "reasoning": "Today's QQQ gains are driven by a drop in the 10-year Treasury yield to 4.36% and a chip stock rally, which dominate over new tariff announcements. The market's positive response indicates these bullish factors are absorbing current risks, with no material overnight gap-down threat evident. However, escalating tariff developments could introduce uncertainty, warranting caution."
+}

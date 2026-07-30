@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-24",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Brent crude surges above $100 on Houthi attacks widening the Iran-aligned conflict, driving broad risk-off rotation and inflation fears.",
+  "reasoning": "Today's catalysts are novel and severe, with Brent crude surging above $100 due to widening Houthi attacks and mega-cap tech earnings revealing negative free cash flow, escalating prior concerns on inflation and AI spending. The market's decline of -1.37% indicates partial absorption, but the unresolved geopolitical and earnings risks carry material overnight gap-down potential as similar but less severe news in recent history led to further declines."
+}

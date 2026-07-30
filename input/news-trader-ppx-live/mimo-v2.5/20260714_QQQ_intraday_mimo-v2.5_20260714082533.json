@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-14",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.8,
+  "threat_level": "LOW",
+  "key_catalyst": "June CPI report showing inflation at 3.5% YoY, below the 3.8% consensus",
+  "reasoning": "Today's June CPI report showing inflation at 3.5% YoY, well below expectations, provides a strong bullish catalyst by reducing near-term Fed hike risks, which directly supports rate-sensitive growth stocks in QQQ. The sharp rebound in semiconductors and positive bank earnings further absorb recent geopolitical concerns, indicating the market is responding positively without material overnight gap-down risk. However, ongoing U.S.-Iran tensions remain a background threat that could escalate."
+}
