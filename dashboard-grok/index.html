@@ -774,50 +774,6 @@ async function loadPredictions(files) {
   return { predictions: [...best.values()], failed, listed: files.length };
 }
 
-async function loadYahooOhlc(minDate, maxDate) {
-  const start = Math.floor(new Date(minDate + "T00:00:00Z").getTime() / 1000) - 7 * 86400;
-  const end = Math.floor(new Date(maxDate + "T23:59:59Z").getTime() / 1000) + 14 * 86400;
-  const yahoo = `https://query2.finance.yahoo.com/v8/finance/chart/QQQ?interval=1d&period1=${start}&period2=${end}`;
-  const proxies = [
-    yahoo,
-    `https://api.allorigins.win/raw?url=${encodeURIComponent(yahoo)}`,
-    `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(yahoo)}`,
-  ];
-  let lastErr;
-  for (const url of proxies) {
-    try {
-      const data = await fetchJson(url);
-      const result = data?.chart?.result?.[0];
-      if (!result) throw new Error("empty chart");
-      return parseYahooResult(result);
-    } catch (e) {
-      lastErr = e;
-    }
-  }
-  throw lastErr || new Error("Yahoo failed");
-}
-
-function parseYahooResult(result) {
-  const ts = result.timestamp || [];
-  const q = result.indicators.quote[0];
-  const map = new Map();
-  for (let i = 0; i < ts.length; i++) {
-    const o = q.open[i], c = q.close[i];
-    if (o == null || c == null) continue;
-    const date = new Date(ts[i] * 1000);
-    // Use America/New_York calendar date
-    const day = date.toLocaleDateString("en-CA", { timeZone: "America/New_York" });
-    map.set(day, {
-      date: day,
-      open: o,
-      high: q.high[i],
-      low: q.low[i],
-      close: c,
-    });
-  }
-  return map;
-}
-
 async function loadOhlcCache() {
   const data = await fetchJson(OHLC_CACHE_URL);
   const map = new Map();
@@ -1254,22 +1210,12 @@ async function main() {
     return;
   }
 
-  const dates = predictions.map(p => p.date).sort();
-  const minDate = dates[0];
-  const maxDate = dates[dates.length - 1];
-
   try {
-    const live = await loadYahooOhlc(minDate, maxDate);
-    applyOhlc(live, "Yahoo live");
+    const cache = await loadOhlcCache();
+    applyOhlc(cache, "qqq-ohlc.json");
   } catch (e) {
-    try {
-      const cache = await loadOhlcCache();
-      applyOhlc(cache, "OHLC cache");
-      showBanner("Yahoo live unavailable in browser — using qqq-ohlc.json cache (refreshed by CI).");
-    } catch (e2) {
-      showBanner("Could not load QQQ prices — signals shown without scores.", true);
-      applyOhlc(new Map(), "none");
-    }
+    showBanner("Could not load QQQ prices — signals shown without scores.", true);
+    applyOhlc(new Map(), "none");
   }
 
   state.columns = aggregate(predictions);
