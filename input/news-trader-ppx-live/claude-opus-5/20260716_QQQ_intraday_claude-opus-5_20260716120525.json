@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-16",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.66,
+  "threat_level": "HIGH",
+  "key_catalyst": "TSMC's record Q2 earnings and raised $60-64B capex guidance triggering a sector-wide semiconductor selloff, with the memory/storage supercycle trade unwinding",
+  "reasoning": "Today's catalyst is a genuine inversion of the sector's reaction function: TSMC delivered record Q2 revenue of $40.2B and 77% earnings growth yet fell ~2%, and the whole chip complex sold off (Arm -5%, Micron -8%, SanDisk -8.1%, SK Hynix -9%, Western Digital -8.7%), meaning good news no longer supports the highest-weighted part of QQQ. That is compounded by a rate shock the market did not shrug off — 208K jobless claims snapped the rate-cut narrative and pushed the 10-year to 4.60%, just under the 4.62% cycle high, with September hike odds round-tripping from 47% to 17% back to 44% despite the softest PPI in six years. QQQ fell 1.07% while the Dow closed up 147 points on UnitedHealth, so the damage is concentrated in exactly the long-duration mega-cap tech that dominates overnight QQQ exposure."
+}

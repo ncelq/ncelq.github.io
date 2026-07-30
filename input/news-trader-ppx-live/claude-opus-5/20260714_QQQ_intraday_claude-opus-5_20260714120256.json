@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-14",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.72,
+  "threat_level": "MODERATE",
+  "key_catalyst": "June CPI at 3.5% YoY vs 3.8% consensus, slashing near-term Fed rate-hike odds",
+  "reasoning": "The dominant catalyst today is a decisively bullish macro surprise: June CPI at 3.5% vs 3.8% consensus, which all three sources rank as the top item and which collapsed July hike odds from roughly 42% to 14%. That directly reverses the specific mechanism that drove the -1.90% drop on 2026-07-13 (oil-driven yield spike pricing out cuts and adding hike risk), and semiconductors — the epicenter of Monday's ~5% plunge — rebounded 3.4% with Nvidia +2.4%, alongside strong bank earnings from Goldman, JPMorgan and Bank of America. IBM's ~26% collapse is severe but idiosyncratic and lightly weighted in QQQ, and the escalating Iran/Hormuz situation, while unresolved, is a familiar theme the index has now absorbed twice without the CPI relief being overwhelmed."
+}

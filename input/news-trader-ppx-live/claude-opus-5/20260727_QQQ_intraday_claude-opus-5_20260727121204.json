@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-27",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.72,
+  "threat_level": "HIGH",
+  "key_catalyst": "Mega-cap tech earnings (Apple, Microsoft, Amazon, Meta) landing this week into unresolved AI-capex ROI fear, compounded by a Wednesday FOMC with a ~30% surprise-hike probability",
+  "reasoning": "QQQ has now fallen four consecutive sessions (-0.51%, -1.90%, -1.12%, -1.39%) with the AI-capex profitability fear that began with Alphabet and Tesla on 07-23/07-24 still unresolved and about to be re-tested by Apple, Microsoft, Amazon and Meta reports this week. Today added a genuinely new macro leg: a US-Iran ceasefire that markets initially read as risk-positive was re-priced within the session into a hawkish demand-shock story, with a ~30% implied odds of a surprise FOMC hike on Wednesday. The market did not shrug this off - it reversed early gains and closed down 1.39%, which shows the selling is still absorbing, not exhausted, into two hard binary events."
+}

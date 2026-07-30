@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-20",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.62,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Mega-cap tech earnings week (Alphabet, Tesla Wednesday; Intel Thursday) driving a pre-market tech rebound, against escalating U.S.-Iran strikes that pushed Brent above $90 and the 30-year yield above 5%.",
+  "reasoning": "The dominant catalyst is anticipation of mega-cap earnings (Alphabet, Tesla, Intel) with all three sources rating it bullish impact 9, and QQQ is already up ~1.08% pre-market, echoing the 2026-07-14 pattern where a positive macro/earnings catalyst drove a +1.12% session. The bearish offsets — U.S.-Iran strikes with Brent above $90 and the 30-year yield above 5% — are escalating but are a recurring theme present on 2026-07-14, 07-15 and 07-16, and the market has repeatedly treated oil/yield headlines as a secondary drag rather than the primary driver; the true damage on 07-16 (-1.64%) came from semiconductor-specific capex fears (TSMC), not geopolitics. With no new chip-specific shock today and earnings not yet reported, there is not enough conviction to override the HOLD default."
+}

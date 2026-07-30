@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-15",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.62,
+  "threat_level": "MODERATE",
+  "key_catalyst": "IBM's 25% plunge on a Q2 revenue miss, with management flagging enterprise capex shifting from traditional software to AI infrastructure, triggering a broad software-sector selloff inside QQQ",
+  "reasoning": "Today's dominant catalyst — IBM's 25% plunge and the resulting rotation out of traditional enterprise software (ServiceNow -5%, Adobe -4.3%, Intuit -2.5%, CRM -2.2%) — is an intra-index reallocation rather than a systemic threat: the same news drove a rally in AI chips and cybersecurity (Nvidia, AMD, CrowdStrike), which caps QQQ's downside at -0.96% rather than producing a broad risk-off break. The IBM warning first appeared on 2026-07-14 and QQQ still closed +1.12% that day, so this is a second-day, already-disclosed catalyst whose severity is being absorbed through rotation, and the cooler 3.5% CPI print removes the near-term July hike risk. Warsh's hawkish testimony and the Iran blockade are both recurring themes from 07-13/07-14 that the market has repeatedly digested without follow-through, so overnight gap-down risk looks contained rather than material."
+}

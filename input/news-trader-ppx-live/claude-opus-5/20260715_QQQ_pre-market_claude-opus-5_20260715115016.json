@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-15",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.76,
+  "threat_level": "LOW",
+  "key_catalyst": "ASML record Q2 orders and raised 2026 sales guidance to EUR 43-45bn confirming AI chip capex, layered on the cooler June CPI that cut July hike odds to ~17%",
+  "reasoning": "The dominant catalysts are strongly bullish and confirming rather than novel: the cooler June CPI (3.5% vs 3.8% consensus) that drove the +1.12% rally on 2026-07-14 is being reinforced by ASML's record orders and raised 2026 guidance, plus solid BlackRock/bank results, with pre-market already up. The bearish items are known, recurring themes rather than new shocks: US-Iran strikes are now in their fourth consecutive night and Warsh's hawkish pushback was already delivered during yesterday's testimony, both of which the market absorbed on 07-14 while still closing higher."
+}

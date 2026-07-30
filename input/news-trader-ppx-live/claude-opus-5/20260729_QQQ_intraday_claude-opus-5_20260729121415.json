@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-29",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.72,
+  "threat_level": "HIGH",
+  "key_catalyst": "Escalating semiconductor selloff on China's advancing domestic chipmaking equipment capabilities (Micron -8.9%, AMD -8.1%, Applied Materials -7.8%), now confirmed globally by heavy SK Hynix and Samsung losses in Korea",
+  "reasoning": "The China lithography/chipmaking-equipment threat that first hit on 2026-07-28 escalated rather than faded today, with Micron -8.9%, AMD -8.1%, and Applied Materials -7.8% and confirmation from a Kospi crash in SK Hynix and Samsung, so this is escalation of a familiar theme rather than priced-in noise. QQQ has now fallen five consecutive sessions (-1.90%, -1.12%, -0.31%, -0.97%, -1.41%) with no absorption or stabilization, and today's decline came even as the Dow rose 537 points, showing the damage is idiosyncratic to Nasdaq-100 constituents rather than a broad risk-off wave that could mean-revert. Overnight the fund faces a live binary stack: the FOMC decision Wednesday with a still-elevated 31.5% hike probability, plus Meta and Microsoft earnings the same day into a tape already punishing AI capex, exactly the setup that produced the 2026-07-23/24 Alphabet and Tesla gap-downs."
+}
