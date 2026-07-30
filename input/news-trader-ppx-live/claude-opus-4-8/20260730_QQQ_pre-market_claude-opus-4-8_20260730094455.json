@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-30",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.72,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Microsoft Q4 earnings beat (18% revenue growth, +7% overnight) lifting the second-largest QQQ weight",
+  "reasoning": "The dominant catalyst is Microsoft's blowout Q4 (18% revenue growth, +7% overnight) from the second-largest QQQ component, reinforced by a Fed hold the market looked past and WSJ reporting Trump may end the Iran conflict without demanding Strait of Hormuz reopening—a de-escalation of the oil-shock theme that drove the 07-24 selloff. Countervailing drags (Meta -7% on soft guidance, Qualcomm miss, a fifth straight semis slide) are real but are known, recurring themes the market is actively absorbing rather than fresh novel shocks, and pre-market is up +1.97% after the -2.04% 07-29 flush. No escalating novel HIGH/CRITICAL catalyst meets the bar to override the HOLD default."
+}

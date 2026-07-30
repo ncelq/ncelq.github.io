@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-30",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.72,
+  "threat_level": "HIGH",
+  "key_catalyst": "Oil prices jump on fresh fighting with Iran while AI/semiconductor stocks sell off, dragging Wall Street lower (Dow -1,100+)",
+  "reasoning": "Track B applies: today's dominant catalysts \u2014 an Iran/oil MACRO_SHOCK and an AI/semiconductor SECTOR_ROTATION selloff \u2014 are both recurring themes whose recent same-theme memory responses are overwhelmingly DOWN, so they are not priced in. The Fed holding steady removes one uncertainty, but the oil/chip complex is actively escalating (oil jumping on fresh Iran fighting, Dow -1,100), matching the escalation override rather than resolving, so cool-down from prior wrong SELLs does not lift the bar for still-punishing themes."
+}

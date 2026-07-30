@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-30",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.85,
+  "threat_level": "LOW",
+  "key_catalyst": "Microsoft's Q4 earnings beat and strong cloud performance offsetting Meta's miss and semiconductor weakness",
+  "reasoning": "Microsoft's robust earnings beat and cloud growth are effectively offsetting Meta's miss and ongoing semiconductor weakness, driving a strong pre-market relief rally. The market is successfully absorbing the Fed's hawkish dissents and mixed geopolitical headlines, indicating that recent bearish themes are stabilizing rather than escalating. With the index already up nearly 2% pre-market and pricing in the mixed mega-cap results, there is no novel or unpriced threat to justify a SELL signal."
+}

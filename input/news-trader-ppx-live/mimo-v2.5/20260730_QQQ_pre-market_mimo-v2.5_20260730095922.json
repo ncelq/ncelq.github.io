@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-30",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.65,
+  "threat_level": "LOW",
+  "key_catalyst": "Microsoft Q4 earnings crush estimates with 18% revenue growth, shares surge 7% overnight",
+  "reasoning": "Microsoft's strong earnings beat provides a direct positive lift to QQQ in pre-market, offsetting Meta's miss and recent bearish trends. However, unresolved geopolitical tensions with Iran and mixed sector performance create uncertainty, preventing strong conviction for a SELL despite prior selloffs."
+}
