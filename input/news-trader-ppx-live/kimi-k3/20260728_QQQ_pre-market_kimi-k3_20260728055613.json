@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-28",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.72,
+  "threat_level": "HIGH",
+  "key_catalyst": "Nvidia's reported $250B OpenAI financing backstop reviving AI circular-financing fears",
+  "reasoning": "The WSJ report of Nvidia's ~$250B OpenAI backstop is a novel, high-severity catalyst that attacks the demand side of the AI trade (suppliers financing their own customers), compounding the existing capex-ROI scrutiny that already drove sustained multi-day selling after Alphabet/Tesla on 2026-07-23 and 2026-07-24. Simultaneously, Fed tightening expectations are escalating fast — from a 30% surprise-hike probability on 2026-07-27 to >70% odds of a 2026 hike with a September quarter-point hike now priced in — directly pressuring the long-duration megacaps that dominate QQQ. With the Fed decision Wednesday and MSFT/META/AAPL/AMZN reporting into a high bar, the catalyst stack is unresolved and worsening rather than absorbed."
+}

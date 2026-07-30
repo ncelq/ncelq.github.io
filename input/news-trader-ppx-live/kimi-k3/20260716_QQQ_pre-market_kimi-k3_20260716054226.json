@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-16",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.62,
+  "threat_level": "HIGH",
+  "key_catalyst": "Memory/storage chip rout (Micron, SanDisk, SK Hynix, WDC down 8-9%) on supercycle doubts, compounded by escalating US strikes on Iran and oil above $85",
+  "reasoning": "Today's setup closely mirrors 2026-07-13 (-1.90%): escalating US-Iran strikes with oil above $85 plus a broad semiconductor rout, but this time the geopolitical trajectory is worsening (fresh CENTCOM strikes, first tanker attack since the blockade) and the memory selloff reflects a narrative break in the storage supercycle with 8-9% declines across Micron, SanDisk, SK Hynix, and WDC. The 'sell the news' reaction to TSMC's strong beat signals exhaustion in the AI hardware trade, and unlike 07-14's CPI-driven rescue, today's cool PPI is already out while yields rise on oil and strong jobless claims, removing the catalyst that powered the prior rebound. Apple's record high and disinflation data provide partial offsets, but they have not stopped the pre-market slide and the two heaviest QQQ risk drivers are deteriorating simultaneously."
+}

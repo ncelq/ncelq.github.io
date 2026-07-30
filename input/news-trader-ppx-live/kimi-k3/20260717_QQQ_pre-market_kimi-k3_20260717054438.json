@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-17",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.72,
+  "threat_level": "HIGH",
+  "key_catalyst": "Anthropic ban triggering political/regulatory risk reassessment across the AI sector",
+  "reasoning": "The reported Anthropic ban is a novel, high-severity regulatory catalyst directly targeting QQQ's core AI exposure (Nvidia, Meta, Amazon), with no prior occurrence in recent history to suggest absorption. It lands on top of an unresolved, multi-day semiconductor selloff (7/16 -1.64% continuing to -1.85% pre-market), escalating Fed hawkishness (Warsh 7/15 now followed by Jefferson openly floating a hike), and mechanical selling from the SpaceX index inclusion and Tesla dumping. Unlike 7/14, when cooler CPI provided a counter-catalyst to reverse the prior selloff, today has no offsetting bullish catalyst and the rotation out of tech is accelerating."
+}

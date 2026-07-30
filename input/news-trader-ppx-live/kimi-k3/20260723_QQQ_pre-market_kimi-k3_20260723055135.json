@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-23",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.72,
+  "threat_level": "HIGH",
+  "key_catalyst": "Alphabet's 4%+ after-hours drop on raised AI capex guidance despite a Q2 beat, confirming investor rejection of the mega-cap AI spending thesis",
+  "reasoning": "The first Magnificent Seven verdicts on the AI spending thesis are now in and they are negative: Alphabet fell 4%+ despite a revenue/cloud beat purely because of the $195-205B capex guidance raise, and Tesla missed on EPS with negative free cash flow — a novel, high-severity earnings catalyst that directly hits top QQQ holdings. Simultaneously, the familiar oil/Iran theme has escalated rather than stabilized (Iran rejecting talks and a Houthi Red Sea blockade are new developments versus 'diplomatic channels open' on 7/20), pushing Brent toward $95, the 30-year above 5%, and September rate-hike odds to 83% — a macro regime shift from cuts to hikes that long-duration tech has not yet absorbed."
+}
