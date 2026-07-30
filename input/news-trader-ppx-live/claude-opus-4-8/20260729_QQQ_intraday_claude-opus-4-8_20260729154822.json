@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-29",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.66,
+  "threat_level": "HIGH",
+  "key_catalyst": "Escalating semiconductor selloff on China's advancing domestic chipmaking-equipment capabilities",
+  "reasoning": "The China chipmaking-equipment threat is a familiar theme that escalated rather than faded: it first hit on 2026-07-28 (QQQ -0.97%) and today intensified into an outright semiconductor crash (Micron -8.9%, AMD -8.1%, Applied Materials -7.8%), driving QQQ -1.41% even as the Dow rose ~1% and the S&P gained. The accelerating rotation out of AI/tech mega-caps into cyclicals is QQQ-specific downside that is still developing, not absorbed, and it sits directly ahead of two binary overnight catalysts."
+}

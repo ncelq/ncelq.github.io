@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-29",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "China's advancing chipmaking capabilities trigger accelerated semiconductor selloff and broad rotation out of AI mega-caps.",
+  "reasoning": "The semiconductor selloff triggered by China's advancing chipmaking capabilities escalated significantly today, with major QQQ constituents like Micron and AMD dropping roughly 8%. This structural threat, combined with a pronounced rotation into cyclicals and heavy de-risking ahead of tomorrow's Fed decision and Mag 7 earnings, creates material overnight gap-down risk."
+}

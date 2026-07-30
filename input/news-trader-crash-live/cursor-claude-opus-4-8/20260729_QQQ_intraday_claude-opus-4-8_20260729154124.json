@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-29",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.82,
+  "threat_level": "HIGH",
+  "key_catalyst": "SK Hynix earnings miss triggering broad semiconductor selloff and renewed AI-spending doubts",
+  "reasoning": "The SK Hynix earnings miss reignited AI-capex doubts and drove a broad, still-unstabilized semiconductor selloff (NVDA, AMD, MU, INTC extending losses intraday), the primary driver of QQQ's -1.26% intraday decline. This stacks with three hawkish Fed dissents pressuring long-duration growth names and unresolved after-hours risk from Microsoft/Meta earnings, none of which show signs of absorption. With the session closing down and multiple unresolved primary drivers, overnight risk is elevated."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-29",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.8,
+  "threat_level": "HIGH",
+  "key_catalyst": "Intensifying AI Spending Fears Trigger Massive Semiconductor Selloff",
+  "reasoning": "QQQ fell 1.31% today, extending the semiconductor-driven selloff, as AI spending fears and China chip competition intensified. No absorption is evident, and with major tech earnings this week, downside risks remain high."
+}

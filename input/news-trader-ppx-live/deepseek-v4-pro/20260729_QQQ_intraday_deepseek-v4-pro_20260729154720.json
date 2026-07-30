@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-29",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "China's advancing chipmaking capabilities triggering a semiconductor sector crash",
+  "reasoning": "The China semiconductor threat escalated for a second consecutive day, causing an accelerated selloff in major QQQ constituents and a broadening rotation out of tech. With the Fed decision and megacap earnings imminent, the market has not absorbed this novel competitive risk, and unresolved catalysts heighten overnight gap-down vulnerability."
+}

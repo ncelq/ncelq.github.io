@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-29",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.9,
+  "threat_level": "CRITICAL",
+  "key_catalyst": "MACRO_SHOCK: Oil prices surge over 6% following Houthi tanker attack and US-Saudi strikes in Iraq, escalating Middle East tensions",
+  "reasoning": "Today's session saw a -1.57% decline driven by escalating MACRO_SHOCK (Houthi tanker attack, US-Saudi strikes in Iraq, oil surge over 6%) and persistent EARNINGS_CRISIS (Micron DRAM pressure, semiconductor weakness). The market's negative response was muted relative to the severity of the news, suggesting complacency rather than absorption. Late-session headlines show no de-escalation in geopolitical risks, leaving the catalyst live and unpriced for overnight exposure."
+}
