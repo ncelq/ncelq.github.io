@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- layout:signal-rail-04 mockup-match-v4 -->
+<!-- layout:ledger-04 mockup-match-v5 -->
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -156,6 +156,16 @@ section h2 {
   background: linear-gradient(180deg, #fffbeb, #ffffff);
   box-shadow: 0 8px 24px rgba(245,158,11,.14);
 }
+.pod.p2 {
+  border: 1.5px solid rgba(148,163,184,.55);
+  background: linear-gradient(180deg, #f8fafc, #ffffff);
+  box-shadow: 0 8px 24px rgba(100,116,139,.12);
+}
+.pod.p3 {
+  border: 1.5px solid rgba(180,83,9,.4);
+  background: linear-gradient(180deg, #fff7ed, #ffffff);
+  box-shadow: 0 8px 24px rgba(180,83,9,.12);
+}
 .medal { font-size: 45px; line-height: 1; margin-bottom: 8px; }
 .pod-name { font-family: var(--display); font-weight: 700; font-size: 22.5px; margin: 0 0 2px; }
 .pod-pipe { font-size: 17.25px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
@@ -199,7 +209,7 @@ table.acc-table { width: 100%; border-collapse: collapse; font-size: 16px; min-w
 .tg-x { background: var(--line-soft); color: var(--muted); }
 
 
-/* Latest signals — pipeline columns × shared model rows */
+/* Latest signals — ledger cards (mockup kpi-04) */
 #latestSignals .board {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -216,8 +226,8 @@ table.acc-table { width: 100%; border-collapse: collapse; font-size: 16px; min-w
   min-width: 0;
 }
 #latestSignals .dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -227,53 +237,71 @@ table.acc-table { width: 100%; border-collapse: collapse; font-size: 16px; min-w
 #latestSignals .head.crash .dot { background: #d97706; }
 #latestSignals .head h2 {
   margin: 0;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 800;
-  letter-spacing: .06em;
+  letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--ink);
 }
 #latestSignals .head small {
   color: var(--muted);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #latestSignals .card {
   display: grid;
-  grid-template-columns: 6px 1fr;
-  gap: 0;
+  grid-template-columns: 8px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 11px 14px;
+  min-height: 56px;
+  min-width: 0;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
-  overflow: hidden;
-  min-height: 120px;
-  min-width: 0;
   box-shadow: var(--shadow);
 }
-#latestSignals .card.up .rail { background: linear-gradient(180deg, #10b981, #34d399); }
-#latestSignals .card.down .rail { background: linear-gradient(180deg, #f43f5e, #fb7185); }
-#latestSignals .card.na .rail { background: linear-gradient(180deg, #94a3b8, #cbd5e1); }
+#latestSignals .card[data-cat] { cursor: help; }
+#latestSignals .pip {
+  width: 8px;
+  height: 28px;
+  border-radius: 99px;
+  background: #94a3b8;
+}
+#latestSignals .card.up .pip { background: #10b981; }
+#latestSignals .card.down .pip { background: #f43f5e; }
+#latestSignals .card.na .pip { background: #94a3b8; }
+#latestSignals .card.rank-1.up,
+#latestSignals .card.rank-2.up,
+#latestSignals .card.rank-3.up {
+  background: #f0fdf4;
+  border-color: rgba(22,163,74,.4);
+  box-shadow: 0 8px 24px rgba(22,163,74,.12);
+}
+#latestSignals .card.rank-1.down,
+#latestSignals .card.rank-2.down,
+#latestSignals .card.rank-3.down {
+  background: #fff1f2;
+  border-color: rgba(225,29,72,.4);
+  box-shadow: 0 8px 24px rgba(225,29,72,.12);
+}
 #latestSignals .card.missing {
   background: transparent;
   border-style: dashed;
   box-shadow: none;
 }
-#latestSignals .card.missing .rail { background: var(--line-soft); }
-#latestSignals .body { padding: 14px 14px 14px 16px; min-width: 0; }
-#latestSignals .top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 8px;
-}
+#latestSignals .card.missing .pip { background: var(--line-soft); }
 #latestSignals .model {
   margin: 0;
   font-family: var(--display);
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1.25;
   color: var(--ink);
-  min-width: 0;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -282,10 +310,9 @@ table.acc-table { width: 100%; border-collapse: collapse; font-size: 16px; min-w
   margin: 0;
   flex-shrink: 0;
   font-family: var(--display);
-  font-size: 2rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  letter-spacing: -.02em;
-  line-height: 1;
+  letter-spacing: -.01em;
   text-transform: uppercase;
 }
 #latestSignals .card.up .sig { color: var(--up); }
@@ -294,39 +321,41 @@ table.acc-table { width: 100%; border-collapse: collapse; font-size: 16px; min-w
 #latestSignals .threat {
   display: inline-flex;
   align-items: center;
-  margin: 8px 0 0;
-  font-size: 11px;
+  margin: 4px 0 0;
+  font-size: 10px;
   font-weight: 800;
   letter-spacing: .04em;
   text-transform: uppercase;
   font-variant-numeric: tabular-nums;
   padding: 2px 8px;
   border-radius: 99px;
+  background: var(--line-soft);
+  color: var(--muted);
 }
 #latestSignals .threat.threat-low { background: var(--up-soft); color: var(--up); }
 #latestSignals .threat.threat-moderate { background: var(--amber-soft); color: var(--amber); }
 #latestSignals .threat.threat-high { background: #ffedd5; color: #c2410c; }
 #latestSignals .threat.threat-critical { background: var(--down-soft); color: var(--down); }
 #latestSignals .card.na .threat { background: var(--line-soft); color: var(--muted); }
-#latestSignals .cat {
-  margin: 10px 0 0;
+#catTip {
+  position: fixed;
+  z-index: 1000;
+  display: none;
+  max-width: min(320px, calc(100vw - 24px));
+  padding: 10px 12px;
+  font-family: var(--font);
   font-size: 12.5px;
-  color: var(--muted);
-  line-height: 1.45;
-}
-#latestSignals .cat-more {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: none;
-  font: inherit;
-  font-weight: 700;
   color: var(--ink-soft);
-  cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  line-height: 1.45;
+  background: var(--panel-glass);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lift);
+  backdrop-filter: blur(6px);
+  pointer-events: none;
+  transform: translate(12px, 14px);
 }
-#latestSignals .cat-more:hover { color: var(--ink); }
+#catTip.show { display: block; }
 @media (max-width: 980px) {
   #latestSignals .board { grid-template-columns: 1fr 1fr; }
 }
@@ -724,14 +753,10 @@ function renderLatestSignals() {
     [...knownByPipe.values()].flatMap(m => [...m.keys()])
   )].sort((a, b) => a.localeCompare(b));
 
-  const CAT_MAX = 85;
-  const catHtml = (raw) => {
-    const text = raw || "—";
-    if (text.length <= CAT_MAX) return `<p class="cat">${esc(text)}</p>`;
-    return `<p class="cat">
-      <span class="cat-teaser">${esc(text.slice(0, CAT_MAX))}… <button type="button" class="cat-more">more</button></span>
-      <span class="cat-full" hidden>${esc(text)}</span>
-    </p>`;
+  const catAttr = (raw) => {
+    const text = String(raw || "").trim();
+    if (!text || text === "—" || text === "N/A") return "";
+    return ` data-cat="${esc(text)}"`;
   };
 
   const cardHtml = (p) => {
@@ -745,16 +770,15 @@ function renderLatestSignals() {
     const threatClass = tone === "na" ? "" : threatCls(threat);
     const medal = state.btMedals?.get(`${p.engine}/${p.model}`) || "";
     const medalHtml = medal ? `<span class="bt-medal">${medal}</span>` : "";
-    return `<article class="card ${tone}">
-      <div class="rail" aria-hidden="true"></div>
-      <div class="body">
-        <div class="top">
-          <p class="model">${medalHtml}${esc(p.model)}</p>
-          <p class="sig">${esc(p.signal)}</p>
-        </div>
+    const rankIdx = BT_MEDALS.indexOf(medal);
+    const rankClass = rankIdx >= 0 ? ` rank-${rankIdx + 1}` : "";
+    return `<article class="card ${tone}${rankClass}"${catAttr(p.key_catalyst)}>
+      <span class="pip" aria-hidden="true"></span>
+      <div>
+        <p class="model">${medalHtml}${esc(p.model)}</p>
         <span class="threat ${threatClass}">${esc(threat)} · ${esc(conf)}</span>
-        ${catHtml(p.key_catalyst)}
       </div>
+      <p class="sig">${esc(p.signal)}</p>
     </article>`;
   };
 
@@ -768,8 +792,9 @@ function renderLatestSignals() {
   });
 
   const emptyCard = () => `<article class="card missing" aria-hidden="true">
-    <div class="rail"></div>
-    <div class="body"></div>
+    <span class="pip"></span>
+    <div></div>
+    <p class="sig"></p>
   </article>`;
 
   // Flat 4-col grid: header row, then one row per model (aligned across pipelines)
@@ -792,16 +817,59 @@ function renderLatestSignals() {
   }).join("")).join("");
 
   grid.innerHTML = `<div class="board">${heads}${cells}</div>`;
-  grid.querySelector(".board").addEventListener("click", (e) => {
-    const btn = e.target.closest(".cat-more");
-    if (!btn) return;
-    const cat = btn.closest(".cat");
-    const full = cat.querySelector(".cat-full");
-    const teaser = cat.querySelector(".cat-teaser");
-    if (!full || !teaser) return;
-    teaser.hidden = true;
-    full.hidden = false;
-  });
+  bindCatTip(grid);
+}
+
+/** Floating catalyst overlay that follows the cursor over KPI cards. */
+function bindCatTip(root) {
+  let tip = document.getElementById("catTip");
+  if (!tip) {
+    tip = document.createElement("div");
+    tip.id = "catTip";
+    tip.setAttribute("role", "tooltip");
+    document.body.appendChild(tip);
+  }
+
+  const place = (e) => {
+    const pad = 12;
+    const tw = tip.offsetWidth;
+    const th = tip.offsetHeight;
+    let x = e.clientX + 14;
+    let y = e.clientY + 16;
+    if (x + tw + pad > window.innerWidth) x = e.clientX - tw - 12;
+    if (y + th + pad > window.innerHeight) y = e.clientY - th - 12;
+    tip.style.left = `${Math.max(pad, x)}px`;
+    tip.style.top = `${Math.max(pad, y)}px`;
+    tip.style.transform = "none";
+  };
+
+  const hide = () => {
+    tip.classList.remove("show");
+    tip.textContent = "";
+  };
+
+  root.onmouseover = (e) => {
+    const card = e.target.closest(".card[data-cat]");
+    if (!card || !root.contains(card)) return;
+    tip.textContent = card.getAttribute("data-cat") || "";
+    tip.classList.add("show");
+    place(e);
+  };
+  root.onmousemove = (e) => {
+    if (!tip.classList.contains("show")) return;
+    const card = e.target.closest(".card[data-cat]");
+    if (!card || !root.contains(card)) { hide(); return; }
+    place(e);
+  };
+  root.onmouseout = (e) => {
+    const from = e.target.closest(".card[data-cat]");
+    if (!from) return;
+    const to = e.relatedTarget && e.relatedTarget.closest
+      ? e.relatedTarget.closest(".card[data-cat]")
+      : null;
+    if (to === from) return;
+    hide();
+  };
 }
 
 function triCls(p) {
