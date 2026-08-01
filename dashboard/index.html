@@ -413,7 +413,7 @@ table.acc-table { width: 100%; border-collapse: collapse; font-size: 16px; min-w
 
   <section>
     <h2>Battle Heatmap</h2>
-    <p class="section-sub">Every engine × every date (LLM → PPX → PPX2 → Crash) — top row: QQQ move · upper-left: pre-market · lower-right: intraday</p>
+    <p class="section-sub">Every engine × every date (xMEM → sMEM → sMEM2 → CRASH) — top row: QQQ move · upper-left: pre-market · lower-right: intraday</p>
     <div class="hm-wrap" id="hmWrap"></div>
   </section>
 
@@ -494,7 +494,7 @@ function shortEngine(engine) {
 }
 
 function shortCol(engine, model) {
-  return `${shortEngine(engine)}/${shortModel(model)}`;
+  return `${pipeMeta(engine).short}/${shortModel(model)}`;
 }
 
 /** Engine order: llm → ppx → ppx2 → crash, models A–Z within each folder */
@@ -639,12 +639,12 @@ function esc(s) {
 }
 
 const PIPE_META = {
-  "news-trader-crash-live": { short: "CRASH", cls: "tg-crash" },
-  "news-trader-llm-live": { short: "LLM", cls: "tg-llm" },
-  "news-trader-ppx-live": { short: "PPX", cls: "tg-ppx" },
-  "news-trader-ppx2-live": { short: "PPX2", cls: "tg-ppx2" },
+  "news-trader-crash-live": { short: "CRASH", name: "CRASH NEWS TRACKING LLM", cls: "tg-crash" },
+  "news-trader-llm-live": { short: "xMEM", name: "EXTRA MEMORY NEWS LLM", cls: "tg-llm" },
+  "news-trader-ppx-live": { short: "sMEM", name: "SHORT MEMORY NEWS LLM", cls: "tg-ppx" },
+  "news-trader-ppx2-live": { short: "sMEM2", name: "SHORT MEMORY NEWS LLM v2", cls: "tg-ppx2" },
 };
-const pipeMeta = (p) => PIPE_META[p] || { short: shortEngine(p), cls: "tg-x" };
+const pipeMeta = (p) => PIPE_META[p] || { short: shortEngine(p), name: p, cls: "tg-x" };
 
 function threatCls(level) {
   const k = String(level || "").toUpperCase();
@@ -780,7 +780,7 @@ function renderLatestSignals() {
     return `<header class="head ${esc(cls)}">
       <span class="dot" aria-hidden="true"></span>
       <h2>${esc(pm.short)}</h2>
-      <small>${n} models</small>
+      <small>${esc(pm.name)} · ${n} models</small>
     </header>`;
   }).join("");
 
@@ -838,7 +838,7 @@ function qqqTriTitle(date, session, r) {
 }
 
 function renderHeatmap() {
-  const rows = columnsByFolder(); // LLM → PPX → PPX2 → Crash on Y
+  const rows = columnsByFolder(); // xMEM → sMEM → sMEM2 → CRASH on Y
   const cols = heatDates();
   const lookup = new Map();
   for (const p of state.predictions) {
@@ -958,7 +958,7 @@ function renderPodium(mountId, top) {
     return `<div class="pod p${i + 1}">
       <div class="medal">${medals[i]}</div>
       <p class="pod-name">${esc(r.name)}</p>
-      <p class="pod-pipe"><span class="tag ${pm.cls}">${pm.short}</span></p>
+      <p class="pod-pipe"><span class="tag ${pm.cls}">${pm.short}</span> ${esc(pm.name)}</p>
       <p class="pod-score ${r.pos ? "pos" : "neg"}">${r.score}</p>
       <p class="pod-acc">${r.sub}</p>
     </div>`;
@@ -1060,7 +1060,7 @@ function renderAccuracy() {
       return a.model.localeCompare(b.model);
     });
     const pm = pipeMeta(pipe.id);
-    html += `<tr class="pipe-row"><td colspan="6"><span class="tag ${pm.cls}">${pm.short}</span> &nbsp;${esc(pipe.id)}</td></tr>`;
+    html += `<tr class="pipe-row"><td colspan="6"><span class="tag ${pm.cls}">${pm.short}</span> &nbsp;${esc(pm.name)}</td></tr>`;
 
     const holdBuckets = [];
     const sellBuckets = [];
@@ -1335,7 +1335,7 @@ function renderBacktest(results = computeBacktestResults()) {
 
   for (const pipe of pipeStats) {
     const pm = pipeMeta(pipe.id);
-    html += `<tr class="pipe-row"><td colspan="7"><span class="tag ${pm.cls}">${pm.short}</span> &nbsp;${esc(pipe.id)}</td></tr>`;
+    html += `<tr class="pipe-row"><td colspan="7"><span class="tag ${pm.cls}">${pm.short}</span> &nbsp;${esc(pm.name)}</td></tr>`;
 
     const models = pipe.models.slice().sort((a, b) => {
       const ea = a.bt.excessPct == null ? -Infinity : a.bt.excessPct;
