@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- layout:signal-rail-04 mockup-match-v4 -->
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,7 +56,7 @@ body {
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
-.wrap { max-width: 1220px; margin: 0 auto; padding: 28px 22px 70px; }
+.wrap { max-width: 1400px; margin: 0 auto; padding: 28px 22px 70px; }
 .status {
   display: none;
   margin: 0 0 16px;
@@ -194,105 +195,143 @@ table.acc-table { width: 100%; border-collapse: collapse; font-size: 16px; min-w
 .tg-crash { background: #ffe0a3; color: #78350f; }
 .tg-llm { background: #ddd6fe; color: #4c1d95; }
 .tg-ppx { background: #bae6fd; color: #0c4a6e; }
+.tg-ppx2 { background: #99f6e4; color: #115e59; }
 .tg-x { background: var(--line-soft); color: var(--muted); }
 
-/* Latest signal KPI cards */
-.kpi-grid {
+
+/* Latest signals — pipeline columns × shared model rows */
+#latestSignals .board {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 14px;
+  row-gap: 8px;
   align-items: stretch;
 }
-.kpi {
+#latestSignals .head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0 2px 4px;
+  min-width: 0;
+}
+#latestSignals .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+#latestSignals .head.llm .dot { background: #7c3aed; }
+#latestSignals .head.ppx .dot { background: #0284c7; }
+#latestSignals .head.ppx2 .dot { background: #0d9488; }
+#latestSignals .head.crash .dot { background: #d97706; }
+#latestSignals .head h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+#latestSignals .head small {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+#latestSignals .card {
+  display: grid;
+  grid-template-columns: 6px 1fr;
+  gap: 0;
   background: var(--panel);
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 18px 18px 16px;
-  box-shadow: var(--shadow);
-  position: relative;
+  border-radius: var(--radius-sm);
   overflow: hidden;
-  transition: transform .18s ease, box-shadow .18s ease;
+  min-height: 120px;
+  min-width: 0;
+  box-shadow: var(--shadow);
+}
+#latestSignals .card.up .rail { background: linear-gradient(180deg, #10b981, #34d399); }
+#latestSignals .card.down .rail { background: linear-gradient(180deg, #f43f5e, #fb7185); }
+#latestSignals .card.na .rail { background: linear-gradient(180deg, #94a3b8, #cbd5e1); }
+#latestSignals .card.missing {
+  background: transparent;
+  border-style: dashed;
+  box-shadow: none;
+}
+#latestSignals .card.missing .rail { background: var(--line-soft); }
+#latestSignals .body { padding: 14px 14px 14px 16px; min-width: 0; }
+#latestSignals .top {
   display: flex;
-  flex-direction: column;
-  height: 100%;
-  min-height: 220px;
-}
-.kpi:hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); }
-.kpi::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #94a3b8, #cbd5e1);
-  opacity: .85;
-}
-.kpi.up::before { background: linear-gradient(90deg, #10b981, #34d399); }
-.kpi.down::before { background: linear-gradient(90deg, #f43f5e, #fb7185); }
-.kpi.up {
-  border-color: rgba(22,163,74,.35);
-  background: linear-gradient(180deg, #ffffff 0%, #ffffff 55%, rgba(220,252,231,.55) 80%, #dcfce7 100%);
-}
-.kpi.down {
-  border-color: rgba(225,29,72,.3);
-  background: linear-gradient(180deg, #ffffff 0%, #ffffff 55%, rgba(255,228,230,.55) 80%, #ffe4e6 100%);
-}
-.k-head {
-  display: flex;
+  justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 8px 12px;
-  margin: 0;
+  gap: 8px;
 }
-.k-value {
+#latestSignals .model {
+  margin: 0;
   font-family: var(--display);
-  font-size: 2.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#latestSignals .model .bt-medal { margin-right: 4px; }
+#latestSignals .sig {
+  margin: 0;
+  flex-shrink: 0;
+  font-family: var(--display);
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: -.02em;
   line-height: 1;
-  margin: 0;
+  text-transform: uppercase;
 }
-.kpi.up .k-value { color: var(--up); }
-.kpi.down .k-value { color: var(--down); }
-.k-side {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
-}
-.kpi .tag {
-  font-size: 11px;
-  padding: 2px 8px;
-  border-radius: 99px;
-  letter-spacing: .04em;
-}
-.k-threat {
+#latestSignals .card.up .sig { color: var(--up); }
+#latestSignals .card.down .sig { color: var(--down); }
+#latestSignals .card.na .sig { color: var(--muted); }
+#latestSignals .threat {
   display: inline-flex;
   align-items: center;
-  font-variant-numeric: tabular-nums;
+  margin: 8px 0 0;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: .04em;
   text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
   padding: 2px 8px;
   border-radius: 99px;
 }
-.k-threat.threat-low { background: var(--up-soft); color: var(--up); }
-.k-threat.threat-moderate { background: var(--amber-soft); color: var(--amber); }
-.k-threat.threat-high { background: #ffedd5; color: #c2410c; }
-.k-threat.threat-critical { background: var(--down-soft); color: var(--down); }
-.k-model {
+#latestSignals .threat.threat-low { background: var(--up-soft); color: var(--up); }
+#latestSignals .threat.threat-moderate { background: var(--amber-soft); color: var(--amber); }
+#latestSignals .threat.threat-high { background: #ffedd5; color: #c2410c; }
+#latestSignals .threat.threat-critical { background: var(--down-soft); color: var(--down); }
+#latestSignals .card.na .threat { background: var(--line-soft); color: var(--muted); }
+#latestSignals .cat {
   margin: 10px 0 0;
-  font-size: 1.05rem;
-  font-weight: 800;
-  line-height: 1.25;
-  color: var(--ink);
-}
-.k-sub {
   font-size: 12.5px;
   color: var(--muted);
-  margin: 10px 0 0;
   line-height: 1.45;
-  flex: 1;
+}
+#latestSignals .cat-more {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-weight: 700;
+  color: var(--ink-soft);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+#latestSignals .cat-more:hover { color: var(--ink); }
+@media (max-width: 980px) {
+  #latestSignals .board { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  #latestSignals .board { grid-template-columns: 1fr; }
 }
 .hm-wrap {
   background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
@@ -351,7 +390,7 @@ table.acc-table { width: 100%; border-collapse: collapse; font-size: 16px; min-w
 
   <section id="latestSignals">
     <h2 id="latestSignalsTitle">Latest signals</h2>
-    <div class="kpi-grid" id="latestSignalGrid"><p class="loading">Loading signals…</p></div>
+    <div id="latestSignalGrid"><p class="loading">Loading signals…</p></div>
   </section>
 
   <section>
@@ -374,7 +413,7 @@ table.acc-table { width: 100%; border-collapse: collapse; font-size: 16px; min-w
 
   <section>
     <h2>Battle Heatmap</h2>
-    <p class="section-sub">Every engine × every date (LLM → PPX → Crash) — top row: QQQ move · upper-left: pre-market · lower-right: intraday</p>
+    <p class="section-sub">Every engine × every date (LLM → PPX → PPX2 → Crash) — top row: QQQ move · upper-left: pre-market · lower-right: intraday</p>
     <div class="hm-wrap" id="hmWrap"></div>
   </section>
 
@@ -382,7 +421,7 @@ table.acc-table { width: 100%; border-collapse: collapse; font-size: 16px; min-w
 
 <script>
 const CONCURRENCY = 12;
-const DATA_ROOT = ".."; // repo root relative to this page (dashboard-grok/) — for prediction JSON only
+const DATA_ROOT = ".."; // repo root relative to this page (dashboard/) — for prediction JSON only
 const MANIFEST_URL = "manifest.json";
 const OHLC_CACHE_URL = "qqq-ohlc.json";
 
@@ -458,8 +497,8 @@ function shortCol(engine, model) {
   return `${shortEngine(engine)}/${shortModel(model)}`;
 }
 
-/** Engine order: llm → ppx → crash, models A–Z within each folder */
-const FOLDER_ORDER = ["llm", "ppx", "crash"];
+/** Engine order: llm → ppx → ppx2 → crash, models A–Z within each folder */
+const FOLDER_ORDER = ["llm", "ppx", "ppx2", "crash"];
 
 function folderKey(engine) {
   const e = shortEngine(engine);
@@ -603,6 +642,7 @@ const PIPE_META = {
   "news-trader-crash-live": { short: "CRASH", cls: "tg-crash" },
   "news-trader-llm-live": { short: "LLM", cls: "tg-llm" },
   "news-trader-ppx-live": { short: "PPX", cls: "tg-ppx" },
+  "news-trader-ppx2-live": { short: "PPX2", cls: "tg-ppx2" },
 };
 const pipeMeta = (p) => PIPE_META[p] || { short: shortEngine(p), cls: "tg-x" };
 
@@ -615,15 +655,28 @@ function threatCls(level) {
   return "threat-moderate";
 }
 
-function latestPerModel(predictions = state.predictions) {
+function predStamp(p) {
+  return `${p.date}|${String(p.timestamp).padStart(20, "0")}`;
+}
+
+/** Newest prediction overall — drives the Latest signals date/session title. */
+function newestPrediction(predictions = state.predictions) {
+  let best = null;
+  for (const p of predictions) {
+    if (!best || predStamp(p) > predStamp(best)) best = p;
+  }
+  return best;
+}
+
+/** Latest file per engine/model, optionally locked to one date + session. */
+function latestPerModel(predictions = state.predictions, date = null, session = null) {
   const best = new Map();
   for (const p of predictions) {
+    if (date != null && p.date !== date) continue;
+    if (session != null && p.session !== session) continue;
     const k = `${p.engine}/${p.model}`;
     const prev = best.get(k);
-    if (!prev) { best.set(k, p); continue; }
-    const a = `${p.date}|${String(p.timestamp).padStart(20, "0")}`;
-    const b = `${prev.date}|${String(prev.timestamp).padStart(20, "0")}`;
-    if (a > b) best.set(k, p);
+    if (!prev || predStamp(p) > predStamp(prev)) best.set(k, p);
   }
   return [...best.values()].sort((a, b) => {
     const fa = folderKey(a.engine);
@@ -634,37 +687,121 @@ function latestPerModel(predictions = state.predictions) {
 }
 
 function renderLatestSignals() {
-  const rows = latestPerModel();
   const titleEl = document.getElementById("latestSignalsTitle");
   const grid = document.getElementById("latestSignalGrid");
-  if (!rows.length) {
+  const newest = newestPrediction();
+  if (!newest) {
     titleEl.textContent = "Latest signals";
     grid.innerHTML = '<p class="loading">No signals loaded</p>';
     return;
   }
-  const newest = rows.slice().sort((a, b) => {
-    const aK = `${a.date}|${String(a.timestamp).padStart(20, "0")}`;
-    const bK = `${b.date}|${String(b.timestamp).padStart(20, "0")}`;
-    return bK.localeCompare(aK);
-  })[0];
   titleEl.textContent = `${newest.date} - ${newest.session}`;
-  grid.innerHTML = rows.map(p => {
-    const pm = pipeMeta(p.engine);
-    const hold = p.signal === "HOLD";
-    const conf = Math.round((Number(p.confidence) || 0) * 100);
+
+  // Only cards from that date + session (e.g. 20260731_*_intraday_*.json)
+  const rows = latestPerModel(state.predictions, newest.date, newest.session);
+  if (!rows.length) {
+    grid.innerHTML = '<p class="loading">No signals for this session</p>';
+    return;
+  }
+
+  const pipes = Object.keys(PIPE_META).sort((a, b) => folderKey(a) - folderKey(b) || a.localeCompare(b));
+
+  // engine → shortModel → display name (any history ⇒ model folder exists)
+  const knownByPipe = new Map();
+  for (const c of state.columns) {
+    if (!knownByPipe.has(c.engine)) knownByPipe.set(c.engine, new Map());
+    const mk = shortModel(c.model);
+    if (!knownByPipe.get(c.engine).has(mk)) knownByPipe.get(c.engine).set(mk, c.model);
+  }
+
+  // engine → shortModel → prediction for this date + session
+  const byPipeModel = new Map();
+  for (const p of rows) {
+    if (!byPipeModel.has(p.engine)) byPipeModel.set(p.engine, new Map());
+    byPipeModel.get(p.engine).set(shortModel(p.model), p);
+  }
+  const modelOrder = [...new Set(
+    [...knownByPipe.values()].flatMap(m => [...m.keys()])
+  )].sort((a, b) => a.localeCompare(b));
+
+  const CAT_MAX = 85;
+  const catHtml = (raw) => {
+    const text = raw || "—";
+    if (text.length <= CAT_MAX) return `<p class="cat">${esc(text)}</p>`;
+    return `<p class="cat">
+      <span class="cat-teaser">${esc(text.slice(0, CAT_MAX))}… <button type="button" class="cat-more">more</button></span>
+      <span class="cat-full" hidden>${esc(text)}</span>
+    </p>`;
+  };
+
+  const cardHtml = (p) => {
+    const sig = String(p.signal || "").toUpperCase();
+    const tone = sig === "HOLD" ? "up" : sig === "SELL" ? "down" : "na";
+    const confNum = Number(p.confidence);
+    const conf = Number.isFinite(confNum)
+      ? `${Math.round(confNum * 100)}%`
+      : String(p.confidence || "—");
     const threat = String(p.threat_level || "—").toUpperCase();
-    return `<article class="kpi ${hold ? "up" : "down"}">
-      <div class="k-head">
-        <p class="k-value">${esc(p.signal)}</p>
-        <div class="k-side">
-          <span class="tag ${pm.cls}">${esc(pm.short)}</span>
-          <span class="k-threat ${threatCls(threat)}">${esc(threat)}/${conf}%</span>
+    const threatClass = tone === "na" ? "" : threatCls(threat);
+    const medal = state.btMedals?.get(`${p.engine}/${p.model}`) || "";
+    const medalHtml = medal ? `<span class="bt-medal">${medal}</span>` : "";
+    return `<article class="card ${tone}">
+      <div class="rail" aria-hidden="true"></div>
+      <div class="body">
+        <div class="top">
+          <p class="model">${medalHtml}${esc(p.model)}</p>
+          <p class="sig">${esc(p.signal)}</p>
         </div>
+        <span class="threat ${threatClass}">${esc(threat)} · ${esc(conf)}</span>
+        ${catHtml(p.key_catalyst)}
       </div>
-      <p class="k-model">${esc(p.model)}</p>
-      <p class="k-sub">${esc(p.key_catalyst || "—")}</p>
     </article>`;
+  };
+
+  const naCard = (engine, model) => cardHtml({
+    engine,
+    model,
+    signal: "N/A",
+    confidence: "N/A",
+    threat_level: "N/A",
+    key_catalyst: "N/A",
+  });
+
+  const emptyCard = () => `<article class="card missing" aria-hidden="true">
+    <div class="rail"></div>
+    <div class="body"></div>
+  </article>`;
+
+  // Flat 4-col grid: header row, then one row per model (aligned across pipelines)
+  const heads = pipes.map((engine) => {
+    const pm = pipeMeta(engine);
+    const cls = shortEngine(engine);
+    const n = knownByPipe.get(engine)?.size || 0;
+    return `<header class="head ${esc(cls)}">
+      <span class="dot" aria-hidden="true"></span>
+      <h2>${esc(pm.short)}</h2>
+      <small>${n} models</small>
+    </header>`;
   }).join("");
+
+  const cells = modelOrder.map((mk) => pipes.map((engine) => {
+    const p = byPipeModel.get(engine)?.get(mk);
+    if (p) return cardHtml(p);
+    const modelName = knownByPipe.get(engine)?.get(mk);
+    return modelName ? naCard(engine, modelName) : emptyCard();
+  }).join("")).join("");
+
+  grid.innerHTML = `<div class="board">${heads}${cells}</div>`;
+  grid.querySelector(".board").addEventListener("click", (e) => {
+    const btn = e.target.closest(".cat-more");
+    if (!btn) return;
+    const cat = btn.closest(".cat");
+    const full = cat.querySelector(".cat-full");
+    const teaser = cat.querySelector(".cat-teaser");
+    if (!full || !teaser) return;
+    teaser.hidden = true;
+    full.hidden = false;
+  });
 }
 
 function triCls(p) {
@@ -701,7 +838,7 @@ function qqqTriTitle(date, session, r) {
 }
 
 function renderHeatmap() {
-  const rows = columnsByFolder(); // LLM → PPX → Crash on Y
+  const rows = columnsByFolder(); // LLM → PPX → PPX2 → Crash on Y
   const cols = heatDates();
   const lookup = new Map();
   for (const p of state.predictions) {
@@ -840,14 +977,21 @@ function emptyAccBucket() {
   return { n: 0, correct: 0, acc: null };
 }
 
-function addAccBucket(into, from) {
-  into.n += from.n;
-  into.correct += from.correct;
+function meanAccBucket(buckets) {
+  const xs = buckets.filter(b => b && b.n > 0 && b.acc != null);
+  if (!xs.length) return emptyAccBucket();
+  const acc = xs.reduce((s, b) => s + b.acc, 0) / xs.length;
+  const n = xs.reduce((s, b) => s + b.n, 0) / xs.length;
+  return {
+    n,
+    correct: (acc / 100) * n,
+    acc,
+  };
 }
 
-function finalizeAccBucket(b) {
-  b.acc = b.n ? (b.correct / b.n) * 100 : null;
-  return b;
+function fmtAvgCount(v) {
+  if (v == null || Number.isNaN(v)) return "—";
+  return Number.isInteger(v) ? String(v) : v.toFixed(1);
 }
 
 function pendingForColumn(col) {
@@ -865,7 +1009,9 @@ function accTD(bucket) {
   const col = pct >= 50
     ? "linear-gradient(90deg,#22c55e,#16A34A)"
     : "linear-gradient(90deg,#fb7185,#f43f5e)";
-  return `<b>${pct.toFixed(1)}%</b> <span class="n" style="color:var(--faint);font-size:18px">(${bucket.correct}/${bucket.n})</span><span class="abar" style="width:${w}px;background:${col}"></span>`;
+  const correct = Number.isInteger(bucket.correct) ? bucket.correct : bucket.correct.toFixed(1);
+  const n = Number.isInteger(bucket.n) ? bucket.n : bucket.n.toFixed(1);
+  return `<b>${pct.toFixed(1)}%</b> <span class="n" style="color:var(--faint);font-size:18px">(${correct}/${n})</span><span class="abar" style="width:${w}px;background:${col}"></span>`;
 }
 
 function renderAccuracy() {
@@ -881,7 +1027,9 @@ function renderAccuracy() {
   const pipeStats = [...byPipe.entries()].map(([id, models]) => ({
     id,
     models,
-    score: models.reduce((s, c) => s + c.weight, 0),
+    score: models.length
+      ? models.reduce((s, c) => s + c.weight, 0) / models.length
+      : 0,
   })).sort((a, b) => {
     if (b.score !== a.score) return b.score - a.score;
     return a.id.localeCompare(b.id);
@@ -914,23 +1062,21 @@ function renderAccuracy() {
     const pm = pipeMeta(pipe.id);
     html += `<tr class="pipe-row"><td colspan="6"><span class="tag ${pm.cls}">${pm.short}</span> &nbsp;${esc(pipe.id)}</td></tr>`;
 
-    const pipeTot = {
-      hold: emptyAccBucket(),
-      sell: emptyAccBucket(),
-      all: emptyAccBucket(),
-      scoredN: 0,
-      score: 0,
-    };
+    const holdBuckets = [];
+    const sellBuckets = [];
+    const allBuckets = [];
+    let scoredN = 0;
+    let score = 0;
     for (const m of models) {
       const hold = bucketWithAcc(m.HOLD);
       const sell = bucketWithAcc(m.SELL);
       const all = bucketWithAcc(m.all);
       const pending = pendingForColumn(m);
-      addAccBucket(pipeTot.hold, hold);
-      addAccBucket(pipeTot.sell, sell);
-      addAccBucket(pipeTot.all, all);
-      pipeTot.scoredN += m.all.n;
-      pipeTot.score += m.weight;
+      holdBuckets.push(hold);
+      sellBuckets.push(sell);
+      allBuckets.push(all);
+      scoredN += m.all.n;
+      score += m.weight;
       html += `<tr>
         <td style="padding-left:26px;font-weight:700">${medalAt(modelRank.get(m.key))}${esc(m.model)}</td>
         <td>${accTD(hold)}</td>
@@ -940,16 +1086,21 @@ function renderAccuracy() {
         <td><b style="color:${m.weight >= 0 ? "var(--up)" : "var(--down)"}">${fmtPts(m.weight)}</b></td>
       </tr>`;
     }
-    finalizeAccBucket(pipeTot.hold);
-    finalizeAccBucket(pipeTot.sell);
-    finalizeAccBucket(pipeTot.all);
+    const nModels = models.length || 1;
+    const pipeAvg = {
+      hold: meanAccBucket(holdBuckets),
+      sell: meanAccBucket(sellBuckets),
+      all: meanAccBucket(allBuckets),
+      scoredN: scoredN / nModels,
+      score: score / nModels,
+    };
     html += `<tr class="subtotal">
-      <td>Pipeline total</td>
-      <td>${accTD(pipeTot.hold)}</td>
-      <td>${accTD(pipeTot.sell)}</td>
-      <td>${accTD(pipeTot.all)}</td>
-      <td><b>${pipeTot.scoredN}</b></td>
-      <td><b style="color:${pipeTot.score >= 0 ? "var(--up)" : "var(--down)"}">${fmtPts(pipeTot.score)}</b></td>
+      <td>Pipeline average</td>
+      <td>${accTD(pipeAvg.hold)}</td>
+      <td>${accTD(pipeAvg.sell)}</td>
+      <td>${accTD(pipeAvg.all)}</td>
+      <td><b>${fmtAvgCount(pipeAvg.scoredN)}</b></td>
+      <td><b style="color:${pipeAvg.score >= 0 ? "var(--up)" : "var(--down)"}">${fmtPts(pipeAvg.score)}</b></td>
     </tr>`;
   });
   html += `</tbody>`;
@@ -1105,16 +1256,36 @@ function btRowCells(bt) {
     <td${qqqHint}>${xsCell}</td>`;
 }
 
-function renderBacktest() {
-  const medals = ["🏆", "🥈", "🥉"];
-  const medalAt = (i) => (i >= 0 && i < 3 ? medals[i] + " " : "");
+const BT_MEDALS = ["🥇", "🥈", "🥉"];
 
-  const results = state.columns.map(c => ({
+function computeBacktestResults() {
+  return state.columns.map(c => ({
     key: c.key,
     engine: c.engine,
     model: c.model,
     bt: runBacktest(c.engine, c.model),
   }));
+}
+
+/** Top-3 by Excess vs QQQ → emoji map for KPI cards / tables. */
+function btMedalMap(results) {
+  const ranked = results
+    .filter(r => r.bt.excessPct != null)
+    .slice()
+    .sort((a, b) => {
+      if (b.bt.excessPct !== a.bt.excessPct) return b.bt.excessPct - a.bt.excessPct;
+      return a.key.localeCompare(b.key);
+    });
+  const medals = new Map();
+  ranked.slice(0, 3).forEach((r, i) => medals.set(r.key, BT_MEDALS[i]));
+  return medals;
+}
+
+function renderBacktest(results = computeBacktestResults()) {
+  const medalAt = (key) => {
+    const m = state.btMedals?.get(key);
+    return m ? m + " " : "";
+  };
 
   const byPipe = new Map();
   for (const r of results) {
@@ -1151,8 +1322,6 @@ function renderBacktest() {
       if (eb !== ea) return eb - ea;
       return a.key.localeCompare(b.key);
     });
-  const modelRank = new Map();
-  rankedModels.forEach((r, i) => { modelRank.set(r.key, i); });
 
   renderPodium("btPodium", rankedModels.filter(r => r.bt.excessPct != null).slice(0, 3).map(r => ({
     name: r.model,
@@ -1176,12 +1345,12 @@ function renderBacktest() {
     });
     for (const m of models) {
       html += `<tr>
-        <td style="padding-left:26px;font-weight:700">${medalAt(modelRank.get(m.key))}${esc(m.model)}</td>
+        <td style="padding-left:26px;font-weight:700">${medalAt(m.key)}${esc(m.model)}</td>
         ${btRowCells(m.bt)}
       </tr>`;
     }
     html += `<tr class="subtotal">
-      <td>Pipeline total</td>
+      <td>Pipeline average</td>
       ${btRowCells(pipe.bt)}
     </tr>`;
   }
@@ -1195,7 +1364,7 @@ async function main() {
   try {
     manifest = await fetchJson(MANIFEST_URL);
   } catch (e) {
-    showBanner("Missing manifest.json — run dashboard-grok/scripts/generate-input-manifest.py (reads ../input, writes here)", true);
+    showBanner("Missing manifest.json — run dashboard/scripts/generate-input-manifest.py (reads ../input, writes here)", true);
     return;
   }
 
@@ -1217,11 +1386,13 @@ async function main() {
   }
 
   state.columns = aggregate(predictions);
+  const btResults = computeBacktestResults();
+  state.btMedals = btMedalMap(btResults);
   renderMeta({ predictions: predictions.length, listed, failed });
   if (failed) showBanner(`Loaded ${predictions.length} signals; skipped ${failed} files.`);
   renderLatestSignals();
   renderAccuracy();
-  renderBacktest();
+  renderBacktest(btResults);
   renderHeatmap();
 }
 

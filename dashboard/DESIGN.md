@@ -259,7 +259,7 @@ components:
 
 # Signal Arena · DESIGN.md
 
-Visual identity for `dashboard-grok/index.html` — a client-only QQQ signal scoreboard.
+Visual identity for `dashboard/index.html` — a client-only QQQ signal scoreboard.
 
 ## Overview
 
@@ -385,3 +385,4 @@ Uppercase chips — Crash / LLM / PPX pastel pairs as listed in tokens. Unknown 
 - Don't flatten semantic color: a green wrong-call or rose win breaks the scoreboard grammar.
 - Don't mix sharp and fully rounded corners on the same component family without reason.
 - Do maintain WCAG AA contrast for body text on white/soft washes; prefer `#0F172A` on `#FFFFFF` / `#FAFAFA`.
+
