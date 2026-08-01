@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch QQQ daily OHLC from Yahoo and write dashboard-grok/qqq-ohlc.json."""
+"""Fetch QQQ daily OHLC from Yahoo and write dashboard/qqq-ohlc.json."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-# dashboard-grok/scripts/ → repo root
+# dashboard/scripts/ → repo root
 ROOT_DEFAULT = Path(__file__).resolve().parents[2]
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 
@@ -56,7 +56,7 @@ def fetch_yahoo(range_: str = "6mo") -> dict:
 
 
 def write_ohlc(repo_root: Path, range_: str = "6mo") -> Path:
-    out = repo_root / "dashboard-grok" / "qqq-ohlc.json"
+    out = repo_root / "dashboard" / "qqq-ohlc.json"
     data = fetch_yahoo(range_=range_)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")

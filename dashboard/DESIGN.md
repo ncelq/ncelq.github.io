@@ -259,7 +259,7 @@ components:
 
 # Signal Arena · DESIGN.md
 
-Visual identity for `dashboard-grok/index.html` — a client-only QQQ signal scoreboard.
+Visual identity for `dashboard/index.html` — a client-only QQQ signal scoreboard.
 
 ## Overview
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Scan repo input/**/*.json (read-only) and write dashboard-grok/manifest.json."""
+"""Scan repo input/**/*.json (read-only) and write dashboard/manifest.json."""
 
 from __future__ import annotations
 
@@ -8,9 +8,9 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-# dashboard-grok/scripts/ → repo root
+# dashboard/scripts/ → repo root
 ROOT_DEFAULT = Path(__file__).resolve().parents[2]
-PKG_DIR = Path(__file__).resolve().parents[1]  # dashboard-grok/
+PKG_DIR = Path(__file__).resolve().parents[1]  # dashboard/
 MANIFEST_NAME = "manifest.json"
 
 
@@ -37,7 +37,7 @@ def build_manifest(files: list[str], generated_at: str | None = None) -> dict:
 
 def write_manifest(repo_root: Path, generated_at: str | None = None) -> Path:
     input_dir = repo_root / "input"
-    out = repo_root / "dashboard-grok" / MANIFEST_NAME
+    out = repo_root / "dashboard" / MANIFEST_NAME
     payload = build_manifest(collect_files(input_dir), generated_at=generated_at)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")

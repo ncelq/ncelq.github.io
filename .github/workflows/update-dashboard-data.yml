@@ -1,4 +1,4 @@
-name: Update dashboard-grok data
+name: Update dashboard data
 
 on:
   workflow_dispatch:
@@ -21,20 +21,20 @@ jobs:
           python-version: "3.12"
 
       - name: Generate manifest
-        run: python dashboard-grok/scripts/generate-input-manifest.py
+        run: python dashboard/scripts/generate-input-manifest.py
 
       - name: Fetch QQQ OHLC cache
-        run: python dashboard-grok/scripts/fetch-qqq-ohlc.py
+        run: python dashboard/scripts/fetch-qqq-ohlc.py
         continue-on-error: true
 
       - name: Commit if changed
         run: |
-          if git diff --quiet -- dashboard-grok/manifest.json dashboard-grok/qqq-ohlc.json; then
+          if git diff --quiet -- dashboard/manifest.json dashboard/qqq-ohlc.json; then
             echo "no changes"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add dashboard-grok/manifest.json dashboard-grok/qqq-ohlc.json
-          git commit -m "chore: refresh dashboard-grok manifest and QQQ OHLC cache"
+          git add dashboard/manifest.json dashboard/qqq-ohlc.json
+          git commit -m "chore: refresh dashboard manifest and QQQ OHLC cache"
           git push

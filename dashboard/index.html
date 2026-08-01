@@ -421,7 +421,7 @@ table.acc-table { width: 100%; border-collapse: collapse; font-size: 16px; min-w
 
 <script>
 const CONCURRENCY = 12;
-const DATA_ROOT = ".."; // repo root relative to this page (dashboard-grok/) — for prediction JSON only
+const DATA_ROOT = ".."; // repo root relative to this page (dashboard/) — for prediction JSON only
 const MANIFEST_URL = "manifest.json";
 const OHLC_CACHE_URL = "qqq-ohlc.json";
 
@@ -1364,7 +1364,7 @@ async function main() {
   try {
     manifest = await fetchJson(MANIFEST_URL);
   } catch (e) {
-    showBanner("Missing manifest.json — run dashboard-grok/scripts/generate-input-manifest.py (reads ../input, writes here)", true);
+    showBanner("Missing manifest.json — run dashboard/scripts/generate-input-manifest.py (reads ../input, writes here)", true);
     return;
   }
 
