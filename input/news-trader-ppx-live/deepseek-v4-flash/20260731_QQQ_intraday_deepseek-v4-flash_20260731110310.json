@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-31",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.72,
+  "threat_level": "HIGH",
+  "key_catalyst": "Apple's September-quarter revenue guidance miss and after-hours share decline on AI-related component supply constraints",
+  "reasoning": "Apple's guidance miss and roughly 7-10% after-hours decline is a high-severity new catalyst hitting QQQ's largest holding, and it has not yet been repriced into the regular-session close. The 10-year Treasury yield at 4.74% with September hike odds near 69% adds rate-pressure, while Amazon's surge only partially offsets Apple and semis reversed hard with Micron down ~6%. Overnight gap-down risk is material."
+}

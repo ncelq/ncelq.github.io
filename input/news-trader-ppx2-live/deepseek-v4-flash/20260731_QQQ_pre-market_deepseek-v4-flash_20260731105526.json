@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-31",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.65,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Amazon Q2 earnings beat driven by AWS; stock jumps 9.5% after-hours",
+  "reasoning": "Today's catalyst is a mixed mega-cap earnings cluster rather than a single novel shock: strong after-hours responses from AMZN and MSFT are offset by weakness in AAPL and META, while the 30-year Treasury yield at a 19-year peak adds a broad macro headwind. With no prior session history available to calibrate market response, the net setup is balanced and does not meet the high bar for a SELL."
+}
