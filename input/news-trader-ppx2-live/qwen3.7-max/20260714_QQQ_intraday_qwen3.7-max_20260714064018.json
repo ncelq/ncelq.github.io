@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-14",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "US-Iran shipping blockade announcement and oil surging above $86",
+  "reasoning": "Despite a highly favorable CPI print and a semiconductor rebound, QQQ closed flat as the market temporarily shrugged off a severe escalation in US-Iran tensions, including a new shipping blockade and oil surging past $86. Given that lesser geopolitical fears triggered a 1.9% selloff yesterday, the market's failure to price in this escalating conflict and spiking energy costs leaves QQQ vulnerable to an overnight gap-down if the blockade disrupts supply chains or sparks retaliation."
+}

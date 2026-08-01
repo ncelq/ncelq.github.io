@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-28",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Semiconductor sell-off driven by China's DUV lithography mass production and AI circular financing concerns",
+  "reasoning": "Despite a significant macro tailwind from falling oil prices easing inflation fears, QQQ barely held flat due to severe selling pressure in semiconductors driven by novel threats like China's lithography breakthroughs and AI circular financing concerns. This indicates deep underlying weakness in the AI narrative and poses significant downside risk ahead of this week's megacap earnings."
+}

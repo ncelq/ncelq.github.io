@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-22",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.62,
+  "threat_level": "HIGH",
+  "key_catalyst": "US-Iran escalation with stalled diplomacy drives oil above $92-93 and 10-year Treasury yield to two-month highs ~4.62%, reversing the prior session's yield-driven rally",
+  "reasoning": "Today's dominant driver is a decisive reversal of yesterday's bullish fuel: the 10-year yield has surged from 4.36% back to 4.62-4.63% (two-month highs) as stalled US-Iran diplomacy (Rubio: Iran 'not serious about talks') pushes Brent above $92-93 and reignites inflation fears. On 2026-07-16, yields at 4.60% combined with geopolitical tension and chip weakness produced a -1.64% QQQ session, providing a direct template; on 2026-07-21 the rally was explicitly built on falling yields, which have now violently reversed. Rubio's comment marks an escalation of the familiar Iran theme (talks were 'open' on 7/20, now stalled), and event risk from Alphabet/Tesla earnings after the close is already prompting de-risking."
+}

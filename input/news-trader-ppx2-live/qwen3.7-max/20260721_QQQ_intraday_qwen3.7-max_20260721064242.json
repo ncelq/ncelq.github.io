@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-21",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.8,
+  "threat_level": "LOW",
+  "key_catalyst": "10-Year Treasury yield drops to a one-week low of 4.36% alongside a broad surge in semiconductor stocks, reversing prior rate and capex fears.",
+  "reasoning": "The market is actively reversing the bearish trends from July 16, driven by a sharp drop in the 10-year Treasury yield to 4.36% and a broad rally in semiconductor stocks. Despite lingering geopolitical noise regarding broad tariff threats and the Middle East, the shift toward dovish Fed expectations and falling discount rates provides strong support for growth stocks."
+}

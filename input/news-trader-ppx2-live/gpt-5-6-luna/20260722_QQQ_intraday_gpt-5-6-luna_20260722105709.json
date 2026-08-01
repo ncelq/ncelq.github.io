@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-22",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.72,
+  "threat_level": "HIGH",
+  "key_catalyst": "Escalating Middle East tensions driving oil above $95",
+  "reasoning": "Escalating Middle East tensions pushed oil above $95 and the 10-year yield to 4.64%, creating unresolved macro risk despite QQQ finishing higher. AMD's Anthropic deal and Super Micro's $60B orders offset the shock today, but post-close Alphabet and Tesla earnings add meaningful overnight gap risk."
+}

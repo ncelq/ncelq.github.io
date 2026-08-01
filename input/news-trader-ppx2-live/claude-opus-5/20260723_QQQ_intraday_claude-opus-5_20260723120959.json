@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-23",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.62,
+  "threat_level": "HIGH",
+  "key_catalyst": "Alphabet Q2: revenue and Cloud beat (+82%) but full-year capex guidance raised to $195-205B, driving GOOGL down ~4% and reviving AI-spending ROI concerns across QQQ's heaviest weights",
+  "reasoning": "Today is the first session in this window with zero bullish items from any source: Alphabet's capex guidance raise to $195-205B and Tesla's 35% EPS miss each knocked those top-10 holdings roughly 4%, while Brent pushed to $96.50 and the 10-year hit 4.66-4.70%, its highest since January, with ~30% odds now priced for a hike at next week's Fed meeting. QQQ's -0.72% is a mild response relative to that stacked severity, and the rate offset that produced the 7/21 +1.85% record-high rally (10-year falling 6bp to 4.36%) has now fully reversed across three consecutive sessions (4.36% to 4.64% to 4.70%). The energy leg is still actively escalating rather than resolving: Houthi strikes on two Saudi tankers opened a second theater at Bab el-Mandeb beyond the Strait of Hormuz, alongside Trump's warning of strikes on Iranian infrastructure, which is a live overnight headline risk the modest close does not discount."
+}

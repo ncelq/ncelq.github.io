@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-22",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.79,
+  "threat_level": "HIGH",
+  "key_catalyst": "Escalating U.S.-Iran conflict driving an oil surge and higher Treasury yields",
+  "reasoning": "The U.S.-Iran conflict has escalated into a 12th day of strikes, diplomacy is described as stalled, and oil has moved above $90 while Treasury yields approach two-month highs—an unresolved inflation and valuation shock for QQQ. This is a material escalation beyond the prior oil-risk narrative rather than routine noise. The July 21 risk rally relied on falling yields and chip strength, both of which are reversing ahead of pivotal Alphabet and Tesla results."
+}

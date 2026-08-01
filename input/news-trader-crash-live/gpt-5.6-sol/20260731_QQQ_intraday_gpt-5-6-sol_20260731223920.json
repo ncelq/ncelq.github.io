@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-31",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.84,
+  "threat_level": "HIGH",
+  "key_catalyst": "Fresh hawkish Fed signals and continued long-term Treasury yield escalation",
+  "reasoning": "Fresh hawkish statements from three FOMC dissenters, increased rate-hike expectations, and long yields at a 19-year high leave a broad, actively escalating QQQ driver unresolved. Apple's supply constraints remain a separate primary drag, while the late-session recovery did not establish sustained absorption of either catalyst."
+}

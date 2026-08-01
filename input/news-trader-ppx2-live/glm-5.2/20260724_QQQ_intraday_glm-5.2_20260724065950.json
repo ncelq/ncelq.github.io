@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-24",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.75,
+  "threat_level": "HIGH",
+  "key_catalyst": "Brent crude surges above $100 on Houthi tanker attacks and Trump Iran threats, pushing 10Y yields to 4.70% and 2Y to 17-month highs, compressing QQQ mega-cap valuations",
+  "reasoning": "Three concurrent HIGH-severity catalysts are escalating simultaneously: Brent crude broke $100 for the first time since May with Goldman forecasting >$120 and RBC citing a path to $146, Alphabet and Tesla both reported first-ever negative free cash flow while massively raising AI capex (GOOGL $195-205B, TSLA >$25B), and Section 301 tariffs on 60 countries covering ~99% of US imports just went live with retaliation risk pending. The trajectory across the past four sessions shows clear escalation—oil from ~$90 (Jul 20) to $100+ (Jul 24), 10Y yields from 4.36% to 4.70%, and QQQ losses compounding (-1.90% then -1.37%)—indicating these catalysts are not yet fully absorbed and overnight gap-down risk is material."
+}

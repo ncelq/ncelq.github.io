@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-24",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.72,
+  "threat_level": "HIGH",
+  "key_catalyst": "Brent crude surging above $100/bbl after Iran rejected a ceasefire and Houthi forces attacked Saudi tankers, driving September Fed hike odds to 80%",
+  "reasoning": "The threat complex has escalated materially beyond what drove yesterday's -1.90% decline: Brent broke $100 after Iran rejected a ceasefire, a genuinely novel tariff shock (10-12.5% on ~60 countries, effective almost immediately) landed overnight, and September rate-hike odds repriced to 80% — a regime shift from hold/hawkish-pause to active hike pricing. Pre-market is only -0.30%, which understates three impact-9/8 catalysts and suggests incomplete absorption rather than resilience, especially with the Alphabet/Tesla AI-capex selloff still in motion and MSFT/META/AMZN/AAPL plus the Fed meeting looming next week. Intel's beat is a modest counterweight but cannot offset a compounding oil-tariff-Fed stagflation shock that disproportionately hits long-duration QQQ constituents."
+}

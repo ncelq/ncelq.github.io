@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-27",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.74,
+  "threat_level": "HIGH",
+  "key_catalyst": "Escalating pre-earnings scrutiny of mega-cap AI capital spending and returns",
+  "reasoning": "The recurring AI-capex return concern intensified into a week of Apple, Microsoft, Amazon, and Meta earnings, following the Alphabet/Tesla-driven QQQ declines on July 23 and July 24. Today’s further selling alongside unresolved Fed hike concerns indicates that the theme is still being repriced rather than fully absorbed. Iran-related reports conflict between ceasefire and escalation, so they add uncertainty but are not the primary catalyst."
+}

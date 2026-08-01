@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-30",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.65,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Microsoft Q4 earnings crush estimates with 18% revenue growth and strong cloud performance, shares surge 7%+ overnight",
+  "reasoning": "Microsoft's exceptional earnings beat (18% revenue growth, 7%+ overnight surge) directly counters the AI capex scrutiny theme that drove the four-day selloff (-1.12%, -0.31%, -0.97%, -2.04%), and the Fed hold with the market shrugging off hawkish dissent provides macro stability. However, Meta's profit miss and soft Q3 guidance (shares down ~7%), Qualcomm's miss, and semiconductors extending to a fifth straight session of losses cap the rally and leave unresolved risks that could trigger intraday reversals."
+}

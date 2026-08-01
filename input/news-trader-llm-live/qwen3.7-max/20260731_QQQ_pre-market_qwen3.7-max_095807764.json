@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-31",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.85,
+  "threat_level": "LOW",
+  "key_catalyst": "Amazon and Microsoft deliver blowout earnings beats, resolving AI capex fears despite hawkish Fed dissent.",
+  "reasoning": "Track B applies as today's news features recurring themes of Fed policy dissent and mega-cap tech earnings. While recent earnings crisis days were mostly down, today's news is clearly resolving the fear with blowout beats from QQQ heavyweights Microsoft and Amazon, mirroring the T-10 setup that triggered a +3.30% rally. The previous session summary confirms the market is effectively shrugging off AI capex fears in favor of risk-on sentiment."
+}

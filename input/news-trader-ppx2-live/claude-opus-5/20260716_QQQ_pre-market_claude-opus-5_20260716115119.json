@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-16",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.62,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Memory and storage chip stocks plunge 8-9% (Micron, SK Hynix, Western Digital, SanDisk) as investors reprice the AI storage supercycle",
+  "reasoning": "The dominant catalyst is a memory/storage chip unwind (Micron -8%, SK Hynix -9%, WDC -8.7%, SanDisk -8.1%) that is a sector-specific valuation reset rather than a new systemic shock, and it arrives alongside genuinely supportive fundamentals: TSMC's Q2 beat with raised FY26 capex confirms AI demand is intact, June PPI fell 0.3% extending the disinflation from the 07-14 CPI print, and Apple hit an all-time high on the Alibaba AI clearance. The Iran escalation is a recurring theme now in its third week, and the market has already demonstrated it absorbs these strikes: the far more severe 07-13 Hormuz-closure scare (-1.90%) was fully recovered on 07-14 (+1.12%), and the 07-15 blockade reimposition produced only -0.27%. Pre-market is already down 0.71%, meaning a meaningful portion of the chip de-rating is absorbed at the open, and no single catalyst here carries the CRITICAL, novel character required to override the HOLD default."
+}

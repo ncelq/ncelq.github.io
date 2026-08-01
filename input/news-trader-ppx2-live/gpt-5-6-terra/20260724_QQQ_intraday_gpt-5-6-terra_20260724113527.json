@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-24",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.78,
+  "threat_level": "HIGH",
+  "key_catalyst": "Brent crude breaching $100 as Houthi attacks on Saudi tankers widen the Iran-aligned conflict",
+  "reasoning": "Brent above $100 after expanded Houthi tanker attacks is an escalating, unresolved overnight geopolitical and inflation shock, compounded by new tariffs and a broad mega-cap AI cash-burn repricing. Intel's after-hours strength offers a limited offset, but it does not resolve the oil disruption, higher-yield pressure, or the new scrutiny of Alphabet and Tesla spending."
+}

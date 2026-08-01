@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-28",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Nvidia in talks for ~$250B backstop to finance OpenAI data center, reviving circular-financing fears in AI",
+  "reasoning": "The Nvidia $250B OpenAI backstop is a novel, high-severity catalyst that undermines the AI demand thesis; combined with Chinese chip breakthroughs and surging Fed rate hike odds, it escalates the same AI capex fears that drove QQQ down 1.90% on 7/23. With megacap earnings and the Fed ahead, the pre-market 1.66% drop reflects ongoing absorption rather than an overreaction, and the risk of further de-rating remains acute."
+}

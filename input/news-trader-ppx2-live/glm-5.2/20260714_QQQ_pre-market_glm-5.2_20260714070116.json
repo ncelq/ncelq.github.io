@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-14",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.62,
+  "threat_level": "HIGH",
+  "key_catalyst": "Hormuz blockade now operational with US-Iran strikes entering third night; Brent crude above $85",
+  "reasoning": "On 7/13, QQQ fell -1.90% when US-Iran strikes and Strait of Hormuz closure FEARS first emerged; today the blockade is actually OPERATIONAL with a third night of strikes, commercial traffic collapsed to record lows, and Brent up 9.6%—yet QQQ is bouncing +0.95% on CPI expectations that have not even been confirmed. The market is pricing in a soft CPI print while materially underpricing an active blockade on ~20% of global oil flow, a clear escalation from yesterday's fear to today's reality."
+}

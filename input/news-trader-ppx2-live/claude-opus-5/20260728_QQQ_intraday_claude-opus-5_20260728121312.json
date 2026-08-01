@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-28",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.62,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Reports that China has begun mass production of domestic DUV immersion lithography machines, triggering a global semiconductor sell-off and ~1% pre-market drop in Nasdaq-100 futures",
+  "reasoning": "QQQ absorbed a genuinely novel bearish catalyst today — reports of China mass-producing domestic DUV immersion lithography machines — and still closed roughly flat (+0.04%) after Nasdaq-100 futures were down ~1% pre-market, indicating real dip-buying rather than a shrug. Critically, the dominant bearish driver of the 07-22 through 07-24 slide (Brent above $100 on Houthi tanker attacks and Iran escalation, with 10-year yields at 4.66%+) has now reversed: the strike pause pushed Brent below $90, yields lower, and removed the inflation/hike impulse that did the actual damage on 07-23 (-1.90%) and 07-24 (-1.12%). The chip-competition story is a multi-year structural threat with no near-term earnings mechanism, not an overnight gap driver."
+}

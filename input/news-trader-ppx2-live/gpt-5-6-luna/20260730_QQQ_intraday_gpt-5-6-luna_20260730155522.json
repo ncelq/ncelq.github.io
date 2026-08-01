@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-30",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.76,
+  "threat_level": "HIGH",
+  "key_catalyst": "The FOMC's rare 9-3 hawkish hold and resulting 10-year yield spike to 4.70%",
+  "reasoning": "Microsoft and semiconductor strength validated parts of the AI-demand narrative, but the rare 9-3 hawkish Fed hold drove the 10-year yield to 4.70%, while Meta's collapsing free cash flow revived unresolved AI-capex concerns. Because the session's support was concentrated and did not broadly resolve the risks behind the July 24 and July 28-29 selloffs, overnight gap-down risk is material."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-15",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.76,
+  "threat_level": "HIGH",
+  "key_catalyst": "Fourth consecutive night of U.S. strikes on Iran and threats to additional energy-export corridors",
+  "reasoning": "Fresh U.S. strikes, an ongoing naval blockade, and Iran's threat against additional export corridors mark an unresolved escalation with potential energy and inflation spillovers. The cooler CPI is already a recurring catalyst, while the market's limited response to worsening geopolitical risk leaves room for delayed repricing despite strong ASML results."
+}

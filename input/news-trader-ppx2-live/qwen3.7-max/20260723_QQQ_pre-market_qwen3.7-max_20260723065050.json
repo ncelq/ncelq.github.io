@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-23",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Alphabet's raised AI capex guidance spooking investors on ROI, compounded by oil surging to $95 and reviving Fed rate-hike fears",
+  "reasoning": "The combination of Alphabet's massive AI capex guidance spooking investors on ROI, Tesla's earnings miss, and escalating Middle East tensions pushing oil to $95 and 10-year yields to 4.66% creates a severe multi-pronged threat. While the market is down 1.58% pre-market, the surge in rate-hike odds and the cracking of the AI spending narrative suggest the catalyst is not fully absorbed and carries high forward risk."
+}

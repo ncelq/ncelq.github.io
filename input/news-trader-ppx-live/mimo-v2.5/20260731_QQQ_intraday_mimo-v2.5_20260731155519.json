@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-31",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.8,
+  "threat_level": "HIGH",
+  "key_catalyst": "Apple's weak current-quarter guidance due to AI supply constraints, causing a 9% stock drop.",
+  "reasoning": "Apple's unprecedented 9% plunge on weak forward guidance, driven by AI component supply constraints, is a novel and severe catalyst for QQQ's largest holding, posing material overnight gap-down risk. This is compounded by escalating Iran-driven inflation fears, with Treasury yields jumping to 4.74% and oil prices rising, which the market has not fully absorbed despite today's muted -0.47% move. Similar themes of Fed hawkishness and earnings volatility in recent history (e.g., 2026-07-30) show escalating risks that often lead to further declines."
+}

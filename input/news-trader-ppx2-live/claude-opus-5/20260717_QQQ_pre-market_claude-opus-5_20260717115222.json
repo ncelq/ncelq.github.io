@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-17",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.74,
+  "threat_level": "HIGH",
+  "key_catalyst": "Reported ban on Anthropic triggering a broad political/regulatory risk reassessment of the AI sector, compounded by Fed Vice Chair Jefferson signaling openness to a rate hike",
+  "reasoning": "Today is the first session in this window where all three sources are unanimously bearish with zero bullish offsets, stacking a novel regulatory shock (the Anthropic ban and H-1B/skilled-immigration curbs) on top of an escalating hawkish-Fed thread that ran from Warsh's 07-15 testimony to Vice Chair Jefferson now explicitly leaving a hike on the table ahead of the July 28-29 FOMC. Chips are being sold despite TSMC's record Q2 profit, the same good-news-sold behavior that produced QQQ -1.64% on 07-16 (record TSMC earnings, raised capex) and -1.90% on 07-13, which points to an AI momentum trade de-rating rather than consolidating. With mechanical SpaceX index-inclusion rebalancing and Tesla liquidation still ahead and no macro relief print scheduled to play the role cool CPI played on 07-14, the catalyst set is unresolved and still developing."
+}

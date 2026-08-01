@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-27",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.6,
+  "threat_level": "MODERATE",
+  "key_catalyst": "US-Iran diplomatic breakthrough easing the oil supply shock, contested by a report of fresh Houthi attacks on Saudi oil installations",
+  "reasoning": "The dominant bearish driver of the last three sessions—oil spiking on Middle East escalation—appears to be inflecting, with a reported US-Iran diplomatic breakthrough pulling Brent back from $100 and QQQ rebounding +0.97% pre-market. Recent history shows the market already absorbed much of this shock with diminishing daily losses (-0.51% on 07-22, -1.90% on 07-23, -1.12% on 07-24), and the major binary risks (FOMC Wednesday, MSFT/META/AAPL/AMZN earnings) land later in the week, not today's session. A conflicting report of fresh weekend Houthi strikes on Saudi oil sites prevents strong conviction either way, which argues for the default stance."
+}

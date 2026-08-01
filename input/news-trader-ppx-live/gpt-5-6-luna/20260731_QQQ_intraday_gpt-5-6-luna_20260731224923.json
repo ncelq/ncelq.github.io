@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-31",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.82,
+  "threat_level": "HIGH",
+  "key_catalyst": "Apple's weak current-quarter revenue guidance tied to an AI-related component supply crunch",
+  "reasoning": "Apple's sharp decline after weak forward guidance is a high-severity, newly reported catalyst for QQQ because it is a top-weighted constituent, while rising oil and Treasury yields add unresolved pressure to growth valuations. Amazon's strong results and the semiconductor rebound limited today's decline, but the market's modest -0.47% response does not fully offset the overnight risk from Apple's supply warning and escalating inflation/geopolitical concerns."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-22",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.68,
+  "threat_level": "HIGH",
+  "key_catalyst": "Post-close Alphabet and Tesla earnings",
+  "reasoning": "QQQ recovered to +0.41% on Super Micro and AMD AI-demand validation, but it did so while oil rose above $95 and the 10-year yield reached 4.64%, leaving the inflation-and-rates shock only partially absorbed. The recurring Middle East/oil theme has escalated since July 20, and unresolved post-close Alphabet and Tesla earnings add material overnight gap risk despite July 21's rate-driven rally."
+}

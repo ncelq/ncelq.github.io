@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-20",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.65,
+  "threat_level": "HIGH",
+  "key_catalyst": "Brent crude spiking above $90 on ninth day of US-Iran airstrikes, combined with failed semiconductor rebound and looming mega-cap earnings week",
+  "reasoning": "Brent crude briefly crossing $90 for the first time since early June represents a novel escalation in the US-Iran conflict that has now persisted nine days, directly lifting rate-hike odds (53% September) and pressuring long-duration tech multiples. The failed semiconductor rebound—where early 4-6% gains in memory chips and SMH +2.6% reversed lower with Nvidia, TSMC, and AMD all closing negative—signals that bargain hunters are not sustaining bids in the AI trade, a worrying pattern after the sector entered bear market territory on July 16. With mega-cap earnings (Alphabet, Tesla, Intel) representing $5T+ in market cap looming this week, the market's modest -0.54% response appears underpriced relative to the severity of escalating oil, rising hike odds, and binary earnings risk."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-31",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.76,
+  "threat_level": "HIGH",
+  "key_catalyst": "Hawkish Fed dissenters push Treasury yields to multi-year highs, pressuring rate-sensitive tech valuations",
+  "reasoning": "Three unresolved, escalating catalysts all remain primary drivers of QQQ's decline: Apple (a top QQQ weight) suffered its steepest drop since March 2020 on an unresolved AI-driven component crunch with admitted limited options and a possible September iPhone price hike; hawkish Fed dissenters pushed the 10Y to 4.708% and 30Y to 5.25% (multi-year highs) with 69% odds of a September hike; and Hormuz/Bab el-Mandeb oil disruptions ended July with crude's biggest monthly gain since March with no de-escalation. The session faded from +1.64% pre-market to -0.60% intraday, and Amazon/Microsoft strength only partially masked Apple's drag — with weekend gap risk on the Iran/Hormuz front, the catalysts are not absorbed."
+}

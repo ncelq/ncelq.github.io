@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-28",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.62,
+  "threat_level": "HIGH",
+  "key_catalyst": "China begins mass-producing domestic DUV lithography machines, triggering a global semiconductor selloff and oversupply fears for ASML and chip-equipment makers",
+  "reasoning": "China's mass production of domestic DUV lithography machines is a novel, structurally bearish catalyst for QQQ's heavily weighted semiconductor complex, and the flat close (+0.04%) reflects only the offsetting oil collapse from the US-Iran pause rather than genuine absorption of the chip threat. This lands on top of an unresolved week-long AI capex ROI selloff (7/23 -1.90%, 7/24 -1.12%) now compounded by fresh 'circular financing' doubts around Nvidia's deal web, with binary event risk from Wednesday's Fed decision and four megacap earnings ahead. With roughly half of Nasdaq-100 constituents already in correction, overnight follow-through in global chip trading poses material gap-down risk."
+}

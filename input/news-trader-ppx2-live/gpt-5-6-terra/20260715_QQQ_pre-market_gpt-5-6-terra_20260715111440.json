@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-15",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.72,
+  "threat_level": "HIGH",
+  "key_catalyst": "Escalating U.S.-Iran strikes and growing Strait of Hormuz/export-corridor risk pushing oil higher",
+  "reasoning": "The cooler CPI repricing was already rewarded on July 14, while fresh U.S. strikes on Iran, higher oil prices, and threats to export corridors represent an escalating geopolitical catalyst rather than resolved noise. QQQ rebounded on July 14 despite elevated Iran risk, but the sharp July 13 risk-off response to the same conflict shows this unresolved escalation can quickly outweigh supportive semiconductor and earnings news."
+}

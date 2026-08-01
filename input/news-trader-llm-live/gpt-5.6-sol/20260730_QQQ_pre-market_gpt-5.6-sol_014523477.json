@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-30",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.88,
+  "threat_level": "HIGH",
+  "key_catalyst": "Brent crude surged over 6% after a Houthi tanker attack and U.S.-Saudi strikes in Iraq",
+  "reasoning": "Track B applies: renewed Middle East shipping disruption and oil-price escalation are recurring, unresolved themes rather than novel events. Same-theme sessions are predominantly DOWN, and today's tanker attack, strikes, and 6% Brent surge show renewed deterioration despite QQQ's prior decline. Microsoft's strong results do not outweigh this historically market-punishing macro shock."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-16",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.79,
+  "threat_level": "HIGH",
+  "key_catalyst": "Escalating U.S.-Iran military action and oil prices above $85 alongside a broad memory-chip selloff.",
+  "reasoning": "Fresh U.S. strikes and a shipping blockade represent an escalation of the Iran/oil-risk theme, while a broad memory-chip rout is undermining QQQ’s semiconductor exposure despite TSMC’s strong outlook. The inability of TSMC, Apple, and softer PPI data to offset the sector selloff suggests the market is prioritizing worsening geopolitical and AI-hardware valuation risks."
+}

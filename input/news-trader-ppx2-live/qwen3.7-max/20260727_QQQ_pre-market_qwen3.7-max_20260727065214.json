@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-27",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.85,
+  "threat_level": "LOW",
+  "key_catalyst": "US-Iran diplomatic breakthrough and oil retreating from $100, easing inflation fears and Treasury yields.",
+  "reasoning": "The primary drivers of last week's sell-off—spiking oil prices and surging Treasury yields—are actively de-escalating, with crude retreating from $100 and the 10-year yield easing ahead of the FOMC decision. The market is responding positively to this macro relief and front-running the remaining mega-cap tech earnings, indicating the recent downward trajectory is stabilizing rather than facing a novel critical threat."
+}

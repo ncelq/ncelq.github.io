@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-28",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.7,
+  "threat_level": "HIGH",
+  "key_catalyst": "China's domestic DUV lithography mass production triggering a global chip sell-off",
+  "reasoning": "Today's flat session belies a novel and severe threat: China's mass production of DUV lithography machines directly challenges the global semiconductor supply chain, a core QQQ weighting. With the market already reeling from AI capex concerns and geopolitical volatility, this underappreciated catalyst carries high overnight gap-down risk, especially ahead of the Fed decision and megacap earnings."
+}

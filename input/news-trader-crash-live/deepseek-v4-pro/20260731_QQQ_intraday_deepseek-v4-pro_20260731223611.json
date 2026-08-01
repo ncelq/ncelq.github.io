@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-31",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.8,
+  "threat_level": "HIGH",
+  "key_catalyst": "Rising Treasury yields and hawkish Fed comments",
+  "reasoning": "The 10-year yield hit a new multi-year high and hawkish Fed comments reinforce rate hike expectations, directly pressuring QQQ's growth stocks. Oil supply fears add inflation risk, further dimming the outlook for a dovish pivot. The index closed -0.60% after an early pre-market gain, suggesting active selling into strength with no absorption of these macro threats."
+}

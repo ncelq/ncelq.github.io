@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-31",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.82,
+  "threat_level": "HIGH",
+  "key_catalyst": "Treasury-yield spike following three FOMC dissents favoring an immediate rate hike",
+  "reasoning": "Rare hawkish Fed dissents drove Treasury yields above 4.7% while unresolved Iran-related oil disruptions reinforced inflation risk. QQQ declined only modestly because Amazon’s surge offset Apple’s collapse, leaving the broad macro threat insufficiently absorbed as semiconductor strength also reversed intraday."
+}

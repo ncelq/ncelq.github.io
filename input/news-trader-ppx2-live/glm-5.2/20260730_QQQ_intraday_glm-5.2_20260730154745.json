@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-30",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.68,
+  "threat_level": "HIGH",
+  "key_catalyst": "Pending Apple and Amazon earnings after tonight's close, combined with the Fed's hawkish 3-dissent hold and 10-year yield at 4.70%",
+  "reasoning": "Apple and Amazon are reporting earnings after tonight's close, creating binary overnight risk on top of a fragile market that only today broke a four-day losing streak. The Fed's hawkish hold with three dissents and the 10-year yield spiking to 4.70% create a fundamentally unfavorable backdrop for growth valuations, and Meta's 7-9% drop on collapsing free cash flow demonstrates that AI capex concerns remain an active landmine ahead of two more mega-cap reports. Recent history shows earnings-driven selloffs (7/24 Tesla/Alphabet, 7/28-29 semiconductor crash) can cascade quickly, and today's rally was heavily dependent on a single stock (Microsoft) while breadth concerns persist."
+}

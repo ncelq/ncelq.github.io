@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-22",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.8,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Super Micro Computer's $60B order backlog and AMD's Anthropic deal validating AI infrastructure demand",
+  "reasoning": "Despite escalating macro headwinds with oil surpassing $95 and the 10-year yield climbing back to 4.64%, QQQ demonstrated strong resilience by closing positive, driven by massive AI infrastructure validation from Super Micro and AMD. The market has effectively absorbed the geopolitical and rate shocks, shifting focus to the binary outcomes of after-hours Alphabet and Tesla earnings rather than pricing in an immediate macro-driven gap-down."
+}

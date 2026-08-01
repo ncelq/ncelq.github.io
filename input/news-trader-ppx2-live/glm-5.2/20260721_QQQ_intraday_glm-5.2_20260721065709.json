@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-21",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.58,
+  "threat_level": "HIGH",
+  "key_catalyst": "Potential Alphabet Q2 earnings release after today's close, creating binary overnight gap risk for QQQ",
+  "reasoning": "Today's +0.61% rally was driven by a genuine macro tailwind (10-year yield dropping 6bps to 4.36%) and a broad semiconductor rebound, but overnight risk is elevated by the possibility of Alphabet's Q2 earnings release after tonight's close—one model explicitly flags GOOGL as reporting today, while others say Wednesday, and either interpretation implies imminent binary risk for a top QQQ holding. Recent earnings reactions have been punishing: IBM plunged 25% on 7/15 and TSMC sold off on 7/16 despite beating estimates, and on 7/20 a semiconductor rebound 'failed to hold,' suggesting today's rally may also be fragile. Compounding the risk, Trump's new tariff letters to 150+ countries with August 1 effective dates and a 50% copper tariff are a fresh, developing overhang that the market only partially absorbed today."
+}

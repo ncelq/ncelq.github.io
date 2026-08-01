@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-31",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.74,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Microsoft’s earnings-driven validation of cloud and AI demand with a more conservative capital-expenditure outlook",
+  "reasoning": "Microsoft’s cloud-strength earnings and lower AI-capex outlook remain the dominant catalyst, and QQQ is gaining pre-market despite Meta’s cash-flow weakness, elevated Treasury yields, and renewed Iran risk. On July 30, QQQ rallied strongly as Microsoft-led AI demand validation outweighed the same hawkish-Fed and Meta concerns, reversing the semiconductor-driven selling seen July 28–29. Today’s macro and geopolitical risks remain meaningful but are largely recurring rather than a clearly new, high-severity deterioration."
+}

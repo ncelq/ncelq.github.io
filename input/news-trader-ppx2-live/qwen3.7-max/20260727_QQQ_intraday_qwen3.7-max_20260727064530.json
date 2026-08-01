@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-27",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.85,
+  "threat_level": "HIGH",
+  "key_catalyst": "Pre-earnings anxiety over AI CapEx ROI ahead of remaining Mag-7 reports, compounded by stagflationary macro headwinds and Fed rate hike jitters",
+  "reasoning": "The market is experiencing a broadening sell-off in mega-cap tech as AI CapEx scrutiny spreads ahead of remaining Mag-7 earnings, compounding the negative reactions seen on July 23 and 24. This sector-specific de-rating is exacerbated by severe macro headwinds, including stagflationary pressures from new tariffs and oil shocks, alongside a material 30% probability of a surprise Fed rate hike, creating significant overnight gap-down risk."
+}

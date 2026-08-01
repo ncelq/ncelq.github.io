@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-31",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.88,
+  "threat_level": "HIGH",
+  "key_catalyst": "Apple's Disappointing Guidance and AI-Driven Supply Crunch",
+  "reasoning": "Multiple high-severity catalysts remain unresolved and are actively escalating, including a massive drop in mega-cap Apple due to AI-driven supply constraints, surging oil prices from Middle East disruptions, and hawkish Fed dissent pushing Treasury yields higher. The market closed down intraday on July 31st and faces compounding macro and micro headwinds heading into the next session."
+}

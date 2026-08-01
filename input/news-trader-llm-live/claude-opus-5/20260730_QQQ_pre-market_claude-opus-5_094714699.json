@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-30",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.74,
+  "threat_level": "HIGH",
+  "key_catalyst": "Oil prices jump following renewed fighting with Iran while sinking AI stocks drag Wall Street lower \u2014 the US-Iran MoU/halt from two sessions ago is broken with no de-escalation or crude pullback in the window.",
+  "reasoning": "Track B applies with an escalation override: today's dominant themes \u2014 the Iran/oil macro shock plus AI-complex/semiconductor spending doubt \u2014 are both recurring, and recent same-theme responses are overwhelmingly DOWN (MACRO_SHOCK 0 UP / 4 DOWN / 1 FLAT; SECTOR_ROTATION 1 UP / 4 DOWN; EARNINGS_CRISIS 0 UP / 4 DOWN / 1 FLAT), so neither leg is priced in. The escalation is objective rather than label-based: the US-Iran MoU that printed only two sessions ago has been broken by renewed fighting with oil jumping again, which is a worse factual state than the halt/MoU sequence memory carried, and the China memory/base-die item is the fourth consecutive session of unrebutted competitive-capacity pressure on the semiconductor complex. Microsoft's 14th straight double beat with cloud up 27% is the only resolving item, but every megacap AI-capex print in this window (Alphabet, Tesla, Meta) was sold regardless of the beat, so a strong report is not reliable offsetting evidence here."
+}

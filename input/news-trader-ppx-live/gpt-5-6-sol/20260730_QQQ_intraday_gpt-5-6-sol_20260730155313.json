@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-30",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.74,
+  "threat_level": "HIGH",
+  "key_catalyst": "Rare hawkish Fed triple dissent accompanied by a 10-year Treasury yield spike to 4.70%",
+  "reasoning": "The Fed’s rare three-dissent hold and the 10-year yield’s jump to 4.70% represent an unresolved escalation in rate risk. Today’s resilience was driven primarily by Microsoft and semiconductors, while Meta’s collapse showed AI-capex concerns remain active. Similar rate and capex pressure weighed on QQQ from July 24 through July 29, leaving material overnight catch-up risk."
+}

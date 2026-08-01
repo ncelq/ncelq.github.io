@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-29",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.68,
+  "threat_level": "HIGH",
+  "key_catalyst": "Compounding FOMC rate decision + Microsoft/Meta earnings after close amid escalating AI spending scrutiny",
+  "reasoning": "The AI capex and semiconductor sell-off theme has been escalating across four straight sessions (7-23 through 7-28), with each day adding a new layer: initial AI spending scrutiny from Alphabet/Tesla, then oil shock and tariffs, then China's DUV lithography breakthrough, and now today's compounding binary events—the FOMC decision and MSFT/META earnings after the close. The rotation out of AI/semiconductor stocks is accelerating (Micron -8.9%, AMD -8.1% on 7-28) rather than stabilizing, and with 31.5% hike probability plus intense AI monetization skepticism, the forward risk into tonight's prints and tomorrow's session is elevated and unresolved."
+}

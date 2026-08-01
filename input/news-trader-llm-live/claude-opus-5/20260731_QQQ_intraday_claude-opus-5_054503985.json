@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-31",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.68,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Amazon +15% on an AWS blowout against Apple's ~$475B single-day value wipeout, with Microsoft's CFO rebutting the AI-overcapacity narrative and cutting calendar-2026 capex to ~$175B \u2014 megacap AI/cloud demand confirmed while the index-level damage is Apple-specific.",
+  "reasoning": "The 9:30-15:45 window resolved the exact leg that produced this memory window's DOWN days: Microsoft's CFO explicitly dismissed the AI-overcapacity narrative alongside the calendar-2026 capex cut to about $175B, Amazon delivered a +15% move in the cash session on the AWS blowout, and the memory/semiconductor complex rallied hard (KOSPI up 18%) instead of fading \u2014 which retires both the 'good chip/megacap news gets sold' configuration and the Korean memory meltdown that memory carried as an open Asia-hours channel. QQQ's -0.60% is below every routine digestion print in the window (-0.83% to -0.90%) and far below its capitulations (-1.38%, -1.90%, -2.04%), and it is composition rather than risk-off: Apple's roughly $475B wipe is a realized single-name earnings repricing already inside today's close, partially offset by two megacap wins. What remains unresolved is Apple's China/Services softness reading through to Asian suppliers, the durability of a squeeze-flavored semi rally, and the carried Iran/oil leg that has now printed nothing for a second consecutive session \u2014 real channels, but none of them is a late-session deterioration or a dated overnight trigger, so a SELL here would be shorting the close of an improving-news tape."
+}

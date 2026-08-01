@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-31",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.85,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Market relief rally driven by Microsoft's earnings beat and cooling GDP/PCE data limiting immediate Fed tightening.",
+  "reasoning": "The market has fully absorbed the Fed's hawkish dissents and geopolitical yield pressures, evidenced by yesterday's +3.30% surge and today's +1.36% pre-market gain. Investors are prioritizing Microsoft's earnings momentum and cooling macroeconomic data over lingering inflation and Middle East risks, leaving no immediate novel threat to justify a sell."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-24",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.72,
+  "threat_level": "HIGH",
+  "key_catalyst": "Brent crude surging above $100 on widening Houthi/Iran-aligned conflict, pushing Treasury yields to multi-month highs and compounding the mega-cap AI capex cash-burn repricing",
+  "reasoning": "Today's session compounds yesterday's -1.90% decline with a fresh escalation rather than resolution: Brent crossed $100 for the first time since May, driving the 10-year yield to 4.70%, while the AI capex repricing materially worsened (Tesla -14.5% vs -4% on July 23; Alphabet -7% vs -4.2%). The intraday -1.37% response looks small relative to a 7% oil spike, a 14.5% Tesla collapse, and newly live Section 301 tariffs on 60 countries, indicating the market has only partially absorbed a cluster of HIGH-severity, still-escalating catalysts. With Houthi attacks widening and Trump threatening Iranian infrastructure, overnight geopolitical gap-down risk is material."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-30",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 1.0,
+  "threat_level": "NONE",
+  "key_catalyst": "",
+  "reasoning": "No open catalysts."
+}

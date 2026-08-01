@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-31",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.74,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Microsoft's strong cloud results and lower-than-feared AI capital spending",
+  "reasoning": "Microsoft's cloud beat and restrained AI-capex guidance already drove the July 30 tech rally, despite the same hawkish Fed dissents and Meta cash-flow concerns. Yield pressure and Iran tensions remain unresolved, but conflicting reports do not establish a clearly novel, high-severity shock. The strong-conviction threshold for SELL is not met."
+}

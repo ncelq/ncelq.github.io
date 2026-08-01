@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-29",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.78,
+  "threat_level": "HIGH",
+  "key_catalyst": "China's advancing chipmaking capabilities threatening global semiconductor leaders",
+  "reasoning": "China's advancing domestic chipmaking capabilities intensified the semiconductor threat, producing sharp losses in major QQQ components and occurring alongside an accelerating rotation out of AI-heavy technology. The catalyst is unresolved and worsening after the similar July 28 semiconductor warning, while upcoming mega-cap earnings and the Fed decision add overnight gap-down risk."
+}

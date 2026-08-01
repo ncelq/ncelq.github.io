@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-27",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.88,
+  "threat_level": "HIGH",
+  "key_catalyst": "Mega-cap tech earnings jitters as AI-capex scrutiny intensifies",
+  "reasoning": "AI-capex skepticism has broadened from last week's Alphabet and Tesla reactions to a dense Apple, Microsoft, Amazon, and Meta earnings window, while Fed-hike risk and tariffs remain unresolved. The US-Iran narrative is also unstable, with ceasefire-related hawkish repricing in one source and renewed military/oil escalation in another, leaving material overnight gap-down risk."
+}

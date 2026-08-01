@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-28",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.62,
+  "threat_level": "HIGH",
+  "key_catalyst": "China begins mass-producing domestic DUV immersion lithography machines, threatening ASML's dominance and sparking global semiconductor sell-off",
+  "reasoning": "China's mass production of domestic DUV lithography machines is a novel structural threat to semiconductor dominance within QQQ's heavy chip weighting, and today's flat close (+0.04%) after four straight down days suggests the market has not fully absorbed this catalyst. With the Fed decision Wednesday and megacap earnings (Microsoft, Meta, Amazon, Apple) arriving this week amid intensifying AI capex and circular financing scrutiny, the combination of unresolved semiconductor disruption and imminent event risk creates material overnight gap-down vulnerability."
+}

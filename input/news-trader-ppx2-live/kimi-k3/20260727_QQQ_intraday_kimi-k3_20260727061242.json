@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-27",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.66,
+  "threat_level": "HIGH",
+  "key_catalyst": "Pre-FOMC and pre-mega-cap-earnings de-risking, with a 30% priced probability of a surprise Fed rate hike and intensifying AI capex ROI scrutiny",
+  "reasoning": "QQQ has now fallen four consecutive sessions (-0.51%, -1.90%, -1.12%, and -1.39% today) and the drivers are unresolved, forward-looking catalysts rather than absorbed news: Wednesday's FOMC carries a priced ~30% chance of a surprise hike, and four mega-cap reports (Apple, Microsoft, Amazon, Meta) land this week after Alphabet and Tesla both sold off hard on AI capex scrutiny. The 07-23 and 07-24 sessions show the realized pattern this earnings season is negative for mega-cap tech, and the inflation/Fed hawkishness channel (oil above $100, tariffs in effect) remains active rather than winding down."
+}

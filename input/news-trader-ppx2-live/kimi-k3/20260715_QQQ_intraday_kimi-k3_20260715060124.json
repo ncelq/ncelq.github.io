@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-15",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.6,
+  "threat_level": "HIGH",
+  "key_catalyst": "IBM's 25% plunge spreading into a sector-wide software selloff as enterprise capex shifts to AI infrastructure",
+  "reasoning": "The IBM-driven repricing of traditional software escalated today from an isolated stock event (7/14, impact 2-7, shrugged off) into a sector-wide contagion (NOW -5%, ADBE -4.3%, CRM -2.2%, INTU -2.5%), a novel and developing catalyst that directly impairs multiple QQQ heavyweights and is unlikely to be fully digested in one session as analysts reassess enterprise software models. Simultaneously, U.S.-Iran military action escalated (reimposed naval blockade plus intensified airstrikes), recreating the exact setup that produced the -1.90% gap-down on 7/13, while hawkish Warsh testimony (63% September hike odds) removes the dovish cushion that rescued the market on 7/14. The chip rotation offset keeps QQQ's loss moderate at -0.96%, but with soft CPI now fully absorbed and no equivalent catalyst due, overnight headline risk skews negative."
+}

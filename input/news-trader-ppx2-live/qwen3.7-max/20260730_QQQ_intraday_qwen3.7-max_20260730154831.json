@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-30",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.7,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Microsoft's blowout earnings and broad semiconductor rally absorbing Fed hawkishness and Meta's FCF drag",
+  "reasoning": "The market successfully absorbed a hawkish Fed outcome with three dissents and a 4.70% 10-year yield, alongside Meta's FCF collapse, driven by Microsoft's blowout results and a broad semiconductor rally. While after-hours Apple and Amazon earnings introduce binary overnight risk, the immediate macro uncertainty is resolved and the AI capex narrative has bifurcated rather than uniformly deteriorated, favoring a HOLD."
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-31",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "SELL",
+  "confidence": 0.66,
+  "threat_level": "HIGH",
+  "key_catalyst": "Bear-steepening Treasury selloff — 10-year to 4.74%, 30-year ~5.26%, September hike odds 69% — after three FOMC members dissented for an immediate hike, compounded by oil pushing toward $90 on Hormuz disruptions",
+  "reasoning": "QQQ absorbed an extraordinary bearish load today — Apple down 7-10% on guidance cut, the 10-year at 4.71-4.74% and 30-year near 5.26% after three FOMC dissents for a hike with September odds at 69%, and Brent up to $87.93 on Strait of Hormuz tanker disruptions — yet finished only -0.47% purely because Amazon's one-off 15% earnings pop cushioned it. That offset is non-repeating while the rate and oil pressure is not, and the internal tell was ugly: the SOX printed its best day since April 2025 intraday but constituents reversed hard (Micron from +6.4% to -5.9%), showing the AI-earnings relief bid is already exhausting. Recent history shows this exact rate-plus-rotation complex produced -0.31%, -0.97% and -2.04% on 07-27 through 07-29, and the only rescue since (07-30, +3.30%) came from a megacap earnings shock that has now been fully spent with the reporting calendar behind us."
+}

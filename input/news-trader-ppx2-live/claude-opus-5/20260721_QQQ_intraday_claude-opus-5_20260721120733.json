@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-21",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.76,
+  "threat_level": "LOW",
+  "key_catalyst": "10-year Treasury yield drop of 6bp to a one-week low of 4.36% on cooling jobs data and dovish Waller comments, paired with a broad semiconductor rally led by ARM +3%",
+  "reasoning": "Today's dominant catalysts are bullish and mutually reinforcing: the 10-year yield fell 6bp to a one-week low of 4.36% (a sharp reversal from the 4.60% cycle-high stress that drove the -1.64% drop on 2026-07-16), and semiconductors rallied broadly with ARM +3% and Broadcom, Qualcomm, GlobalFoundries, ON Semi and NXP all up more than 2%, undoing the sector pressure that capped 2026-07-20. The only bearish item, Trump's tariff letters to 150+ countries and the 50% copper tariff, is rated low impact (4) and is partially offset by the Greenland tariff threat being dropped; no novel high-severity threat emerged today."
+}

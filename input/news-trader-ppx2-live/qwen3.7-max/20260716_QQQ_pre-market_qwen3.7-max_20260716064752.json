@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-16",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "SELL",
+  "confidence": 0.8,
+  "threat_level": "HIGH",
+  "key_catalyst": "Severe 8-9% rout in memory chip stocks despite TSMC's blowout earnings, compounded by a novel US military strike on an Iranian supertanker",
+  "reasoning": "The unprecedented US strike on an Iranian supertanker marks a critical kinetic escalation in geopolitical tensions, driving oil above $85 and pushing yields higher despite soft PPI data. Concurrently, a severe 8-9% rout in memory chip stocks despite TSMC's blowout earnings signals a fracturing of the AI hardware trade, leaving QQQ vulnerable to further downside as the market digests these dual shocks."
+}

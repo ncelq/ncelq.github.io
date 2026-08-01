@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-31",
+  "symbol": "QQQ",
+  "session": "intraday",
+  "signal": "HOLD",
+  "confidence": 0.85,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Apple wipes out $475 billion in value on earnings disappointment, effectively offset by massive surges in Amazon and Microsoft.",
+  "reasoning": "The intraday session featured a massive divergence in mega-cap earnings, with Apple wiping out $475 billion in value while Amazon and Microsoft surged on strong cloud results and lowered capex forecasts. Despite the historic Apple drag, QQQ stabilized near flat (-0.31%), indicating the market is rationally offsetting hardware weakness with resolving AI capex fears rather than exhibiting complacency. Overnight gap-down risk is muted as the discrete earnings shocks are fully priced in and the structural bid for AI and cloud infrastructure remains intact."
+}

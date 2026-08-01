@@ -1,0 +1,10 @@
+{
+  "date": "2026-07-31",
+  "symbol": "QQQ",
+  "session": "pre-market",
+  "signal": "HOLD",
+  "confidence": 0.68,
+  "threat_level": "MODERATE",
+  "key_catalyst": "Amazon's AWS-fueled earnings beat and 9.5% after-hours gain",
+  "reasoning": "Track B applies: mixed mega-cap earnings and AI-capex concerns are recurring rather than novel. Although same-theme sessions were mostly DOWN, strong AWS and Microsoft cloud results materially mitigate the prior spending-risk narrative, while Meta and Apple weakness appears company-specific rather than an escalation."
+}
