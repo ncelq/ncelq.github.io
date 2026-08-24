@@ -170,12 +170,16 @@ header.top .sub b{color:var(--ink)}
           <div class="card progress"><div class="ct"><span class="cn">Repo quiet since 22 Aug</span><span class="chip progress">In progress</span></div><p class="cd">No new news-trader* push since 22 Aug (ppx2 already killed). Forward-test still the top-1.</p></div>
         </div></div>
         <div class="col has-prog"><span class="node"></span><h5>Backtest</h5><div class="cards">
-          <div class="card progress"><div class="ct"><span class="cn">Frozen 4-sleeve rule</span><span class="chip progress">In progress</span></div><p class="cd">SELL iff SELL&gt;HOLD. TQQQ if 3 HOLD; SQQQ if 3 SELL; QQQ if 2/1; cash if 2/1 reverse. Frozen 20 Aug.</p></div>
+          <div class="card progress"><div class="ct"><span class="cn">Frozen 4-sleeve rule</span><span class="chip progress">In progress</span></div><p class="cd">SELL iff SELL&gt;HOLD. TQQQ if 3 HOLD; SQQQ if 3 SELL; QQQ if 2/1; cash if 2/1 reverse. Frozen 20 Aug. Keep crash+llm+ppx / Book Q on QQQ.</p></div>
+          <div class="card progress"><div class="ct"><span class="cn">VOO instead of QQQ on 2H/1S</span><span class="chip progress">In progress</span></div><p class="cd">Wash. Combined n=15 QQQ +0.26% vs VOO +0.16%; stitched book almost identical. Keep Book Q / QQQ.</p></div>
           <div class="card progress"><div class="ct"><span class="cn">Aug window 08-03–08-20</span><span class="chip progress">In progress</span></div><p class="cd">n=27: book +14.6% vs QQQ ~+3.3% vs dummy +6.9%. SQQQ unused in August.</p></div>
           <div class="card progress"><div class="ct"><span class="cn">July reverse test 07-06–07-30</span><span class="chip progress">In progress</span></div><p class="cd">n=35: book +7.5% vs QQQ −6.4% vs dummy −11.3%. First SQQQ 07-20.</p></div>
           <div class="card progress"><div class="ct"><span class="cn">Edge status</span><span class="chip progress">In progress</span></div><p class="cd">Hinted, not confirmed (~60 sess). Need another ugly month + calm month. Bar = no-signal dummy.</p></div>
         </div></div>
-        <div class="col has-prog"><span class="node"></span><h5>Beta/Paper</h5><div class="cards"><div class="card progress"><div class="ct"><span class="cn">Walk-forward paper</span><span class="chip progress">In progress</span></div><p class="cd">Rule frozen 20 Aug; walk-forward from 08-19. First 3-book SELL 08-20 afternoon. Supporting the stream top-priority forward test.</p></div></div></div>
+        <div class="col has-prog"><span class="node"></span><h5>Beta/Paper</h5><div class="cards">
+          <div class="card progress"><div class="ct"><span class="cn">Walk-forward paper</span><span class="chip progress">In progress</span></div><p class="cd">Rule frozen 20 Aug; walk-forward from 08-19. First 3-book SELL 08-20 afternoon. Supporting the stream top-priority forward test.</p></div>
+          <div class="card progress"><div class="ct"><span class="cn">File timing vs open</span><span class="chip progress">In progress</span></div><p class="cd">Pre-market files land ~9:33–9:45 ET after the 9:30 open, so cash-session book may not be tradable as simulated. Overnight files ~3:40 are usable into the close.</p></div>
+        </div></div>
         <div class="col"><span class="node"></span><h5>Live Trading</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">Signals generate; no live 4-sleeve execution yet.</p></div></div></div>
       </div>
     </div>
