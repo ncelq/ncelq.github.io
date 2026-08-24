@@ -240,6 +240,11 @@ html, body {
   font-weight: 400;
 }
 
+.stream-aim.rag-next {
+  color: var(--accent-deep);
+  font-weight: 600;
+}
+
 .rag {
   display: inline-flex;
   align-items: center;
@@ -482,7 +487,7 @@ html, body {
         <span class="legend-item"><span class="swatch nostart"></span> Not start</span>
       </div>
       <div class="rag-legend" aria-label="RAG legend">
-        RAG = distance to end goal · 🟢 near/at the goal · 🟡 partway · 🔴 far from the goal · ⚪ not started / no work toward the goal
+        RAG = solution + path to target · 🟢 has a solution AND a clear way to hit the stream target (not necessarily live/done) · 🟡 some work, path or solution still unclear · 🔴 far; no solution that gets to the target · ⚪ not started
       </div>
     </div>
   </header>
@@ -503,8 +508,9 @@ html, body {
         <!-- Stream 1 - Broad -->
         <div class="row-head" role="rowheader">
           <div class="stream-name">Stream 1 - Broad</div>
-          <span class="rag yellow"><span class="dot" aria-hidden="true">🟡</span> not migrated</span>
+          <span class="rag yellow"><span class="dot" aria-hidden="true">🟡</span> path unclear</span>
           <div class="stream-aim">Beat SPX return+risk; broad-market only. Off QC → GCP + IBKR.</div>
+          <div class="stream-aim rag-next">🟢 when paper trading on GCP</div>
         </div>
         <div class="cell top1-cell">
           <article class="card top1 progress">
@@ -565,7 +571,7 @@ html, body {
         <!-- Stream 2 - High Beta -->
         <div class="row-head" role="rowheader">
           <div class="stream-name">Stream 2 - High Beta</div>
-          <span class="rag yellow"><span class="dot" aria-hidden="true">🟡</span> not live yet</span>
+          <span class="rag green"><span class="dot" aria-hidden="true">🟢</span> WK08 clear</span>
           <div class="stream-aim">SPX+10%, return:MDD 2:1 or 3:1. Successor WK08 replaces VT01.</div>
         </div>
         <div class="cell top1-cell">
@@ -779,7 +785,7 @@ html, body {
         <!-- Stream 5 - News LLM -->
         <div class="row-head" role="rowheader">
           <div class="stream-name">Stream 5 - News LLM</div>
-          <span class="rag yellow"><span class="dot" aria-hidden="true">🟡</span> not validated</span>
+          <span class="rag green"><span class="dot" aria-hidden="true">🟢</span> 4-sleeve path</span>
           <div class="stream-aim">4-sleeve QQQ overlay (crash+llm+ppx; ppx2 killed). Validate via forward test.</div>
         </div>
         <div class="cell top1-cell">
