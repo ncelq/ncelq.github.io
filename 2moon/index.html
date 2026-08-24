@@ -639,45 +639,98 @@ html, body {
         <!-- Stream 5 -->
         <div class="row-head" role="rowheader">
           <div class="stream-name">Stream 5 - News LLM</div>
-          <div class="stream-aim">All news-trader-*. Signals first, strategy later.</div>
+          <div class="stream-aim">4-sleeve QQQ news overlay (crash + llm + ppx; ppx2 killed). Book-level majority. Signals first.</div>
         </div>
         <div class="cell">
           <article class="card done">
             <div class="card-top">
-              <div class="card-name">News LLM aim</div>
+              <div class="card-name">4-sleeve QQQ news overlay</div>
               <span class="pill done">Done</span>
             </div>
-            <p class="card-desc">News-driven LLM trading added as aim 5.</p>
+            <p class="card-desc">crash + llm + ppx books (ppx2 killed 20 Aug). Book-level majority, not raw model count.</p>
           </article>
         </div>
         <div class="cell">
           <article class="card progress">
             <div class="card-top">
-              <div class="card-name">news-trader-ppx2-live</div>
+              <div class="card-name">news-trader-crash-live</div>
               <span class="pill progress">In progress</span>
             </div>
-            <p class="card-desc">QQQ premarket/intraday signal JSON. Last ppx2 22 Aug.</p>
+            <p class="card-desc">Drop-gated. Only asks the model if QQQ already down 0.5%; else HOLD. Sells after the drop is on the tape.</p>
           </article>
           <article class="card progress">
             <div class="card-top">
               <div class="card-name">news-trader-llm-live</div>
               <span class="pill progress">In progress</span>
             </div>
-            <p class="card-desc">QQQ premarket/intraday signal JSON.</p>
+            <p class="card-desc">HOLD-biased on purpose (bull-tape prior; LLMs overreact to already-absorbed headlines).</p>
           </article>
           <article class="card progress">
             <div class="card-top">
               <div class="card-name">news-trader-ppx-live</div>
               <span class="pill progress">In progress</span>
             </div>
-            <p class="card-desc">QQQ premarket/intraday signal JSON.</p>
+            <p class="card-desc">Live web search, soft HOLD-unless-you-mean-it. Kept. glm/sol/terra/mimo pack.</p>
+          </article>
+          <article class="card block">
+            <div class="card-top">
+              <div class="card-name">news-trader-ppx2-live</div>
+              <span class="pill block">Block</span>
+            </div>
+            <p class="card-desc">Killed 20 Aug — keep ppx. Same vote, frozen Finnhub+Perplexity dump, no search (2/5 real downs vs ppx 4/5).</p>
           </article>
           <article class="card progress">
             <div class="card-top">
-              <div class="card-name">news-trader-crash-live</div>
+              <div class="card-name">Signal-edge rule</div>
               <span class="pill progress">In progress</span>
             </div>
-            <p class="card-desc">QQQ premarket/intraday signal JSON.</p>
+            <p class="card-desc">Session counts only if |QQQ| ≥ 0.5%. SELL right on those drops, HOLD on those rises.</p>
+          </article>
+          <article class="card progress">
+            <div class="card-top">
+              <div class="card-name">Session timing</div>
+              <span class="pill progress">In progress</span>
+            </div>
+            <p class="card-desc">Pre-market files ~9:33–9:45 ET (after 9:30 open) — cash-session book may not be tradable as simulated. Overnight ~3:40 ET usable into the close.</p>
+          </article>
+        </div>
+        <div class="cell">
+          <article class="card progress">
+            <div class="card-top">
+              <div class="card-name">Frozen 4-sleeve rule</div>
+              <span class="pill progress">In progress</span>
+            </div>
+            <p class="card-desc">Vote each book (SELL iff SELL&gt;HOLD). TQQQ if 3 HOLD; SQQQ if 3 SELL; QQQ if 2 HOLD / 1 SELL; cash if 2 SELL / 1 HOLD. Frozen 20 Aug.</p>
+          </article>
+          <article class="card progress">
+            <div class="card-top">
+              <div class="card-name">Aug window 08-03–08-20</div>
+              <span class="pill progress">In progress</span>
+            </div>
+            <p class="card-desc">n=27: book +14.6% vs QQQ ~+3.3% vs dummy (TQQQ overnight / QQQ day) +6.9%. TQQQ 15 sess +15.7%; QQQ 8 sess −1.0%; cash 4; SQQQ unused in August.</p>
+          </article>
+          <article class="card progress">
+            <div class="card-top">
+              <div class="card-name">July reverse test 07-06–07-30</div>
+              <span class="pill progress">In progress</span>
+            </div>
+            <p class="card-desc">n=35: book +7.5% vs QQQ −6.4% vs dummy −11.3%. First SQQQ 07-20. August lead was levering an up tape; July lead was getting off TQQQ on a down tape.</p>
+          </article>
+          <article class="card progress">
+            <div class="card-top">
+              <div class="card-name">Edge status</div>
+              <span class="pill progress">In progress</span>
+            </div>
+            <p class="card-desc">Hinted, not confirmed (~60 sess, two months, rule frozen after seeing August). Need another ugly month + another calm month. SQQQ barely tested; bar to beat remains the no-signal dummy.</p>
+          </article>
+        </div>
+        <div class="cell">
+          <article class="card progress">
+            <div class="card-top">
+              <div class="card-name">Walk-forward paper</div>
+              <span class="pill progress">In progress</span>
+            </div>
+            <p class="card-desc">Rule frozen 20 Aug; walk-forward from 08-19. First 3-book SELL 08-20 afternoon (llm first majority SELL). Not a live traded book yet.</p>
           </article>
         </div>
         <div class="cell">
@@ -686,25 +739,7 @@ html, body {
               <div class="card-name">Not start</div>
               <span class="pill nostart">Not start</span>
             </div>
-            <p class="card-desc">No trading rule yet.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card nostart placeholder">
-            <div class="card-top">
-              <div class="card-name">Not start</div>
-              <span class="pill nostart">Not start</span>
-            </div>
-            <p class="card-desc">Signal jobs already run; no strategy to migrate.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card nostart placeholder">
-            <div class="card-top">
-              <div class="card-name">Not start</div>
-              <span class="pill nostart">Not start</span>
-            </div>
-            <p class="card-desc">Strategy not built.</p>
+            <p class="card-desc">Signals generate; no live 4-sleeve execution yet.</p>
           </article>
         </div>
       </div>
@@ -730,7 +765,7 @@ html, body {
         <!-- Cloud Stream 1 - GCP -->
         <div class="row-head" role="rowheader">
           <div class="stream-name">Stream 1 - GCP</div>
-          <div class="stream-aim">Repo ibkr-gcp</div>
+          <div class="stream-aim">Repo ibkr-gcp · GCP project</div>
         </div>
         <div class="cell">
           <article class="card progress">
@@ -771,7 +806,7 @@ html, body {
               <div class="card-name">IB Gateway + CF + YubiKey GUI</div>
               <span class="pill progress">In progress</span>
             </div>
-            <p class="card-desc">IB Gateway on VM the IB Gateway VM, Cloud Function fetches balance an IB account, Windows YubiKey GUI (IbkrGwGui); user must log in to Gateway themselves. Last work 19–20 Aug (YubiKey GUI, startup script, proxy env).</p>
+            <p class="card-desc">IB Gateway VM, balance Cloud Function for IB account, Windows YubiKey GUI (IbkrGwGui); user must log in to Gateway themselves. Last work 19–20 Aug (YubiKey GUI, startup script, proxy env).</p>
           </article>
         </div>
         <div class="cell">
