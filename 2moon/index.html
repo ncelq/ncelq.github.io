@@ -166,8 +166,8 @@ html, body {
 }
 
 .board.algo {
-  grid-template-columns: 168px minmax(220px, 1.15fr) repeat(5, minmax(168px, 1fr));
-  min-width: 1380px;
+  grid-template-columns: minmax(240px, 280px) repeat(5, minmax(168px, 1fr));
+  min-width: 1280px;
 }
 
 .board.cloud {
@@ -207,15 +207,9 @@ html, body {
   border-bottom: 1px solid var(--line);
 }
 
-.col-head.top1-head {
-  color: var(--ink);
-  background: linear-gradient(180deg, #FFF8E8 0%, #F7F1E4 100%);
-  letter-spacing: 0.08em;
-}
-
 .row-head {
   background: var(--row-label);
-  padding: 14px 12px;
+  padding: 12px 10px;
   position: sticky;
   left: 0;
   z-index: 2;
@@ -279,11 +273,6 @@ html, body {
   min-height: 96px;
 }
 
-.cell.top1-cell {
-  background: linear-gradient(180deg, #FFFBF3 0%, #FBFAF8 100%);
-  padding: 10px;
-}
-
 .card {
   border-radius: 6px;
   padding: 9px 10px 10px;
@@ -333,7 +322,8 @@ html, body {
   border-color: var(--top1-border);
   background: var(--top1-bg);
   box-shadow: 0 1px 0 rgba(160, 128, 96, 0.18);
-  padding: 12px 12px 13px;
+  padding: 10px 10px 11px;
+  margin-top: 2px;
 }
 
 .card.top1.progress {
@@ -343,31 +333,21 @@ html, body {
 
 .card.top1 .card-name {
   font-family: var(--display);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.25;
 }
 
 .card.top1 .card-desc {
-  font-size: 12.5px;
+  font-size: 12px;
   color: var(--ink);
-  line-height: 1.45;
+  line-height: 1.4;
 }
 
 .card.top1 .pill {
-  font-size: 10px;
-  padding: 3px 7px;
-}
-
-.top1-phase {
-  display: inline-block;
-  margin-top: 6px;
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--accent-deep);
+  font-size: 9.5px;
+  padding: 2px 6px;
 }
 
 .card-top {
@@ -498,7 +478,6 @@ html, body {
     <div class="board-wrap">
       <div class="board algo" role="table" aria-label="Algo development kanban">
         <div class="corner" role="columnheader"></div>
-        <div class="col-head top1-head" role="columnheader">Top 1</div>
         <div class="col-head" role="columnheader">Ideation</div>
         <div class="col-head" role="columnheader">Research</div>
         <div class="col-head" role="columnheader">Backtest</div>
@@ -511,15 +490,12 @@ html, body {
           <span class="rag yellow"><span class="dot" aria-hidden="true">🟡</span> path unclear</span>
           <div class="stream-aim">Beat SPX return+risk; broad-market only. Off QC → GCP + IBKR.</div>
           <div class="stream-aim rag-next">🟢 when paper trading on GCP</div>
-        </div>
-        <div class="cell top1-cell">
           <article class="card top1 progress">
             <div class="card-top">
               <div class="card-name">Migrate Broad off QC → GCP + IBKR</div>
               <span class="pill progress">In progress</span>
             </div>
             <p class="card-desc">Replace QC live sleeve. Only active work on this stream for now.</p>
-            <span class="top1-phase">Beta / paper path</span>
           </article>
         </div>
         <div class="cell">
@@ -555,7 +531,7 @@ html, body {
               <div class="card-name">Migration pointer</div>
               <span class="pill progress">In progress</span>
             </div>
-            <p class="card-desc">See Top 1 — GCP + IBKR path, not QC.</p>
+            <p class="card-desc">See stream top priority — GCP + IBKR path, not QC.</p>
           </article>
         </div>
         <div class="cell">
@@ -573,15 +549,12 @@ html, body {
           <div class="stream-name">Stream 2 - High Beta</div>
           <span class="rag green"><span class="dot" aria-hidden="true">🟢</span> WK08 clear</span>
           <div class="stream-aim">SPX+10%, return:MDD 2:1 or 3:1. Successor WK08 replaces VT01.</div>
-        </div>
-        <div class="cell top1-cell">
           <article class="card top1 progress">
             <div class="card-top">
               <div class="card-name">WK08 replaces VT01</div>
               <span class="pill progress">In progress</span>
             </div>
             <p class="card-desc">LEAN backtest in flight. IYW bull / Sortino+low-corr bear path.</p>
-            <span class="top1-phase">Backtest</span>
           </article>
         </div>
         <div class="cell">
@@ -633,7 +606,7 @@ html, body {
               <div class="card-name">old VT01 still live</div>
               <span class="pill block">Block</span>
             </div>
-            <p class="card-desc">Still holds SSO/QLD into downs; not the top-1.</p>
+            <p class="card-desc">Still holds SSO/QLD into downs; not the top priority.</p>
           </article>
         </div>
 
@@ -642,15 +615,12 @@ html, body {
           <div class="stream-name">Stream 3 - Hot ETFs</div>
           <span class="rag red"><span class="dot" aria-hidden="true">🔴</span> no strong-hold</span>
           <div class="stream-aim">Need sticky hold of leading theme (oil Apr, semis, Korea). Not weekly rotate.</div>
-        </div>
-        <div class="cell top1-cell">
           <article class="card top1 progress">
             <div class="card-top">
               <div class="card-name">Strong-hold sector replacement</div>
               <span class="pill progress">In progress</span>
             </div>
             <p class="card-desc">Define/build a SEC09 replacement that strong-holds leading sectors. TOP02 weekly rotate is not this.</p>
-            <span class="top1-phase">Research</span>
           </article>
         </div>
         <div class="cell">
@@ -668,7 +638,7 @@ html, body {
               <div class="card-name">Theme: fg-momentum-topgain</div>
               <span class="pill progress">In progress</span>
             </div>
-            <p class="card-desc">Daily gainer/theme caches — supporting, not top-1.</p>
+            <p class="card-desc">Daily gainer/theme caches — supporting, not top priority.</p>
           </article>
           <article class="card progress">
             <div class="card-top">
@@ -716,7 +686,7 @@ html, body {
               <div class="card-name">SEC09 live</div>
               <span class="pill block">Block</span>
             </div>
-            <p class="card-desc">Monthly lock-in / missed sticky Korea-semis. Demoted — not top-1.</p>
+            <p class="card-desc">Monthly lock-in / missed sticky Korea-semis. Demoted — not top priority.</p>
           </article>
         </div>
 
@@ -725,15 +695,12 @@ html, body {
           <div class="stream-name">Stream 4 - Momentum Stocks</div>
           <span class="rag red"><span class="dot" aria-hidden="true">🔴</span> nothing close</span>
           <div class="stream-aim">Need 45%+ WR, PF 2. Nothing close to a solution yet.</div>
-        </div>
-        <div class="cell top1-cell">
           <article class="card top1 progress">
             <div class="card-top">
               <div class="card-name">Find a working momentum / breakout</div>
               <span class="pill progress">In progress</span>
             </div>
             <p class="card-desc">Very early research. Target 45%+ WR, PF 2. No confidence — not backtest-ready.</p>
-            <span class="top1-phase">Research</span>
           </article>
         </div>
         <div class="cell">
@@ -751,7 +718,7 @@ html, body {
               <div class="card-name">Early exploration</div>
               <span class="pill progress">In progress</span>
             </div>
-            <p class="card-desc">Same Top 1 hunt — strip confidence; nothing close.</p>
+            <p class="card-desc">Same top-priority hunt — strip confidence; nothing close.</p>
           </article>
         </div>
         <div class="cell">
@@ -787,15 +754,12 @@ html, body {
           <div class="stream-name">Stream 5 - News LLM</div>
           <span class="rag green"><span class="dot" aria-hidden="true">🟢</span> 4-sleeve path</span>
           <div class="stream-aim">4-sleeve QQQ overlay (crash+llm+ppx; ppx2 killed). Validate via forward test.</div>
-        </div>
-        <div class="cell top1-cell">
           <article class="card top1 progress">
             <div class="card-top">
               <div class="card-name">Forward-test live signals</div>
               <span class="pill progress">In progress</span>
             </div>
             <p class="card-desc">Validate the frozen 4-sleeve (crash+llm+ppx). Walk-forward from 08-19; not a live traded book yet.</p>
-            <span class="top1-phase">Beta / Paper Testing</span>
           </article>
         </div>
         <div class="cell">
@@ -807,6 +771,7 @@ html, body {
             <p class="card-desc">crash + llm + ppx books (ppx2 killed 20 Aug). Book-level majority, not raw model count.</p>
           </article>
         </div>
+
         <div class="cell">
           <article class="card progress">
             <div class="card-top">
@@ -880,7 +845,7 @@ html, body {
               <div class="card-name">Walk-forward paper</div>
               <span class="pill progress">In progress</span>
             </div>
-            <p class="card-desc">Rule frozen 20 Aug; walk-forward from 08-19. First 3-book SELL 08-20 afternoon. Supporting the Top 1 forward test.</p>
+            <p class="card-desc">Rule frozen 20 Aug; walk-forward from 08-19. First 3-book SELL 08-20 afternoon. Supporting the stream top-priority forward test.</p>
           </article>
         </div>
         <div class="cell">
