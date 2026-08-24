@@ -3,923 +3,212 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2moon · Stream Kanban</title>
+<title>2moon · Progress Track — Sky Breeze</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root {
-  --sand: #F2E2BA;
-  --bg: #F0EFEC;
-  --panel: #FBFAF8;
-  --ink: #3C3A36;
-  --muted: #78746C;
-  --line: #D8D4CE;
-  --accent: #A08060;
-  --accent-deep: #8A7358;
-  --row-label: #F7F4EE;
-  --header: #F7F1E4;
-  --cell: #FBFAF8;
-  --done: #2f7d4a;
-  --done-bg: #e8f4ec;
-  --done-border: #a8d4b6;
-  --progress: #4a90b8;
-  --progress-bg: #e8f3f9;
-  --progress-border: #a8cfe3;
-  --block: #c44a4a;
-  --block-bg: #f8eaea;
-  --block-border: #e3b0b0;
-  --nostart: #8a8680;
-  --nostart-bg: #eceae6;
-  --nostart-border: #d0cdc7;
-  --top1-border: #A08060;
-  --top1-bg: #FFF9EF;
-  --font: "Source Sans 3", system-ui, sans-serif;
-  --display: "Fraunces", Georgia, serif;
+:root{
+  --bg:#f5f9ff; --panel:#ffffff; --ink:#0f172a; --muted:#5c6675; --line:#dbe6f4; --line-2:#eef4fb;
+  --accent:#0ea5e9; --accent-2:#0284c7;
+  --done:#16a34a; --done-bg:#e9f7ef; --done-bd:#bbf7d0;
+  --prog:#0ea5e9; --prog-bg:#e0f2fe; --prog-bd:#bae6fd;
+  --block:#e5484d; --block-bg:#fceced; --block-bd:#fecaca;
+  --none:#98a2b3; --none-bg:#f4f6fa; --none-bd:#e4e8f0;
+  --rag-g:#15803d; --rag-y:#92400e; --rag-r:#c0282d; --rag-w:#64748b;
+  --rag-y-bg:#fef3c7; --rag-y-bd:#fde68a;
+  --font:'Inter',system-ui,sans-serif; --display:'Inter',sans-serif;
+  --shadow:0 18px 44px -26px rgba(14,165,233,.18);
+  --r-stream:20px; --r-card:12px; --r-chip:8px;
+  --fs-h1:32px; --fs-h2:21px; --fs-name:16px; --fs-sub:13px;
+  --fs-legend:12px; --fs-raghelp:11.5px; --fs-aim:12.5px;
+  --fs-h5:10.5px; --fs-cn:12px; --fs-cd:11px; --fs-chip:8px;
+  --fs-footer:12.5px; --fs-rag:11px;
+  --blob-a:#d8ecff; --blob-b:#e7ddff;
 }
-
-* { box-sizing: border-box; }
-
-html, body {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-  background:
-    radial-gradient(1000px 480px at 8% -8%, rgba(242, 226, 186, 0.55) 0%, transparent 55%),
-    radial-gradient(800px 420px at 100% 0%, rgba(160, 128, 96, 0.08) 0%, transparent 50%),
-    var(--bg);
-  color: var(--ink);
-  font-family: var(--font);
-  -webkit-font-smoothing: antialiased;
-}
-
-.page {
-  max-width: 1680px;
-  margin: 0 auto;
-  padding: 0 24px 40px;
-}
-
-.site-nav {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  margin: 0 -24px 22px;
-  padding: 14px 24px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 14px 24px;
-  background: linear-gradient(180deg, #FBFAF8 0%, #F7F1E4 100%);
-  border-bottom: 1px solid var(--line);
-}
-
-.brand-block h1 {
-  margin: 0;
-  font-family: var(--display);
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  color: var(--ink);
-}
-
-.brand-block .subtitle {
-  margin: 6px 0 0;
-  color: var(--muted);
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.brand-block .subtitle time {
-  color: var(--accent-deep);
-  font-weight: 600;
-}
-
-.legend-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: flex-end;
-}
-
-.legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 14px;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.legend-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--muted);
-}
-
-.swatch {
-  width: 10px;
-  height: 10px;
-  border-radius: 2px;
-  border: 1px solid transparent;
-}
-
-.swatch.done { background: var(--done); border-color: var(--done); }
-.swatch.progress { background: var(--progress); border-color: var(--progress); }
-.swatch.block { background: var(--block); border-color: var(--block); }
-.swatch.nostart { background: var(--nostart); border-color: var(--nostart); }
-
-.rag-legend {
-  font-size: 11.5px;
-  color: var(--muted);
-  font-weight: 500;
-  line-height: 1.4;
-}
-
-.group {
-  margin-bottom: 28px;
-}
-
-.group-title {
-  margin: 0 0 12px;
-  font-family: var(--display);
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--accent-deep);
-}
-
-.board-wrap {
-  overflow-x: auto;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: var(--panel);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.7) inset;
-}
-
-.board {
-  display: grid;
-  min-width: 1220px;
-}
-
-.board.algo {
-  grid-template-columns: minmax(240px, 280px) repeat(5, minmax(168px, 1fr));
-  min-width: 1280px;
-}
-
-.board.cloud {
-  grid-template-columns: 200px repeat(3, minmax(220px, 1fr));
-  min-width: 900px;
-}
-
-.col-head,
-.row-head,
-.cell {
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.col-head:last-child,
-.cell:last-child {
-  border-right: none;
-}
-
-.corner {
-  background: var(--header);
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  position: sticky;
-  left: 0;
-  z-index: 3;
-}
-
-.col-head {
-  background: var(--header);
-  padding: 12px 12px 11px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--accent-deep);
-  border-bottom: 1px solid var(--line);
-}
-
-.row-head {
-  background: var(--row-label);
-  padding: 12px 10px;
-  position: sticky;
-  left: 0;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  justify-content: flex-start;
-}
-
-.stream-name {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  line-height: 1.25;
-  color: var(--ink);
-}
-
-.stream-aim {
-  font-size: 11px;
-  line-height: 1.4;
-  color: var(--muted);
-  font-weight: 400;
-}
-
-.stream-aim.rag-next {
-  color: var(--accent-deep);
-  font-weight: 600;
-}
-
-.rag {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  align-self: flex-start;
-  padding: 3px 8px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: #fff;
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--ink);
-  line-height: 1.3;
-}
-
-.rag .dot {
-  font-size: 11px;
-  line-height: 1;
-}
-
-.rag.yellow { background: #FFF6DE; border-color: #E6D4A8; }
-.rag.red { background: #F8EAEA; border-color: #E3B0B0; }
-.rag.green { background: #E8F4EC; border-color: #A8D4B6; }
-.rag.white { background: #F3F2EF; border-color: #D8D4CE; color: var(--muted); }
-
-.cell {
-  background: var(--cell);
-  padding: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-  min-height: 96px;
-}
-
-.card {
-  border-radius: 6px;
-  padding: 9px 10px 10px;
-  border: 1px solid var(--line);
-  background: #fff;
-}
-
-.card.done {
-  background: var(--done-bg);
-  border-color: var(--done-border);
-}
-
-.card.progress {
-  background: var(--progress-bg);
-  border-color: var(--progress-border);
-}
-
-.card.block {
-  background: var(--block-bg);
-  border-color: var(--block-border);
-}
-
-.card.nostart {
-  background: var(--nostart-bg);
-  border-color: var(--nostart-border);
-}
-
-.card.placeholder {
-  opacity: 0.85;
-}
-
-.card.note {
-  padding: 7px 8px 8px;
-  opacity: 0.95;
-}
-
-.card.note .card-name {
-  font-size: 11.5px;
-}
-
-.card.note .card-desc {
-  font-size: 11px;
-}
-
-.card.top1 {
-  border-width: 2px;
-  border-color: var(--top1-border);
-  background: var(--top1-bg);
-  box-shadow: 0 1px 0 rgba(160, 128, 96, 0.18);
-  padding: 10px 10px 11px;
-  margin-top: 2px;
-}
-
-.card.top1.progress {
-  background: linear-gradient(180deg, #FFF9EF 0%, #EAF4FA 100%);
-  border-color: var(--top1-border);
-}
-
-.card.top1 .card-name {
-  font-family: var(--display);
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.25;
-}
-
-.card.top1 .card-desc {
-  font-size: 12px;
-  color: var(--ink);
-  line-height: 1.4;
-}
-
-.card.top1 .pill {
-  font-size: 9.5px;
-  padding: 2px 6px;
-}
-
-.card-top {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 8px;
-  margin-bottom: 5px;
-}
-
-.card-name {
-  font-size: 12.5px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  line-height: 1.3;
-  color: var(--ink);
-}
-
-.pill {
-  flex-shrink: 0;
-  font-size: 9.5px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding: 2px 6px;
-  border-radius: 3px;
-  line-height: 1.4;
-  border: 1px solid transparent;
-}
-
-.pill.done {
-  color: var(--done);
-  background: #d7ecdf;
-  border-color: var(--done-border);
-}
-
-.pill.progress {
-  color: #2f6f93;
-  background: #d7ebf5;
-  border-color: var(--progress-border);
-}
-
-.pill.block {
-  color: var(--block);
-  background: #f0d4d4;
-  border-color: var(--block-border);
-}
-
-.pill.nostart {
-  color: #6a6660;
-  background: #e4e1db;
-  border-color: var(--nostart-border);
-}
-
-.card-desc {
-  margin: 0;
-  font-size: 11.5px;
-  line-height: 1.4;
-  color: var(--muted);
-}
-
-.footer {
-  margin-top: 22px;
-  padding-top: 14px;
-  border-top: 1px solid var(--line);
-  font-size: 12px;
-  color: var(--muted);
-}
-
-@media (max-width: 900px) {
-  .page { padding: 0 12px 28px; }
-  .site-nav { margin: 0 -12px 18px; padding: 12px; }
-  .brand-block h1 { font-size: 26px; }
-  .group-title { font-size: 20px; }
-  .legend-stack { align-items: flex-start; }
-  .legend { justify-content: flex-start; }
-}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--font);-webkit-font-smoothing:antialiased}
+body{line-height:1.55;overflow-x:hidden;position:relative}
+body::before,body::after{content:"";position:fixed;border-radius:50%;filter:blur(90px);opacity:.5;z-index:0;pointer-events:none}
+body::before{width:420px;height:420px;background:var(--blob-a);top:-140px;left:-160px}
+body::after{width:360px;height:360px;background:var(--blob-b);top:220px;right:-140px}
+.page{max-width:1320px;margin:0 auto;padding:30px 28px 60px;position:relative;z-index:1}
+header.top{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:26px}
+header.top h1{margin:0;font-family:var(--display);font-size:var(--fs-h1);font-weight:700;letter-spacing:-.02em;line-height:1.15}
+header.top .sub{color:var(--muted);font-size:var(--fs-sub);margin:6px 0 0;font-weight:500}
+header.top .sub b{color:var(--ink)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;align-items:center;font-size:var(--fs-legend);color:var(--muted)}
+.legend .li{display:inline-flex;align-items:center;gap:6px;font-weight:600}
+.legend .sw{width:10px;height:10px;border-radius:50%}
+.legend .sw.d{background:var(--done)} .legend .sw.p{background:var(--prog)} .legend .sw.b{background:var(--block)} .legend .sw.n{background:var(--none)}
+.rag-help{margin-top:8px;font-size:var(--fs-raghelp);color:var(--muted);line-height:1.5;max-width:72ch}
+.group{margin-bottom:36px}
+.group h2{font-family:var(--display);font-size:var(--fs-h2);font-weight:700;letter-spacing:-.015em;margin:0 0 16px;display:flex;align-items:center;gap:12px;line-height:1.15}
+.group h2:after{content:"";flex:1;height:1px;background:var(--line)}
+.stream{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-stream);padding:18px 20px;margin-bottom:16px;box-shadow:var(--shadow)}
+.s-head{display:flex;align-items:center;gap:14px;margin-bottom:18px;flex-wrap:wrap}
+.s-head .name{font-size:var(--fs-name);font-weight:700;letter-spacing:-.01em;font-family:var(--display)}
+.rag{display:inline-flex;align-items:center;gap:6px;font-size:var(--fs-rag);font-weight:700;padding:3px 9px;border-radius:999px;border:1px solid transparent}
+.rag.g{background:var(--done-bg);color:var(--rag-g);border-color:var(--done-bd)}
+.rag.y{background:var(--rag-y-bg);color:var(--rag-y);border-color:var(--rag-y-bd)}
+.rag.r{background:var(--block-bg);color:var(--rag-r);border-color:var(--block-bd)}
+.rag.w{background:var(--none-bg);color:var(--rag-w);border-color:var(--none-bd)}
+.s-head .aim{margin-left:auto;font-size:var(--fs-aim);color:var(--muted);max-width:44ch}
+.s-head .aim b{color:var(--ink);font-weight:700}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative}
+.steps.cloud{grid-template-columns:repeat(3,1fr)}
+.steps .col{position:relative;padding-top:34px;padding-right:12px}
+.steps .col:before{content:"";position:absolute;top:14px;left:0;right:12px;height:2px;background:var(--line)}
+.steps .col:first-child:before{left:14px}
+.steps .col:last-child:before{right:auto;left:14px;width:calc(100% - 14px)}
+.steps .col:first-child:after{content:"";position:absolute;top:8px;left:0;width:14px;height:2px;background:transparent}
+.node{position:absolute;top:8px;left:0;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--none);z-index:2}
+.col.has-done .node{border-color:var(--done);background:var(--done)}
+.col.has-prog .node{border-color:var(--prog);background:var(--prog)}
+.col.has-block .node{border-color:var(--block);background:var(--block)}
+.col h5{margin:0 0 10px;font-size:var(--fs-h5);letter-spacing:.07em;text-transform:uppercase;color:var(--accent-2);font-weight:700}
+.cards{display:flex;flex-direction:column;gap:7px}
+.card{border:1px solid var(--line);border-radius:var(--r-card);padding:9px 10px;background:var(--panel)}
+.card.done{background:var(--done-bg);border-color:var(--done-bd)}
+.card.progress{background:var(--prog-bg);border-color:var(--prog-bd)}
+.card.block{background:var(--block-bg);border-color:var(--block-bd)}
+.card.nostart{background:var(--none-bg);border-color:var(--none-bd)}
+.card .ct{display:flex;justify-content:space-between;align-items:flex-start;gap:6px;margin-bottom:3px}
+.card .cn{font-size:var(--fs-cn);font-weight:700;line-height:1.25;letter-spacing:-.01em}
+.card .cd{margin:0;font-size:var(--fs-cd);line-height:1.4;color:var(--muted)}
+.chip{flex-shrink:0;font-size:var(--fs-chip);font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 6px;border-radius:var(--r-chip);border:1px solid transparent}
+.chip.done{color:var(--done);background:#d1fae5;border-color:var(--done-bd)}
+.chip.progress{color:#0369a1;background:#e0f2fe;border-color:var(--prog-bd)}
+.chip.block{color:var(--block);background:#fee2e2;border-color:var(--block-bd)}
+.chip.nostart{color:#64748b;background:#e5e7eb;border-color:var(--none-bd)}
+.footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);font-size:var(--fs-footer);color:var(--muted)}
+@media(max-width:980px){.steps,.steps.cloud{grid-template-columns:1fr 1fr}.steps .col:before{display:none}.node{display:none}.steps .col{padding-top:0}}
 </style>
 </head>
 <body>
 <div class="page">
-  <header class="site-nav">
-    <div class="brand-block">
+  <header class="top">
+    <div>
       <h1>2moon</h1>
-      <p class="subtitle">Status as of <time datetime="2026-08-24">24 Aug 2026 HKT</time></p>
+      <p class="sub">Status as of <b>24 Aug 2026 HKT</b> · 8 streams across 2 groups</p>
     </div>
-    <div class="legend-stack">
-      <div class="legend" aria-label="Status legend">
-        <span class="legend-item"><span class="swatch done"></span> Done</span>
-        <span class="legend-item"><span class="swatch progress"></span> In progress</span>
-        <span class="legend-item"><span class="swatch block"></span> Block</span>
-        <span class="legend-item"><span class="swatch nostart"></span> Not start</span>
+    <div>
+      <div class="legend">
+        <span class="li"><span class="sw d"></span> Done</span>
+        <span class="li"><span class="sw p"></span> In progress</span>
+        <span class="li"><span class="sw b"></span> Block</span>
+        <span class="li"><span class="sw n"></span> Not start</span>
       </div>
-      <div class="rag-legend" aria-label="RAG legend">
-        RAG = solution + path to target · 🟢 has a solution AND a clear way to hit the stream target (not necessarily live/done) · 🟡 some work, path or solution still unclear · 🔴 far; no solution that gets to the target · ⚪ not started
-      </div>
+      <p class="rag-help"><b>RAG</b> = solution + path to target · 🟢 solution AND clear path · 🟡 some work unclear · 🔴 far; no solution · ⚪ not started</p>
     </div>
   </header>
+  <section class="group">
+    <h2>Algo development</h2>
 
-  <!-- GROUP A: Algo development -->
-  <section class="group" aria-labelledby="group-algo">
-    <h2 class="group-title" id="group-algo">Algo development</h2>
-    <div class="board-wrap">
-      <div class="board algo" role="table" aria-label="Algo development kanban">
-        <div class="corner" role="columnheader"></div>
-        <div class="col-head" role="columnheader">Ideation</div>
-        <div class="col-head" role="columnheader">Research</div>
-        <div class="col-head" role="columnheader">Backtest</div>
-        <div class="col-head" role="columnheader">Beta/Paper Testing</div>
-        <div class="col-head" role="columnheader">Live Trading</div>
+    <div class="stream">
+      <div class="s-head"><span class="name">Stream 1 — Broad</span><span class="rag y">🟡 path unclear</span><span class="aim">Migrate to GCP + IBKR to replace QuantConnect. · <b>🟢 when paper trading on GCP</b></span></div>
+      <div class="steps">
+        <div class="col"><span class="node"></span><h5>Ideation</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">Clean slate — prior ideation closed out.</p></div></div></div>
+        <div class="col"><span class="node"></span><h5>Research</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">No new research while migrating.</p></div></div></div>
+        <div class="col"><span class="node"></span><h5>Backtest</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">No new backtest work on this stream.</p></div></div></div>
+        <div class="col has-prog"><span class="node"></span><h5>Beta/Paper</h5><div class="cards"><div class="card progress"><div class="ct"><span class="cn">Migration pointer</span><span class="chip progress">In progress</span></div><p class="cd">See stream top priority — GCP + IBKR path, not QC.</p></div></div></div>
+        <div class="col"><span class="node"></span><h5>Live Trading</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">QC live retired from this board; no new live sleeve yet.</p></div></div></div>
+      </div>
+    </div>
 
-        <!-- Stream 1 - Broad -->
-        <div class="row-head" role="rowheader">
-          <div class="stream-name">Stream 1 - Broad</div>
-          <span class="rag yellow"><span class="dot" aria-hidden="true">🟡</span> path unclear</span>
-          <div class="stream-aim">Migrate to GCP + IBKR to replace QuantConnect.</div>
-          <div class="stream-aim rag-next">🟢 when paper trading on GCP</div>
-          
-        </div>
-        <div class="cell">
-          <article class="card nostart placeholder">
-            <div class="card-top">
-              <div class="card-name">Not start</div>
-              <span class="pill nostart">Not start</span>
-            </div>
-            <p class="card-desc">Clean slate — prior ideation closed out.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card nostart placeholder">
-            <div class="card-top">
-              <div class="card-name">Not start</div>
-              <span class="pill nostart">Not start</span>
-            </div>
-            <p class="card-desc">No new research while migrating.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card nostart placeholder">
-            <div class="card-top">
-              <div class="card-name">Not start</div>
-              <span class="pill nostart">Not start</span>
-            </div>
-            <p class="card-desc">No new backtest work on this stream.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card progress note">
-            <div class="card-top">
-              <div class="card-name">Migration pointer</div>
-              <span class="pill progress">In progress</span>
-            </div>
-            <p class="card-desc">See stream top priority — GCP + IBKR path, not QC.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card nostart placeholder">
-            <div class="card-top">
-              <div class="card-name">Not start</div>
-              <span class="pill nostart">Not start</span>
-            </div>
-            <p class="card-desc">QC live retired from this board; no new live sleeve yet.</p>
-          </article>
-        </div>
+    <div class="stream">
+      <div class="s-head"><span class="name">Stream 2 — High Beta</span><span class="rag g">🟢 WK08 clear</span><span class="aim">WK08 replaces VT01.</span></div>
+      <div class="steps">
+        <div class="col has-done"><span class="node"></span><h5>Ideation</h5><div class="cards"><div class="card done"><div class="ct"><span class="cn">VT01 thesis</span><span class="chip done">Done</span></div><p class="cd">High-beta flip thesis locked; successor is WK08.</p></div></div></div>
+        <div class="col has-done"><span class="node"></span><h5>Research</h5><div class="cards">
+          <div class="card done"><div class="ct"><span class="cn">regime-trading-signal</span><span class="chip done">Done</span></div><p class="cd">wkcluster HOLD/SELL used by WK08.</p></div>
+          <div class="card done"><div class="ct"><span class="cn">bt-framework 11_volatility</span><span class="chip done">Done</span></div><p class="cd">Lab vol work (VRP/skew/VIX term/VVIX/sector dispersion) — research complete for now.</p></div>
+        </div></div>
+        <div class="col has-prog"><span class="node"></span><h5>Backtest</h5><div class="cards"><div class="card progress"><div class="ct"><span class="cn">WK08</span><span class="chip progress">In progress</span></div><p class="cd">LEAN backtest; table trimmed 23 Aug. Working phase for this stream.</p></div></div></div>
+        <div class="col"><span class="node"></span><h5>Beta/Paper</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">No beta/paper on WK08 yet.</p></div></div></div>
+        <div class="col has-block"><span class="node"></span><h5>Live Trading</h5><div class="cards"><div class="card block"><div class="ct"><span class="cn">old VT01 still live</span><span class="chip block">Block</span></div><p class="cd">Still holds SSO/QLD into downs; not the top priority.</p></div></div></div>
+      </div>
+    </div>
+    <div class="stream">
+      <div class="s-head"><span class="name">Stream 3 — Hot ETFs</span><span class="rag r">🔴 no strong-hold</span><span class="aim">SEC09 replacement that strong-holds leading sectors.</span></div>
+      <div class="steps">
+        <div class="col has-done"><span class="node"></span><h5>Ideation</h5><div class="cards"><div class="card done"><div class="ct"><span class="cn">SEC09 thesis</span><span class="chip done">Done</span></div><p class="cd">Hot-ETF / theme rotator thesis defined; live sleeve failed sticky hold.</p></div></div></div>
+        <div class="col has-prog"><span class="node"></span><h5>Research</h5><div class="cards">
+          <div class="card progress"><div class="ct"><span class="cn">Theme: fg-momentum-topgain</span><span class="chip progress">In progress</span></div><p class="cd">Daily gainer/theme caches — supporting, not top priority.</p></div>
+          <div class="card progress"><div class="ct"><span class="cn">Theme: WK02</span><span class="chip progress">In progress</span></div><p class="cd">Theme day-trade / theme detect — supporting.</p></div>
+          <div class="card progress"><div class="ct"><span class="cn">Theme: fg-daily-report</span><span class="chip progress">In progress</span></div><p class="cd">Stock-score notebook — supporting.</p></div>
+          <div class="card nostart"><div class="ct"><span class="cn">TOP02 = anti-lock-in only</span><span class="chip nostart">Not top-1</span></div><p class="cd">Weekly 21d rotate — not a sticky strong-hold replacement.</p></div>
+        </div></div>
+        <div class="col"><span class="node"></span><h5>Backtest</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">No strong-hold backtest yet.</p></div></div></div>
+        <div class="col"><span class="node"></span><h5>Beta/Paper</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">No beta/paper on a strong-hold sleeve.</p></div></div></div>
+        <div class="col has-block"><span class="node"></span><h5>Live Trading</h5><div class="cards"><div class="card block"><div class="ct"><span class="cn">SEC09 live</span><span class="chip block">Block</span></div><p class="cd">Monthly lock-in / missed sticky Korea-semis. Demoted — not top priority.</p></div></div></div>
+      </div>
+    </div>
 
-        <!-- Stream 2 - High Beta -->
-        <div class="row-head" role="rowheader">
-          <div class="stream-name">Stream 2 - High Beta</div>
-          <span class="rag green"><span class="dot" aria-hidden="true">🟢</span> WK08 clear</span>
-          <div class="stream-aim">WK08 replaces VT01.</div>
-        </div>
-        <div class="cell">
-          <article class="card done">
-            <div class="card-top">
-              <div class="card-name">VT01 thesis</div>
-              <span class="pill done">Done</span>
-            </div>
-            <p class="card-desc">High-beta flip thesis locked; successor is WK08.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card done">
-            <div class="card-top">
-              <div class="card-name">regime-trading-signal</div>
-              <span class="pill done">Done</span>
-            </div>
-            <p class="card-desc">wkcluster HOLD/SELL used by WK08.</p>
-          </article>
-          <article class="card done">
-            <div class="card-top">
-              <div class="card-name">bt-framework 11_volatility</div>
-              <span class="pill done">Done</span>
-            </div>
-            <p class="card-desc">Lab vol work (VRP/skew/VIX term/VVIX/sector dispersion) — research complete for now.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card progress">
-            <div class="card-top">
-              <div class="card-name">WK08</div>
-              <span class="pill progress">In progress</span>
-            </div>
-            <p class="card-desc">LEAN backtest; table trimmed 23 Aug. Working phase for this stream.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card nostart placeholder">
-            <div class="card-top">
-              <div class="card-name">Not start</div>
-              <span class="pill nostart">Not start</span>
-            </div>
-            <p class="card-desc">No beta/paper on WK08 yet.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card block note">
-            <div class="card-top">
-              <div class="card-name">old VT01 still live</div>
-              <span class="pill block">Block</span>
-            </div>
-            <p class="card-desc">Still holds SSO/QLD into downs; not the top priority.</p>
-          </article>
-        </div>
-
-        <!-- Stream 3 - Hot ETFs -->
-        <div class="row-head" role="rowheader">
-          <div class="stream-name">Stream 3 - Hot ETFs</div>
-          <span class="rag red"><span class="dot" aria-hidden="true">🔴</span> no strong-hold</span>
-          <div class="stream-aim">SEC09 replacement that strong-holds leading sectors.</div>
-        </div>
-        <div class="cell">
-          <article class="card done">
-            <div class="card-top">
-              <div class="card-name">SEC09 thesis</div>
-              <span class="pill done">Done</span>
-            </div>
-            <p class="card-desc">Hot-ETF / theme rotator thesis defined; live sleeve failed sticky hold.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card progress">
-            <div class="card-top">
-              <div class="card-name">Theme: fg-momentum-topgain</div>
-              <span class="pill progress">In progress</span>
-            </div>
-            <p class="card-desc">Daily gainer/theme caches — supporting, not top priority.</p>
-          </article>
-          <article class="card progress">
-            <div class="card-top">
-              <div class="card-name">Theme: WK02</div>
-              <span class="pill progress">In progress</span>
-            </div>
-            <p class="card-desc">Theme day-trade / theme detect — supporting.</p>
-          </article>
-          <article class="card progress">
-            <div class="card-top">
-              <div class="card-name">Theme: fg-daily-report</div>
-              <span class="pill progress">In progress</span>
-            </div>
-            <p class="card-desc">Stock-score notebook — supporting.</p>
-          </article>
-          <article class="card note nostart">
-            <div class="card-top">
-              <div class="card-name">TOP02 = anti-lock-in only</div>
-              <span class="pill nostart">Not top-1</span>
-            </div>
-            <p class="card-desc">Weekly 21d rotate — not a sticky strong-hold replacement.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card nostart placeholder">
-            <div class="card-top">
-              <div class="card-name">Not start</div>
-              <span class="pill nostart">Not start</span>
-            </div>
-            <p class="card-desc">No strong-hold backtest yet.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card nostart placeholder">
-            <div class="card-top">
-              <div class="card-name">Not start</div>
-              <span class="pill nostart">Not start</span>
-            </div>
-            <p class="card-desc">No beta/paper on a strong-hold sleeve.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card block note">
-            <div class="card-top">
-              <div class="card-name">SEC09 live</div>
-              <span class="pill block">Block</span>
-            </div>
-            <p class="card-desc">Monthly lock-in / missed sticky Korea-semis. Demoted — not top priority.</p>
-          </article>
-        </div>
-
-        <!-- Stream 4 - Momentum Stocks -->
-        <div class="row-head" role="rowheader">
-          <div class="stream-name">Stream 4 - Momentum Stocks</div>
-          <span class="rag red"><span class="dot" aria-hidden="true">🔴</span> nothing close</span>
-          <div class="stream-aim">Find a working momentum / breakout.</div>
-        </div>
-        <div class="cell">
-          <article class="card nostart placeholder">
-            <div class="card-top">
-              <div class="card-name">Not start</div>
-              <span class="pill nostart">Not start</span>
-            </div>
-            <p class="card-desc">No locked thesis for a working sleeve.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card progress note">
-            <div class="card-top">
-              <div class="card-name">Early exploration</div>
-              <span class="pill progress">In progress</span>
-            </div>
-            <p class="card-desc">Same top-priority hunt — strip confidence; nothing close.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card nostart placeholder">
-            <div class="card-top">
-              <div class="card-name">Not start</div>
-              <span class="pill nostart">Not start</span>
-            </div>
-            <p class="card-desc">Not backtest-ready.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card nostart placeholder">
-            <div class="card-top">
-              <div class="card-name">Not start</div>
-              <span class="pill nostart">Not start</span>
-            </div>
-            <p class="card-desc">No paper sleeve.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card block note">
-            <div class="card-top">
-              <div class="card-name">MO01 lagging</div>
-              <span class="pill block">Block</span>
-            </div>
-            <p class="card-desc">Old live sleeve; late entries. Not the path.</p>
-          </article>
-        </div>
-
-        <!-- Stream 5 - News LLM -->
-        <div class="row-head" role="rowheader">
-          <div class="stream-name">Stream 5 - News LLM</div>
-          <span class="rag green"><span class="dot" aria-hidden="true">🟢</span> 4-sleeve path</span>
-          <div class="stream-aim">Forward-test live signals.</div>
-        </div>
-        <div class="cell">
-          <article class="card done">
-            <div class="card-top">
-              <div class="card-name">4-sleeve QQQ news overlay</div>
-              <span class="pill done">Done</span>
-            </div>
-            <p class="card-desc">crash + llm + ppx books (ppx2 killed 20 Aug). Book-level majority, not raw model count.</p>
-          </article>
-        </div>
-
-        <div class="cell">
-          <article class="card progress">
-            <div class="card-top">
-              <div class="card-name">news-trader-crash-live</div>
-              <span class="pill progress">In progress</span>
-            </div>
-            <p class="card-desc">Drop-gated. Only asks if QQQ already down 0.5%; else HOLD.</p>
-          </article>
-          <article class="card progress">
-            <div class="card-top">
-              <div class="card-name">news-trader-llm-live</div>
-              <span class="pill progress">In progress</span>
-            </div>
-            <p class="card-desc">HOLD-biased on purpose (bull-tape prior).</p>
-          </article>
-          <article class="card progress">
-            <div class="card-top">
-              <div class="card-name">news-trader-ppx-live</div>
-              <span class="pill progress">In progress</span>
-            </div>
-            <p class="card-desc">Live web search; kept. glm/sol/terra/mimo pack.</p>
-          </article>
-          <article class="card block">
-            <div class="card-top">
-              <div class="card-name">news-trader-ppx2-live</div>
-              <span class="pill block">Block</span>
-            </div>
-            <p class="card-desc">Killed 20 Aug — keep ppx. Frozen dump, no search (2/5 real downs vs ppx 4/5).</p>
-          </article>
-          <article class="card progress note">
-            <div class="card-top">
-              <div class="card-name">Signal-edge rule</div>
-              <span class="pill progress">In progress</span>
-            </div>
-            <p class="card-desc">Session counts only if |QQQ| ≥ 0.5%. SELL on those drops, HOLD on those rises.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card progress">
-            <div class="card-top">
-              <div class="card-name">Frozen 4-sleeve rule</div>
-              <span class="pill progress">In progress</span>
-            </div>
-            <p class="card-desc">SELL iff SELL&gt;HOLD. TQQQ if 3 HOLD; SQQQ if 3 SELL; QQQ if 2/1; cash if 2/1 reverse. Frozen 20 Aug.</p>
-          </article>
-          <article class="card progress">
-            <div class="card-top">
-              <div class="card-name">Aug window 08-03–08-20</div>
-              <span class="pill progress">In progress</span>
-            </div>
-            <p class="card-desc">n=27: book +14.6% vs QQQ ~+3.3% vs dummy +6.9%. SQQQ unused in August.</p>
-          </article>
-          <article class="card progress">
-            <div class="card-top">
-              <div class="card-name">July reverse test 07-06–07-30</div>
-              <span class="pill progress">In progress</span>
-            </div>
-            <p class="card-desc">n=35: book +7.5% vs QQQ −6.4% vs dummy −11.3%. First SQQQ 07-20.</p>
-          </article>
-          <article class="card progress note">
-            <div class="card-top">
-              <div class="card-name">Edge status</div>
-              <span class="pill progress">In progress</span>
-            </div>
-            <p class="card-desc">Hinted, not confirmed (~60 sess). Need another ugly month + calm month. Bar = no-signal dummy.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card progress">
-            <div class="card-top">
-              <div class="card-name">Walk-forward paper</div>
-              <span class="pill progress">In progress</span>
-            </div>
-            <p class="card-desc">Rule frozen 20 Aug; walk-forward from 08-19. First 3-book SELL 08-20 afternoon. Supporting the stream top-priority forward test.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card nostart placeholder">
-            <div class="card-top">
-              <div class="card-name">Not start</div>
-              <span class="pill nostart">Not start</span>
-            </div>
-            <p class="card-desc">Signals generate; no live 4-sleeve execution yet.</p>
-          </article>
-        </div>
+    <div class="stream">
+      <div class="s-head"><span class="name">Stream 4 — Momentum Stocks</span><span class="rag r">🔴 nothing close</span><span class="aim">Find a working momentum / breakout.</span></div>
+      <div class="steps">
+        <div class="col"><span class="node"></span><h5>Ideation</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">No locked thesis for a working sleeve.</p></div></div></div>
+        <div class="col has-prog"><span class="node"></span><h5>Research</h5><div class="cards"><div class="card progress"><div class="ct"><span class="cn">Early exploration</span><span class="chip progress">In progress</span></div><p class="cd">Same top-priority hunt — strip confidence; nothing close.</p></div></div></div>
+        <div class="col"><span class="node"></span><h5>Backtest</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">Not backtest-ready.</p></div></div></div>
+        <div class="col"><span class="node"></span><h5>Beta/Paper</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">No paper sleeve.</p></div></div></div>
+        <div class="col has-block"><span class="node"></span><h5>Live Trading</h5><div class="cards"><div class="card block"><div class="ct"><span class="cn">MO01 lagging</span><span class="chip block">Block</span></div><p class="cd">Old live sleeve; late entries. Not the path.</p></div></div></div>
+      </div>
+    </div>
+    <div class="stream">
+      <div class="s-head"><span class="name">Stream 5 — News LLM</span><span class="rag g">🟢 4-sleeve path</span><span class="aim">Forward-test live signals.</span></div>
+      <div class="steps">
+        <div class="col has-done"><span class="node"></span><h5>Ideation</h5><div class="cards"><div class="card done"><div class="ct"><span class="cn">4-sleeve QQQ news overlay</span><span class="chip done">Done</span></div><p class="cd">crash + llm + ppx books (ppx2 killed 20 Aug). Book-level majority, not raw model count.</p></div></div></div>
+        <div class="col has-prog"><span class="node"></span><h5>Research</h5><div class="cards">
+          <div class="card progress"><div class="ct"><span class="cn">news-trader-crash-live</span><span class="chip progress">In progress</span></div><p class="cd">Drop-gated. Only asks if QQQ already down 0.5%; else HOLD.</p></div>
+          <div class="card progress"><div class="ct"><span class="cn">news-trader-llm-live</span><span class="chip progress">In progress</span></div><p class="cd">HOLD-biased on purpose (bull-tape prior).</p></div>
+          <div class="card progress"><div class="ct"><span class="cn">news-trader-ppx-live</span><span class="chip progress">In progress</span></div><p class="cd">Live web search; kept. glm/sol/terra/mimo pack.</p></div>
+          <div class="card block"><div class="ct"><span class="cn">news-trader-ppx2-live</span><span class="chip block">Block</span></div><p class="cd">Killed 20 Aug — keep ppx. Frozen dump, no search (2/5 real downs vs ppx 4/5).</p></div>
+          <div class="card progress"><div class="ct"><span class="cn">Signal-edge rule</span><span class="chip progress">In progress</span></div><p class="cd">Session counts only if |QQQ| ≥ 0.5%. SELL on those drops, HOLD on those rises.</p></div>
+        </div></div>
+        <div class="col has-prog"><span class="node"></span><h5>Backtest</h5><div class="cards">
+          <div class="card progress"><div class="ct"><span class="cn">Frozen 4-sleeve rule</span><span class="chip progress">In progress</span></div><p class="cd">SELL iff SELL&gt;HOLD. TQQQ if 3 HOLD; SQQQ if 3 SELL; QQQ if 2/1; cash if 2/1 reverse. Frozen 20 Aug.</p></div>
+          <div class="card progress"><div class="ct"><span class="cn">Aug window 08-03–08-20</span><span class="chip progress">In progress</span></div><p class="cd">n=27: book +14.6% vs QQQ ~+3.3% vs dummy +6.9%. SQQQ unused in August.</p></div>
+          <div class="card progress"><div class="ct"><span class="cn">July reverse test 07-06–07-30</span><span class="chip progress">In progress</span></div><p class="cd">n=35: book +7.5% vs QQQ −6.4% vs dummy −11.3%. First SQQQ 07-20.</p></div>
+          <div class="card progress"><div class="ct"><span class="cn">Edge status</span><span class="chip progress">In progress</span></div><p class="cd">Hinted, not confirmed (~60 sess). Need another ugly month + calm month. Bar = no-signal dummy.</p></div>
+        </div></div>
+        <div class="col has-prog"><span class="node"></span><h5>Beta/Paper</h5><div class="cards"><div class="card progress"><div class="ct"><span class="cn">Walk-forward paper</span><span class="chip progress">In progress</span></div><p class="cd">Rule frozen 20 Aug; walk-forward from 08-19. First 3-book SELL 08-20 afternoon. Supporting the stream top-priority forward test.</p></div></div></div>
+        <div class="col"><span class="node"></span><h5>Live Trading</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">Signals generate; no live 4-sleeve execution yet.</p></div></div></div>
       </div>
     </div>
   </section>
 
-  <!-- GROUP B: Cloud infra -->
-  <section class="group" aria-labelledby="group-cloud">
-    <h2 class="group-title" id="group-cloud">Cloud infra</h2>
-    <div class="board-wrap">
-      <div class="board cloud" role="table" aria-label="Cloud infra kanban">
-        <div class="corner" role="columnheader"></div>
-        <div class="col-head" role="columnheader">Development</div>
-        <div class="col-head" role="columnheader">Beta Testing</div>
-        <div class="col-head" role="columnheader">Live</div>
+  <section class="group">
+    <h2>Cloud infra</h2>
 
-        <!-- Cloud Stream 1 - GCP -->
-        <div class="row-head" role="rowheader">
-          <div class="stream-name">Stream 1 - GCP</div>
-          <span class="rag yellow"><span class="dot" aria-hidden="true">🟡</span> cloud unfinished</span>
-          <div class="stream-aim">Stand up GCP for hosting and paper trade.</div>
-        </div>
-        <div class="cell">
-          <article class="card progress">
-            <div class="card-top">
-              <div class="card-name">ibkr-gcp</div>
-              <span class="pill progress">In progress</span>
-            </div>
-            <p class="card-desc">GCP project, bootstrap script, Deploy VM / Deploy Cloud Function Actions, machine-type update 20 Aug. README checklist still unchecked boxes.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card nostart placeholder">
-            <div class="card-top">
-              <div class="card-name">Not start</div>
-              <span class="pill nostart">Not start</span>
-            </div>
-            <p class="card-desc">Beta testing not started.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card nostart placeholder">
-            <div class="card-top">
-              <div class="card-name">Not start</div>
-              <span class="pill nostart">Not start</span>
-            </div>
-            <p class="card-desc">Not live.</p>
-          </article>
-        </div>
+    <div class="stream">
+      <div class="s-head"><span class="name">Stream 1 — GCP</span><span class="rag y">🟡 cloud unfinished</span><span class="aim">Stand up GCP for hosting and paper trade.</span></div>
+      <div class="steps cloud">
+        <div class="col has-prog"><span class="node"></span><h5>Development</h5><div class="cards"><div class="card progress"><div class="ct"><span class="cn">ibkr-gcp</span><span class="chip progress">In progress</span></div><p class="cd">GCP project, bootstrap script, Deploy VM / Deploy Cloud Function Actions, machine-type update 20 Aug. README checklist still unchecked boxes.</p></div></div></div>
+        <div class="col"><span class="node"></span><h5>Beta Testing</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">Beta testing not started.</p></div></div></div>
+        <div class="col"><span class="node"></span><h5>Live</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">Not live.</p></div></div></div>
+      </div>
+    </div>
 
-        <!-- Cloud Stream 2 - IBKR Connection -->
-        <div class="row-head" role="rowheader">
-          <div class="stream-name">Stream 2 - IBKR Connection</div>
-          <span class="rag yellow"><span class="dot" aria-hidden="true">🟡</span> broker unfinished</span>
-          <div class="stream-aim">Connect IBKR for paper / live.</div>
-        </div>
-        <div class="cell">
-          <article class="card progress">
-            <div class="card-top">
-              <div class="card-name">IB Gateway + CF + YubiKey GUI</div>
-              <span class="pill progress">In progress</span>
-            </div>
-            <p class="card-desc">IB Gateway VM, balance Cloud Function for IB account, Windows YubiKey GUI (IbkrGwGui); user must log in to Gateway themselves. Last work 19–20 Aug (YubiKey GUI, startup script, proxy env).</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card nostart placeholder">
-            <div class="card-top">
-              <div class="card-name">Not start</div>
-              <span class="pill nostart">Not start</span>
-            </div>
-            <p class="card-desc">Balance fetch exists but algo trading through this path is not confirmed.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card nostart placeholder">
-            <div class="card-top">
-              <div class="card-name">Not start</div>
-              <span class="pill nostart">Not start</span>
-            </div>
-            <p class="card-desc">Not live.</p>
-          </article>
-        </div>
+    <div class="stream">
+      <div class="s-head"><span class="name">Stream 2 — IBKR Connection</span><span class="rag y">🟡 broker unfinished</span><span class="aim">Connect IBKR for paper / live.</span></div>
+      <div class="steps cloud">
+        <div class="col has-prog"><span class="node"></span><h5>Development</h5><div class="cards"><div class="card progress"><div class="ct"><span class="cn">IB Gateway + CF + YubiKey GUI</span><span class="chip progress">In progress</span></div><p class="cd">IB Gateway VM, balance Cloud Function for IB account, Windows YubiKey GUI (IbkrGwGui); user must log in to Gateway themselves. Last work 19–20 Aug (YubiKey GUI, startup script, proxy env).</p></div></div></div>
+        <div class="col"><span class="node"></span><h5>Beta Testing</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">Balance fetch exists but algo trading through this path is not confirmed.</p></div></div></div>
+        <div class="col"><span class="node"></span><h5>Live</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">Not live.</p></div></div></div>
+      </div>
+    </div>
 
-        <!-- Cloud Stream 3 - Alpaca Connection -->
-        <div class="row-head" role="rowheader">
-          <div class="stream-name">Stream 3 - Alpaca Connection</div>
-          <span class="rag white"><span class="dot" aria-hidden="true">⚪</span> not started</span>
-          <div class="stream-aim">Connect Alpaca.</div>
-        </div>
-        <div class="cell">
-          <article class="card nostart placeholder">
-            <div class="card-top">
-              <div class="card-name">Not start</div>
-              <span class="pill nostart">Not start</span>
-            </div>
-            <p class="card-desc">No alpaca repo work yet.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card nostart placeholder">
-            <div class="card-top">
-              <div class="card-name">Not start</div>
-              <span class="pill nostart">Not start</span>
-            </div>
-            <p class="card-desc">No alpaca repo work yet.</p>
-          </article>
-        </div>
-        <div class="cell">
-          <article class="card nostart placeholder">
-            <div class="card-top">
-              <div class="card-name">Not start</div>
-              <span class="pill nostart">Not start</span>
-            </div>
-            <p class="card-desc">No alpaca repo work yet.</p>
-          </article>
-        </div>
+    <div class="stream">
+      <div class="s-head"><span class="name">Stream 3 — Alpaca Connection</span><span class="rag w">⚪ not started</span><span class="aim">Connect Alpaca.</span></div>
+      <div class="steps cloud">
+        <div class="col"><span class="node"></span><h5>Development</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">No alpaca repo work yet.</p></div></div></div>
+        <div class="col"><span class="node"></span><h5>Beta Testing</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">No alpaca repo work yet.</p></div></div></div>
+        <div class="col"><span class="node"></span><h5>Live</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">No alpaca repo work yet.</p></div></div></div>
       </div>
     </div>
   </section>
-
-  <footer class="footer">
-    Updated 24 Aug 2026 HKT · source: ncelq GitHub
-  </footer>
+  <footer class="footer">Updated 24 Aug 2026 HKT · source: ncelq GitHub</footer>
 </div>
 </body>
 </html>
