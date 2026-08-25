@@ -167,16 +167,12 @@ header.top .sub b{color:var(--ink)}
           <div class="card block"><div class="ct"><span class="cn">news-trader-ppx2-live</span><span class="chip block">Block</span></div><p class="cd">Killed 20 Aug — keep ppx. Frozen dump, no search (2/5 real downs vs ppx 4/5).</p></div>
           <div class="card done"><div class="ct"><span class="cn">Signal-edge rule</span><span class="chip done">Done</span></div><p class="cd">Session counts only if |QQQ| ≥ 0.5%. SELL on those drops, HOLD on those rises.</p></div>
         </div></div>
-        <div class="col has-prog"><span class="node"></span><h5>Backtest</h5><div class="cards">
-          <div class="card progress"><div class="ct"><span class="cn">Frozen 4-sleeve rule</span><span class="chip progress">In progress</span></div><p class="cd">SELL iff SELL&gt;HOLD. TQQQ if 3 HOLD; SQQQ if 3 SELL; QQQ if 2/1; cash if 2/1 reverse. Frozen 20 Aug. Keep crash+llm+ppx / Book Q on QQQ.</p></div>
-          <div class="card progress"><div class="ct"><span class="cn">VOO instead of QQQ on 2H/1S</span><span class="chip progress">In progress</span></div><p class="cd">Wash. Combined n=15 QQQ +0.26% vs VOO +0.16%; stitched book almost identical. Keep Book Q / QQQ.</p></div>
-          <div class="card progress"><div class="ct"><span class="cn">Aug window 08-03–08-20</span><span class="chip progress">In progress</span></div><p class="cd">n=27: book +14.6% vs QQQ ~+3.3% vs dummy +6.9%. SQQQ unused in August.</p></div>
-          <div class="card progress"><div class="ct"><span class="cn">July reverse test 07-06–07-30</span><span class="chip progress">In progress</span></div><p class="cd">n=35: book +7.5% vs QQQ −6.4% vs dummy −11.3%. First SQQQ 07-20.</p></div>
-          <div class="card progress"><div class="ct"><span class="cn">Edge status</span><span class="chip progress">In progress</span></div><p class="cd">Hinted, not confirmed (~60 sess). Need another ugly month + calm month. Bar = no-signal dummy.</p></div>
-        </div></div>
+        <div class="col"><span class="node"></span><h5>Backtest</h5><div class="cards"></div></div>
         <div class="col has-prog"><span class="node"></span><h5>Beta/Paper</h5><div class="cards">
-          <div class="card progress"><div class="ct"><span class="cn">Walk-forward paper</span><span class="chip progress">In progress</span></div><p class="cd">Rule frozen 20 Aug; walk-forward from 08-19. First 3-book SELL 08-20 afternoon. Supporting the stream top-priority forward test. 24 Aug pre-market files landed (crash/llm/ppx; ppx2 still killed). Pre-market still arrives after the 9:30 ET open.</p></div>
-          <div class="card progress"><div class="ct"><span class="cn">File timing vs open</span><span class="chip progress">In progress</span></div><p class="cd">Pre-market files land after the 9:30 ET open (~9:33–9:45), so cash-session book may not be tradable as simulated. Overnight files ~3:40 usable into the close.</p></div>
+          <div class="card progress"><div class="ct"><span class="cn">TQQQ</span><span class="chip progress">In progress</span></div><p class="cd">Paper. Tape 11/30 (8 hits; Wilson gate 21/30). CONFIRMING. 8/11 on |QQQ|≥0.5% days. Not proven.</p></div>
+          <div class="card progress"><div class="ct"><span class="cn">VOO / QQQ</span><span class="chip progress">In progress</span></div><p class="cd">Paper. Tape 12/30 (6 hits; gate 21/30). CONFIRMING. Same 2H/1S days. Aug n=31 Book Q +15.2% vs Book V +16.0%. Keep Q.</p></div>
+          <div class="card progress"><div class="ct"><span class="cn">Cash</span><span class="chip progress">In progress</span></div><p class="cd">Paper. Tape 13/30 (11 hits; gate 21/30). CONFIRMING. 11/13 tape hits. Not proven.</p></div>
+          <div class="card progress"><div class="ct"><span class="cn">SQQQ</span><span class="chip progress">In progress</span></div><p class="cd">Paper. Tape 5/30 (3 hits; gate 21/30). CONFIRMING. First Aug prints: 08-20 night −1.68%, 08-21 cash +0.80%, 08-24 cash +1.39%.</p></div>
         </div></div>
         <div class="col"><span class="node"></span><h5>Live Trading</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">Signals generate; no live 4-sleeve execution yet.</p></div></div></div>
       </div>
