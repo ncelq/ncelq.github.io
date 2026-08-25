@@ -110,8 +110,8 @@ header.top .sub b{color:var(--ink)}
       <div class="steps">
         <div class="col"><span class="node"></span><h5>Ideation</h5><div class="cards"></div></div>
         <div class="col"><span class="node"></span><h5>Research</h5><div class="cards"></div></div>
-        <div class="col"><span class="node"></span><h5>Backtest</h5><div class="cards"></div></div>
-        <div class="col has-prog"><span class="node"></span><h5>Beta/Paper</h5><div class="cards"><div class="card progress"><div class="ct"><span class="cn">Migration pointer</span><span class="chip progress">In progress</span></div><p class="cd">See stream top priority — GCP + IBKR path, not QC.</p></div></div></div>
+        <div class="col has-done"><span class="node"></span><h5>Backtest</h5><div class="cards"><div class="card done"><div class="ct"><span class="cn">allocate() golden</span><span class="chip done">Done</span></div><p class="cd">Matches ETF01 risk-parity × 35% vol-target on SPMO/GLDM/IYW (golden weights).</p></div></div></div>
+        <div class="col has-prog"><span class="node"></span><h5>Beta/Paper</h5><div class="cards"><div class="card progress"><div class="ct"><span class="cn">algo-etf01</span><span class="chip progress">In progress</span></div><p class="cd">Off-QC one-shot IBKR rebalance. Broad-market migrate path. Not paper on GCP yet.</p></div></div></div>
         <div class="col"><span class="node"></span><h5>Live Trading</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">QC live retired from this board; no new live sleeve yet.</p></div></div></div>
       </div>
     </div>
@@ -185,7 +185,10 @@ header.top .sub b{color:var(--ink)}
     <div class="stream">
       <div class="s-head"><span class="name">Stream 1 — GCP</span><span class="rag y">🟡 cloud unfinished</span><span class="aim">Stand up GCP for hosting and paper trade.</span></div>
       <div class="steps cloud">
-        <div class="col has-prog"><span class="node"></span><h5>Development</h5><div class="cards"><div class="card progress"><div class="ct"><span class="cn">ibkr-gcp</span><span class="chip progress">In progress</span></div><p class="cd">GCP project, bootstrap script, Deploy VM / Deploy Cloud Function Actions, machine-type update 20 Aug. README checklist still unchecked boxes.</p></div></div></div>
+        <div class="col has-prog"><span class="node"></span><h5>Development</h5><div class="cards">
+          <div class="card progress"><div class="ct"><span class="cn">ibkr-gcp</span><span class="chip progress">In progress</span></div><p class="cd">GCP project, bootstrap script, Deploy VM / Deploy Cloud Function Actions, machine-type update 20 Aug. README checklist still unchecked boxes.</p></div>
+          <div class="card progress"><div class="ct"><span class="cn">algo-etf01 showcase</span><span class="chip progress">In progress</span></div><p class="cd">First algo on the GCP path. ETF01 replica job. Showcase for this stream.</p></div>
+        </div></div>
         <div class="col"><span class="node"></span><h5>Beta Testing</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">Beta testing not started.</p></div></div></div>
         <div class="col"><span class="node"></span><h5>Live</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">Not live.</p></div></div></div>
       </div>
