@@ -90,7 +90,7 @@ header.top .sub b{color:var(--ink)}
   <header class="top">
     <div>
       <h1>2moon</h1>
-      <p class="sub">Status as of <b>26 Aug 2026 HKT · refreshed ~23:35</b> · 8 streams across 2 groups</p>
+      <p class="sub">Status as of <b>28 Aug 2026 HKT</b> · 8 streams across 2 groups</p>
     </div>
     <div>
       <div class="legend">
@@ -106,12 +106,12 @@ header.top .sub b{color:var(--ink)}
     <h2>Algo development</h2>
 
     <div class="stream">
-      <div class="s-head"><span class="name">Stream 1 — Broad</span><span class="rag y">🟡 path unclear</span><span class="aim">Migrate to GCP + IBKR to replace QuantConnect. · <b>🟢 when paper trading on GCP</b></span></div>
+      <div class="s-head"><span class="name">Stream 1 — Broad</span><span class="rag g">🟢 paper on GCP</span><span class="aim">Paper-watch algo-etf01 after first successful cloud paper run.</span></div>
       <div class="steps">
         <div class="col"><span class="node"></span><h5>Ideation</h5><div class="cards"></div></div>
         <div class="col"><span class="node"></span><h5>Research</h5><div class="cards"></div></div>
         <div class="col has-done"><span class="node"></span><h5>Backtest</h5><div class="cards"><div class="card done"><div class="ct"><span class="cn">allocate() golden</span><span class="chip done">Done</span></div><p class="cd">Matches ETF01 risk-parity × 35% vol-target on SPMO/GLDM/IYW (golden weights).</p></div></div></div>
-        <div class="col has-prog"><span class="node"></span><h5>Beta/Paper</h5><div class="cards"><div class="card progress"><div class="ct"><span class="cn">algo-etf01</span><span class="chip progress">In progress</span></div><p class="cd">Off-QC one-shot IBKR rebalance. Now consumes algo-trading-lib (lib/ibkr). QC snapshot tests for allocate() parity 26 Aug. Not paper on GCP yet.</p></div></div></div>
+        <div class="col has-prog"><span class="node"></span><h5>Beta/Paper</h5><div class="cards"><div class="card progress"><div class="ct"><span class="cn">algo-etf01</span><span class="chip progress">In progress</span></div><p class="cd">First cloud paper rebalance succeeded 28 Aug (IB paper). Consumes algo-trading-lib. Watch through 4 Sep. Not live.</p></div></div></div>
         <div class="col"><span class="node"></span><h5>Live Trading</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">QC live retired from this board; no new live sleeve yet.</p></div></div></div>
       </div>
     </div>
@@ -187,9 +187,9 @@ header.top .sub b{color:var(--ink)}
       <div class="steps cloud">
         <div class="col has-prog"><span class="node"></span><h5>Development</h5><div class="cards">
           <div class="card progress"><div class="ct"><span class="cn">ibkr-gcp</span><span class="chip progress">In progress</span></div><p class="cd">GCP project, bootstrap script, Deploy VM / Deploy Cloud Function Actions, machine-type update 20 Aug. README checklist still unchecked boxes.</p></div>
-          <div class="card progress"><div class="ct"><span class="cn">algo-etf01 showcase</span><span class="chip progress">In progress</span></div><p class="cd">First algo on the GCP path. ETF01 replica job. Showcase for this stream. Wired to algo-trading-lib 26 Aug. Still not paper.</p></div>
+          <div class="card progress"><div class="ct"><span class="cn">algo-etf01 showcase</span><span class="chip progress">In progress</span></div><p class="cd">First algo on the GCP path. First cloud paper run succeeded 28 Aug. Showcase for this stream. Consumes algo-trading-lib.</p></div>
         </div></div>
-        <div class="col"><span class="node"></span><h5>Beta Testing</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">Beta testing not started.</p></div></div></div>
+        <div class="col has-prog"><span class="node"></span><h5>Beta Testing</h5><div class="cards"><div class="card progress"><div class="ct"><span class="cn">algo-etf01 paper</span><span class="chip progress">In progress</span></div><p class="cd">First successful cloud paper run 28 Aug. One-week observe. Not live.</p></div></div></div>
         <div class="col"><span class="node"></span><h5>Live</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">Not live.</p></div></div></div>
       </div>
     </div>
