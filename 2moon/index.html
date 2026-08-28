@@ -106,12 +106,12 @@ header.top .sub b{color:var(--ink)}
     <h2>Algo development</h2>
 
     <div class="stream">
-      <div class="s-head"><span class="name">Stream 1 — Broad</span><span class="rag g">🟢 paper on GCP</span><span class="aim">Paper-watch algo-etf01 after first successful cloud paper run.</span></div>
+      <div class="s-head"><span class="name">Stream 1 — Broad</span><span class="rag g">🟢 paper on GCP</span><span class="aim">Beta complete. Not live.</span></div>
       <div class="steps">
         <div class="col"><span class="node"></span><h5>Ideation</h5><div class="cards"></div></div>
         <div class="col"><span class="node"></span><h5>Research</h5><div class="cards"></div></div>
         <div class="col has-done"><span class="node"></span><h5>Backtest</h5><div class="cards"><div class="card done"><div class="ct"><span class="cn">allocate() golden</span><span class="chip done">Done</span></div><p class="cd">Matches ETF01 risk-parity × 35% vol-target on SPMO/GLDM/IYW (golden weights).</p></div></div></div>
-        <div class="col has-prog"><span class="node"></span><h5>Beta/Paper</h5><div class="cards"><div class="card progress"><div class="ct"><span class="cn">algo-etf01</span><span class="chip progress">In progress</span></div><p class="cd">First cloud paper rebalance succeeded 28 Aug (IB paper). Consumes algo-trading-lib. Watch through 4 Sep. Not live.</p></div></div></div>
+        <div class="col has-done"><span class="node"></span><h5>Beta/Paper</h5><div class="cards"><div class="card done"><div class="ct"><span class="cn">algo-etf01</span><span class="chip done">Done</span></div><p class="cd">Cloud paper path completed 28 Aug (IB paper). Consumes algo-trading-lib. Not live.</p></div></div></div>
         <div class="col"><span class="node"></span><h5>Live Trading</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">QC live retired from this board; no new live sleeve yet.</p></div></div></div>
       </div>
     </div>
@@ -165,10 +165,10 @@ header.top .sub b{color:var(--ink)}
         </div></div>
         <div class="col"><span class="node"></span><h5>Backtest</h5><div class="cards"></div></div>
         <div class="col has-prog"><span class="node"></span><h5>Beta/Paper</h5><div class="cards">
-          <div class="card progress"><div class="ct"><span class="cn">TQQQ 🟢</span><span class="chip progress">In progress</span></div><p class="cd">Paper. Tape 11/30 (8 hits; gate 21/30). CONFIRMING. Projects ≥21/30. Aug n=33 Book Q +15.7%.</p></div>
-          <div class="card progress"><div class="ct"><span class="cn">QQQ 🔴</span><span class="chip progress">In progress</span></div><p class="cd">Paper. Tape 13/30 (7 hits; gate 21/30). CONFIRMING. Rate ≤55% with n≥8; projects fail 21/30. Unlevered is QQQ.</p></div>
+          <div class="card progress"><div class="ct"><span class="cn">TQQQ 🟢</span><span class="chip progress">In progress</span></div><p class="cd">Paper. Tape 12/30 (9 hits; gate 21/30). CONFIRMING. Projects ≥21/30. Book Q Aug n=38 +19.0% vs QQQ +4.6%. Mix TQQQ 19 / QQQ 11 / cash 5 / SQQQ 3.</p></div>
+          <div class="card progress"><div class="ct"><span class="cn">QQQ 🟡</span><span class="chip progress">In progress</span></div><p class="cd">Paper. Tape 14/30 (8 hits; gate 21/30). CONFIRMING. n≥8 ~60% mud. Unlevered is QQQ. 08-28 cash not scored.</p></div>
           <div class="card progress"><div class="ct"><span class="cn">Cash 🟢</span><span class="chip progress">In progress</span></div><p class="cd">Paper. Tape 13/30 (11 hits; gate 21/30). CONFIRMING. Projects ≥21/30.</p></div>
-          <div class="card progress"><div class="ct"><span class="cn">SQQQ 🟡</span><span class="chip progress">In progress</span></div><p class="cd">Paper. Tape 5/30 (3 hits; gate 21/30). CONFIRMING. ~60% mud or n&lt;8. Mix n=33: TQQQ 16 / QQQ 9 / cash 5 / SQQQ 3.</p></div>
+          <div class="card progress"><div class="ct"><span class="cn">SQQQ ⚪</span><span class="chip progress">In progress</span></div><p class="cd">Paper. Tape 5/30 (3 hits; gate 21/30). CONFIRMING. n&lt;8, cannot estimate. Do not flip to 🟡 or 🔴.</p></div>
         </div></div>
         <div class="col"><span class="node"></span><h5>Live Trading</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">Signals generate; no live 4-sleeve execution yet.</p></div></div></div>
       </div>
@@ -179,13 +179,13 @@ header.top .sub b{color:var(--ink)}
     <h2>Cloud infra</h2>
 
     <div class="stream">
-      <div class="s-head"><span class="name">Stream 1 — GCP</span><span class="rag g">🟢 paper path up</span><span class="aim">GCP hosting + paper trade is up. Beta with algo-etf01.</span></div>
+      <div class="s-head"><span class="name">Stream 1 — GCP</span><span class="rag g">🟢 paper path up</span><span class="aim">GCP paper Beta complete. Not live.</span></div>
       <div class="steps cloud">
         <div class="col has-done"><span class="node"></span><h5>Development</h5><div class="cards">
           <div class="card done"><div class="ct"><span class="cn">ibkr-gcp</span><span class="chip done">Done</span></div><p class="cd">GCP stand-up complete (project, bootstrap, Deploy VM / Deploy Cloud Function). Phase closed; work moved to Beta.</p></div>
           <div class="card done"><div class="ct"><span class="cn">algo-etf01 showcase</span><span class="chip done">Done</span></div><p class="cd">First algo on the GCP path. Development closed. Paper run is tracked under Beta with Stream 1 Broad.</p></div>
         </div></div>
-        <div class="col has-prog"><span class="node"></span><h5>Beta Testing</h5><div class="cards"><div class="card progress"><div class="ct"><span class="cn">algo-etf01 paper</span><span class="chip progress">In progress</span></div><p class="cd">First successful cloud paper run 28 Aug (IB paper). Shared Beta with Stream 1 Broad. Watch through 4 Sep. Not live.</p></div></div></div>
+        <div class="col has-done"><span class="node"></span><h5>Beta Testing</h5><div class="cards"><div class="card done"><div class="ct"><span class="cn">algo-etf01 paper</span><span class="chip done">Done</span></div><p class="cd">Beta complete 28 Aug. Shared with Stream 1 Broad. Not live.</p></div></div></div>
         <div class="col"><span class="node"></span><h5>Live</h5><div class="cards"><div class="card nostart"><div class="ct"><span class="cn">Not start</span><span class="chip nostart">Not start</span></div><p class="cd">Not live.</p></div></div></div>
       </div>
     </div>
