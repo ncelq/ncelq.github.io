@@ -1,0 +1,4109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Today's Gainer Stories · 20260829</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Sand B1 Whisper: #F2E2BA + light brown/grey, light catalysts & story highlights */
+:root {
+  --sand: #F2E2BA;
+  --bg: #F0EFEC;
+  --bg-wash: #F7F1E4;
+  --panel: #FBFAF8;
+  --ink: #3C3A36;
+  --muted: #78746C;
+  --line: #D8D4CE;
+  --line-strong: #C8C4BC;
+  --accent: #A08060;
+  --accent-soft: #F8F3E8;
+  --accent-deep: #8A7358;
+  --pos: #16a34a;
+  --pos-soft: #dcfce7;
+  --warm: #C4A882;
+  --warm-soft: #F8F3EA;
+  --highlight: #F8F6F2;
+  --catalyst-bg: #FAF8F4;
+  --shadow: 0 1px 2px rgba(60,58,54,.03), 0 8px 20px rgba(160,128,96,.07);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --font: "Source Sans 3", system-ui, sans-serif;
+  --display: "Fraunces", Georgia, serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; padding: 0;
+  background:
+    radial-gradient(ellipse 900px 420px at 12% -10%, #F2E2BA, transparent 58%),
+    radial-gradient(ellipse 720px 400px at 95% 4%, #E8E6E2, transparent 55%),
+    var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1120px; margin: 0 auto; padding: 32px 22px 64px; }
+
+.hero {
+  position: relative;
+  padding: 8px 4px 8px;
+  margin-bottom: 28px;
+  animation: rise .55s ease both;
+}
+.hero .eyebrow {
+  font-size: 12px; font-weight: 600; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--accent); margin: 0 0 10px;
+}
+.hero h1 {
+  font-family: var(--display);
+  font-size: clamp(1.85rem, 4vw, 2.55rem);
+  font-weight: 700; line-height: 1.15;
+  margin: 0 0 14px; letter-spacing: -0.02em;
+}
+.hero-meta {
+  display: flex; flex-wrap: wrap; gap: 10px 18px;
+  align-items: baseline; color: var(--muted); font-size: 13px;
+}
+.hero-meta strong { color: var(--ink); font-weight: 600; }
+.hero-meta .sep { opacity: .35; }
+.index-briefs {
+  margin-top: 16px;
+}
+.index-brief {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  box-shadow: var(--shadow);
+}
+.index-brief .sym {
+  font-size: 11px; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--accent-deep); margin: 0 0 6px;
+}
+.index-brief .rational-points {
+  margin: 0; padding: 0 0 0 1.1em;
+  font-size: 13px; color: var(--ink); line-height: 1.45;
+}
+.index-brief .rational-points li { margin: 0 0 4px; }
+.index-brief .rational-points li:last-child { margin-bottom: 0; }
+.index-brief .muted { margin: 0; font-size: 13px; }
+.index-brief .theme-overview {
+  margin: 0;
+  font-size: 13px; color: var(--ink); line-height: 1.45;
+  white-space: pre-wrap;
+  font-family: inherit;
+}
+.index-brief .brief-section + .brief-section {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+}
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 10px;
+}
+.highlight-card {
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 12px 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 100%;
+}
+.highlight-card .h-title {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: .95rem;
+  margin: 0;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+.highlight-card .h-tickers {
+  display: flex; flex-wrap: wrap; gap: 4px;
+}
+.highlight-card .h-ticker {
+  font-size: 10.5px; font-weight: 600;
+  font-family: var(--mono);
+  background: var(--bg);
+  color: var(--accent-deep);
+  border: 1px solid var(--line);
+  padding: 1px 6px; border-radius: 4px;
+}
+.highlight-card .h-bullets {
+  margin: 0; padding: 0 0 0 1.05em;
+  font-size: 12.5px; color: var(--ink); line-height: 1.4;
+}
+.highlight-card .h-bullets li { margin: 0 0 3px; }
+.highlight-card .h-bullets li:last-child { margin-bottom: 0; }
+.highlight-card .h-takeaway {
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px dashed var(--line);
+  font-size: 12.5px; font-weight: 600;
+  color: var(--accent-deep); line-height: 1.35;
+}
+.highlight-card .h-takeaway::before {
+  content: "📌 ";
+}
+
+.section { margin-top: 30px; animation: rise .55s ease both; }
+.section:nth-of-type(2) { animation-delay: .05s; }
+.section:nth-of-type(3) { animation-delay: .1s; }
+.section:nth-of-type(4) { animation-delay: .15s; }
+.section-hd { margin-bottom: 14px; }
+.section-hd h2 {
+  font-family: var(--display); font-size: 1.35rem; font-weight: 700;
+  margin: 0 0 4px; letter-spacing: -0.01em;
+}
+.section-hd p { margin: 0; color: var(--muted); font-size: 13.5px; }
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: stretch;
+}
+.theme-board {
+  display: flex; flex-direction: column;
+  height: 100%;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 13px;
+  cursor: pointer;
+  text-align: left;
+  font: inherit; color: inherit;
+  box-shadow: var(--shadow);
+  transition: border-color .2s, transform .2s, background .2s;
+}
+.theme-board:hover { border-color: color-mix(in srgb, var(--accent) 40%, var(--line)); transform: translateY(-1px); }
+.theme-board.active {
+  background: var(--panel);
+  border-color: var(--accent-deep);
+  box-shadow: none;
+  outline: 1px solid var(--accent-deep);
+  outline-offset: 0;
+}
+.theme-board .t-name {
+  font-family: var(--display); font-weight: 700; font-size: .98rem; margin: 0 0 4px;
+}
+.theme-board .t-stats {
+  display: flex; justify-content: space-between; gap: 6px;
+  font-size: 11.5px; color: var(--muted); margin-bottom: 8px;
+}
+.theme-board .t-avg { color: var(--pos); font-weight: 700; }
+.theme-board .theme-catalysts {
+  padding: 0; background: none; border: none; margin-bottom: 8px;
+}
+.theme-board .t-leaves {
+  display: flex; flex-wrap: wrap; gap: 3px;
+  margin-top: auto; border-top: 1px dashed var(--line); padding-top: 8px;
+}
+.leaf-chip {
+  font-size: 10.5px; font-weight: 500;
+  background: var(--warm-soft); color: var(--warm);
+  padding: 1px 6px; border-radius: 4px;
+}
+.theme-board .theme-catalysts .cat-label {
+  font-size: 10px; font-weight: 600; letter-spacing: .05em;
+  text-transform: uppercase; color: var(--muted); margin: 0 0 4px;
+}
+.theme-board .theme-catalysts ul {
+  margin: 0; padding: 0 0 0 1em; font-size: 11.5px; line-height: 1.35;
+  text-align: left;
+}
+.theme-board .theme-catalysts li { margin: 0 0 2px; }
+.theme-board .theme-catalysts li:last-child { margin-bottom: 0; }
+
+.spotlight {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  box-shadow: var(--shadow);
+}
+.spotlight-hd {
+  display: flex; flex-wrap: wrap; align-items: baseline;
+  justify-content: space-between; gap: 10px;
+  margin-bottom: 16px; padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+.spotlight-hd h3 {
+  font-family: var(--display); font-size: 1.25rem; margin: 0;
+}
+.spotlight-hd .meta { color: var(--muted); font-size: 13px; }
+.spotlight-hd .meta .pos { color: var(--pos); font-weight: 700; }
+.spot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+.spot-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 14px 15px;
+  background: var(--panel);
+  transition: opacity .25s ease, transform .25s ease;
+  animation: fadeSlide .35s ease both;
+}
+.spot-card .top {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;
+}
+.spot-card .sym {
+  font-family: var(--mono); font-weight: 700; font-size: 15px;
+}
+.spot-card .nm { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+.spot-card .chg {
+  color: var(--pos); font-weight: 700; font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.spot-card .row-meta {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;
+  font-size: 11.5px; color: var(--muted);
+}
+.mini-chart {
+  margin-top: 10px;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  height: auto;
+  line-height: 0;
+}
+.mini-chart svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.tag {
+  display: inline-block; padding: 1px 7px; border-radius: 4px;
+  background: var(--accent-soft); color: var(--ink); font-weight: 500;
+}
+.leaf-tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 4px; }
+.leaf-tag {
+  font-size: 10.5px; padding: 1px 6px; border-radius: 4px;
+  background: var(--warm-soft); color: var(--warm); font-weight: 500;
+}
+.rational {
+  margin-top: 10px; font-size: 13px; color: var(--ink); line-height: 1.55;
+}
+.rational.muted { color: var(--muted); font-style: italic; }
+button.more {
+  background: none; border: none; color: var(--accent); font: inherit;
+  font-weight: 600; cursor: pointer; padding: 0; margin-top: 6px; display: inline-block;
+}
+button.more:hover { color: var(--accent-deep); text-decoration: underline; }
+.rational-points {
+  margin: 10px 0 0; padding: 0 0 0 1.1em;
+  font-size: 13px; color: var(--ink); line-height: 1.45;
+}
+.rational-points li { margin: 0 0 4px; }
+.rational-full {
+  margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--line);
+  font-size: 13px; color: var(--ink); line-height: 1.55;
+}
+
+.fund-badge {
+  font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 5px;
+  font-variant-numeric: tabular-nums;
+}
+.fund-badge.hi {
+  background: #dcfce7; color: #16a34a;
+}
+.fund-badge.mid {
+  background: #fef3c7; color: #d97706;
+}
+.fund-badge.lo {
+  background: #fee2e2; color: #dc2626;
+}
+.score-badge {
+  font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 5px;
+  font-variant-numeric: tabular-nums;
+}
+.score-badge.hi {
+  background: #dcfce7; color: #16a34a;
+}
+.score-badge.mid {
+  background: #fef3c7; color: #d97706;
+}
+.score-badge.lo {
+  background: #fee2e2; color: #dc2626;
+}
+.score-badge.na {
+  background: #EDEBE7; color: var(--muted);
+}
+
+footer {
+  margin-top: 36px; padding-top: 16px;
+  border-top: 1px solid var(--line);
+  text-align: center; color: var(--muted); font-size: 12px;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+  .theme-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .wrap { padding: 22px 14px 48px; }
+  .theme-grid { grid-template-columns: 1fr; }
+  .spot-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const DATA = {
+  "scraped_at": "2026-08-29T03:15:12",
+  "min_change_pct": 5.0,
+  "gainers": [
+    {
+      "symbol": "ESTC",
+      "name": "Elastic N.V.",
+      "price": "99.91",
+      "change_pct": 19.31,
+      "score_10d": 46.67,
+      "fundamental": 1,
+      "rational": "Elastic shares surged nearly 19% after the company reported strong fiscal Q1 2027 results, with revenue up 15% year-over-year to $478.1 million and adjusted EPS of $0.70, both topping Wall Street estimates. Management raised full-year guidance above consensus, citing record customer additions in the >$100K ACV cohort, accelerating AI adoption (37% of large customers now using Elastic for AI use cases), and strong momentum across Search & AI, Security, and Observability. The move came alongside a wave of analyst price-target hikes (Citigroup to $128, RBC and Baird to $120, Oppenheimer to $118, UBS to $105, Stifel to $107) and broader software-sector strength following blockbuster earnings from Salesforce, CrowdStrike, and Nvidia that eased concerns about AI disrupting traditional software business models; hedge fund positioning was mixed, with Paul Tudor Jones' firm building a new stake ahead of earnings while Point72 trimmed its position.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610020,
+          "chain_name": "AI",
+          "plate_id": 10010508,
+          "name": "Application Layer"
+        }
+      ],
+      "industry": "Software - Application",
+      "sector": "Technology",
+      "rational_points": "• ELST +19% after Q1 ’27 beat: $478.1M rev (+15% YoY), EPS $0.70 vs. estimates.\n• Guidance raised—record $100K+ ACV customers, AI adoption up to 37% of large clients.\n• Analysts hike targets: Citigroup $128, RBC/Baird $120, Oppenheimer $118; UBS $105, Stifel $107.\n• Hedge funds split: PTJ’s firm buys ahead of earnings; Point72 trims stake."
+    },
+    {
+      "symbol": "GAP",
+      "name": "The Gap, Inc.",
+      "price": "23.48",
+      "change_pct": 12.94,
+      "score_10d": 59.0,
+      "fundamental": 1,
+      "rational": "Gap shares surged nearly 13% after the company reported fiscal Q2 adjusted EPS of $0.52, topping the $0.48-$0.49 consensus, even as revenue of $3.65 billion missed estimates and fell 2% year-over-year. Management raised full-year adjusted EPS guidance to $2.35-$2.45 from $2.30-$2.40 and announced a leadership change at Old Navy, naming Michael Francis as the brand's new CEO effective November 2. The namesake Gap brand delivered its 11th straight quarter of double-digit comparable sales growth (+10%), driven by denim and the Hailey Bieber collaboration, offsetting continued weakness at Old Navy (comps -4%) and Athleta (comps -12%). Numerous analysts, including UBS, TD Cowen, BTIG, BofA, Morgan Stanley, Barclays, and Wells Fargo, raised price targets following the print, though several maintained cautious Neutral/Equal-Weight ratings citing ongoing macro pressure on Old Navy's lower-end customer base.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610056,
+          "chain_name": "Clothing",
+          "plate_id": 10103472,
+          "name": "Offline Platform"
+        }
+      ],
+      "industry": "Apparel - Retail",
+      "sector": "Consumer Cyclical",
+      "rational_points": "• Gap (GPS) +13%—EPS beat ($0.52 vs. $0.48–$0.49 est.), revenue missed ($3.65B, -2% YoY).\n• Guidance raised to $2.35–$2.45; Old Navy names Michael Francis as new CEO (Nov 2).\n• Gap brand +10% comps (denim, Hailey Bieber), but Old Navy (-4%) & Athleta (-12%) lag.\n• Analysts raised targets (UBS, TD Cowen, etc.), but some kept Neutral/Equal-Weight."
+    },
+    {
+      "symbol": "SOLS",
+      "name": "Solstice Advanced Materials, Inc.",
+      "price": "63.53",
+      "change_pct": 12.76,
+      "score_10d": 35.31,
+      "fundamental": 0,
+      "rational": "Solstice Advanced Materials and Element Solutions mutually terminated their previously announced merger agreement, with neither party owing a termination fee, following pushback from Element Solutions shareholders over deal terms. In tandem with the termination, Solstice's board authorized its first-ever $500 million share repurchase program and affirmed Q3 and full-year 2026 guidance, moves seen as signaling management confidence in the standalone business. Shares surged over 10% in after-hours trading as investors welcomed the buyback announcement and removal of merger-related uncertainty, even as the stock had closed roughly flat during the regular session amid a backdrop of new institutional buying (including Ancora Advisors) and a consensus 'Moderate Buy' rating with an average price target of $78.25.",
+      "industrial_leaves": [],
+      "industry": "Chemicals - Specialty",
+      "sector": "Basic Materials",
+      "rational_points": "• Solstice (SOLT) and Element Solutions (ESOL) called off merger deal—no termination fees paid after shareholder pushback.\n• Solstice board launched $500M buyback program, reaffirmed Q3/FY2026 guidance amid standalone confidence.\n• Stock jumped ~10% after-hours on buyback news, despite flat close; institutional buying (Ancora) and 'Moderate Buy' rating ($78.25 avg target)."
+    },
+    {
+      "symbol": "TOP",
+      "name": "TOP Financial Group Limited",
+      "price": "16.73",
+      "change_pct": 8.5,
+      "score_10d": 72.39,
+      "fundamental": 0,
+      "rational": "",
+      "industrial_leaves": [],
+      "industry": "Financial - Capital Markets",
+      "sector": "Financial Services",
+      "rational_points": ""
+    },
+    {
+      "symbol": "FLUT",
+      "name": "Flutter Entertainment plc",
+      "price": "101.78",
+      "change_pct": 7.13,
+      "score_10d": 43.65,
+      "fundamental": 0,
+      "rational": "Flutter Entertainment shares rallied after a favorable Nevada court ruling upheld the state's authority to regulate sports-related prediction market contracts, easing regulatory overhang for sportsbooks like FanDuel and DraftKings ahead of an anticipated SCOTUS showdown over prediction markets. The rebound also reflects continued analyst support (Stifel reiterating Buy with a $133 target) following last week's post-earnings selloff, in which Flutter beat Q2 revenue expectations ($4.33B vs $4.23B consensus) but cut 2026 U.S. EBITDA guidance by $210M to fund $270M in extra promotional spend, alongside news that CEO Peter Jackson will hand over to Dan Taylor on October 1. Despite the sharp bounce off 52-week lows near $89.71, shares remain down roughly 69% over the past year as investors weigh intensifying competition in online sports betting and prediction markets against still-constructive Buy/Outperform ratings from most brokers.",
+      "industrial_leaves": [],
+      "industry": "Gambling, Resorts & Casinos",
+      "sector": "Consumer Cyclical",
+      "rational_points": "• Flutter (FLT) surged after Nevada court ruling reaffirmed state power to regulate sports prediction markets, easing regulatory uncertainty.\n• Analysts reaffirmed support: Stifel kept Buy rating with $133 target despite Q2 revenue beating ($4.33B vs $4.23B) and 2026 U.S. EBITDA cut.\n• CEO transition + promotions: Peter Jackson stepping down Oct 1; $270M extra spend on promotions cuts 2026 EBITDA by $210M.\n• Down 69% YTD: Shares rebounded from $89.71 lows but still face competition pressures amid mostly Buy/Outperform ratings."
+    },
+    {
+      "symbol": "WDAY",
+      "name": "Workday, Inc.",
+      "price": "204.72",
+      "change_pct": 5.76,
+      "score_10d": 49.08,
+      "fundamental": 0,
+      "rational": "Workday shares surged nearly 6% as investors cheered stronger-than-expected fiscal Q2 results, with non-GAAP EPS of $2.75 and revenue of $2.65 billion beating estimates, plus 13.9% subscription revenue growth and AI products now driving over 25% of new contract value with 5,500+ customers using organic AI agents. The rally reflects broader software-sector optimism following blockbuster results from Salesforce and CrowdStrike this week that eased fears of AI disrupting legacy enterprise software, though the gains came despite a Capital One downgrade to Equalweight and mixed guidance warnings from Citi and Morgan Stanley about potential future 'guide downs,' while RBC, BMO, BNP Paribas, Wells Fargo and Barclays all raised price targets citing durable demand and an accelerating AI monetization story; the board also authorized an additional $4 billion share buyback after completing $1.3 billion in repurchases during the quarter.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610020,
+          "chain_name": "AI",
+          "plate_id": 10010508,
+          "name": "Application Layer"
+        },
+        {
+          "chain_id": 9610028,
+          "chain_name": "Cloud Computing",
+          "plate_id": 10010376,
+          "name": "Saas"
+        }
+      ],
+      "industry": "Software - Application",
+      "sector": "Technology",
+      "rational_points": "• Workday (WDAY) +5.9%: Q2 non-GAAP EPS $2.75, revenue $2.65B beat estimates.\n• AI momentum: AI products now 25% of new contract value, 5,500+ customers using organic AI agents.\n• Analysts split: Citi/Morgan Stanley warn of \"guide downs\"; RBC/BMO/BNP Paribas raise targets on AI demand.\n• Buyback boost: Board authorizes $4B share repurchase after $1.3B Q2 repurchases."
+    },
+    {
+      "symbol": "DPZ",
+      "name": "Domino's Pizza, Inc.",
+      "price": "350.00",
+      "change_pct": 5.4,
+      "score_10d": 52.85,
+      "fundamental": 0,
+      "rational": "Domino's Pizza shares rebounded sharply, closing up 5.4% at $350.00 after a volatile stretch that saw the stock slide earlier in the week on soft same-store sales (U.S. +0.1%, international -0.1%) and a Baird downgrade to Neutral with a $350 price target. The bounce comes despite lingering investor caution over decelerating comparable-sales momentum and EPS estimates trending lower over the past 30 days, with analysts split on growth prospects versus rivals like McDonald's; the stock remains well below its 52-week high of $469 and trades at a notable discount to its estimated fair value, suggesting some investors view the pullback as overdone even as fundamental concerns about traffic and demand persist.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610032,
+          "chain_name": "Food & Beverage",
+          "plate_id": 10010432,
+          "name": "Limited-Service Restaurants"
+        },
+        {
+          "chain_id": 9610043,
+          "chain_name": "Travel & Transportation",
+          "plate_id": 10102893,
+          "name": "Food & Beverage"
+        }
+      ],
+      "industry": "Restaurants",
+      "sector": "Consumer Cyclical",
+      "rational_points": "• Domino’s Pizza (DPZ) +5.4% to $350 after weak same-store sales (U.S. +0.1%, int’l -0.1%) and Baird downgrade to Neutral.\n• Baird cut target to $350, citing lingering demand concerns amid slowing comps.\n• Split analyst views on growth vs. peers like McDonald’s; stock trades 21% below 52-week high."
+    },
+    {
+      "symbol": "LULU",
+      "name": "lululemon athletica inc.",
+      "price": "120.81",
+      "change_pct": 5.05,
+      "score_10d": 45.67,
+      "fundamental": 0,
+      "rational": "Lululemon shares rebounded sharply, closing up over 5% and extending modest after-hours gains, as bargain hunters stepped in following a steep pullback that had driven the stock near multi-year lows around $115-116. The rally appears driven by positioning ahead of the company's September 3 fiscal Q2 earnings report rather than a specific catalyst, aided by a heavy short-interest base that can amplify upside moves, continued institutional accumulation disclosed in fresh 13F filings, and a read-through from peer apparel retailers like Gap and Abercrombie posting strong post-earnings pops this week. Sentiment remains cautious overall, with a consensus 'Reduce' rating and average price target of $148.38, following recent target cuts from Goldman Sachs (to $111) and Telsey Advisory Group (to $122) on concerns over weak US and China sales, margin pressure from tariffs, and potential fiscal 2026 guidance cuts, while UBS has flagged possible upside from cost controls and buybacks; the stock's move also came against a backdrop of broader athletic-retail weakness after Dick's Sporting Goods' guidance cut earlier in the week dragged down Lululemon and Nike.",
+      "industrial_leaves": [],
+      "industry": "Apparel - Retail",
+      "sector": "Consumer Cyclical",
+      "rational_points": "• LULU surged +5%+ after hitting multi-year lows (~$115–116), driven by positioning ahead of Sept 3 Q2 earnings and heavy short interest.\n• Institutional buying (13F filings) and peer strength (Gap, Abercrombie pops) lifted sentiment despite consensus 'Reduce' rating ($148 avg target).\n• Goldman (to $111) and Telsey (to $122) cut targets over US/China sales weakness, tariff margins, but UBS sees upside from cost controls/buybacks.\n• Broader retail drag: Athletic stocks (Dick’s Sporting Goods, Nike) weighed on LULU amid guidance caution."
+    },
+    {
+      "symbol": "CVI",
+      "name": "CVR Energy, Inc.",
+      "price": "41.76",
+      "change_pct": 5.03,
+      "score_10d": 65.89,
+      "fundamental": 0,
+      "rational": "CVR Energy shares surged nearly 5% to close at $41.76, near a 52-week high, extending a sector-wide rally in independent refiners as tight refining capacity, disrupted Middle East crude flows, and strong crack spreads continue to boost margin expectations. The move mirrors gains across peers like PBF Energy, Delek US, and HF Sinclair, all of which have posted double-digit percentage gains in recent months on the back of blowout earnings and elevated fuel prices tied to the ongoing U.S.-Iran conflict and hedge funds' record overweight positioning in energy stocks. CVR's rally comes despite a Wall Street 'Strong Sell' consensus and a price target well below current levels, as the company's Q2 results (EPS of $0.34 vs. $0.26 estimate, revenue up 55.5% YoY to $2.74 billion) and continued institutional accumulation - including new stakes from PDT Partners and Thomist Capital - underscore renewed investor interest in the refining sector's cash-generating potential.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610019,
+          "chain_name": "Petroleum",
+          "plate_id": 10010154,
+          "name": "Petroleum Refining"
+        },
+        {
+          "chain_id": 9610053,
+          "chain_name": "Plant Cultivation",
+          "plate_id": 10102479,
+          "name": "Fertilizers & Pesticides"
+        }
+      ],
+      "industry": "Oil & Gas Refining & Marketing",
+      "sector": "Energy",
+      "rational_points": "• CVR Energy (+5%) hit near 52-week high at $41.76, riding tight refining capacity, Middle East crude disruptions, and strong crack spreads.\n• Sector-wide rally: Peers like PBF Energy, Delek US, HF Sinclair also surged on earnings and fuel price gains from U.S.-Iran tensions.\n• Despite 'Strong Sell' consensus, CVR’s Q2 beat ($0.34 EPS vs. $0.26 est., +55.5% YoY revenue) and new institutional buys (PDT Partners, Thomist Capital) drove demand."
+    }
+  ],
+  "theme_catalysts": {},
+  "market_update": "• AI earnings momentum vs. Fed hawkishness—Nvidia’s blowout Q2 results and AWS strength clashed with rising 10-year yields (near 4.72%) after Warsh’s Jackson Hole remarks, pressuring growth stocks amid macro uncertainty.\n• Tech valuations and mixed peer reactions—QQQ’s 9.9% GF Value overvaluation reading contrasted with Marvell’s Google-deal delay drag, while Micron and AMD held up, reflecting cautious AI capex digestion.\n• Record inflows but short-term volatility—VOO’s $69B+ 2026 net inflows (largest globally) coexisted with PCE near 3.7% and bond-market jitters, as investors balanced long-term demand with near-term inflation/fed risks.",
+  "index_briefs": {
+    "QQQ": {
+      "description": "Invesco QQQ closed modestly lower, pulling back from an early rally as rising Treasury yields (10-year near 4.72% after Fed Governor Warsh's Jackson Hole remarks) offset strong AI-driven earnings momentum. Nvidia's blowout Q2 results and bullish fiscal 2027 guidance had lifted futures overnight, but the ETF faded into the close as investors weighed elevated valuations, a 9.9% GF Value overvaluation reading, and mixed peer earnings reactions—Marvell tumbled on Google-deal timing concerns while Micron and AMD showed resilience. Continued heavy institutional trading activity in QQQ (numerous 13F filings showing both accumulation and trimming) underscored a market still digesting the AI capex debate alongside macro inflation and rate uncertainty."
+    },
+    "VOO": {
+      "description": "VOO edged modestly lower, tracking a pullback in mega-cap tech after Fed Chair nominee Kevin Warsh's hawkish Jackson Hole remarks pushed the 10-year Treasury yield toward 4.72%, pressuring rate-sensitive growth names even as broader risk sentiment stayed constructive following blowout Nvidia earnings and Amazon's AI-driven AWS strength. The move comes despite continued massive investor demand for the fund—VOO pulled in $4.3 billion during last week's down period alone and has gathered roughly $69 billion in net inflows in 2026, more than any ETF globally, underscoring a persistent 'buy the dip' mentality among long-term holders even as bond-market jitters and inflation data (PCE running near 3.7% annually) inject short-term volatility into large-cap equities."
+    }
+  },
+  "theme_overview": {
+    "text": "【🤖 AI APPLICATION LAYER】\n• ESTC +19.31% after crushing earnings and guidance\n• AI adoption hit 37% of large customers\n• Analysts hiked targets, easing AI disruption fears\n📌 AI demand is real, and the market’s paying up for proof\n\n【👕 OFFLINE PLATFORM (CLOTHING)】\n• GAP +12.94% after beating EPS and raising guidance\n• Denim and Hailey Bieber collabs drove Gap brand\n• Weak Old Navy/Athleta comps couldn’t dampen momentum\n📌 Turnaround plays still have juice when the numbers surprise\n\n【🍕 LIMITED-SERVICE RESTAURANTS (FOOD & BEVERAGE)】\n• DPZ +5.40% as traders bought the dip after soft comps\n• Short covering and bargain hunters stepped in\n📌 Weak sales can’t keep a lid on oversold names forever\n\n【⛽ PETROLEUM REFINING】\n• CVI +5.03% as tight capacity and crude disruptions juiced crack spreads\n• Peers PBF, DK, HFC rode the same wave\n📌 Refiners are printing cash—funds can’t ignore it",
+    "themes": [
+      {
+        "emoji": "🤖",
+        "title": "AI APPLICATION LAYER",
+        "tickers": [],
+        "bullets": [
+          "ESTC +19.31% after crushing earnings and guidance",
+          "AI adoption hit 37% of large customers",
+          "Analysts hiked targets, easing AI disruption fears"
+        ],
+        "takeaway": "AI demand is real, and the market’s paying up for proof"
+      },
+      {
+        "emoji": "👕",
+        "title": "OFFLINE PLATFORM (CLOTHING)",
+        "tickers": [],
+        "bullets": [
+          "GAP +12.94% after beating EPS and raising guidance",
+          "Denim and Hailey Bieber collabs drove Gap brand",
+          "Weak Old Navy/Athleta comps couldn’t dampen momentum"
+        ],
+        "takeaway": "Turnaround plays still have juice when the numbers surprise"
+      },
+      {
+        "emoji": "🍕",
+        "title": "LIMITED-SERVICE RESTAURANTS (FOOD & BEVERAGE)",
+        "tickers": [],
+        "bullets": [
+          "DPZ +5.40% as traders bought the dip after soft comps",
+          "Short covering and bargain hunters stepped in"
+        ],
+        "takeaway": "Weak sales can’t keep a lid on oversold names forever"
+      },
+      {
+        "emoji": "⛽",
+        "title": "PETROLEUM REFINING",
+        "tickers": [],
+        "bullets": [
+          "CVI +5.03% as tight capacity and crude disruptions juiced crack spreads",
+          "Peers PBF, DK, HFC rode the same wave"
+        ],
+        "takeaway": "Refiners are printing cash—funds can’t ignore it"
+      }
+    ]
+  },
+  "ohlc_30d": {
+    "CVI": {
+      "bars": [
+        [
+          28.2989,
+          29.495,
+          28.2091,
+          28.7873
+        ],
+        [
+          28.867,
+          28.8969,
+          27.8005,
+          28.558
+        ],
+        [
+          29.4651,
+          31.359,
+          29.3256,
+          30.6613
+        ],
+        [
+          30.5217,
+          31.1995,
+          30.2426,
+          31.1796
+        ],
+        [
+          31.5384,
+          31.7378,
+          30.1629,
+          30.8706
+        ],
+        [
+          31.5683,
+          33.7712,
+          31.5683,
+          33.3526
+        ],
+        [
+          33.7812,
+          33.7812,
+          32.8841,
+          33.4722
+        ],
+        [
+          33.2928,
+          33.2928,
+          31.5783,
+          32.4455
+        ],
+        [
+          33.1532,
+          33.7912,
+          32.7146,
+          33.3526
+        ],
+        [
+          33.9208,
+          35.0571,
+          33.5619,
+          35.0172
+        ],
+        [
+          34.7381,
+          35.715,
+          34.5288,
+          34.5487
+        ],
+        [
+          34.8876,
+          35.6751,
+          33.9307,
+          35.2864
+        ],
+        [
+          35.7648,
+          35.9442,
+          34.4391,
+          34.768
+        ],
+        [
+          35.9343,
+          35.9343,
+          33.7114,
+          33.831
+        ],
+        [
+          33.4224,
+          34.14,
+          32.5651,
+          33.3426
+        ],
+        [
+          32.5252,
+          34.0404,
+          32.5053,
+          33.9606
+        ],
+        [
+          34.0603,
+          34.6185,
+          32.6249,
+          33.6317
+        ],
+        [
+          34.5487,
+          35.3262,
+          34.17,
+          34.5089
+        ],
+        [
+          35.8844,
+          39.7819,
+          35.715,
+          37.9578
+        ],
+        [
+          38.2568,
+          38.7452,
+          35.2066,
+          35.5056
+        ],
+        [
+          34.7082,
+          35.1568,
+          32.6249,
+          32.7844
+        ],
+        [
+          32.2063,
+          33.3426,
+          31.7577,
+          33.223
+        ],
+        [
+          33.1333,
+          33.2429,
+          31.0699,
+          31.0998
+        ],
+        [
+          31.6182,
+          31.6879,
+          30.3622,
+          31.2693
+        ],
+        [
+          30.6812,
+          31.5783,
+          29.7043,
+          31.05
+        ],
+        [
+          31.86,
+          32.84,
+          31.86,
+          32.42
+        ],
+        [
+          32.78,
+          34.39,
+          32.51,
+          34.05
+        ],
+        [
+          33.55,
+          35.16,
+          33.55,
+          35.04
+        ],
+        [
+          34.74,
+          35.63,
+          34.13,
+          35.6
+        ],
+        [
+          35.82,
+          35.82,
+          35.06,
+          35.26
+        ],
+        [
+          35.31,
+          36.87,
+          34.86,
+          36.42
+        ],
+        [
+          36.97,
+          37.13,
+          35.7,
+          36.66
+        ],
+        [
+          36.69,
+          37.3,
+          36.19,
+          36.7
+        ],
+        [
+          37.16,
+          37.5,
+          35.79,
+          35.83
+        ],
+        [
+          36.18,
+          40.17,
+          36.14,
+          39.51
+        ],
+        [
+          39.09,
+          40.0,
+          37.68,
+          38.03
+        ],
+        [
+          37.55,
+          38.39,
+          37.38,
+          37.89
+        ],
+        [
+          37.32,
+          40.7,
+          37.32,
+          40.03
+        ],
+        [
+          40.04,
+          40.3,
+          38.94,
+          39.76
+        ],
+        [
+          39.85,
+          42.195,
+          39.85,
+          41.76
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        30.5821,
+        30.5821,
+        30.5821,
+        30.5821,
+        30.5821,
+        30.5821,
+        30.5821,
+        30.5821,
+        30.5821,
+        30.5821,
+        30.5821,
+        30.8094,
+        30.8845,
+        31.6071,
+        32.3066,
+        32.3066,
+        32.3066,
+        32.3066,
+        32.3066,
+        32.3066,
+        33.4144,
+        34.5421
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        37.4695,
+        37.4695,
+        37.4695,
+        37.4695,
+        37.4695,
+        37.4695,
+        37.4695,
+        37.4695,
+        37.4695,
+        37.4695,
+        37.4695,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "DPZ": {
+      "bars": [
+        [
+          312.47,
+          312.5,
+          300.76,
+          305.91
+        ],
+        [
+          310.53,
+          319.97,
+          308.75,
+          313.14
+        ],
+        [
+          309.65,
+          309.66,
+          300.32,
+          302.35
+        ],
+        [
+          297.01,
+          303.16,
+          294.94,
+          300.88
+        ],
+        [
+          301.35,
+          305.9,
+          299.02,
+          299.46
+        ],
+        [
+          300.91,
+          311.99,
+          300.91,
+          309.85
+        ],
+        [
+          305.5,
+          310.22,
+          304.99,
+          309.85
+        ],
+        [
+          310.52,
+          317.0,
+          308.75,
+          310.87
+        ],
+        [
+          312.32,
+          330.43,
+          311.29,
+          329.67
+        ],
+        [
+          330.83,
+          336.47,
+          316.18,
+          322.18
+        ],
+        [
+          342.75,
+          350.0,
+          324.0,
+          328.97
+        ],
+        [
+          327.39,
+          336.59,
+          317.54,
+          326.34
+        ],
+        [
+          331.64,
+          331.64,
+          318.64,
+          319.83
+        ],
+        [
+          320.27,
+          323.59,
+          315.68,
+          323.25
+        ],
+        [
+          322.23,
+          335.89,
+          322.23,
+          332.97
+        ],
+        [
+          335.57,
+          348.6,
+          335.57,
+          343.53
+        ],
+        [
+          349.89,
+          359.7,
+          346.95,
+          350.47
+        ],
+        [
+          350.37,
+          364.58,
+          347.61,
+          360.0
+        ],
+        [
+          353.19,
+          355.14,
+          342.8,
+          352.25
+        ],
+        [
+          347.39,
+          350.07,
+          342.96,
+          347.44
+        ],
+        [
+          351.2,
+          365.45,
+          351.2,
+          364.41
+        ],
+        [
+          363.99,
+          372.16,
+          363.15,
+          367.63
+        ],
+        [
+          369.0,
+          369.51,
+          362.21,
+          366.61
+        ],
+        [
+          366.01,
+          366.01,
+          357.01,
+          358.43
+        ],
+        [
+          354.94,
+          355.21,
+          349.76,
+          350.95
+        ],
+        [
+          343.79,
+          352.26,
+          341.02,
+          347.85
+        ],
+        [
+          344.38,
+          361.51,
+          344.38,
+          357.34
+        ],
+        [
+          353.74,
+          355.55,
+          349.9,
+          353.72
+        ],
+        [
+          357.67,
+          358.01,
+          347.16,
+          350.88
+        ],
+        [
+          352.21,
+          352.62,
+          346.01,
+          346.27
+        ],
+        [
+          342.96,
+          345.0,
+          334.49,
+          335.42
+        ],
+        [
+          339.14,
+          343.76,
+          334.78,
+          336.25
+        ],
+        [
+          336.0,
+          345.82,
+          335.47,
+          336.52
+        ],
+        [
+          333.68,
+          341.7,
+          328.72,
+          334.37
+        ],
+        [
+          334.51,
+          343.22,
+          332.34,
+          341.85
+        ],
+        [
+          337.73,
+          349.29,
+          337.73,
+          349.01
+        ],
+        [
+          346.25,
+          353.93,
+          346.25,
+          349.91
+        ],
+        [
+          347.53,
+          348.9,
+          341.27,
+          344.56
+        ],
+        [
+          339.29,
+          342.85,
+          331.05,
+          332.06
+        ],
+        [
+          337.0,
+          353.0,
+          336.495,
+          350.0
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        298.3465,
+        308.3936,
+        309.6689,
+        309.6689,
+        309.6689,
+        312.7496,
+        326.7159,
+        329.6807,
+        329.6807,
+        329.6807,
+        329.6807,
+        329.6807,
+        329.6807,
+        329.6807,
+        329.6807,
+        329.6807,
+        329.6807,
+        329.6807,
+        329.6807,
+        329.6807,
+        329.6807,
+        329.6807,
+        329.6807,
+        329.6807,
+        329.6807
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        340.2778,
+        340.2778,
+        340.2778,
+        340.2778,
+        340.2778,
+        340.2778,
+        340.2778,
+        340.2778,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "ESTC": {
+      "bars": [
+        [
+          57.0,
+          58.6,
+          56.56,
+          58.54
+        ],
+        [
+          59.8,
+          61.28,
+          58.01,
+          59.46
+        ],
+        [
+          58.05,
+          60.41,
+          57.78,
+          60.08
+        ],
+        [
+          58.62,
+          62.75,
+          58.35,
+          62.06
+        ],
+        [
+          63.49,
+          63.97,
+          59.76,
+          60.24
+        ],
+        [
+          61.16,
+          63.12,
+          60.56,
+          62.43
+        ],
+        [
+          59.84,
+          62.95,
+          59.46,
+          62.32
+        ],
+        [
+          63.42,
+          64.64,
+          61.62,
+          62.24
+        ],
+        [
+          62.19,
+          63.16,
+          60.7,
+          62.11
+        ],
+        [
+          61.3,
+          62.46,
+          61.02,
+          61.59
+        ],
+        [
+          60.61,
+          63.22,
+          60.3,
+          62.74
+        ],
+        [
+          60.72,
+          63.44,
+          59.29,
+          60.18
+        ],
+        [
+          59.66,
+          59.71,
+          58.29,
+          58.68
+        ],
+        [
+          59.3,
+          59.46,
+          56.06,
+          57.33
+        ],
+        [
+          58.06,
+          58.96,
+          57.65,
+          58.68
+        ],
+        [
+          59.9,
+          62.21,
+          59.48,
+          61.24
+        ],
+        [
+          61.62,
+          63.13,
+          60.25,
+          62.1
+        ],
+        [
+          62.34,
+          66.06,
+          62.25,
+          64.44
+        ],
+        [
+          64.49,
+          64.91,
+          62.93,
+          64.25
+        ],
+        [
+          63.64,
+          66.05,
+          63.2,
+          65.79
+        ],
+        [
+          67.01,
+          69.8,
+          67.0,
+          68.74
+        ],
+        [
+          67.67,
+          71.45,
+          67.06,
+          71.06
+        ],
+        [
+          72.62,
+          72.83,
+          69.49,
+          69.72
+        ],
+        [
+          67.17,
+          70.16,
+          66.47,
+          69.95
+        ],
+        [
+          71.69,
+          75.48,
+          71.21,
+          75.11
+        ],
+        [
+          74.03,
+          77.08,
+          73.79,
+          76.32
+        ],
+        [
+          75.99,
+          77.39,
+          75.27,
+          76.35
+        ],
+        [
+          74.83,
+          77.37,
+          74.64,
+          77.16
+        ],
+        [
+          77.72,
+          86.7,
+          77.52,
+          86.03
+        ],
+        [
+          86.01,
+          87.61,
+          83.81,
+          86.68
+        ],
+        [
+          85.51,
+          86.38,
+          82.18,
+          83.44
+        ],
+        [
+          84.11,
+          86.59,
+          83.5,
+          85.01
+        ],
+        [
+          84.98,
+          87.96,
+          84.5,
+          87.34
+        ],
+        [
+          87.89,
+          88.21,
+          85.27,
+          85.9
+        ],
+        [
+          85.43,
+          86.24,
+          83.51,
+          85.94
+        ],
+        [
+          85.68,
+          86.06,
+          82.95,
+          83.24
+        ],
+        [
+          82.98,
+          83.32,
+          79.44,
+          80.4
+        ],
+        [
+          79.05,
+          80.91,
+          78.79,
+          79.25
+        ],
+        [
+          82.65,
+          85.78,
+          82.0,
+          83.74
+        ],
+        [
+          103.89,
+          107.995,
+          96.82,
+          99.91
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        59.0018,
+        59.0018,
+        60.8991,
+        60.8991,
+        61.3501,
+        63.9713,
+        66.1423,
+        66.3167,
+        67.6888,
+        72.0441,
+        72.0441,
+        72.4642,
+        74.1994,
+        75.512,
+        75.512,
+        75.512,
+        75.512,
+        75.512,
+        75.512,
+        75.512
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        72.6708,
+        70.9306,
+        69.5705,
+        69.5705,
+        69.5705,
+        67.2872,
+        66.5254,
+        66.1016,
+        66.1016,
+        66.1016,
+        66.1016,
+        66.1016,
+        66.1016,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "FLUT": {
+      "bars": [
+        [
+          106.24,
+          108.08,
+          103.61,
+          107.43
+        ],
+        [
+          108.055,
+          111.18,
+          107.805,
+          108.35
+        ],
+        [
+          107.11,
+          111.94,
+          106.58,
+          111.32
+        ],
+        [
+          109.93,
+          111.84,
+          108.61,
+          110.79
+        ],
+        [
+          113.46,
+          115.15,
+          110.56,
+          110.66
+        ],
+        [
+          112.85,
+          117.22,
+          111.76,
+          112.4
+        ],
+        [
+          109.29,
+          112.07,
+          107.01,
+          108.47
+        ],
+        [
+          110.0,
+          113.57,
+          107.84,
+          110.0
+        ],
+        [
+          110.93,
+          111.25,
+          107.57,
+          108.3
+        ],
+        [
+          106.18,
+          107.47,
+          103.3,
+          106.56
+        ],
+        [
+          104.15,
+          107.72,
+          103.99,
+          106.53
+        ],
+        [
+          103.89,
+          105.67,
+          100.78,
+          100.95
+        ],
+        [
+          101.07,
+          101.18,
+          98.13,
+          99.8
+        ],
+        [
+          100.31,
+          101.5,
+          99.23,
+          100.82
+        ],
+        [
+          101.38,
+          102.26,
+          99.715,
+          101.25
+        ],
+        [
+          105.94,
+          108.65,
+          103.77,
+          105.84
+        ],
+        [
+          108.5,
+          110.265,
+          106.43,
+          109.06
+        ],
+        [
+          107.835,
+          109.99,
+          107.38,
+          107.78
+        ],
+        [
+          104.8,
+          105.95,
+          101.02,
+          102.13
+        ],
+        [
+          101.71,
+          105.37,
+          101.32,
+          104.47
+        ],
+        [
+          105.72,
+          108.15,
+          103.78,
+          105.96
+        ],
+        [
+          105.0,
+          106.94,
+          102.11,
+          104.96
+        ],
+        [
+          97.705,
+          98.5,
+          89.71,
+          92.91
+        ],
+        [
+          94.0,
+          94.56,
+          90.725,
+          93.01
+        ],
+        [
+          94.41,
+          97.35,
+          91.915,
+          94.74
+        ],
+        [
+          93.01,
+          97.098,
+          92.99,
+          94.27
+        ],
+        [
+          94.27,
+          100.48,
+          93.51,
+          99.02
+        ],
+        [
+          97.04,
+          98.31,
+          95.05,
+          98.08
+        ],
+        [
+          98.08,
+          99.1,
+          96.31,
+          98.32
+        ],
+        [
+          99.7,
+          101.53,
+          97.866,
+          101.41
+        ],
+        [
+          101.91,
+          102.79,
+          96.17,
+          96.39
+        ],
+        [
+          96.19,
+          96.34,
+          92.84,
+          92.89
+        ],
+        [
+          93.35,
+          100.645,
+          92.98,
+          99.16
+        ],
+        [
+          100.0,
+          103.5,
+          99.2,
+          99.57
+        ],
+        [
+          99.6,
+          103.47,
+          99.335,
+          102.61
+        ],
+        [
+          102.28,
+          104.46,
+          101.8,
+          102.58
+        ],
+        [
+          101.04,
+          104.31,
+          100.09,
+          102.06
+        ],
+        [
+          101.36,
+          101.85,
+          97.8,
+          98.06
+        ],
+        [
+          97.68,
+          99.13,
+          94.96,
+          95.01
+        ],
+        [
+          95.8,
+          102.64,
+          95.18,
+          101.78
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        126.2652,
+        123.8402,
+        119.9576,
+        119.582,
+        117.8327,
+        112.8983,
+        112.0,
+        111.6225,
+        111.6225,
+        111.6225,
+        111.6225,
+        111.6225,
+        111.6225,
+        111.6225,
+        111.6225,
+        111.6225,
+        111.6225,
+        111.6225,
+        111.6225,
+        111.6225,
+        111.6225,
+        111.6225,
+        111.6225,
+        111.6225,
+        108.6005,
+        108.6005,
+        108.6005,
+        108.6005,
+        108.6005,
+        108.6005,
+        108.6005,
+        108.6005,
+        108.6005
+      ]
+    },
+    "GAP": {
+      "bars": [
+        [
+          18.9148,
+          19.2913,
+          18.5878,
+          19.1922
+        ],
+        [
+          19.0238,
+          19.331,
+          18.7266,
+          18.895
+        ],
+        [
+          18.65,
+          18.68,
+          18.31,
+          18.35
+        ],
+        [
+          18.64,
+          19.09,
+          18.3,
+          18.85
+        ],
+        [
+          19.05,
+          19.48,
+          18.94,
+          19.46
+        ],
+        [
+          19.67,
+          20.13,
+          19.35,
+          19.8
+        ],
+        [
+          19.95,
+          20.14,
+          19.57,
+          20.13
+        ],
+        [
+          19.98,
+          20.98,
+          19.94,
+          20.28
+        ],
+        [
+          20.44,
+          20.9,
+          20.38,
+          20.5
+        ],
+        [
+          20.63,
+          21.24,
+          20.06,
+          20.35
+        ],
+        [
+          20.37,
+          20.46,
+          19.69,
+          19.88
+        ],
+        [
+          19.81,
+          19.97,
+          19.45,
+          19.6
+        ],
+        [
+          19.7,
+          19.84,
+          19.49,
+          19.65
+        ],
+        [
+          19.36,
+          19.64,
+          18.76,
+          18.88
+        ],
+        [
+          18.69,
+          19.29,
+          18.68,
+          19.01
+        ],
+        [
+          19.19,
+          19.66,
+          19.08,
+          19.64
+        ],
+        [
+          19.8,
+          20.43,
+          19.8,
+          20.21
+        ],
+        [
+          20.11,
+          20.49,
+          19.91,
+          20.29
+        ],
+        [
+          20.22,
+          20.44,
+          20.03,
+          20.38
+        ],
+        [
+          20.32,
+          20.33,
+          19.96,
+          20.09
+        ],
+        [
+          20.28,
+          20.55,
+          20.09,
+          20.49
+        ],
+        [
+          20.3,
+          20.82,
+          20.18,
+          20.62
+        ],
+        [
+          20.81,
+          20.98,
+          20.5,
+          20.57
+        ],
+        [
+          20.61,
+          20.68,
+          20.34,
+          20.52
+        ],
+        [
+          20.14,
+          20.66,
+          20.0,
+          20.47
+        ],
+        [
+          20.57,
+          21.64,
+          20.56,
+          21.51
+        ],
+        [
+          21.0,
+          21.2,
+          20.68,
+          20.96
+        ],
+        [
+          20.69,
+          20.69,
+          20.11,
+          20.25
+        ],
+        [
+          20.38,
+          20.48,
+          19.98,
+          20.39
+        ],
+        [
+          20.45,
+          20.73,
+          20.28,
+          20.6
+        ],
+        [
+          20.35,
+          20.63,
+          20.1,
+          20.18
+        ],
+        [
+          20.18,
+          20.41,
+          19.98,
+          20.08
+        ],
+        [
+          20.06,
+          20.39,
+          19.96,
+          20.1
+        ],
+        [
+          19.88,
+          19.98,
+          19.52,
+          19.65
+        ],
+        [
+          19.97,
+          20.17,
+          19.75,
+          19.8
+        ],
+        [
+          19.78,
+          20.51,
+          19.78,
+          20.36
+        ],
+        [
+          20.27,
+          20.33,
+          19.95,
+          20.15
+        ],
+        [
+          20.59,
+          21.51,
+          20.56,
+          21.15
+        ],
+        [
+          20.75,
+          21.4,
+          20.55,
+          20.79
+        ],
+        [
+          24.685,
+          25.8,
+          23.335,
+          23.48
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        19.1167,
+        19.1167,
+        19.1167,
+        19.1167,
+        19.1167,
+        19.1167,
+        19.1167,
+        19.1167,
+        19.1167,
+        19.1167,
+        19.1167,
+        19.1167,
+        19.1167,
+        19.1167,
+        19.1167
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        22.743,
+        22.743,
+        22.743,
+        22.541,
+        21.9495,
+        21.6071,
+        21.3241,
+        21.0356,
+        21.0356,
+        21.0356,
+        21.0356,
+        21.0356,
+        21.0356,
+        21.0356,
+        21.0356,
+        21.0356,
+        21.0356,
+        21.0356,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "LULU": {
+      "bars": [
+        [
+          116.34,
+          117.67,
+          112.92,
+          115.64
+        ],
+        [
+          117.36,
+          118.81,
+          113.5,
+          115.07
+        ],
+        [
+          113.0,
+          115.4,
+          110.9,
+          113.62
+        ],
+        [
+          113.0,
+          116.69,
+          111.31,
+          116.51
+        ],
+        [
+          118.26,
+          121.41,
+          117.16,
+          119.26
+        ],
+        [
+          119.25,
+          122.0,
+          119.24,
+          120.3
+        ],
+        [
+          119.89,
+          120.02,
+          115.86,
+          117.32
+        ],
+        [
+          118.0,
+          120.49,
+          116.57,
+          117.42
+        ],
+        [
+          115.07,
+          119.9,
+          114.34,
+          118.79
+        ],
+        [
+          118.01,
+          119.05,
+          115.66,
+          116.33
+        ],
+        [
+          116.23,
+          117.81,
+          115.0,
+          116.67
+        ],
+        [
+          113.88,
+          116.95,
+          113.39,
+          116.63
+        ],
+        [
+          116.1,
+          116.56,
+          112.43,
+          113.37
+        ],
+        [
+          111.21,
+          112.14,
+          109.2,
+          110.63
+        ],
+        [
+          111.3,
+          115.7,
+          110.55,
+          114.28
+        ],
+        [
+          117.59,
+          118.37,
+          115.76,
+          117.83
+        ],
+        [
+          119.0,
+          121.88,
+          118.48,
+          120.32
+        ],
+        [
+          118.8,
+          120.87,
+          118.04,
+          119.03
+        ],
+        [
+          117.53,
+          119.69,
+          115.11,
+          119.48
+        ],
+        [
+          120.4,
+          121.0,
+          117.87,
+          118.87
+        ],
+        [
+          122.18,
+          124.38,
+          120.54,
+          123.67
+        ],
+        [
+          121.75,
+          124.61,
+          120.86,
+          123.03
+        ],
+        [
+          123.94,
+          124.82,
+          122.6,
+          123.51
+        ],
+        [
+          122.6,
+          125.92,
+          122.01,
+          124.73
+        ],
+        [
+          124.54,
+          128.86,
+          124.0,
+          128.58
+        ],
+        [
+          128.75,
+          128.76,
+          125.02,
+          127.8
+        ],
+        [
+          125.5,
+          126.48,
+          123.6,
+          125.61
+        ],
+        [
+          124.87,
+          124.95,
+          120.7,
+          120.87
+        ],
+        [
+          122.27,
+          122.88,
+          118.77,
+          119.56
+        ],
+        [
+          119.1,
+          120.23,
+          117.95,
+          119.55
+        ],
+        [
+          118.48,
+          119.33,
+          114.91,
+          115.74
+        ],
+        [
+          116.98,
+          122.05,
+          115.61,
+          119.01
+        ],
+        [
+          119.03,
+          121.34,
+          119.01,
+          119.45
+        ],
+        [
+          117.17,
+          117.85,
+          114.69,
+          115.69
+        ],
+        [
+          116.9,
+          121.66,
+          116.9,
+          121.07
+        ],
+        [
+          122.22,
+          123.49,
+          120.31,
+          122.78
+        ],
+        [
+          118.62,
+          119.55,
+          117.12,
+          118.33
+        ],
+        [
+          118.18,
+          118.7,
+          115.87,
+          116.35
+        ],
+        [
+          116.43,
+          118.5,
+          114.9,
+          115.0
+        ],
+        [
+          116.64,
+          121.185,
+          116.35,
+          120.81
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        109.7663,
+        110.4022,
+        112.7954,
+        112.8466,
+        114.4462,
+        115.0971,
+        115.0971,
+        115.0971,
+        115.0971,
+        115.0971,
+        115.0971,
+        115.0971,
+        115.0971,
+        115.0971,
+        115.0971,
+        115.0971,
+        115.0971,
+        115.0971,
+        null,
+        null
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        131.3708,
+        130.9206,
+        130.248,
+        128.1822,
+        126.6729,
+        126.2722,
+        122.6304,
+        122.6304,
+        122.6304,
+        122.6304,
+        122.6304,
+        122.6304,
+        122.6304,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        128.7913,
+        128.7913
+      ]
+    },
+    "SOLS": {
+      "bars": [
+        [
+          73.2924,
+          73.7068,
+          66.5813,
+          67.9595
+        ],
+        [
+          68.1792,
+          68.4987,
+          60.2647,
+          62.0174
+        ],
+        [
+          60.9288,
+          62.4168,
+          59.9202,
+          60.9288
+        ],
+        [
+          63.765,
+          64.3742,
+          61.6978,
+          62.7164
+        ],
+        [
+          62.1772,
+          62.6166,
+          60.9788,
+          61.2184
+        ],
+        [
+          62.0573,
+          63.3556,
+          60.1698,
+          60.9788
+        ],
+        [
+          62.8862,
+          63.8549,
+          61.7477,
+          63.2757
+        ],
+        [
+          62.8862,
+          63.4455,
+          59.7903,
+          60.9488
+        ],
+        [
+          60.2997,
+          60.4595,
+          57.9828,
+          58.1625
+        ],
+        [
+          56.4248,
+          59.4009,
+          56.1252,
+          58.3023
+        ],
+        [
+          58.6319,
+          59.4957,
+          56.2451,
+          56.3949
+        ],
+        [
+          57.059,
+          60.3196,
+          56.2551,
+          60.0001
+        ],
+        [
+          60.3895,
+          62.0673,
+          60.1199,
+          60.5893
+        ],
+        [
+          60.02,
+          61.8875,
+          60.02,
+          60.799
+        ],
+        [
+          61.0587,
+          62.4318,
+          59.9451,
+          60.4595
+        ],
+        [
+          60.5693,
+          61.6129,
+          58.7617,
+          60.5094
+        ],
+        [
+          59.9601,
+          60.6192,
+          55.7957,
+          57.2337
+        ],
+        [
+          57.4035,
+          58.2124,
+          53.7983,
+          55.5859
+        ],
+        [
+          58.0177,
+          59.9501,
+          57.1838,
+          57.3136
+        ],
+        [
+          58.8816,
+          60.779,
+          57.783,
+          60.0899
+        ],
+        [
+          60.1299,
+          62.6765,
+          59.4308,
+          62.1472
+        ],
+        [
+          63.1159,
+          64.6539,
+          62.0324,
+          63.4355
+        ],
+        [
+          63.4155,
+          63.4155,
+          60.9758,
+          62.4168
+        ],
+        [
+          62.0973,
+          63.4055,
+          61.4082,
+          62.0973
+        ],
+        [
+          61.9075,
+          62.9661,
+          60.6692,
+          60.8789
+        ],
+        [
+          61.0187,
+          61.3533,
+          59.3909,
+          60.2397
+        ],
+        [
+          60.829,
+          61.8077,
+          60.2897,
+          61.0287
+        ],
+        [
+          62.4168,
+          62.8962,
+          61.2983,
+          62.1272
+        ],
+        [
+          62.1272,
+          63.1559,
+          61.7178,
+          62.4868
+        ],
+        [
+          62.4268,
+          63.5953,
+          62.0074,
+          62.5666
+        ],
+        [
+          62.5367,
+          62.9861,
+          61.6688,
+          62.4668
+        ],
+        [
+          61.1385,
+          61.2684,
+          59.9302,
+          60.0101
+        ],
+        [
+          60.03,
+          60.6991,
+          57.1139,
+          57.2637
+        ],
+        [
+          56.4947,
+          56.8892,
+          55.3563,
+          56.5447
+        ],
+        [
+          56.8143,
+          57.4235,
+          55.9754,
+          56.0853
+        ],
+        [
+          55.8756,
+          56.0164,
+          54.4874,
+          55.2863
+        ],
+        [
+          55.2863,
+          55.9055,
+          54.5473,
+          55.4661
+        ],
+        [
+          55.1465,
+          56.8842,
+          54.9268,
+          56.295
+        ],
+        [
+          56.87,
+          57.56,
+          55.88,
+          56.34
+        ],
+        [
+          64.99,
+          67.5,
+          63.13,
+          63.53
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        52.9098
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        73.0854,
+        70.0463,
+        68.3386,
+        68.2401,
+        68.2401,
+        68.2401,
+        68.2401,
+        68.2401,
+        68.2401,
+        68.1285,
+        66.7567,
+        66.7567,
+        66.7567,
+        66.7567,
+        66.7567,
+        66.7567,
+        66.7567,
+        66.7567,
+        66.7567,
+        66.7567,
+        66.7567,
+        66.7567,
+        66.7567,
+        66.7567,
+        66.4354,
+        65.9725,
+        62.8528,
+        62.8331,
+        61.0505,
+        60.594,
+        60.594,
+        60.594,
+        null
+      ]
+    },
+    "TOP": {
+      "bars": [
+        [
+          1.77,
+          2.07,
+          1.72,
+          2.04
+        ],
+        [
+          2.02,
+          2.098,
+          1.85,
+          1.97
+        ],
+        [
+          1.97,
+          2.096,
+          1.96,
+          2.03
+        ],
+        [
+          2.01,
+          2.09,
+          1.91,
+          2.08
+        ],
+        [
+          2.05,
+          2.193,
+          2.019,
+          2.11
+        ],
+        [
+          2.03,
+          2.03,
+          1.61,
+          1.84
+        ],
+        [
+          1.84,
+          1.94,
+          1.76,
+          1.87
+        ],
+        [
+          1.85,
+          2.1,
+          1.85,
+          2.1
+        ],
+        [
+          2.05,
+          2.644,
+          2.05,
+          2.52
+        ],
+        [
+          2.54,
+          2.88,
+          2.48,
+          2.81
+        ],
+        [
+          14.05,
+          14.05,
+          10.0,
+          11.2
+        ],
+        [
+          10.75,
+          12.45,
+          10.5,
+          11.15
+        ],
+        [
+          11.65,
+          12.0,
+          9.9,
+          11.35
+        ],
+        [
+          2.28,
+          2.425,
+          2.12,
+          2.18
+        ],
+        [
+          2.11,
+          2.25,
+          2.02,
+          2.19
+        ],
+        [
+          2.13,
+          2.25,
+          1.97,
+          2.14
+        ],
+        [
+          2.15,
+          2.305,
+          2.07,
+          2.26
+        ],
+        [
+          2.28,
+          2.4,
+          2.11,
+          2.11
+        ],
+        [
+          2.18,
+          2.215,
+          1.68,
+          2.085
+        ],
+        [
+          10.35,
+          10.75,
+          9.25,
+          10.3
+        ],
+        [
+          10.01,
+          11.91,
+          10.0,
+          10.52
+        ],
+        [
+          10.37,
+          12.406,
+          10.37,
+          11.02
+        ],
+        [
+          11.12,
+          11.409,
+          9.33,
+          10.45
+        ],
+        [
+          10.48,
+          10.928,
+          9.87,
+          10.665
+        ],
+        [
+          10.86,
+          11.705,
+          10.2,
+          11.29
+        ],
+        [
+          11.2,
+          11.9,
+          10.965,
+          11.62
+        ],
+        [
+          11.56,
+          12.28,
+          11.44,
+          12.045
+        ],
+        [
+          12.11,
+          12.282,
+          10.8,
+          10.84
+        ],
+        [
+          11.21,
+          11.555,
+          10.73,
+          10.94
+        ],
+        [
+          11.01,
+          11.34,
+          10.84,
+          11.13
+        ],
+        [
+          11.0,
+          11.8,
+          10.8,
+          11.37
+        ],
+        [
+          11.41,
+          12.835,
+          11.39,
+          12.46
+        ],
+        [
+          12.12,
+          13.08,
+          12.12,
+          12.66
+        ],
+        [
+          12.65,
+          13.61,
+          12.65,
+          13.28
+        ],
+        [
+          13.28,
+          14.73,
+          13.19,
+          14.13
+        ],
+        [
+          14.25,
+          16.345,
+          14.02,
+          16.24
+        ],
+        [
+          16.1,
+          16.2,
+          14.58,
+          15.37
+        ],
+        [
+          15.36,
+          15.49,
+          14.41,
+          14.875
+        ],
+        [
+          14.88,
+          15.8,
+          14.59,
+          15.42
+        ],
+        [
+          15.58,
+          17.4189,
+          14.56,
+          16.73
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1.5987,
+        2.784,
+        3.0818,
+        3.0818,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0.6137,
+        2.4828,
+        3.5068,
+        3.5068,
+        4.0029,
+        5.0267,
+        6.2869,
+        7.3708,
+        7.3708,
+        7.3708,
+        7.7318,
+        8.0314,
+        8.5623,
+        9.2173,
+        9.873,
+        10.3623,
+        10.7404,
+        10.8135,
+        10.8135,
+        11.1057,
+        11.1057
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        2.7699,
+        2.7699,
+        null,
+        null,
+        null,
+        null,
+        15.0974,
+        11.9262,
+        9.6634,
+        8.0288,
+        6.8535,
+        5.7976,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "WDAY": {
+      "bars": [
+        [
+          132.99,
+          138.4,
+          129.2,
+          137.99
+        ],
+        [
+          142.24,
+          145.81,
+          142.01,
+          143.65
+        ],
+        [
+          142.23,
+          142.23,
+          137.18,
+          137.88
+        ],
+        [
+          131.4,
+          138.98,
+          130.15,
+          138.34
+        ],
+        [
+          142.19,
+          143.1,
+          137.65,
+          138.95
+        ],
+        [
+          140.85,
+          147.22,
+          140.85,
+          144.87
+        ],
+        [
+          132.97,
+          141.98,
+          132.26,
+          139.81
+        ],
+        [
+          142.52,
+          147.39,
+          141.31,
+          141.82
+        ],
+        [
+          144.33,
+          148.42,
+          141.46,
+          145.43
+        ],
+        [
+          144.96,
+          149.88,
+          142.36,
+          144.78
+        ],
+        [
+          140.48,
+          147.83,
+          139.13,
+          147.22
+        ],
+        [
+          139.01,
+          144.99,
+          139.01,
+          141.17
+        ],
+        [
+          142.18,
+          142.18,
+          131.93,
+          132.42
+        ],
+        [
+          135.86,
+          136.33,
+          127.11,
+          127.87
+        ],
+        [
+          130.49,
+          136.0,
+          130.49,
+          135.34
+        ],
+        [
+          141.55,
+          150.24,
+          140.19,
+          147.54
+        ],
+        [
+          151.53,
+          160.55,
+          151.06,
+          159.69
+        ],
+        [
+          159.79,
+          170.4,
+          158.99,
+          168.01
+        ],
+        [
+          158.02,
+          160.99,
+          149.54,
+          158.11
+        ],
+        [
+          155.48,
+          160.89,
+          152.1,
+          160.34
+        ],
+        [
+          165.84,
+          169.67,
+          161.64,
+          165.05
+        ],
+        [
+          162.93,
+          172.15,
+          162.28,
+          171.28
+        ],
+        [
+          173.64,
+          174.0,
+          168.87,
+          170.64
+        ],
+        [
+          163.71,
+          171.4,
+          163.05,
+          170.24
+        ],
+        [
+          174.3,
+          182.72,
+          174.28,
+          179.64
+        ],
+        [
+          176.98,
+          185.82,
+          176.2,
+          184.19
+        ],
+        [
+          181.03,
+          185.03,
+          179.28,
+          181.27
+        ],
+        [
+          175.86,
+          178.53,
+          173.17,
+          175.29
+        ],
+        [
+          177.44,
+          227.49,
+          174.6,
+          206.45
+        ],
+        [
+          207.85,
+          208.0,
+          195.01,
+          198.68
+        ],
+        [
+          192.49,
+          195.33,
+          189.31,
+          191.18
+        ],
+        [
+          195.3,
+          195.78,
+          190.43,
+          190.64
+        ],
+        [
+          190.34,
+          200.79,
+          189.46,
+          198.42
+        ],
+        [
+          197.64,
+          200.37,
+          194.78,
+          197.32
+        ],
+        [
+          197.67,
+          201.55,
+          194.79,
+          200.01
+        ],
+        [
+          199.7,
+          202.76,
+          198.48,
+          199.15
+        ],
+        [
+          196.18,
+          198.38,
+          193.7,
+          194.42
+        ],
+        [
+          188.18,
+          193.6,
+          188.05,
+          190.75
+        ],
+        [
+          195.4,
+          200.0,
+          189.79,
+          193.57
+        ],
+        [
+          190.68,
+          207.8399,
+          189.2486,
+          204.72
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        123.0391,
+        131.5631,
+        131.5631,
+        131.5631,
+        131.9436,
+        134.5289,
+        143.0729,
+        143.0729,
+        148.4895,
+        151.2871,
+        155.5503,
+        155.5503,
+        155.5503,
+        155.5503,
+        155.5503,
+        155.5503,
+        156.8273,
+        164.6592,
+        168.4132,
+        175.0924,
+        175.0924,
+        175.0924,
+        175.0924,
+        175.0924
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        170.3164,
+        169.6348,
+        169.6348,
+        168.1258,
+        166.6419,
+        163.2239,
+        158.2617,
+        158.2617,
+        158.2617,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  }
+};
+const SOURCE_FILE = "20260829_yahoo_gainers_20260829031531.json";
+
+const G = DATA.gainers || [];
+const OHLC = DATA.ohlc_30d || {};
+
+function esc(s) {
+  return String(s == null ? "" : s)
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+function avg(arr) {
+  if (!arr.length) return 0;
+  return arr.reduce((a, b) => a + b, 0) / arr.length;
+}
+function fmtPct(n) {
+  if (n == null || isNaN(n)) return "—";
+  const v = Number(n);
+  return (v >= 0 ? "+" : "") + v.toFixed(2) + "%";
+}
+function fmtPrice(p) {
+  if (p == null || p === "") return "—";
+  const n = Number(p);
+  if (isNaN(n)) return esc(p);
+  return "$" + n.toFixed(2);
+}
+function scoreTone(s) {
+  if (s == null || isNaN(s)) return "na";
+  const v = Number(s);
+  if (v >= 75) return "hi";
+  if (v >= 50) return "mid";
+  return "lo";
+}
+function fmtFund(f) {
+  const n = f == null || f === "" || isNaN(Number(f)) ? 0 : Number(f);
+  return `${n}/6`;
+}
+function fundTone(f) {
+  const n = f == null || f === "" || isNaN(Number(f)) ? 0 : Number(f);
+  if (n >= 4) return "hi";
+  if (n >= 2) return "mid";
+  return "lo";
+}
+function scoreBadgeHtml(s) {
+  const tone = scoreTone(s);
+  const label = s == null || isNaN(s) ? "—" : Number(s).toFixed(1);
+  return `<span class="score-badge ${tone}">10d ${label}</span>`;
+}
+function fundBadgeHtml(f) {
+  return `<span class="fund-badge ${fundTone(f)}">Fund ${fmtFund(f)}</span>`;
+}
+
+/** Mini OHLC + SuperTrend candle chart SVG */
+function ohlcChartHtml(symbol) {
+  const entry = OHLC[symbol];
+  const bars = Array.isArray(entry) ? entry : (entry && entry.bars);
+  if (!Array.isArray(bars) || bars.length < 2) return "";
+  const stUp = (!Array.isArray(entry) && entry.st_up) || [];
+  const stDown = (!Array.isArray(entry) && entry.st_down) || [];
+  const w = 300, h = 200, padX = 2, padY = 8; // 3:2
+  let lo = Infinity, hi = -Infinity;
+  bars.forEach((b, i) => {
+    if (!b || b.length < 4) return;
+    lo = Math.min(lo, b[2]);
+    hi = Math.max(hi, b[1]);
+    const u = stUp[i], d = stDown[i];
+    if (u != null && !isNaN(u)) { lo = Math.min(lo, u); hi = Math.max(hi, u); }
+    if (d != null && !isNaN(d)) { lo = Math.min(lo, d); hi = Math.max(hi, d); }
+  });
+  if (!(hi > lo)) return "";
+  const n = bars.length;
+  const slot = (w - padX * 2) / n;
+  const bodyW = Math.max(1.5, Math.min(6, slot * 0.55));
+  const yScale = (v) => padY + (hi - v) / (hi - lo) * (h - padY * 2);
+  const upC = "#2ecc71", downC = "#e74c3c";
+  const stFillUp = "#a8e6c1", stFillDown = "#f5b4b0";
+  const stUpC = "#8fd9a8", stDownC = "#f0a0a0";
+
+  function stFill(stArr, boundIdx, color) {
+    let html = "";
+    let i = 0;
+    while (i < n) {
+      while (i < n && (stArr[i] == null || isNaN(stArr[i]))) i++;
+      if (i >= n) break;
+      const start = i;
+      while (i < n && stArr[i] != null && !isNaN(stArr[i])) i++;
+      const end = i;
+      let d = "";
+      for (let j = start; j < end; j++) {
+        const x = padX + j * slot + slot / 2;
+        d += (j === start ? "M" : "L") + ` ${x.toFixed(1)} ${yScale(stArr[j]).toFixed(1)} `;
+      }
+      for (let j = end - 1; j >= start; j--) {
+        const b = bars[j];
+        if (!b) continue;
+        const x = padX + j * slot + slot / 2;
+        d += `L ${x.toFixed(1)} ${yScale(b[boundIdx]).toFixed(1)} `;
+      }
+      d += "Z";
+      html += `<path d="${d}" fill="${color}" fill-opacity="0.15"/>`;
+    }
+    return html;
+  }
+
+  function stLine(stArr, color) {
+    let html = "", seg = "";
+    const flush = () => {
+      if (seg) {
+        html += `<polyline points="${seg.trim()}" fill="none" stroke="${color}" stroke-width="1.2"/>`;
+        seg = "";
+      }
+    };
+    for (let i = 0; i < n; i++) {
+      const v = stArr[i];
+      if (v == null || isNaN(v)) { flush(); continue; }
+      const x = padX + i * slot + slot / 2;
+      seg += `${x.toFixed(1)},${yScale(v).toFixed(1)} `;
+    }
+    flush();
+    return html;
+  }
+
+  let parts = "";
+  parts += stFill(stUp, 2, stFillUp);
+  parts += stFill(stDown, 1, stFillDown);
+  parts += stLine(stUp, stUpC);
+  parts += stLine(stDown, stDownC);
+
+  bars.forEach((b, i) => {
+    if (!b || b.length < 4) return;
+    const [o, high, low, c] = b.map(Number);
+    if ([o, high, low, c].some(x => isNaN(x))) return;
+    const x = padX + i * slot + slot / 2;
+    const color = c >= o ? upC : downC;
+    const yH = yScale(high), yL = yScale(low);
+    const yO = yScale(o), yC = yScale(c);
+    const top = Math.min(yO, yC), bot = Math.max(yO, yC);
+    const bodyH = Math.max(1, bot - top);
+    parts += `<line x1="${x.toFixed(1)}" y1="${yH.toFixed(1)}" x2="${x.toFixed(1)}" y2="${yL.toFixed(1)}" stroke="${color}" stroke-width="1"/>`;
+    parts += `<rect x="${(x - bodyW / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bodyW.toFixed(1)}" height="${bodyH.toFixed(1)}" fill="${color}"/>`;
+  });
+  return `<div class="mini-chart" title="Last ${n} sessions OHLC + SuperTrend"><svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true">${parts}</svg></div>`;
+}
+
+function chainsOf(g) {
+  const set = new Set();
+  (g.industrial_leaves || []).forEach(l => {
+    if (l && l.chain_name) set.add(l.chain_name);
+  });
+  return [...set];
+}
+function leavesOf(g, theme) {
+  const leaves = g.industrial_leaves || [];
+  const names = [];
+  const seen = new Set();
+  leaves.forEach(l => {
+    if (!l || !l.name || seen.has(l.name)) return;
+    if (theme && l.chain_name !== theme) return;
+    seen.add(l.name);
+    names.push(l.name);
+  });
+  return names;
+}
+
+const themeMap = {};
+G.forEach(g => {
+  chainsOf(g).forEach(c => {
+    (themeMap[c] ||= { tickers: {} }).tickers[g.symbol] = true;
+  });
+});
+const themeStats = Object.entries(themeMap).map(([name, d]) => {
+  const list = G.filter(g => d.tickers[g.symbol]);
+  const leafCounts = {};
+  list.forEach(g => {
+    (g.industrial_leaves || []).forEach(l => {
+      if (l && l.chain_name === name && l.name) {
+        leafCounts[l.name] = (leafCounts[l.name] || 0) + 1;
+      }
+    });
+  });
+  const leaves = Object.entries(leafCounts)
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .map(([leaf]) => leaf);
+  return {
+    name,
+    syms: Object.keys(d.tickers).sort((a, b) => {
+      const ga = G.find(x => x.symbol === a);
+      const gb = G.find(x => x.symbol === b);
+      return (gb?.change_pct || 0) - (ga?.change_pct || 0);
+    }),
+    leaves,
+    list,
+    avgChg: avg(list.map(g => g.change_pct || 0)),
+  };
+})
+  .filter(t => t.syms.length >= 3)
+  .sort((a, b) => b.syms.length - a.syms.length || b.avgChg - a.avgChg);
+const topTheme = themeStats[0] || null;
+
+let activeTheme = topTheme ? topTheme.name : null;
+let spotlightExpanded = {};
+
+const app = document.getElementById("app");
+
+function truncate(text, n) {
+  if (!text) return "";
+  if (text.length <= n) return text;
+  return text.slice(0, n).replace(/\s+\S*$/, "") + "…";
+}
+
+function render() {
+  app.innerHTML = "";
+  app.appendChild(renderHero());
+  app.appendChild(renderThemes());
+  app.appendChild(renderSpotlight());
+  app.appendChild(renderQuality());
+  app.appendChild(renderFooter());
+}
+
+function renderHero() {
+  const el = document.createElement("header");
+  el.className = "hero";
+  const scraped = DATA.scraped_at || "—";
+  const minPct = DATA.min_change_pct != null ? DATA.min_change_pct : 5;
+  const update = (DATA.market_update || "").trim();
+  const overviewRaw = DATA.theme_overview;
+  const overviewObj = (overviewRaw && typeof overviewRaw === "object")
+    ? overviewRaw
+    : { text: typeof overviewRaw === "string" ? overviewRaw : "", themes: [] };
+  const overviewText = String(overviewObj.text || "").trim();
+  const overviewThemes = Array.isArray(overviewObj.themes) ? overviewObj.themes : [];
+  const sections = [];
+  if (update && !update.startsWith("(")) {
+    sections.push(`<div class="brief-section">
+      <div class="sym">Market update</div>${pointsToHtml(update)}
+    </div>`);
+  }
+  const highlightInner = renderHotThemeHighlights(overviewThemes, overviewText);
+  if (highlightInner) {
+    sections.push(`<div class="brief-section">${highlightInner}</div>`);
+  }
+  const briefHtml = sections.length
+    ? `<div class="index-briefs"><div class="index-brief">${sections.join("")}</div></div>`
+    : "";
+  el.innerHTML = `
+    <p class="eyebrow">Top gainers · theme-first</p>
+    <h1>Today's Hot Theme (20260829)</h1>
+    <div class="hero-meta">
+      <span><strong>${G.length}</strong> gainers</span>
+      <span class="sep">·</span>
+      <span><strong>${themeStats.length}</strong> themes</span>
+      <span class="sep">·</span>
+      <span>Top theme: <strong>${esc(topTheme ? topTheme.name : "—")}</strong></span>
+      <span class="sep">·</span>
+      <span>Scraped ${esc(scraped)} · ≥ ${minPct}%</span>
+    </div>
+    ${briefHtml}`;
+  return el;
+}
+
+function normThemeKey(s) {
+  return String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+}
+
+/** Map overview/LLM title → exact Hot Theme Today chain_name when possible. */
+function resolveHighlightTitle(rawTitle) {
+  const names = themeStats.map(t => t.name);
+  const target = normThemeKey(rawTitle);
+  if (!target || !names.length) return String(rawTitle || "").trim();
+  const exact = names.find(n => normThemeKey(n) === target);
+  if (exact) return exact;
+  const core = target.replace(/\s*\(.*$/, "").trim();
+  const coreHit = names.find(n => normThemeKey(n) === core);
+  if (coreHit) return coreHit;
+  const scored = names.map(n => {
+    const nn = normThemeKey(n);
+    let score = 0;
+    if (core && (core.startsWith(nn) || nn.startsWith(core))) score += 4;
+    if (core && (core.includes(nn) || nn.includes(core))) score += 2;
+    const ta = new Set(core.split(/\s+/).filter(Boolean));
+    const tb = new Set(nn.split(/\s+/).filter(Boolean));
+    let overlap = 0;
+    ta.forEach(tok => { if (tb.has(tok)) overlap++; });
+    score += overlap * 2;
+    // Prefer longer theme names on ties (more specific)
+    return { n, score, len: nn.length };
+  }).filter(x => x.score > 0)
+    .sort((a, b) => b.score - a.score || b.len - a.len);
+  return scored.length ? scored[0].n : String(rawTitle || "").trim();
+}
+
+function renderHotThemeHighlights(themes, fallbackText) {
+  const usableThemes = (themes || []).filter(t => t && String(t.title || "").trim());
+  if (usableThemes.length) {
+    const cards = usableThemes.map(t => {
+      const title = resolveHighlightTitle(t.title);
+      const tickers = Array.isArray(t.tickers) ? t.tickers : [];
+      const bullets = Array.isArray(t.bullets) ? t.bullets : [];
+      const takeaway = String(t.takeaway || "").trim();
+      const tickerHtml = tickers.length
+        ? `<div class="h-tickers">${tickers.map(x => `<span class="h-ticker">${esc(String(x))}</span>`).join("")}</div>`
+        : "";
+      const bulletHtml = bullets.length
+        ? `<ul class="h-bullets">${bullets.map(b => `<li>${esc(String(b))}</li>`).join("")}</ul>`
+        : "";
+      const takeHtml = takeaway ? `<div class="h-takeaway">${esc(takeaway)}</div>` : "";
+      return `<article class="highlight-card">
+        <h3 class="h-title">${esc(title)}</h3>
+        ${tickerHtml}${bulletHtml}${takeHtml}
+      </article>`;
+    }).join("");
+    return `<div class="sym">Hot Theme Highlights</div>
+      <div class="highlight-grid">${cards}</div>`;
+  }
+  const text = String(fallbackText || "").trim();
+  if (text && !text.startsWith("(")) {
+    return `<div class="sym">Hot Theme Highlights</div>
+      <pre class="theme-overview">${esc(text)}</pre>`;
+  }
+  return "";
+}
+
+function renderThemes() {
+  const sec = document.createElement("section");
+  sec.className = "section";
+  sec.id = "themes";
+  sec.innerHTML = `
+    <div class="section-hd">
+      <h2>Hot Theme Today</h2>
+    </div>`;
+  const grid = document.createElement("div");
+  grid.className = "theme-grid";
+  const catalystsMap = DATA.theme_catalysts || {};
+  themeStats.forEach(t => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "theme-board" + (t.name === activeTheme ? " active" : "");
+    const leafList = t.leaves || [];
+    const preview = leafList.slice(0, 4).map(n => `<span class="leaf-chip">${esc(n)}</span>`).join("");
+    const extra = leafList.length > 4 ? `<span class="leaf-chip">+${leafList.length - 4}</span>` : "";
+    const catHtml = pointsToHtml(catalystsMap[t.name] || "");
+    const catBlock = catHtml
+      ? `<div class="theme-catalysts"><div class="cat-label">Key catalysts</div>${catHtml}</div>`
+      : "";
+    btn.innerHTML = `
+      <div class="t-name">${esc(t.name)}</div>
+      <div class="t-stats">
+        <span>${t.syms.length} name${t.syms.length === 1 ? "" : "s"}</span>
+        <span class="t-avg">${fmtPct(t.avgChg)}</span>
+      </div>
+      ${catBlock}
+      <div class="t-leaves">${preview}${extra}</div>`;
+    btn.onclick = () => {
+      if (activeTheme === t.name) {
+        activeTheme = null;
+      } else {
+        activeTheme = t.name;
+      }
+      spotlightExpanded = {};
+      const y = window.scrollY;
+      render();
+      window.scrollTo(0, y);
+    };
+    grid.appendChild(btn);
+  });
+  sec.appendChild(grid);
+  return sec;
+}
+
+
+function fundNum(f) {
+  if (f == null || f === "" || isNaN(Number(f))) return 0;
+  return Number(f);
+}
+
+function isQualityPick(g) {
+  const fund = fundNum(g.fundamental);
+  const score = g.score_10d;
+  const scoreOk = score != null && !isNaN(Number(score)) && Number(score) >= 75;
+  return fund >= 4 || scoreOk;
+}
+
+function renderQuality() {
+  const sec = document.createElement("section");
+  sec.className = "section";
+  sec.id = "quality";
+  const list = G.filter(isQualityPick)
+    .slice()
+    .sort((a, b) => (b.change_pct || 0) - (a.change_pct || 0));
+
+  sec.innerHTML = `
+    <div class="section-hd">
+      <h2>Quality screen</h2>
+      <p>Fund ≥ 4 or 10d score ≥ 75 — compact cards, no narratives.</p>
+    </div>`;
+
+  const wrap = document.createElement("div");
+  wrap.className = "spotlight";
+  const meta = document.createElement("div");
+  meta.className = "spotlight-hd";
+  meta.innerHTML = `
+    <h3>${list.length} name${list.length === 1 ? "" : "s"}</h3>
+    <div class="meta">sorted by change</div>`;
+  wrap.appendChild(meta);
+
+  const grid = document.createElement("div");
+  grid.className = "spot-grid";
+
+  if (!list.length) {
+    grid.innerHTML = `<p class="rational muted">No gainers meet Fund ≥ 4 or 10d ≥ 75 today.</p>`;
+  } else {
+    list.forEach((g, i) => {
+      const card = document.createElement("article");
+      card.className = "spot-card";
+      card.style.animationDelay = (i * 0.03) + "s";
+      const themes = chainsOf(g);
+      const themeHtml = themes.slice(0, 4).map(t => `<span class="leaf-tag">${esc(t)}</span>`).join("");
+      card.innerHTML = `
+        <div class="top">
+          <div>
+            <div class="sym">${esc(g.symbol)}</div>
+            <div class="nm">${esc(g.name)}</div>
+          </div>
+          <div class="chg">${fmtPct(g.change_pct)}</div>
+        </div>
+        <div class="row-meta">
+          <span>${fmtPrice(g.price)}</span>
+          ${fundBadgeHtml(g.fundamental)}
+          ${scoreBadgeHtml(g.score_10d)}
+        </div>
+        ${ohlcChartHtml(g.symbol)}
+        ${themeHtml ? `<div class="leaf-tags">${themeHtml}</div>` : ""}`;
+      grid.appendChild(card);
+    });
+  }
+  wrap.appendChild(grid);
+  sec.appendChild(wrap);
+  return sec;
+}
+
+function pointsToHtml(points) {
+  const lines = String(points || "").split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+  if (!lines.length) return "";
+  const items = lines.map(l => {
+    const text = l.replace(/^[•\-\*\u2013\u2014]\s*/, "").replace(/^\d+[.)]\s*/, "");
+    return `<li>${esc(text)}</li>`;
+  }).join("");
+  return `<ul class="rational-points">${items}</ul>`;
+}
+
+function renderRationalBlock(g) {
+  const rat = (g.rational || "").trim();
+  const points = (g.rational_points || "").trim();
+  const open = !!spotlightExpanded[g.symbol];
+  const usablePoints = points && !points.startsWith("(");
+
+  if (!rat && !usablePoints) {
+    return `<div class="rational muted">No narrative available.</div>`;
+  }
+
+  if (usablePoints) {
+    const ptsHtml = pointsToHtml(points);
+    if (!rat) return ptsHtml;
+    if (open) {
+      return `${ptsHtml}<div class="rational-full">${esc(rat)}</div>
+        <button type="button" class="more" data-sym="${esc(g.symbol)}">Show less</button>`;
+    }
+    return `${ptsHtml}<button type="button" class="more" data-sym="${esc(g.symbol)}">Read more</button>`;
+  }
+
+  // Fallback when points missing: truncated rational + Read more
+  if (open || rat.length <= 220) {
+    return `<div class="rational">${esc(rat)}${rat.length > 220 ? ` <button type="button" class="more" data-sym="${esc(g.symbol)}">Show less</button>` : ""}</div>`;
+  }
+  return `<div class="rational">${esc(truncate(rat, 220))} <button type="button" class="more" data-sym="${esc(g.symbol)}">Read more</button></div>`;
+}
+
+function renderSpotlight() {
+  const sec = document.createElement("section");
+  sec.className = "section";
+  sec.id = "spotlight";
+  const theme = themeStats.find(t => t.name === activeTheme);
+  const title = theme ? theme.name : "All gainers";
+  const list = (theme ? theme.list : G.slice()).slice().sort((a, b) => (b.change_pct || 0) - (a.change_pct || 0));
+  const avgChg = avg(list.map(g => g.change_pct || 0));
+
+  const wrap = document.createElement("div");
+  wrap.className = "spotlight";
+  wrap.innerHTML = `
+    <div class="spotlight-hd">
+      <h3>Hot Theme Breakdown · ${esc(title)}</h3>
+      <div class="meta">${list.length} names · avg <span class="pos">${fmtPct(avgChg)}</span></div>
+    </div>`;
+
+  const grid = document.createElement("div");
+  grid.className = "spot-grid";
+
+  if (!list.length) {
+    grid.innerHTML = `<p class="rational muted">No gainers in this theme.</p>`;
+  } else {
+    list.forEach((g, i) => {
+      const card = document.createElement("article");
+      card.className = "spot-card";
+      card.style.animationDelay = (i * 0.03) + "s";
+      const leaves = leavesOf(g, activeTheme);
+      const leafHtml = leaves.slice(0, 6).map(n => `<span class="leaf-tag">${esc(n)}</span>`).join("");
+      card.innerHTML = `
+        <div class="top">
+          <div>
+            <div class="sym">${esc(g.symbol)}</div>
+            <div class="nm">${esc(g.name)}</div>
+          </div>
+          <div class="chg">${fmtPct(g.change_pct)}</div>
+        </div>
+        <div class="row-meta">
+          <span>${fmtPrice(g.price)}</span>
+          ${fundBadgeHtml(g.fundamental)}
+          ${scoreBadgeHtml(g.score_10d)}
+        </div>
+        ${ohlcChartHtml(g.symbol)}
+        ${leafHtml ? `<div class="leaf-tags">${leafHtml}</div>` : ""}
+        ${renderRationalBlock(g)}`;
+      grid.appendChild(card);
+    });
+  }
+  wrap.appendChild(grid);
+  sec.appendChild(wrap);
+
+  setTimeout(() => {
+    wrap.querySelectorAll(".more").forEach(btn => {
+      btn.onclick = (e) => {
+        e.stopPropagation();
+        const sym = btn.dataset.sym;
+        spotlightExpanded[sym] = !spotlightExpanded[sym];
+        const y = window.scrollY;
+        render();
+        window.scrollTo(0, y);
+      };
+    });
+  }, 0);
+  return sec;
+}
+
+function renderFooter() {
+  const f = document.createElement("footer");
+  f.innerHTML = `Embedded from <code>${esc(SOURCE_FILE)}</code> · scraped ${esc(DATA.scraped_at || "—")} · standalone dashboard`;
+  return f;
+}
+
+render();
+</script>
+</body>
+</html>
