@@ -1,0 +1,4828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Today's Gainer Stories · 20260902</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Sand B1 Whisper: #F2E2BA + light brown/grey, light catalysts & story highlights */
+:root {
+  --sand: #F2E2BA;
+  --bg: #F0EFEC;
+  --bg-wash: #F7F1E4;
+  --panel: #FBFAF8;
+  --ink: #3C3A36;
+  --muted: #78746C;
+  --line: #D8D4CE;
+  --line-strong: #C8C4BC;
+  --accent: #A08060;
+  --accent-soft: #F8F3E8;
+  --accent-deep: #8A7358;
+  --pos: #16a34a;
+  --pos-soft: #dcfce7;
+  --warm: #C4A882;
+  --warm-soft: #F8F3EA;
+  --highlight: #F8F6F2;
+  --catalyst-bg: #FAF8F4;
+  --shadow: 0 1px 2px rgba(60,58,54,.03), 0 8px 20px rgba(160,128,96,.07);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --font: "Source Sans 3", system-ui, sans-serif;
+  --display: "Fraunces", Georgia, serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; padding: 0;
+  background:
+    radial-gradient(ellipse 900px 420px at 12% -10%, #F2E2BA, transparent 58%),
+    radial-gradient(ellipse 720px 400px at 95% 4%, #E8E6E2, transparent 55%),
+    var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1120px; margin: 0 auto; padding: 32px 22px 64px; }
+
+.hero {
+  position: relative;
+  padding: 8px 4px 8px;
+  margin-bottom: 28px;
+  animation: rise .55s ease both;
+}
+.hero .eyebrow {
+  font-size: 12px; font-weight: 600; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--accent); margin: 0 0 10px;
+}
+.hero h1 {
+  font-family: var(--display);
+  font-size: clamp(1.85rem, 4vw, 2.55rem);
+  font-weight: 700; line-height: 1.15;
+  margin: 0 0 14px; letter-spacing: -0.02em;
+}
+.hero-meta {
+  display: flex; flex-wrap: wrap; gap: 10px 18px;
+  align-items: baseline; color: var(--muted); font-size: 13px;
+}
+.hero-meta strong { color: var(--ink); font-weight: 600; }
+.hero-meta .sep { opacity: .35; }
+.index-briefs {
+  margin-top: 16px;
+}
+.index-brief {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  box-shadow: var(--shadow);
+}
+.index-brief .sym {
+  font-size: 11px; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--accent-deep); margin: 0 0 6px;
+}
+.index-brief .rational-points {
+  margin: 0; padding: 0 0 0 1.1em;
+  font-size: 13px; color: var(--ink); line-height: 1.45;
+}
+.index-brief .rational-points li { margin: 0 0 4px; }
+.index-brief .rational-points li:last-child { margin-bottom: 0; }
+.index-brief .muted { margin: 0; font-size: 13px; }
+.index-brief .theme-overview {
+  margin: 0;
+  font-size: 13px; color: var(--ink); line-height: 1.45;
+  white-space: pre-wrap;
+  font-family: inherit;
+}
+.index-brief .brief-section + .brief-section {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+}
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 10px;
+}
+.highlight-card {
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 12px 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 100%;
+}
+.highlight-card .h-title {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: .95rem;
+  margin: 0;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+.highlight-card .h-tickers {
+  display: flex; flex-wrap: wrap; gap: 4px;
+}
+.highlight-card .h-ticker {
+  font-size: 10.5px; font-weight: 600;
+  font-family: var(--mono);
+  background: var(--bg);
+  color: var(--accent-deep);
+  border: 1px solid var(--line);
+  padding: 1px 6px; border-radius: 4px;
+}
+.highlight-card .h-bullets {
+  margin: 0; padding: 0 0 0 1.05em;
+  font-size: 12.5px; color: var(--ink); line-height: 1.4;
+}
+.highlight-card .h-bullets li { margin: 0 0 3px; }
+.highlight-card .h-bullets li:last-child { margin-bottom: 0; }
+.highlight-card .h-takeaway {
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px dashed var(--line);
+  font-size: 12.5px; font-weight: 600;
+  color: var(--accent-deep); line-height: 1.35;
+}
+.highlight-card .h-takeaway::before {
+  content: "📌 ";
+}
+
+.section { margin-top: 30px; animation: rise .55s ease both; }
+.section:nth-of-type(2) { animation-delay: .05s; }
+.section:nth-of-type(3) { animation-delay: .1s; }
+.section:nth-of-type(4) { animation-delay: .15s; }
+.section-hd { margin-bottom: 14px; }
+.section-hd h2 {
+  font-family: var(--display); font-size: 1.35rem; font-weight: 700;
+  margin: 0 0 4px; letter-spacing: -0.01em;
+}
+.section-hd p { margin: 0; color: var(--muted); font-size: 13.5px; }
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: stretch;
+}
+.theme-board {
+  display: flex; flex-direction: column;
+  height: 100%;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 13px;
+  cursor: pointer;
+  text-align: left;
+  font: inherit; color: inherit;
+  box-shadow: var(--shadow);
+  transition: border-color .2s, transform .2s, background .2s;
+}
+.theme-board:hover { border-color: color-mix(in srgb, var(--accent) 40%, var(--line)); transform: translateY(-1px); }
+.theme-board.active {
+  background: var(--panel);
+  border-color: var(--accent-deep);
+  box-shadow: none;
+  outline: 1px solid var(--accent-deep);
+  outline-offset: 0;
+}
+.theme-board .t-name {
+  font-family: var(--display); font-weight: 700; font-size: .98rem; margin: 0 0 4px;
+}
+.theme-board .t-stats {
+  display: flex; justify-content: space-between; gap: 6px;
+  font-size: 11.5px; color: var(--muted); margin-bottom: 8px;
+}
+.theme-board .t-avg { color: var(--pos); font-weight: 700; }
+.theme-board .theme-catalysts {
+  padding: 0; background: none; border: none; margin-bottom: 8px;
+}
+.theme-board .t-leaves {
+  display: flex; flex-wrap: wrap; gap: 3px;
+  margin-top: auto; border-top: 1px dashed var(--line); padding-top: 8px;
+}
+.leaf-chip {
+  font-size: 10.5px; font-weight: 500;
+  background: var(--warm-soft); color: var(--warm);
+  padding: 1px 6px; border-radius: 4px;
+}
+.theme-board .theme-catalysts .cat-label {
+  font-size: 10px; font-weight: 600; letter-spacing: .05em;
+  text-transform: uppercase; color: var(--muted); margin: 0 0 4px;
+}
+.theme-board .theme-catalysts ul {
+  margin: 0; padding: 0 0 0 1em; font-size: 11.5px; line-height: 1.35;
+  text-align: left;
+}
+.theme-board .theme-catalysts li { margin: 0 0 2px; }
+.theme-board .theme-catalysts li:last-child { margin-bottom: 0; }
+
+.spotlight {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  box-shadow: var(--shadow);
+}
+.spotlight-hd {
+  display: flex; flex-wrap: wrap; align-items: baseline;
+  justify-content: space-between; gap: 10px;
+  margin-bottom: 16px; padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+.spotlight-hd h3 {
+  font-family: var(--display); font-size: 1.25rem; margin: 0;
+}
+.spotlight-hd .meta { color: var(--muted); font-size: 13px; }
+.spotlight-hd .meta .pos { color: var(--pos); font-weight: 700; }
+.spot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+.spot-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 14px 15px;
+  background: var(--panel);
+  transition: opacity .25s ease, transform .25s ease;
+  animation: fadeSlide .35s ease both;
+}
+.spot-card .top {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;
+}
+.spot-card .sym {
+  font-family: var(--mono); font-weight: 700; font-size: 15px;
+}
+.spot-card .nm { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+.spot-card .chg {
+  color: var(--pos); font-weight: 700; font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.spot-card .row-meta {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;
+  font-size: 11.5px; color: var(--muted);
+}
+.mini-chart {
+  margin-top: 10px;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  height: auto;
+  line-height: 0;
+}
+.mini-chart svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.tag {
+  display: inline-block; padding: 1px 7px; border-radius: 4px;
+  background: var(--accent-soft); color: var(--ink); font-weight: 500;
+}
+.leaf-tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 4px; }
+.leaf-tag {
+  font-size: 10.5px; padding: 1px 6px; border-radius: 4px;
+  background: var(--warm-soft); color: var(--warm); font-weight: 500;
+}
+.rational {
+  margin-top: 10px; font-size: 13px; color: var(--ink); line-height: 1.55;
+}
+.rational.muted { color: var(--muted); font-style: italic; }
+button.more {
+  background: none; border: none; color: var(--accent); font: inherit;
+  font-weight: 600; cursor: pointer; padding: 0; margin-top: 6px; display: inline-block;
+}
+button.more:hover { color: var(--accent-deep); text-decoration: underline; }
+.rational-points {
+  margin: 10px 0 0; padding: 0 0 0 1.1em;
+  font-size: 13px; color: var(--ink); line-height: 1.45;
+}
+.rational-points li { margin: 0 0 4px; }
+.rational-full {
+  margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--line);
+  font-size: 13px; color: var(--ink); line-height: 1.55;
+}
+
+.fund-badge {
+  font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 5px;
+  font-variant-numeric: tabular-nums;
+}
+.fund-badge.hi {
+  background: #dcfce7; color: #16a34a;
+}
+.fund-badge.mid {
+  background: #fef3c7; color: #d97706;
+}
+.fund-badge.lo {
+  background: #fee2e2; color: #dc2626;
+}
+.score-badge {
+  font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 5px;
+  font-variant-numeric: tabular-nums;
+}
+.score-badge.hi {
+  background: #dcfce7; color: #16a34a;
+}
+.score-badge.mid {
+  background: #fef3c7; color: #d97706;
+}
+.score-badge.lo {
+  background: #fee2e2; color: #dc2626;
+}
+.score-badge.na {
+  background: #EDEBE7; color: var(--muted);
+}
+
+footer {
+  margin-top: 36px; padding-top: 16px;
+  border-top: 1px solid var(--line);
+  text-align: center; color: var(--muted); font-size: 12px;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+  .theme-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .wrap { padding: 22px 14px 48px; }
+  .theme-grid { grid-template-columns: 1fr; }
+  .spot-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const DATA = {
+  "scraped_at": "2026-09-02T23:28:20",
+  "min_change_pct": 5.0,
+  "gainers": [
+    {
+      "symbol": "FRVO",
+      "name": "Fervo Energy Company",
+      "price": "19.75",
+      "change_pct": 28.41,
+      "score_10d": 34.84,
+      "fundamental": 0,
+      "rational": "Fervo Energy shares are giving back a portion of Tuesday's 28% surge, falling nearly 9% in regular trading following the record 396 MW Google power purchase agreement announcement, though shares are rebounding over 3% in after-hours trading. The pullback reflects profit-taking after the sharp rally and broader market risk-off sentiment tied to renewed US-Iran tensions and rising oil prices and bond yields, which pressured utilities and growth-oriented names broadly (XLU declined the prior session). Investors continue weighing the bullish Google deal - which lifts Fervo's contracted power to over 1,064 MW and drew a reiterated Outperform rating with a $46 price target from RBC Capital - against lingering concerns over the company's transmission curtailment disclosure, wider-than-expected Q2 losses, and the upcoming November 9 lock-up expiration on roughly 70 million insider shares. Notable institutional buying was also disclosed, with Wellington Management taking a $129.6 million stake and Resolute Advisors and Ranger Investment Management initiating new positions during Q2, underscoring continued institutional interest despite the stock's volatility and its position roughly 46% below its May IPO price.",
+      "industrial_leaves": [],
+      "industry": "Renewable Utilities",
+      "sector": "Utilities",
+      "rational_points": "• Fervo (FVRV) down ~9% intraday after 28% surge on Google’s 396 MW PPA deal.\n• Rebounded +3% after-hours as profit-taking fades; broader utilities/growth (XLU) under pressure.\n• RBC reiterates Outperform ($46 target) but investors weigh Q2 losses, transmission risks, and Nov. 9 lock-up."
+    },
+    {
+      "symbol": "CRK",
+      "name": "Comstock Resources, Inc.",
+      "price": "16.02",
+      "change_pct": 11.02,
+      "score_10d": 68.78,
+      "fundamental": 0,
+      "rational": "Comstock Resources shares pulled back after their sharp rally on the $1.65 billion SOCAR strategic partnership and asset-sale letter of intent, as analysts split on valuation following the news. UBS reiterated a Sell rating with a $13 price target and Gerdes Energy Research downgraded the stock to Neutral from Buy, both citing valuation concerns and arguing the transactions are largely net-present-value neutral despite reducing pro forma net debt from $3.1 billion to about $1.5 billion, while Mizuho raised its target to $20 citing accelerated debt reduction. The pullback also comes amid broader market pressure from surging oil prices and Treasury yields tied to escalating U.S.-Iran tensions near the Strait of Hormuz, even as sector peer XLE traded near 52-week highs, highlighting investor debate over whether Comstock's balance-sheet improvement justifies its recent run-up.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610019,
+          "chain_name": "Petroleum",
+          "plate_id": 10010156,
+          "name": "Petroleum Exploration"
+        },
+        {
+          "chain_id": 9610019,
+          "chain_name": "Petroleum",
+          "plate_id": 10010157,
+          "name": "Petroleum Extraction"
+        }
+      ],
+      "industry": "Oil & Gas Exploration & Production",
+      "sector": "Energy",
+      "rational_points": "• Comstock (CRK) fell after rallying on $1.65B SOCAR deal & asset sale.\n• Analysts split: UBS (Sell, $13), Gerdes (Neutral) vs. Mizuho (raised to $20).\n• Debt cut from $3.1B to $1.5B—but critics call deals NPV-neutral.\n• Oil prices/yields rose on U.S.-Iran tensions; XLE near 52-week highs."
+    },
+    {
+      "symbol": "EIX",
+      "name": "Edison International",
+      "price": "58.80",
+      "change_pct": 8.93,
+      "score_10d": 33.77,
+      "fundamental": 0,
+      "rational": "Edison International shares are sliding again after hours, down roughly 6% to around $55, extending a volatile stretch that began when California's Senate Bill 492 omitted liability protections for investor-owned utilities, sparking a historic ~23% single-day plunge on August 31. Shares had partially rebounded Tuesday (+5.8% to $57.12) on renewed dividend commitments and speculative call-buying (options volume up ~514% above normal), but wildfire-liability fears resurfaced as SB 492 headed to a vote, with BofA and Mizuho having already slashed price targets (Mizuho to $70 from $86) and downgraded ratings amid concerns over uncapped wildfire claims pressuring EIX's cash flow, credit ratings, and future capital needs. Broader market weakness—driven by surging oil prices near $90-92 on renewed US-Iran tensions and rising Treasury yields—compounded pressure on utilities, with peer PG&E also under similar liability scrutiny, though some retail investors and value-focused analysts (citing a ~25% discount to GF Value) view the selloff as an overreaction given SCE's underlying rate base and grid-modernization growth prospects.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610042,
+          "chain_name": "Electricity",
+          "plate_id": 10102887,
+          "name": "Transmission & Distribution Companies"
+        }
+      ],
+      "industry": "Regulated Electric",
+      "sector": "Utilities",
+      "rational_points": "• EIX (-6% to $55) drops again after SB 492’s liability omissions reignite wildfire-risk fears.\n• BofA/Mizuho cut targets (Mizuho: $70→$86) citing uncapped wildfire claims straining cash flow.\n• Options volume surged 514% Tuesday but volatility resurfaced ahead of SB 492 vote.\n• Peers like PG&E face similar scrutiny; some analysts call selloff overdone vs. SCE’s rate base."
+    },
+    {
+      "symbol": "DUOL",
+      "name": "Duolingo, Inc.",
+      "price": "158.77",
+      "change_pct": 7.02,
+      "score_10d": 56.19,
+      "fundamental": 0,
+      "rational": "Duolingo shares surged roughly 7% after Evercore ISI analyst Mark Mahaney upgraded the stock to Outperform from In Line and doubled his price target to $210 from $105, comparing the setup to Netflix's 2022 growth inflection. The upgrade was backed by proprietary survey data and channel checks pointing to accelerating daily active user growth (tracking 25-27% year-over-year for Q3), following Duolingo's Q2 report of 23% DAU growth to 58.7 million users, 18% revenue growth, and a new $400 million buyback; DA Davidson also raised its target to $175 from $160, reinforcing bullish momentum even as the broader software sector faced volatility from macro pressures like rising oil prices and Treasury yields tied to U.S.-Iran tensions.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610020,
+          "chain_name": "AI",
+          "plate_id": 10010508,
+          "name": "Application Layer"
+        },
+        {
+          "chain_id": 9610027,
+          "chain_name": "Online Education",
+          "plate_id": 10010368,
+          "name": "Online Education Platform"
+        }
+      ],
+      "industry": "Software - Application",
+      "sector": "Technology",
+      "rational_points": "• DUOLINGO (DALG) +7% after Evercore ISI upgraded to Outperform (price target $210 vs. $105).\n• DAU growth accelerating—Q3 survey data shows 25–27% YoY (vs. Q2’s 23% to 58.7M users).\n• Buyback + analyst lift: $400M repurchase plan; DA Davidson raised target to $175."
+    },
+    {
+      "symbol": "BWXT",
+      "name": "BWX Technologies, Inc.",
+      "price": "161.54",
+      "change_pct": 6.07,
+      "score_10d": 36.21,
+      "fundamental": 0,
+      "rational": "BWX Technologies shares pulled back after a strong run tied to its August 26 selection for the U.S. Army's Janus advanced microreactor program and a late-August analyst upgrade, giving back some of the prior session's gains (shares had jumped over 5% on September 1) amid broader market weakness. The decline coincided with a risk-off tone across equities as surging oil prices and rising Treasury yields, driven by escalating U.S.-Iran tensions, pressured industrials and the broader market, though BWXT partially recovered in after-hours trading, gaining back over 1% as investors continue to focus on the company's raised FY26 guidance, growing commercial nuclear backlog, and the upcoming September 29 Investor Day where CEO Rex Geveden and CFO Mike Fitzgerald will detail long-term growth plans.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610045,
+          "chain_name": "Nuclear Power",
+          "plate_id": 10102921,
+          "name": "Nuclear Island Equipment and Auxiliary Facilities"
+        },
+        {
+          "chain_id": 9610045,
+          "chain_name": "Nuclear Power",
+          "plate_id": 10102922,
+          "name": "Nuclear Power Plant Construction"
+        },
+        {
+          "chain_id": 9610085,
+          "chain_name": "Commercial Space",
+          "plate_id": 10104226,
+          "name": "Core Components & Materials"
+        }
+      ],
+      "industry": "Aerospace & Defense",
+      "sector": "Industrials",
+      "rational_points": "• BWXT (BWX) pulled back after 5%+ gain on Sept 1, tied to U.S. Army’s Janus microreactor contract win.\n• Market weakness dragged industrials amid oil surges and U.S.-Iran tensions, pressuring yields.\n• Recovered ~1% after hours as focus shifts to FY26 guidance hike and Sept 29 Investor Day."
+    },
+    {
+      "symbol": "HP",
+      "name": "Helmerich & Payne, Inc.",
+      "price": "46.21",
+      "change_pct": 6.03,
+      "score_10d": 51.83,
+      "fundamental": 1,
+      "rational": "Helmerich & Payne shares are trading near 52-week highs, extending a sharp multi-day rally driven by surging oil prices as escalating U.S.-Iran tensions in the Strait of Hormuz push Brent crude toward $95-97/bbl, boosting drilling demand expectations. The move follows a strong Q3 FY2026 report (revenue beat, narrowing international losses, accelerating North America margins post-KCA Deutag integration) and a bullish Seeking Alpha 'recovery' thesis that fueled buying, even as heavy institutional accumulation (Man Group, Canada Pension Plan, Alyeska, BNY Mellon) contrasts with continued insider selling and a cautious Wall Street 'Hold' consensus (avg. price target $41, below current levels).",
+      "industrial_leaves": [],
+      "industry": "Oil & Gas Drilling",
+      "sector": "Energy",
+      "rational_points": "• HNP trading near 52-week highs on multi-day rally fueled by Brent crude nearing $95–97/bbl.\n• Q3 FY2026 beat (revenue up, narrowing int’l losses, NA margins accelerating post-KCA Deutag).\n• Institutional buying (Man Group, Canada Pension Plan) despite Wall Street ‘Hold’ consensus ($41 avg. target)."
+    },
+    {
+      "symbol": "PCG",
+      "name": "PG&E Corporation",
+      "price": "14.06",
+      "change_pct": 5.95,
+      "score_10d": 33.85,
+      "fundamental": 0,
+      "rational": "PG&E shares fell over 5% after the company announced a board-level strategic review of its business structure and revised its 2027 capital plan, deferring roughly $2 billion of planned investment to cut debt financing needs by $2 billion. The move comes directly on the heels of a brutal selloff earlier this week after California lawmakers failed to include wildfire liability protections in Senate Bill 492, prompting multiple analyst downgrades (BofA to Neutral, Mizuho to Neutral, BMO to Market Perform) and a slew of price target cuts, including JPMorgan trimming its target to $18 from $25 while maintaining Overweight. Despite reaffirming 2026 EPS guidance of $1.64-$1.66 and issuing 2027 guidance of $1.78-$1.82, investors appear focused on the unresolved wildfire liability framework and open-ended tail risk, keeping the stock near 52-week lows and underperforming the broader Utilities sector (XLU), which traded roughly flat in the same session.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610042,
+          "chain_name": "Electricity",
+          "plate_id": 10102885,
+          "name": "Power Plant Manufacturer"
+        },
+        {
+          "chain_id": 9610042,
+          "chain_name": "Electricity",
+          "plate_id": 10102887,
+          "name": "Transmission & Distribution Companies"
+        }
+      ],
+      "industry": "Regulated Electric",
+      "sector": "Utilities",
+      "rational_points": "• PG&E (PCG) down ~5% after announcing a board-level strategic review and deferring $2B in 2027 capex to cut debt financing.\n• Analysts downgraded (BofA, Mizuho, BMO) and slashed targets—JPMorgan cut to $18—amid SB 492 wildfire liability failure.\n• EPS guidance unchanged ($1.64–$1.66 for 2026, $1.78–$1.82 for 2027), but liability uncertainty drags shares to 52-week lows.\n• Underperforms XLU, which traded flat, as tail risk lingers."
+    },
+    {
+      "symbol": "CNH",
+      "name": "CNH Industrial N.V.",
+      "price": "12.50",
+      "change_pct": 5.66,
+      "score_10d": 69.15,
+      "fundamental": 0,
+      "rational": "CNH Industrial surged after Evercore ISI upgraded both CNH and Deere to Outperform from In-Line, with analyst David Raso raising CNH's price target sharply to $18 from $12.50, citing early signs that the three-year downturn in U.S. agricultural equipment demand is nearing a turning point as crop economics improve and the industry's machinery fleet matures. The upgrade builds on momentum from CNH's recent Q2 beat and raised 2026 guidance (adjusted EPS of $0.13 vs. $0.10 expected), Baird's prior upgrade to Outperform with a $15 target, and a new seeding equipment alliance with Bourgault Industries, all reinforcing a bullish narrative around margin recovery even as some GuruFocus valuation metrics flag the stock as overvalued relative to fair value estimates. Shares touched a fresh 52-week high of $13.89 intraday on heavy volume (over 3.5x average), before paring gains in after-hours trading amid broader market jitters tied to escalating U.S.-Iran tensions and a sharp rise in Treasury yields.",
+      "industrial_leaves": [],
+      "industry": "Agricultural - Machinery",
+      "sector": "Industrials",
+      "rational_points": "• CNH Industrial (CNH) surged after Evercore ISI upgraded to Outperform and raised target to $18 from $12.50, citing U.S. ag demand rebound.\n• Q2 beat + raised 2026 EPS guidance ($0.13 vs. $0.10 expected) and Baird’s prior upgrade ($15 target) fueled momentum.\n• New seeding alliance with Bourgault Industries adds to margin recovery narrative despite some valuation concerns.\n• Stock hit 52-week high ($13.89) on 3.5x avg. volume, then pulled back post-market amid geopolitical risks."
+    },
+    {
+      "symbol": "SEB",
+      "name": "Seaboard Corporation",
+      "price": "4",
+      "change_pct": 5.45,
+      "score_10d": 34.25,
+      "fundamental": 2,
+      "rational": "Seaboard shares jumped 5.45% to close at $4,123.38, sharply reversing recent weakness and outperforming the broader Industrials sector, even as the S&P 500 and Dow fell amid renewed U.S.-Iran tensions, rising oil prices, and surging Treasury yields. The rally followed a wave of institutional buying disclosed in 13F filings this week, including a new $106.32 million stake from BlackRock and new positions from HSBC, Deutsche Bank, Susquehanna, and Hennessy Advisors, underscoring renewed institutional interest in the low-float conglomerate after shares had pulled back to near 52-week lows around $3,913. Trading volume was more than double the average, suggesting investors are re-rating the stock following its August 4th earnings report, which showed $159.74 EPS on $2.92 billion in quarterly revenue, a 12.03% return on equity, and a still-low 5.91x price-to-earnings ratio relative to its diversified agribusiness and shipping operations.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610015,
+          "chain_name": "Live Hogs",
+          "plate_id": 10010024,
+          "name": "Hog Farming"
+        },
+        {
+          "chain_id": 9610015,
+          "chain_name": "Live Hogs",
+          "plate_id": 10010026,
+          "name": "Animal Slaughter"
+        },
+        {
+          "chain_id": 9610015,
+          "chain_name": "Live Hogs",
+          "plate_id": 10010028,
+          "name": "Pork Processing"
+        },
+        {
+          "chain_id": 9610015,
+          "chain_name": "Live Hogs",
+          "plate_id": 10010030,
+          "name": "Hog Sale"
+        },
+        {
+          "chain_id": 9610016,
+          "chain_name": "Livestock Farming",
+          "plate_id": 10010024,
+          "name": "Hog Farming"
+        },
+        {
+          "chain_id": 9610016,
+          "chain_name": "Livestock Farming",
+          "plate_id": 10010078,
+          "name": "Poultry Farming"
+        },
+        {
+          "chain_id": 9610016,
+          "chain_name": "Livestock Farming",
+          "plate_id": 10010079,
+          "name": "Food Processing"
+        },
+        {
+          "chain_id": 9610039,
+          "chain_name": "Ports & Shipping",
+          "plate_id": 10101069,
+          "name": "Port Operations"
+        },
+        {
+          "chain_id": 9610053,
+          "chain_name": "Plant Cultivation",
+          "plate_id": 10103417,
+          "name": "Crops"
+        }
+      ],
+      "industry": "Conglomerates",
+      "sector": "Industrials",
+      "rational_points": "• SEB (Seaboard) +5.45% to $4,123.38, defying Industrials sector weakness amid geopolitical tensions.\n• Institutional buying surge: BlackRock ($106.32M) + HSBC, Deutsche Bank, Susquehanna, Hennessy Advisors disclose new stakes.\n• Volume spikes 2x avg—re-rating follows August 4 EPS ($159.74 on $2.92B rev, 12.03% ROE, 5.91x P/E)."
+    },
+    {
+      "symbol": "ORA",
+      "name": "Ormat Technologies, Inc.",
+      "price": "107.29",
+      "change_pct": 5.19,
+      "score_10d": 40.44,
+      "fundamental": 0,
+      "rational": "Ormat Technologies shares are giving back a portion of Tuesday's sector-wide 5.4% rally, declining after hours as rising Treasury yields, surging oil prices tied to renewed U.S.-Iran tensions, and broader risk-off sentiment weigh on utilities and rate-sensitive equities. The pullback comes despite continued positive fundamentals: Ormat's Q2 results (EPS of $0.50 vs. $0.26 expected, revenue up 10.6% YoY to $258.8M) and raised 2026 guidance ($1.15B-$1.20B revenue, $630M-$650M adjusted EBITDA) have kept analysts at a 'Moderate Buy' consensus with a $130.83 price target, well above current levels, while some valuation-focused commentary flags the stock's ~49.5x P/E as elevated versus renewable energy peers. Institutional buying (HSBC, Manufacturers Life Insurance) and a maintained $0.12 quarterly dividend underscore steady investor interest even as macro headwinds - rising bond yields and geopolitical risk - pressure utility stocks broadly, with sector ETF XLU underperforming the market this week.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610042,
+          "chain_name": "Electricity",
+          "plate_id": 10102885,
+          "name": "Power Plant Manufacturer"
+        }
+      ],
+      "industry": "Renewable Utilities",
+      "sector": "Utilities",
+      "rational_points": "• ORA down after hours despite strong Q2 results (EPS $0.50 vs. $0.26 est., +10.6% YoY revenue).\n• Macro drag: Rising Treasury yields, oil prices, and risk-off sentiment hurt utilities.\n• Analysts hold 'Moderate Buy' consensus ($130.83 target) despite ~49.5x P/E vs. peers.\n• Institutional support: HSBC, Manufacturers Life Insurance buying; $0.12 dividend maintained."
+    },
+    {
+      "symbol": "PBR",
+      "name": "Petróleo Brasileiro S.A. - Petrobras",
+      "price": "20.33",
+      "change_pct": 5.06,
+      "score_10d": 63.23,
+      "fundamental": 0,
+      "rational": "Petrobras shares rose alongside a broad rally in oil-linked equities as escalating U.S.-Iran military strikes near the Strait of Hormuz pushed Brent crude toward $95-97 a barrel, its highest level in years, boosting sentiment for upstream producers. Gains were reinforced by Petrobras's strong Q2 2026 results (R$52.4 billion profit, record Brazilian production and refinery utilization) and its recently approved R$17.4 billion shareholder remuneration, which continue to draw institutional buying interest even as some funds trimmed positions and analysts hold a mixed but net 'Moderate Buy' consensus.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610019,
+          "chain_name": "Petroleum",
+          "plate_id": 10010153,
+          "name": "Petroleum Products Retail"
+        },
+        {
+          "chain_id": 9610019,
+          "chain_name": "Petroleum",
+          "plate_id": 10010154,
+          "name": "Petroleum Refining"
+        },
+        {
+          "chain_id": 9610019,
+          "chain_name": "Petroleum",
+          "plate_id": 10010155,
+          "name": "Petroleum Storage and Transportation"
+        },
+        {
+          "chain_id": 9610019,
+          "chain_name": "Petroleum",
+          "plate_id": 10010156,
+          "name": "Petroleum Exploration"
+        },
+        {
+          "chain_id": 9610019,
+          "chain_name": "Petroleum",
+          "plate_id": 10010157,
+          "name": "Petroleum Extraction"
+        },
+        {
+          "chain_id": 9610042,
+          "chain_name": "Electricity",
+          "plate_id": 10102885,
+          "name": "Power Plant Manufacturer"
+        },
+        {
+          "chain_id": 9610053,
+          "chain_name": "Plant Cultivation",
+          "plate_id": 10102479,
+          "name": "Fertilizers & Pesticides"
+        }
+      ],
+      "industry": "Oil & Gas Integrated",
+      "sector": "Energy",
+      "rational_points": "• Petrobras (PBR) up on oil rally—Brent near $95–97 as U.S.-Iran tensions near Strait of Hormuz.\n• Q2 2026 beat expectations: R$52.4B profit, record Brazilian production, and refinery utilization.\n• Shareholder payout approved: R$17.4B remuneration fuels institutional buying despite some fund trims.\n• Analysts mixed but net 'Moderate Buy'—consensus supports long-term upside."
+    }
+  ],
+  "theme_catalysts": {
+    "Electricity": "• California Senate Bill 492 omitted wildfire liability protections, sparking utility selloffs.\n• Rising Treasury yields and surging oil prices pressured rate-sensitive utilities."
+  },
+  "market_update": "• AI-driven tech earnings under scrutiny—Broadcom’s soft guidance and high oil/yield backdrop (4.8% 10Y) test Nasdaq-100’s AI growth narrative despite Nvidia/AMD momentum.\n• Mega-cap concentration risks rise—VOO’s top 10 holdings now account for 37-40% of the index, amplifying sensitivity to AI-driven earnings and rate-sensitive tech valuations.\n• Geopolitics and commodities weigh—U.S.-Iran tensions and oil near $90 fuel bond selloffs, pressuring growth stocks amid lingering macro uncertainty.",
+  "index_briefs": {
+    "QQQ": {
+      "description": "QQQ traded little changed after a two-day pullback tied to a global bond-market selloff, with the 10-year Treasury yield pushing toward 4.8% amid renewed U.S.-Iran tensions and oil above $90 a barrel, pressuring high-multiple tech valuations. Investors are focused on Broadcom's after-hours earnings, where strong AI chip results were overshadowed by soft guidance, sending shares down about 5% postmarket and reinforcing caution about the sustainability of AI infrastructure spending even as Nvidia and AMD's recent blowout quarters continue to underpin the broader Nasdaq-100 growth narrative."
+    },
+    "VOO": {
+      "description": "VOO shares are little changed after hours, holding near record levels as investors weigh a resilient mega-cap tech earnings backdrop (Nvidia's blowout results, Amazon and Alphabet strength) against a global bond selloff driving 10-year Treasury yields toward 4.8% amid renewed U.S.-Iran tensions and oil above $90. The fund recently topped $1 trillion in net assets, an industry first, but faces record concentration risk as its top 10 holdings—led by Nvidia, Apple, Microsoft, Amazon and Alphabet—now represent roughly 37-40% of the index, making VOO's near-term direction increasingly tied to AI-driven megacap earnings and rate-sensitive tech valuations rather than broad market breadth."
+    }
+  },
+  "theme_overview": {
+    "text": "【⛽ PETROLEUM】\n• U.S.-Iran tensions near Strait of Hormuz sent Brent crude toward $95-97/bbl\n• Petrobras rode Q2 profit and a R$17.4B payout\n📌 geopolitical oil spike juiced the whole chain\n\n【🤖 AI/ONLINE EDUCATION】\n• DUOL upgraded by Evercore\n• DAU growth tracking 25-27% YoY, Netflix-like inflection narrative\n📌 bullish analyst call + user momentum = fresh fuel\n\n【⚛️ NUCLEAR POWER & COMMERCIAL SPACE】\n• BWXT held gains on Janus microreactor win\n• Upcoming Investor Day\n📌 defense + nuclear tailwinds still humming\n\n【🐷 LIVE HOGS/LIVESTOCK FARMING】\n• SEB jumped on heavy institutional buying\n• BlackRock, HSBC, Deutsche Bank piled in\n📌 low-float conglomerate got a fresh institutional hug",
+    "themes": [
+      {
+        "emoji": "⛽",
+        "title": "PETROLEUM",
+        "tickers": [],
+        "bullets": [
+          "U.S.-Iran tensions near Strait of Hormuz sent Brent crude toward $95-97/bbl",
+          "Petrobras rode Q2 profit and a R$17.4B payout"
+        ],
+        "takeaway": "geopolitical oil spike juiced the whole chain"
+      },
+      {
+        "emoji": "🤖",
+        "title": "AI/ONLINE EDUCATION",
+        "tickers": [],
+        "bullets": [
+          "DUOL upgraded by Evercore",
+          "DAU growth tracking 25-27% YoY, Netflix-like inflection narrative"
+        ],
+        "takeaway": "bullish analyst call + user momentum = fresh fuel"
+      },
+      {
+        "emoji": "⚛️",
+        "title": "NUCLEAR POWER & COMMERCIAL SPACE",
+        "tickers": [],
+        "bullets": [
+          "BWXT held gains on Janus microreactor win",
+          "Upcoming Investor Day"
+        ],
+        "takeaway": "defense + nuclear tailwinds still humming"
+      },
+      {
+        "emoji": "🐷",
+        "title": "LIVE HOGS/LIVESTOCK FARMING",
+        "tickers": [],
+        "bullets": [
+          "SEB jumped on heavy institutional buying",
+          "BlackRock, HSBC, Deutsche Bank piled in"
+        ],
+        "takeaway": "low-float conglomerate got a fresh institutional hug"
+      }
+    ]
+  },
+  "ohlc_30d": {
+    "BWXT": {
+      "bars": [
+        [
+          186.7057,
+          188.9422,
+          184.2296,
+          186.6957
+        ],
+        [
+          186.516,
+          188.373,
+          183.93,
+          185.7072
+        ],
+        [
+          183.4708,
+          184.2695,
+          175.7529,
+          176.8612
+        ],
+        [
+          181.3042,
+          182.4524,
+          178.2091,
+          179.547
+        ],
+        [
+          181.3142,
+          183.1712,
+          174.7146,
+          176.6315
+        ],
+        [
+          174.2453,
+          175.703,
+          169.8922,
+          173.4665
+        ],
+        [
+          169.7324,
+          174.5947,
+          167.4061,
+          170.9106
+        ],
+        [
+          172.8575,
+          174.5947,
+          169.1733,
+          169.2931
+        ],
+        [
+          171.5096,
+          173.7161,
+          168.0551,
+          172.8176
+        ],
+        [
+          171.1402,
+          178.868,
+          171.1402,
+          174.8943
+        ],
+        [
+          174.6047,
+          180.2159,
+          174.3751,
+          176.3919
+        ],
+        [
+          176.7813,
+          178.0593,
+          173.8859,
+          174.2453
+        ],
+        [
+          178.2191,
+          181.2543,
+          172.7377,
+          176.2522
+        ],
+        [
+          173.6363,
+          173.6363,
+          165.1996,
+          169.4029
+        ],
+        [
+          167.7356,
+          167.7356,
+          156.8527,
+          157.1922
+        ],
+        [
+          161.116,
+          166.1581,
+          159.5185,
+          165.3294
+        ],
+        [
+          168.2248,
+          170.1917,
+          164.4508,
+          168.4345
+        ],
+        [
+          167.3961,
+          174.5648,
+          166.6972,
+          173.5164
+        ],
+        [
+          173.2269,
+          178.2191,
+          170.641,
+          172.1286
+        ],
+        [
+          171.7293,
+          173.157,
+          167.9752,
+          168.0151
+        ],
+        [
+          167.7356,
+          172.2684,
+          166.0482,
+          166.4376
+        ],
+        [
+          168.734,
+          171.0603,
+          164.2111,
+          169.6326
+        ],
+        [
+          170.6909,
+          171.7293,
+          168.5443,
+          168.6142
+        ],
+        [
+          170.5012,
+          172.8575,
+          168.6541,
+          169.4429
+        ],
+        [
+          173.2269,
+          174.2154,
+          168.105,
+          172.2884
+        ],
+        [
+          172.1886,
+          173.4266,
+          166.9668,
+          170.0819
+        ],
+        [
+          169.7324,
+          173.2269,
+          169.2432,
+          172.9474
+        ],
+        [
+          172.4881,
+          174.3252,
+          169.8323,
+          171.27
+        ],
+        [
+          168.11,
+          169.08,
+          164.77,
+          165.01
+        ],
+        [
+          165.24,
+          165.36,
+          158.72,
+          162.26
+        ],
+        [
+          161.3,
+          161.47,
+          154.59,
+          156.44
+        ],
+        [
+          158.97,
+          159.62,
+          156.28,
+          156.78
+        ],
+        [
+          155.49,
+          156.75,
+          149.17,
+          149.52
+        ],
+        [
+          151.8,
+          152.6,
+          147.74,
+          149.73
+        ],
+        [
+          150.93,
+          156.31,
+          150.44,
+          153.16
+        ],
+        [
+          156.5,
+          158.9,
+          154.54,
+          155.85
+        ],
+        [
+          151.88,
+          152.64,
+          150.77,
+          152.29
+        ],
+        [
+          151.0,
+          161.67,
+          151.0,
+          161.54
+        ],
+        [
+          160.99,
+          160.99,
+          154.01,
+          155.67
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        191.0913,
+        189.5369,
+        189.5369,
+        189.5369,
+        189.5369,
+        189.5369,
+        189.5369,
+        188.9183,
+        188.9183,
+        188.9183,
+        188.9183,
+        188.9183,
+        188.9183,
+        188.9183,
+        188.4948,
+        188.1698,
+        187.4631,
+        187.4631,
+        187.4631,
+        187.4631,
+        187.4631,
+        183.4665,
+        179.4262,
+        176.8221,
+        174.5491,
+        171.1168,
+        167.4326,
+        167.4326,
+        167.4326,
+        167.4326,
+        167.4326,
+        167.4326
+      ]
+    },
+    "CNH": {
+      "bars": [
+        [
+          10.41,
+          10.48,
+          10.28,
+          10.28
+        ],
+        [
+          10.35,
+          10.55,
+          10.32,
+          10.45
+        ],
+        [
+          10.44,
+          10.54,
+          10.3,
+          10.42
+        ],
+        [
+          10.58,
+          10.74,
+          10.27,
+          10.42
+        ],
+        [
+          10.43,
+          10.63,
+          10.36,
+          10.57
+        ],
+        [
+          10.51,
+          10.78,
+          10.49,
+          10.6
+        ],
+        [
+          10.64,
+          10.9,
+          10.59,
+          10.64
+        ],
+        [
+          10.64,
+          10.7,
+          10.28,
+          10.33
+        ],
+        [
+          10.41,
+          10.49,
+          10.21,
+          10.35
+        ],
+        [
+          10.45,
+          10.85,
+          10.45,
+          10.7
+        ],
+        [
+          10.67,
+          10.87,
+          10.59,
+          10.62
+        ],
+        [
+          10.68,
+          11.15,
+          10.66,
+          11.15
+        ],
+        [
+          11.15,
+          11.22,
+          10.87,
+          11.08
+        ],
+        [
+          11.14,
+          11.45,
+          11.14,
+          11.44
+        ],
+        [
+          11.29,
+          11.29,
+          10.72,
+          10.76
+        ],
+        [
+          10.78,
+          10.79,
+          10.24,
+          10.32
+        ],
+        [
+          10.35,
+          10.38,
+          10.11,
+          10.25
+        ],
+        [
+          11.41,
+          12.02,
+          10.7,
+          10.8
+        ],
+        [
+          10.94,
+          11.28,
+          10.58,
+          11.22
+        ],
+        [
+          11.2,
+          11.26,
+          10.79,
+          10.79
+        ],
+        [
+          10.81,
+          10.99,
+          10.75,
+          10.85
+        ],
+        [
+          10.83,
+          11.12,
+          10.83,
+          10.91
+        ],
+        [
+          10.79,
+          10.82,
+          10.38,
+          10.48
+        ],
+        [
+          10.49,
+          10.85,
+          10.49,
+          10.63
+        ],
+        [
+          10.67,
+          10.77,
+          10.46,
+          10.73
+        ],
+        [
+          10.66,
+          10.71,
+          10.22,
+          10.39
+        ],
+        [
+          10.35,
+          10.54,
+          10.29,
+          10.44
+        ],
+        [
+          10.4,
+          10.48,
+          10.29,
+          10.29
+        ],
+        [
+          10.28,
+          10.3,
+          10.03,
+          10.03
+        ],
+        [
+          10.12,
+          10.45,
+          10.09,
+          10.29
+        ],
+        [
+          10.19,
+          10.96,
+          10.19,
+          10.95
+        ],
+        [
+          11.04,
+          11.91,
+          10.81,
+          11.87
+        ],
+        [
+          11.9,
+          12.08,
+          11.7,
+          11.76
+        ],
+        [
+          11.9,
+          11.92,
+          11.48,
+          11.56
+        ],
+        [
+          11.54,
+          11.85,
+          11.48,
+          11.62
+        ],
+        [
+          11.62,
+          11.64,
+          11.38,
+          11.43
+        ],
+        [
+          12.11,
+          12.25,
+          11.69,
+          11.83
+        ],
+        [
+          11.8,
+          12.59,
+          11.79,
+          12.5
+        ],
+        [
+          12.46,
+          13.89,
+          12.39,
+          13.65
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        10.1678,
+        10.1678,
+        10.1678,
+        10.1678,
+        10.1678,
+        10.1678,
+        10.1678,
+        10.1678,
+        10.1678,
+        10.1678,
+        10.1678,
+        10.1678,
+        10.1678,
+        10.1678,
+        10.1678,
+        null,
+        null,
+        null,
+        9.5085,
+        10.2164,
+        10.2164,
+        10.2164,
+        10.2164,
+        10.3839,
+        10.4004,
+        10.6728
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        11.4575,
+        11.2856,
+        11.2856,
+        11.2856,
+        11.2856,
+        11.2856,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        11.1514,
+        11.1514,
+        11.1514,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "CRK": {
+      "bars": [
+        [
+          13.64,
+          13.94,
+          13.54,
+          13.69
+        ],
+        [
+          13.56,
+          13.59,
+          12.81,
+          12.92
+        ],
+        [
+          13.18,
+          13.29,
+          12.88,
+          13.24
+        ],
+        [
+          13.2,
+          13.34,
+          12.77,
+          12.98
+        ],
+        [
+          12.79,
+          13.11,
+          12.7,
+          13.07
+        ],
+        [
+          13.26,
+          13.38,
+          13.02,
+          13.1
+        ],
+        [
+          13.25,
+          13.43,
+          12.95,
+          13.34
+        ],
+        [
+          13.1,
+          13.26,
+          12.81,
+          12.89
+        ],
+        [
+          12.81,
+          13.34,
+          12.81,
+          13.28
+        ],
+        [
+          13.69,
+          14.1,
+          13.52,
+          14.02
+        ],
+        [
+          14.4,
+          14.41,
+          13.67,
+          13.72
+        ],
+        [
+          13.9,
+          14.25,
+          13.52,
+          13.52
+        ],
+        [
+          13.32,
+          13.56,
+          12.89,
+          13.0
+        ],
+        [
+          13.0,
+          13.18,
+          12.22,
+          12.38
+        ],
+        [
+          12.38,
+          12.69,
+          12.36,
+          12.61
+        ],
+        [
+          12.25,
+          12.81,
+          12.12,
+          12.7
+        ],
+        [
+          12.72,
+          13.32,
+          12.68,
+          13.26
+        ],
+        [
+          13.27,
+          13.55,
+          12.91,
+          13.41
+        ],
+        [
+          13.1,
+          13.36,
+          12.86,
+          13.3
+        ],
+        [
+          13.5,
+          13.5,
+          12.93,
+          12.96
+        ],
+        [
+          13.28,
+          13.31,
+          13.01,
+          13.21
+        ],
+        [
+          13.28,
+          13.54,
+          13.05,
+          13.41
+        ],
+        [
+          13.76,
+          14.49,
+          13.76,
+          14.36
+        ],
+        [
+          14.19,
+          14.48,
+          13.99,
+          14.39
+        ],
+        [
+          14.44,
+          14.44,
+          13.9,
+          13.92
+        ],
+        [
+          13.5,
+          13.74,
+          13.4,
+          13.58
+        ],
+        [
+          13.7,
+          14.14,
+          13.59,
+          14.06
+        ],
+        [
+          14.09,
+          14.17,
+          13.4,
+          13.55
+        ],
+        [
+          13.81,
+          13.93,
+          13.44,
+          13.66
+        ],
+        [
+          13.91,
+          14.0,
+          13.47,
+          13.54
+        ],
+        [
+          13.6,
+          13.95,
+          13.55,
+          13.82
+        ],
+        [
+          13.82,
+          14.38,
+          13.81,
+          14.22
+        ],
+        [
+          14.39,
+          14.59,
+          14.12,
+          14.28
+        ],
+        [
+          13.88,
+          14.34,
+          13.75,
+          14.17
+        ],
+        [
+          14.09,
+          15.14,
+          14.04,
+          14.5
+        ],
+        [
+          14.42,
+          14.73,
+          14.18,
+          14.62
+        ],
+        [
+          14.54,
+          14.7,
+          14.31,
+          14.43
+        ],
+        [
+          15.82,
+          16.12,
+          14.9,
+          16.02
+        ],
+        [
+          15.7,
+          15.8472,
+          15.35,
+          15.54
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        12.7802,
+        12.7802,
+        12.7802,
+        12.9293,
+        13.1606
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        14.47,
+        14.47,
+        14.47,
+        14.47,
+        14.47,
+        14.47,
+        14.47,
+        14.41,
+        14.3962,
+        14.3962,
+        14.3962,
+        14.3962,
+        14.3962,
+        14.3962,
+        14.3962,
+        14.3962,
+        14.3962,
+        14.3962,
+        14.3962,
+        14.3962,
+        14.3962,
+        14.3962,
+        14.3962,
+        14.3962,
+        14.3962,
+        14.3962,
+        14.3962,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "DUOL": {
+      "bars": [
+        [
+          125.02,
+          132.3,
+          123.48,
+          129.95
+        ],
+        [
+          132.2,
+          133.5,
+          124.64,
+          124.76
+        ],
+        [
+          126.63,
+          132.505,
+          124.83,
+          132.34
+        ],
+        [
+          128.0,
+          132.25,
+          126.5,
+          128.35
+        ],
+        [
+          130.6,
+          134.6,
+          129.9,
+          131.22
+        ],
+        [
+          133.4,
+          134.29,
+          127.58,
+          128.94
+        ],
+        [
+          131.55,
+          135.819,
+          130.755,
+          133.85
+        ],
+        [
+          132.68,
+          136.879,
+          131.02,
+          133.89
+        ],
+        [
+          129.91,
+          133.66,
+          124.01,
+          124.71
+        ],
+        [
+          125.57,
+          125.72,
+          119.145,
+          119.51
+        ],
+        [
+          120.33,
+          121.4,
+          117.21,
+          120.67
+        ],
+        [
+          122.01,
+          124.2,
+          118.28,
+          122.24
+        ],
+        [
+          125.5,
+          134.36,
+          123.383,
+          132.82
+        ],
+        [
+          135.0,
+          141.45,
+          134.03,
+          140.73
+        ],
+        [
+          139.28,
+          143.8,
+          138.8,
+          140.17
+        ],
+        [
+          135.9,
+          136.31,
+          129.67,
+          133.6
+        ],
+        [
+          131.75,
+          134.99,
+          130.5,
+          134.81
+        ],
+        [
+          138.06,
+          139.25,
+          134.9,
+          135.8
+        ],
+        [
+          125.404,
+          137.8,
+          124.75,
+          137.75
+        ],
+        [
+          138.21,
+          139.0,
+          133.45,
+          135.32
+        ],
+        [
+          130.11,
+          135.14,
+          112.021,
+          122.58
+        ],
+        [
+          122.98,
+          131.105,
+          122.98,
+          130.9
+        ],
+        [
+          129.8,
+          137.4,
+          128.5,
+          137.19
+        ],
+        [
+          136.025,
+          138.49,
+          134.0,
+          135.44
+        ],
+        [
+          132.84,
+          136.23,
+          128.18,
+          134.63
+        ],
+        [
+          136.5,
+          146.85,
+          135.0,
+          144.1
+        ],
+        [
+          143.4,
+          143.93,
+          132.57,
+          132.83
+        ],
+        [
+          131.5,
+          132.99,
+          128.465,
+          130.16
+        ],
+        [
+          135.25,
+          142.26,
+          134.069,
+          139.64
+        ],
+        [
+          148.975,
+          151.0,
+          140.71,
+          146.03
+        ],
+        [
+          145.1,
+          148.89,
+          144.62,
+          147.03
+        ],
+        [
+          146.47,
+          147.885,
+          142.77,
+          146.13
+        ],
+        [
+          145.4,
+          149.45,
+          143.45,
+          146.84
+        ],
+        [
+          145.68,
+          148.05,
+          144.01,
+          146.04
+        ],
+        [
+          143.75,
+          146.8,
+          138.62,
+          140.88
+        ],
+        [
+          142.65,
+          146.575,
+          141.3,
+          142.86
+        ],
+        [
+          144.69,
+          149.615,
+          144.46,
+          148.36
+        ],
+        [
+          159.01,
+          162.51,
+          152.52,
+          158.77
+        ],
+        [
+          156.1,
+          158.4654,
+          154.3,
+          157.85
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        113.6504,
+        119.4828,
+        119.4828,
+        119.4828,
+        119.4828,
+        119.4828,
+        119.4828,
+        119.4828,
+        119.4828,
+        119.4828,
+        119.4828,
+        119.4828,
+        119.4828,
+        119.4828,
+        119.4828,
+        119.4828,
+        119.4828,
+        121.1098,
+        122.2573,
+        124.6474,
+        126.648,
+        126.648,
+        126.648,
+        127.1401,
+        131.9795,
+        133.8785
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        154.5005,
+        151.6582,
+        144.4812,
+        138.984,
+        138.984,
+        138.984,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "EIX": {
+      "bars": [
+        [
+          75.09,
+          75.5,
+          74.3,
+          74.64
+        ],
+        [
+          75.11,
+          75.43,
+          74.51,
+          75.2
+        ],
+        [
+          75.4,
+          77.02,
+          75.04,
+          75.97
+        ],
+        [
+          77.07,
+          77.95,
+          76.04,
+          76.58
+        ],
+        [
+          76.28,
+          77.21,
+          75.89,
+          76.68
+        ],
+        [
+          76.46,
+          78.28,
+          76.46,
+          78.05
+        ],
+        [
+          79.21,
+          79.88,
+          77.19,
+          77.63
+        ],
+        [
+          77.84,
+          78.52,
+          77.2,
+          77.25
+        ],
+        [
+          77.27,
+          78.25,
+          76.36,
+          78.17
+        ],
+        [
+          79.01,
+          80.9,
+          78.6,
+          80.38
+        ],
+        [
+          79.6,
+          80.73,
+          78.84,
+          79.64
+        ],
+        [
+          79.96,
+          80.76,
+          79.36,
+          79.75
+        ],
+        [
+          79.23,
+          79.78,
+          78.24,
+          78.64
+        ],
+        [
+          79.12,
+          81.62,
+          78.77,
+          79.79
+        ],
+        [
+          80.28,
+          80.29,
+          78.35,
+          78.63
+        ],
+        [
+          78.5,
+          80.13,
+          77.1,
+          78.73
+        ],
+        [
+          75.94,
+          76.83,
+          73.15,
+          73.37
+        ],
+        [
+          73.78,
+          73.98,
+          71.13,
+          71.46
+        ],
+        [
+          71.08,
+          72.5,
+          70.59,
+          70.69
+        ],
+        [
+          69.26,
+          69.38,
+          66.58,
+          68.32
+        ],
+        [
+          69.1,
+          69.37,
+          66.84,
+          67.23
+        ],
+        [
+          67.29,
+          68.92,
+          67.05,
+          68.62
+        ],
+        [
+          68.08,
+          68.37,
+          67.5,
+          67.83
+        ],
+        [
+          67.83,
+          70.29,
+          67.81,
+          69.89
+        ],
+        [
+          69.62,
+          70.35,
+          68.6,
+          69.4
+        ],
+        [
+          69.78,
+          71.4,
+          69.1,
+          70.68
+        ],
+        [
+          70.52,
+          71.56,
+          70.5,
+          71.41
+        ],
+        [
+          71.09,
+          72.29,
+          70.37,
+          71.3
+        ],
+        [
+          72.5,
+          74.23,
+          72.38,
+          73.69
+        ],
+        [
+          74.32,
+          75.07,
+          72.91,
+          73.44
+        ],
+        [
+          73.1,
+          75.9,
+          72.5,
+          74.66
+        ],
+        [
+          74.62,
+          75.19,
+          71.12,
+          71.59
+        ],
+        [
+          71.74,
+          74.07,
+          71.61,
+          73.97
+        ],
+        [
+          73.9,
+          75.02,
+          73.65,
+          74.78
+        ],
+        [
+          73.5,
+          75.04,
+          72.65,
+          74.51
+        ],
+        [
+          73.56,
+          74.14,
+          72.66,
+          73.68
+        ],
+        [
+          55.71,
+          57.23,
+          53.11,
+          53.98
+        ],
+        [
+          54.01,
+          59.81,
+          52.5,
+          58.8
+        ],
+        [
+          56.78,
+          57.17,
+          53.785,
+          55.19
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        82.9742,
+        82.5581,
+        82.5581,
+        82.5581,
+        82.5581,
+        82.5581,
+        82.5581,
+        82.5581,
+        82.5581,
+        82.5581,
+        81.6801,
+        79.8213,
+        77.2698,
+        76.9698,
+        76.0361,
+        74.8133,
+        74.8133,
+        74.8133,
+        74.8133,
+        74.8133,
+        74.8133,
+        74.8133,
+        74.8133,
+        74.8133,
+        74.8133,
+        74.8133,
+        74.8133,
+        74.8133,
+        74.8133,
+        74.8133,
+        74.8133,
+        74.8133
+      ]
+    },
+    "FRVO": {
+      "bars": [
+        [
+          23.53,
+          27.67,
+          23.26,
+          27.35
+        ],
+        [
+          27.35,
+          27.82,
+          26.59,
+          27.13
+        ],
+        [
+          27.16,
+          27.87,
+          25.83,
+          25.86
+        ],
+        [
+          25.78,
+          26.28,
+          24.85,
+          25.02
+        ],
+        [
+          25.04,
+          25.62,
+          23.97,
+          24.57
+        ],
+        [
+          24.3,
+          24.51,
+          22.66,
+          23.11
+        ],
+        [
+          23.4,
+          24.72,
+          22.5,
+          24.65
+        ],
+        [
+          25.44,
+          26.17,
+          25.25,
+          25.49
+        ],
+        [
+          25.51,
+          27.07,
+          25.37,
+          26.99
+        ],
+        [
+          26.94,
+          28.33,
+          26.9,
+          27.9
+        ],
+        [
+          27.77,
+          28.93,
+          26.23,
+          26.37
+        ],
+        [
+          26.69,
+          26.69,
+          23.9,
+          24.02
+        ],
+        [
+          24.09,
+          24.25,
+          22.78,
+          23.98
+        ],
+        [
+          23.71,
+          23.77,
+          20.76,
+          21.12
+        ],
+        [
+          21.16,
+          21.48,
+          16.89,
+          17.08
+        ],
+        [
+          17.76,
+          22.35,
+          17.75,
+          22.3
+        ],
+        [
+          22.47,
+          23.49,
+          21.98,
+          22.54
+        ],
+        [
+          22.26,
+          23.12,
+          21.26,
+          22.19
+        ],
+        [
+          22.34,
+          23.66,
+          22.0,
+          22.75
+        ],
+        [
+          22.51,
+          23.09,
+          21.96,
+          22.05
+        ],
+        [
+          22.0,
+          24.1,
+          21.88,
+          23.0
+        ],
+        [
+          23.24,
+          25.93,
+          23.1,
+          25.85
+        ],
+        [
+          25.85,
+          26.7,
+          23.8,
+          23.92
+        ],
+        [
+          23.97,
+          24.71,
+          23.1,
+          24.17
+        ],
+        [
+          25.8,
+          26.2,
+          19.54,
+          20.16
+        ],
+        [
+          20.71,
+          21.71,
+          20.24,
+          20.32
+        ],
+        [
+          20.56,
+          22.26,
+          19.71,
+          19.76
+        ],
+        [
+          19.49,
+          19.69,
+          17.56,
+          18.1
+        ],
+        [
+          18.05,
+          19.0,
+          17.71,
+          17.97
+        ],
+        [
+          18.0,
+          18.28,
+          17.01,
+          17.83
+        ],
+        [
+          17.95,
+          18.28,
+          16.69,
+          17.0
+        ],
+        [
+          17.0,
+          17.57,
+          16.51,
+          16.92
+        ],
+        [
+          16.97,
+          17.15,
+          15.31,
+          15.47
+        ],
+        [
+          15.64,
+          16.68,
+          15.32,
+          16.45
+        ],
+        [
+          16.38,
+          16.45,
+          15.22,
+          15.44
+        ],
+        [
+          15.59,
+          16.41,
+          15.55,
+          15.96
+        ],
+        [
+          14.85,
+          15.51,
+          14.6,
+          15.38
+        ],
+        [
+          16.47,
+          20.07,
+          16.44,
+          19.75
+        ],
+        [
+          18.4018,
+          18.79,
+          17.03,
+          17.98
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        11.8772,
+        11.8772
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        32.0592,
+        32.0592,
+        32.0592,
+        32.0592,
+        32.0563,
+        29.6885,
+        29.3101,
+        27.9113,
+        27.9113,
+        27.9113,
+        27.9113,
+        27.9113,
+        27.9113,
+        27.9113,
+        27.9113,
+        27.9113,
+        27.9113,
+        27.9113,
+        27.9113,
+        27.9113,
+        26.6193,
+        25.3183,
+        23.8199,
+        23.3087,
+        22.2028,
+        21.4821,
+        20.9591,
+        20.4768,
+        20.1888,
+        19.2316,
+        null,
+        null
+      ]
+    },
+    "HP": {
+      "bars": [
+        [
+          32.5073,
+          32.736,
+          31.9603,
+          32.5669
+        ],
+        [
+          32.8951,
+          33.1934,
+          32.6962,
+          33.1437
+        ],
+        [
+          33.6508,
+          34.4464,
+          33.5514,
+          33.7801
+        ],
+        [
+          34.2872,
+          34.4762,
+          33.2928,
+          33.5514
+        ],
+        [
+          33.6011,
+          33.8696,
+          32.4178,
+          33.2033
+        ],
+        [
+          32.8752,
+          33.8994,
+          32.8752,
+          33.2332
+        ],
+        [
+          33.79,
+          34.0784,
+          33.2332,
+          33.9491
+        ],
+        [
+          33.6906,
+          34.1281,
+          33.4818,
+          33.5017
+        ],
+        [
+          33.8497,
+          34.5657,
+          33.442,
+          34.3966
+        ],
+        [
+          34.7447,
+          35.3214,
+          34.685,
+          35.043
+        ],
+        [
+          35.6098,
+          35.8684,
+          34.7248,
+          34.8739
+        ],
+        [
+          34.8143,
+          35.7291,
+          34.6651,
+          35.1424
+        ],
+        [
+          34.3966,
+          35.1424,
+          33.3923,
+          33.442
+        ],
+        [
+          33.8099,
+          33.8099,
+          32.3979,
+          32.9249
+        ],
+        [
+          34.0884,
+          34.327,
+          33.0741,
+          33.2729
+        ],
+        [
+          33.7503,
+          33.8,
+          33.0442,
+          33.5812
+        ],
+        [
+          33.7403,
+          34.6055,
+          33.4619,
+          34.3767
+        ],
+        [
+          33.6707,
+          34.0287,
+          33.1138,
+          33.969
+        ],
+        [
+          34.0884,
+          34.5458,
+          33.4818,
+          34.2972
+        ],
+        [
+          34.4364,
+          34.4364,
+          33.084,
+          33.094
+        ],
+        [
+          35.3214,
+          37.6484,
+          34.1878,
+          36.8628
+        ],
+        [
+          36.4849,
+          37.2605,
+          36.2462,
+          36.8926
+        ],
+        [
+          37.9367,
+          41.6757,
+          37.7776,
+          41.6359
+        ],
+        [
+          41.4271,
+          42.7497,
+          40.9398,
+          42.3221
+        ],
+        [
+          41.8746,
+          42.8988,
+          41.3973,
+          42.7298
+        ],
+        [
+          41.974,
+          43.1972,
+          41.8746,
+          42.8292
+        ],
+        [
+          43.1773,
+          44.4004,
+          42.9287,
+          43.9529
+        ],
+        [
+          44.3308,
+          44.5496,
+          43.585,
+          44.47
+        ],
+        [
+          45.0,
+          45.0,
+          44.13,
+          44.19
+        ],
+        [
+          44.36,
+          44.76,
+          43.48,
+          43.76
+        ],
+        [
+          44.18,
+          44.47,
+          43.63,
+          44.1
+        ],
+        [
+          44.33,
+          44.9,
+          43.28,
+          43.55
+        ],
+        [
+          42.99,
+          43.33,
+          42.04,
+          42.49
+        ],
+        [
+          41.71,
+          42.4,
+          41.57,
+          42.08
+        ],
+        [
+          41.51,
+          42.11,
+          40.85,
+          41.4
+        ],
+        [
+          41.46,
+          43.13,
+          41.03,
+          42.42
+        ],
+        [
+          43.61,
+          44.98,
+          43.21,
+          43.58
+        ],
+        [
+          44.45,
+          46.53,
+          44.0,
+          46.21
+        ],
+        [
+          45.68,
+          48.17,
+          45.34,
+          47.64
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        32.2809,
+        32.2809,
+        32.2809,
+        34.7869,
+        35.7285,
+        36.7293,
+        38.1312,
+        39.1938,
+        40.2574,
+        40.2574,
+        40.277,
+        40.277,
+        40.277,
+        40.277,
+        40.277,
+        40.277,
+        40.277,
+        40.277,
+        40.277
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        36.5635,
+        36.5635,
+        36.5635,
+        36.5635,
+        36.5635,
+        36.5635,
+        36.5635,
+        36.5635,
+        36.5635,
+        36.5635,
+        36.5635,
+        36.5635,
+        36.5635,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "ORA": {
+      "bars": [
+        [
+          111.9274,
+          112.4568,
+          110.2093,
+          110.2492
+        ],
+        [
+          110.479,
+          111.8974,
+          109.1105,
+          109.6499
+        ],
+        [
+          108.9507,
+          109.6299,
+          106.6832,
+          106.6931
+        ],
+        [
+          108.7609,
+          109.6899,
+          107.1526,
+          107.2425
+        ],
+        [
+          108.8408,
+          110.9085,
+          108.3713,
+          109.58
+        ],
+        [
+          109.58,
+          110.4091,
+          104.2458,
+          104.7253
+        ],
+        [
+          103.7164,
+          105.0449,
+          102.278,
+          104.5854
+        ],
+        [
+          105.3446,
+          106.0239,
+          103.4267,
+          103.4467
+        ],
+        [
+          104.3457,
+          105.0949,
+          102.4977,
+          104.985
+        ],
+        [
+          104.4456,
+          105.3946,
+          103.3468,
+          103.6265
+        ],
+        [
+          102.4977,
+          103.8862,
+          101.7785,
+          103.7264
+        ],
+        [
+          103.9262,
+          104.3957,
+          98.6619,
+          99.2912
+        ],
+        [
+          99.9206,
+          102.4977,
+          99.5809,
+          102.0083
+        ],
+        [
+          100.2902,
+          100.7896,
+          96.7241,
+          98.3623
+        ],
+        [
+          98.0226,
+          98.0226,
+          92.9881,
+          94.2268
+        ],
+        [
+          96.1047,
+          98.1125,
+          96.1047,
+          96.6042
+        ],
+        [
+          98.0726,
+          98.0726,
+          96.3644,
+          97.4732
+        ],
+        [
+          95.6552,
+          98.0826,
+          94.976,
+          97.9128
+        ],
+        [
+          99.9106,
+          100.3201,
+          97.9627,
+          99.9705
+        ],
+        [
+          99.2813,
+          99.3712,
+          97.8029,
+          97.9128
+        ],
+        [
+          107.6721,
+          110.0794,
+          103.6065,
+          107.2625
+        ],
+        [
+          107.722,
+          110.1094,
+          106.8829,
+          107.9717
+        ],
+        [
+          107.2126,
+          111.7376,
+          106.3136,
+          111.5778
+        ],
+        [
+          113.1261,
+          115.5634,
+          112.0972,
+          114.3348
+        ],
+        [
+          115.5035,
+          116.882,
+          112.4868,
+          113.2759
+        ],
+        [
+          112.8764,
+          114.3947,
+          111.9574,
+          113.3958
+        ],
+        [
+          113.5656,
+          115.5634,
+          113.4457,
+          114.6344
+        ],
+        [
+          114.3048,
+          115.054,
+          113.176,
+          113.7854
+        ],
+        [
+          112.8164,
+          113.3758,
+          109.4501,
+          109.56
+        ],
+        [
+          110.69,
+          111.2,
+          108.73,
+          110.32
+        ],
+        [
+          109.86,
+          111.69,
+          108.15,
+          108.3
+        ],
+        [
+          108.94,
+          110.69,
+          107.92,
+          108.38
+        ],
+        [
+          107.5,
+          107.61,
+          104.13,
+          105.4
+        ],
+        [
+          106.33,
+          107.0,
+          105.32,
+          106.24
+        ],
+        [
+          106.83,
+          107.39,
+          103.01,
+          103.46
+        ],
+        [
+          103.61,
+          105.56,
+          103.42,
+          104.93
+        ],
+        [
+          102.92,
+          103.38,
+          101.47,
+          102.0
+        ],
+        [
+          104.4,
+          107.63,
+          102.53,
+          107.29
+        ],
+        [
+          106.9,
+          107.57,
+          104.295,
+          104.69
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        91.1453,
+        94.3031,
+        94.3127,
+        99.8065,
+        100.8701,
+        100.9873,
+        103.7373,
+        104.6311,
+        104.6311,
+        104.6311,
+        104.6311,
+        104.6311,
+        104.6311,
+        104.6311,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        114.5008,
+        113.0758,
+        112.8661,
+        110.7847,
+        110.7847,
+        110.7847,
+        110.2975,
+        108.1914,
+        108.1914,
+        107.8213,
+        106.8113,
+        106.8113,
+        106.8113,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        115.145,
+        113.6128,
+        111.8621,
+        111.8621,
+        111.8621
+      ]
+    },
+    "PBR": {
+      "bars": [
+        [
+          16.7682,
+          16.7876,
+          16.399,
+          16.5447
+        ],
+        [
+          16.6516,
+          16.8556,
+          16.6127,
+          16.8265
+        ],
+        [
+          17.1179,
+          17.4094,
+          17.0693,
+          17.3705
+        ],
+        [
+          17.5551,
+          17.6425,
+          17.2831,
+          17.4094
+        ],
+        [
+          17.458,
+          17.4968,
+          17.1762,
+          17.3511
+        ],
+        [
+          17.3608,
+          17.3899,
+          16.9431,
+          16.9722
+        ],
+        [
+          17.2442,
+          17.4871,
+          17.1956,
+          17.458
+        ],
+        [
+          17.3608,
+          17.7883,
+          17.2734,
+          17.6717
+        ],
+        [
+          17.798,
+          18.0214,
+          17.6717,
+          18.0117
+        ],
+        [
+          18.2352,
+          18.5752,
+          18.2254,
+          18.3517
+        ],
+        [
+          18.682,
+          18.7598,
+          18.4197,
+          18.4586
+        ],
+        [
+          18.3517,
+          18.5946,
+          18.1769,
+          18.2352
+        ],
+        [
+          17.6523,
+          17.7785,
+          17.4482,
+          17.4871
+        ],
+        [
+          17.5357,
+          17.9243,
+          17.4871,
+          17.5551
+        ],
+        [
+          18.1574,
+          18.1672,
+          17.9048,
+          18.0603
+        ],
+        [
+          18.0117,
+          18.6043,
+          18.0117,
+          18.5752
+        ],
+        [
+          18.6529,
+          18.9055,
+          18.3712,
+          18.8472
+        ],
+        [
+          18.4586,
+          18.6723,
+          18.3809,
+          18.5169
+        ],
+        [
+          18.2643,
+          18.3615,
+          17.9826,
+          18.1866
+        ],
+        [
+          18.4295,
+          18.4392,
+          17.7785,
+          17.8368
+        ],
+        [
+          18.1283,
+          18.138,
+          17.934,
+          17.9923
+        ],
+        [
+          18.206,
+          18.2254,
+          17.4191,
+          17.4482
+        ],
+        [
+          17.6231,
+          18.0117,
+          17.4871,
+          17.8077
+        ],
+        [
+          17.8563,
+          17.8563,
+          17.2928,
+          17.4191
+        ],
+        [
+          17.2734,
+          17.5454,
+          17.2345,
+          17.2539
+        ],
+        [
+          17.1471,
+          17.4677,
+          17.0985,
+          17.3802
+        ],
+        [
+          17.4871,
+          17.5842,
+          17.3122,
+          17.3705
+        ],
+        [
+          17.6717,
+          17.7591,
+          17.4191,
+          17.73
+        ],
+        [
+          17.9631,
+          18.0117,
+          17.594,
+          17.662
+        ],
+        [
+          18.1574,
+          18.41,
+          17.9729,
+          18.0117
+        ],
+        [
+          18.2546,
+          18.7112,
+          18.2254,
+          18.4683
+        ],
+        [
+          18.5946,
+          18.7306,
+          18.4877,
+          18.6043
+        ],
+        [
+          18.1672,
+          18.1963,
+          17.8854,
+          18.07
+        ],
+        [
+          18.08,
+          18.13,
+          17.7,
+          17.85
+        ],
+        [
+          17.73,
+          18.11,
+          17.56,
+          17.76
+        ],
+        [
+          17.79,
+          18.39,
+          17.54,
+          18.25
+        ],
+        [
+          19.18,
+          19.49,
+          18.95,
+          19.35
+        ],
+        [
+          19.68,
+          20.34,
+          19.65,
+          20.33
+        ],
+        [
+          20.21,
+          21.01,
+          20.12,
+          20.86
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        17.2489,
+        17.5379,
+        18.0547
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        18.8827,
+        18.8827,
+        18.8827,
+        18.8827,
+        18.8827,
+        18.8827,
+        18.8827,
+        18.8827,
+        18.8827,
+        18.8827,
+        18.8827,
+        18.8827,
+        18.8827,
+        18.8827,
+        18.8827,
+        18.8827,
+        18.8827,
+        18.8827,
+        18.6949,
+        18.6949,
+        18.6949,
+        18.6949,
+        18.6949,
+        18.6949,
+        18.6949,
+        18.6949,
+        18.6949,
+        18.6949,
+        18.6949,
+        null,
+        null,
+        null
+      ]
+    },
+    "PCG": {
+      "bars": [
+        [
+          17.08,
+          17.24,
+          16.99,
+          17.18
+        ],
+        [
+          17.19,
+          17.25,
+          17.02,
+          17.17
+        ],
+        [
+          17.2,
+          17.56,
+          17.19,
+          17.37
+        ],
+        [
+          17.6,
+          17.81,
+          17.3,
+          17.44
+        ],
+        [
+          17.43,
+          17.56,
+          17.29,
+          17.51
+        ],
+        [
+          17.56,
+          17.69,
+          17.37,
+          17.53
+        ],
+        [
+          17.71,
+          17.85,
+          17.27,
+          17.32
+        ],
+        [
+          17.37,
+          17.49,
+          17.29,
+          17.43
+        ],
+        [
+          17.42,
+          17.61,
+          17.28,
+          17.49
+        ],
+        [
+          17.6,
+          18.11,
+          17.5,
+          18.11
+        ],
+        [
+          17.81,
+          17.99,
+          17.46,
+          17.54
+        ],
+        [
+          17.66,
+          17.98,
+          17.52,
+          17.85
+        ],
+        [
+          17.77,
+          17.99,
+          17.5,
+          17.6
+        ],
+        [
+          17.76,
+          18.44,
+          17.72,
+          17.78
+        ],
+        [
+          17.9,
+          17.93,
+          17.63,
+          17.71
+        ],
+        [
+          17.66,
+          17.83,
+          17.34,
+          17.78
+        ],
+        [
+          17.7,
+          17.79,
+          17.37,
+          17.38
+        ],
+        [
+          17.42,
+          17.51,
+          16.95,
+          17.43
+        ],
+        [
+          17.27,
+          17.65,
+          17.14,
+          17.45
+        ],
+        [
+          17.36,
+          17.6,
+          16.99,
+          17.2
+        ],
+        [
+          17.38,
+          17.46,
+          16.94,
+          17.0
+        ],
+        [
+          16.94,
+          17.6,
+          16.88,
+          17.46
+        ],
+        [
+          17.38,
+          17.45,
+          17.02,
+          17.04
+        ],
+        [
+          17.05,
+          17.44,
+          16.94,
+          17.3
+        ],
+        [
+          17.36,
+          17.4,
+          17.2,
+          17.38
+        ],
+        [
+          17.41,
+          17.8,
+          16.95,
+          17.46
+        ],
+        [
+          17.43,
+          17.85,
+          17.38,
+          17.84
+        ],
+        [
+          17.77,
+          17.82,
+          17.45,
+          17.5
+        ],
+        [
+          17.7,
+          17.99,
+          17.7,
+          17.82
+        ],
+        [
+          17.95,
+          18.02,
+          17.61,
+          17.65
+        ],
+        [
+          17.63,
+          18.41,
+          17.62,
+          17.96
+        ],
+        [
+          18.06,
+          18.09,
+          17.46,
+          17.6
+        ],
+        [
+          17.64,
+          18.14,
+          17.6,
+          18.11
+        ],
+        [
+          18.11,
+          18.38,
+          18.03,
+          18.36
+        ],
+        [
+          18.26,
+          18.4,
+          17.84,
+          18.22
+        ],
+        [
+          18.03,
+          18.1,
+          17.51,
+          17.95
+        ],
+        [
+          18.22,
+          18.35,
+          15.84,
+          16.6
+        ],
+        [
+          13.26,
+          13.7,
+          13.09,
+          13.27
+        ],
+        [
+          13.3,
+          14.79,
+          13.05,
+          14.06
+        ],
+        [
+          13.56,
+          13.57,
+          12.59,
+          13.33
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4079,
+        18.4003,
+        18.4003,
+        17.9767
+      ]
+    },
+    "SEB": {
+      "bars": [
+        [
+          4497.6204,
+          4612.9495,
+          4497.6204,
+          4575.709
+        ],
+        [
+          4577.5779,
+          4684.5213,
+          4515.3311,
+          4663.0327
+        ],
+        [
+          4695.4957,
+          4737.2534,
+          4632.4993,
+          4703.0718
+        ],
+        [
+          4698.8339,
+          4698.8739,
+          4597.5774,
+          4643.2935
+        ],
+        [
+          4754.8042,
+          4759.9817,
+          4641.7742,
+          4663.4727
+        ],
+        [
+          4671.5779,
+          4760.361,
+          4580.1966,
+          4586.3232
+        ],
+        [
+          4643.5433,
+          4678.4848,
+          4483.9178,
+          4533.4116
+        ],
+        [
+          4572.3209,
+          4595.5586,
+          4467.1661,
+          4529.1436
+        ],
+        [
+          4528.6039,
+          4536.6695,
+          4394.0252,
+          4523.8364
+        ],
+        [
+          4562.8658,
+          4689.9187,
+          4543.2965,
+          4615.5781
+        ],
+        [
+          4603.5045,
+          4635.0078,
+          4509.5244,
+          4619.3262
+        ],
+        [
+          4647.5409,
+          4729.4976,
+          4647.5409,
+          4711.957
+        ],
+        [
+          4677.535,
+          4704.611,
+          4572.5808,
+          4608.0322
+        ],
+        [
+          4679.754,
+          4687.6898,
+          4492.7631,
+          4546.2046
+        ],
+        [
+          4546.2047,
+          4586.1538,
+          4452.6541,
+          4586.1538
+        ],
+        [
+          4548.9532,
+          4560.3871,
+          4502.8877,
+          4502.8877
+        ],
+        [
+          4490.3139,
+          4537.5892,
+          4392.9353,
+          4410.9258
+        ],
+        [
+          4397.4532,
+          4464.388,
+          4338.3848,
+          4391.1367
+        ],
+        [
+          4437.0425,
+          4437.0425,
+          4287.7314,
+          4390.0273
+        ],
+        [
+          4497.5203,
+          4716.6743,
+          4280.555,
+          4301.394
+        ],
+        [
+          4312.7183,
+          4352.6971,
+          4086.8778,
+          4276.7373
+        ],
+        [
+          4167.6746,
+          4314.0371,
+          4167.6746,
+          4238.3975
+        ],
+        [
+          4237.5378,
+          4337.705,
+          4136.2115,
+          4236.9185
+        ],
+        [
+          4241.1558,
+          4241.1558,
+          4066.0185,
+          4167.4351
+        ],
+        [
+          4133.5332,
+          4270.1909,
+          4133.5332,
+          4199.1284
+        ],
+        [
+          4226.214,
+          4296.3766,
+          4176.79,
+          4252.3398
+        ],
+        [
+          4183.52,
+          4364.1499,
+          4183.52,
+          4364.1499
+        ],
+        [
+          4360.96,
+          4484.5,
+          4345.27,
+          4452.3198
+        ],
+        [
+          4500.0,
+          4500.0,
+          4328.4399,
+          4491.02
+        ],
+        [
+          4526.1001,
+          4564.0898,
+          4333.8799,
+          4390.0
+        ],
+        [
+          4364.0098,
+          4423.71,
+          4336.7598,
+          4356.3501
+        ],
+        [
+          4360.5098,
+          4399.9902,
+          4155.9199,
+          4259.96
+        ],
+        [
+          4278.0,
+          4328.0,
+          4214.98,
+          4230.8101
+        ],
+        [
+          4205.7202,
+          4244.7798,
+          4131.1699,
+          4136.0
+        ],
+        [
+          4128.54,
+          4147.5298,
+          4000.1499,
+          4026.77
+        ],
+        [
+          4040.0,
+          4040.0,
+          3907.0,
+          3949.8501
+        ],
+        [
+          3931.3999,
+          3959.3701,
+          3850.01,
+          3910.25
+        ],
+        [
+          3920.0,
+          4123.3799,
+          3909.4099,
+          4123.3799
+        ],
+        [
+          4110.0601,
+          4359.0601,
+          4103.46,
+          4262.4902
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        4962.9553,
+        4896.0253,
+        4896.0253,
+        4896.0253,
+        4896.0253,
+        4896.0253,
+        4896.0253,
+        4896.0253,
+        4896.0253,
+        4867.7623,
+        4797.7638,
+        4771.6533,
+        4771.6533,
+        4771.6533,
+        4771.6533,
+        4771.6533,
+        4744.7478,
+        4744.7478,
+        4735.6711,
+        4735.6711,
+        4735.6711,
+        4735.6711,
+        4735.6711,
+        4735.6711,
+        4735.6711,
+        4735.6711,
+        4639.0321,
+        4522.6677,
+        4409.8709,
+        4313.9883,
+        4313.9883,
+        4313.9883
+      ]
+    }
+  }
+};
+const SOURCE_FILE = "20260902_yahoo_gainers_20260902232846.json";
+
+const G = DATA.gainers || [];
+const OHLC = DATA.ohlc_30d || {};
+
+function esc(s) {
+  return String(s == null ? "" : s)
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+function avg(arr) {
+  if (!arr.length) return 0;
+  return arr.reduce((a, b) => a + b, 0) / arr.length;
+}
+function fmtPct(n) {
+  if (n == null || isNaN(n)) return "—";
+  const v = Number(n);
+  return (v >= 0 ? "+" : "") + v.toFixed(2) + "%";
+}
+function fmtPrice(p) {
+  if (p == null || p === "") return "—";
+  const n = Number(p);
+  if (isNaN(n)) return esc(p);
+  return "$" + n.toFixed(2);
+}
+function scoreTone(s) {
+  if (s == null || isNaN(s)) return "na";
+  const v = Number(s);
+  if (v >= 75) return "hi";
+  if (v >= 50) return "mid";
+  return "lo";
+}
+function fmtFund(f) {
+  const n = f == null || f === "" || isNaN(Number(f)) ? 0 : Number(f);
+  return `${n}/6`;
+}
+function fundTone(f) {
+  const n = f == null || f === "" || isNaN(Number(f)) ? 0 : Number(f);
+  if (n >= 4) return "hi";
+  if (n >= 2) return "mid";
+  return "lo";
+}
+function scoreBadgeHtml(s) {
+  const tone = scoreTone(s);
+  const label = s == null || isNaN(s) ? "—" : Number(s).toFixed(1);
+  return `<span class="score-badge ${tone}">10d ${label}</span>`;
+}
+function fundBadgeHtml(f) {
+  return `<span class="fund-badge ${fundTone(f)}">Fund ${fmtFund(f)}</span>`;
+}
+
+/** Mini OHLC + SuperTrend candle chart SVG */
+function ohlcChartHtml(symbol) {
+  const entry = OHLC[symbol];
+  const bars = Array.isArray(entry) ? entry : (entry && entry.bars);
+  if (!Array.isArray(bars) || bars.length < 2) return "";
+  const stUp = (!Array.isArray(entry) && entry.st_up) || [];
+  const stDown = (!Array.isArray(entry) && entry.st_down) || [];
+  const w = 300, h = 200, padX = 2, padY = 8; // 3:2
+  let lo = Infinity, hi = -Infinity;
+  bars.forEach((b, i) => {
+    if (!b || b.length < 4) return;
+    lo = Math.min(lo, b[2]);
+    hi = Math.max(hi, b[1]);
+    const u = stUp[i], d = stDown[i];
+    if (u != null && !isNaN(u)) { lo = Math.min(lo, u); hi = Math.max(hi, u); }
+    if (d != null && !isNaN(d)) { lo = Math.min(lo, d); hi = Math.max(hi, d); }
+  });
+  if (!(hi > lo)) return "";
+  const n = bars.length;
+  const slot = (w - padX * 2) / n;
+  const bodyW = Math.max(1.5, Math.min(6, slot * 0.55));
+  const yScale = (v) => padY + (hi - v) / (hi - lo) * (h - padY * 2);
+  const upC = "#2ecc71", downC = "#e74c3c";
+  const stFillUp = "#a8e6c1", stFillDown = "#f5b4b0";
+  const stUpC = "#8fd9a8", stDownC = "#f0a0a0";
+
+  function stFill(stArr, boundIdx, color) {
+    let html = "";
+    let i = 0;
+    while (i < n) {
+      while (i < n && (stArr[i] == null || isNaN(stArr[i]))) i++;
+      if (i >= n) break;
+      const start = i;
+      while (i < n && stArr[i] != null && !isNaN(stArr[i])) i++;
+      const end = i;
+      let d = "";
+      for (let j = start; j < end; j++) {
+        const x = padX + j * slot + slot / 2;
+        d += (j === start ? "M" : "L") + ` ${x.toFixed(1)} ${yScale(stArr[j]).toFixed(1)} `;
+      }
+      for (let j = end - 1; j >= start; j--) {
+        const b = bars[j];
+        if (!b) continue;
+        const x = padX + j * slot + slot / 2;
+        d += `L ${x.toFixed(1)} ${yScale(b[boundIdx]).toFixed(1)} `;
+      }
+      d += "Z";
+      html += `<path d="${d}" fill="${color}" fill-opacity="0.15"/>`;
+    }
+    return html;
+  }
+
+  function stLine(stArr, color) {
+    let html = "", seg = "";
+    const flush = () => {
+      if (seg) {
+        html += `<polyline points="${seg.trim()}" fill="none" stroke="${color}" stroke-width="1.2"/>`;
+        seg = "";
+      }
+    };
+    for (let i = 0; i < n; i++) {
+      const v = stArr[i];
+      if (v == null || isNaN(v)) { flush(); continue; }
+      const x = padX + i * slot + slot / 2;
+      seg += `${x.toFixed(1)},${yScale(v).toFixed(1)} `;
+    }
+    flush();
+    return html;
+  }
+
+  let parts = "";
+  parts += stFill(stUp, 2, stFillUp);
+  parts += stFill(stDown, 1, stFillDown);
+  parts += stLine(stUp, stUpC);
+  parts += stLine(stDown, stDownC);
+
+  bars.forEach((b, i) => {
+    if (!b || b.length < 4) return;
+    const [o, high, low, c] = b.map(Number);
+    if ([o, high, low, c].some(x => isNaN(x))) return;
+    const x = padX + i * slot + slot / 2;
+    const color = c >= o ? upC : downC;
+    const yH = yScale(high), yL = yScale(low);
+    const yO = yScale(o), yC = yScale(c);
+    const top = Math.min(yO, yC), bot = Math.max(yO, yC);
+    const bodyH = Math.max(1, bot - top);
+    parts += `<line x1="${x.toFixed(1)}" y1="${yH.toFixed(1)}" x2="${x.toFixed(1)}" y2="${yL.toFixed(1)}" stroke="${color}" stroke-width="1"/>`;
+    parts += `<rect x="${(x - bodyW / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bodyW.toFixed(1)}" height="${bodyH.toFixed(1)}" fill="${color}"/>`;
+  });
+  return `<div class="mini-chart" title="Last ${n} sessions OHLC + SuperTrend"><svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true">${parts}</svg></div>`;
+}
+
+function chainsOf(g) {
+  const set = new Set();
+  (g.industrial_leaves || []).forEach(l => {
+    if (l && l.chain_name) set.add(l.chain_name);
+  });
+  return [...set];
+}
+function leavesOf(g, theme) {
+  const leaves = g.industrial_leaves || [];
+  const names = [];
+  const seen = new Set();
+  leaves.forEach(l => {
+    if (!l || !l.name || seen.has(l.name)) return;
+    if (theme && l.chain_name !== theme) return;
+    seen.add(l.name);
+    names.push(l.name);
+  });
+  return names;
+}
+
+const themeMap = {};
+G.forEach(g => {
+  chainsOf(g).forEach(c => {
+    (themeMap[c] ||= { tickers: {} }).tickers[g.symbol] = true;
+  });
+});
+const themeStats = Object.entries(themeMap).map(([name, d]) => {
+  const list = G.filter(g => d.tickers[g.symbol]);
+  const leafCounts = {};
+  list.forEach(g => {
+    (g.industrial_leaves || []).forEach(l => {
+      if (l && l.chain_name === name && l.name) {
+        leafCounts[l.name] = (leafCounts[l.name] || 0) + 1;
+      }
+    });
+  });
+  const leaves = Object.entries(leafCounts)
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .map(([leaf]) => leaf);
+  return {
+    name,
+    syms: Object.keys(d.tickers).sort((a, b) => {
+      const ga = G.find(x => x.symbol === a);
+      const gb = G.find(x => x.symbol === b);
+      return (gb?.change_pct || 0) - (ga?.change_pct || 0);
+    }),
+    leaves,
+    list,
+    avgChg: avg(list.map(g => g.change_pct || 0)),
+  };
+})
+  .filter(t => t.syms.length >= 3)
+  .sort((a, b) => b.syms.length - a.syms.length || b.avgChg - a.avgChg);
+const topTheme = themeStats[0] || null;
+
+let activeTheme = topTheme ? topTheme.name : null;
+let spotlightExpanded = {};
+
+const app = document.getElementById("app");
+
+function truncate(text, n) {
+  if (!text) return "";
+  if (text.length <= n) return text;
+  return text.slice(0, n).replace(/\s+\S*$/, "") + "…";
+}
+
+function render() {
+  app.innerHTML = "";
+  app.appendChild(renderHero());
+  app.appendChild(renderThemes());
+  app.appendChild(renderSpotlight());
+  app.appendChild(renderQuality());
+  app.appendChild(renderFooter());
+}
+
+function renderHero() {
+  const el = document.createElement("header");
+  el.className = "hero";
+  const scraped = DATA.scraped_at || "—";
+  const minPct = DATA.min_change_pct != null ? DATA.min_change_pct : 5;
+  const update = (DATA.market_update || "").trim();
+  const overviewRaw = DATA.theme_overview;
+  const overviewObj = (overviewRaw && typeof overviewRaw === "object")
+    ? overviewRaw
+    : { text: typeof overviewRaw === "string" ? overviewRaw : "", themes: [] };
+  const overviewText = String(overviewObj.text || "").trim();
+  const overviewThemes = Array.isArray(overviewObj.themes) ? overviewObj.themes : [];
+  const sections = [];
+  if (update && !update.startsWith("(")) {
+    sections.push(`<div class="brief-section">
+      <div class="sym">Market update</div>${pointsToHtml(update)}
+    </div>`);
+  }
+  const highlightInner = renderHotThemeHighlights(overviewThemes, overviewText);
+  if (highlightInner) {
+    sections.push(`<div class="brief-section">${highlightInner}</div>`);
+  }
+  const briefHtml = sections.length
+    ? `<div class="index-briefs"><div class="index-brief">${sections.join("")}</div></div>`
+    : "";
+  el.innerHTML = `
+    <p class="eyebrow">Top gainers · theme-first</p>
+    <h1>Today's Hot Theme (20260902)</h1>
+    <div class="hero-meta">
+      <span><strong>${G.length}</strong> gainers</span>
+      <span class="sep">·</span>
+      <span><strong>${themeStats.length}</strong> themes</span>
+      <span class="sep">·</span>
+      <span>Top theme: <strong>${esc(topTheme ? topTheme.name : "—")}</strong></span>
+      <span class="sep">·</span>
+      <span>Scraped ${esc(scraped)} · ≥ ${minPct}%</span>
+    </div>
+    ${briefHtml}`;
+  return el;
+}
+
+function normThemeKey(s) {
+  return String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+}
+
+/** Map overview/LLM title → exact Hot Theme Today chain_name when possible. */
+function resolveHighlightTitle(rawTitle) {
+  const names = themeStats.map(t => t.name);
+  const target = normThemeKey(rawTitle);
+  if (!target || !names.length) return String(rawTitle || "").trim();
+  const exact = names.find(n => normThemeKey(n) === target);
+  if (exact) return exact;
+  const core = target.replace(/\s*\(.*$/, "").trim();
+  const coreHit = names.find(n => normThemeKey(n) === core);
+  if (coreHit) return coreHit;
+  const scored = names.map(n => {
+    const nn = normThemeKey(n);
+    let score = 0;
+    if (core && (core.startsWith(nn) || nn.startsWith(core))) score += 4;
+    if (core && (core.includes(nn) || nn.includes(core))) score += 2;
+    const ta = new Set(core.split(/\s+/).filter(Boolean));
+    const tb = new Set(nn.split(/\s+/).filter(Boolean));
+    let overlap = 0;
+    ta.forEach(tok => { if (tb.has(tok)) overlap++; });
+    score += overlap * 2;
+    // Prefer longer theme names on ties (more specific)
+    return { n, score, len: nn.length };
+  }).filter(x => x.score > 0)
+    .sort((a, b) => b.score - a.score || b.len - a.len);
+  return scored.length ? scored[0].n : String(rawTitle || "").trim();
+}
+
+function renderHotThemeHighlights(themes, fallbackText) {
+  const usableThemes = (themes || []).filter(t => t && String(t.title || "").trim());
+  if (usableThemes.length) {
+    const cards = usableThemes.map(t => {
+      const title = resolveHighlightTitle(t.title);
+      const tickers = Array.isArray(t.tickers) ? t.tickers : [];
+      const bullets = Array.isArray(t.bullets) ? t.bullets : [];
+      const takeaway = String(t.takeaway || "").trim();
+      const tickerHtml = tickers.length
+        ? `<div class="h-tickers">${tickers.map(x => `<span class="h-ticker">${esc(String(x))}</span>`).join("")}</div>`
+        : "";
+      const bulletHtml = bullets.length
+        ? `<ul class="h-bullets">${bullets.map(b => `<li>${esc(String(b))}</li>`).join("")}</ul>`
+        : "";
+      const takeHtml = takeaway ? `<div class="h-takeaway">${esc(takeaway)}</div>` : "";
+      return `<article class="highlight-card">
+        <h3 class="h-title">${esc(title)}</h3>
+        ${tickerHtml}${bulletHtml}${takeHtml}
+      </article>`;
+    }).join("");
+    return `<div class="sym">Hot Theme Highlights</div>
+      <div class="highlight-grid">${cards}</div>`;
+  }
+  const text = String(fallbackText || "").trim();
+  if (text && !text.startsWith("(")) {
+    return `<div class="sym">Hot Theme Highlights</div>
+      <pre class="theme-overview">${esc(text)}</pre>`;
+  }
+  return "";
+}
+
+function renderThemes() {
+  const sec = document.createElement("section");
+  sec.className = "section";
+  sec.id = "themes";
+  sec.innerHTML = `
+    <div class="section-hd">
+      <h2>Hot Theme Today</h2>
+    </div>`;
+  const grid = document.createElement("div");
+  grid.className = "theme-grid";
+  const catalystsMap = DATA.theme_catalysts || {};
+  themeStats.forEach(t => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "theme-board" + (t.name === activeTheme ? " active" : "");
+    const leafList = t.leaves || [];
+    const preview = leafList.slice(0, 4).map(n => `<span class="leaf-chip">${esc(n)}</span>`).join("");
+    const extra = leafList.length > 4 ? `<span class="leaf-chip">+${leafList.length - 4}</span>` : "";
+    const catHtml = pointsToHtml(catalystsMap[t.name] || "");
+    const catBlock = catHtml
+      ? `<div class="theme-catalysts"><div class="cat-label">Key catalysts</div>${catHtml}</div>`
+      : "";
+    btn.innerHTML = `
+      <div class="t-name">${esc(t.name)}</div>
+      <div class="t-stats">
+        <span>${t.syms.length} name${t.syms.length === 1 ? "" : "s"}</span>
+        <span class="t-avg">${fmtPct(t.avgChg)}</span>
+      </div>
+      ${catBlock}
+      <div class="t-leaves">${preview}${extra}</div>`;
+    btn.onclick = () => {
+      if (activeTheme === t.name) {
+        activeTheme = null;
+      } else {
+        activeTheme = t.name;
+      }
+      spotlightExpanded = {};
+      const y = window.scrollY;
+      render();
+      window.scrollTo(0, y);
+    };
+    grid.appendChild(btn);
+  });
+  sec.appendChild(grid);
+  return sec;
+}
+
+
+function fundNum(f) {
+  if (f == null || f === "" || isNaN(Number(f))) return 0;
+  return Number(f);
+}
+
+function isQualityPick(g) {
+  const fund = fundNum(g.fundamental);
+  const score = g.score_10d;
+  const scoreOk = score != null && !isNaN(Number(score)) && Number(score) >= 75;
+  return fund >= 4 || scoreOk;
+}
+
+function renderQuality() {
+  const sec = document.createElement("section");
+  sec.className = "section";
+  sec.id = "quality";
+  const list = G.filter(isQualityPick)
+    .slice()
+    .sort((a, b) => (b.change_pct || 0) - (a.change_pct || 0));
+
+  sec.innerHTML = `
+    <div class="section-hd">
+      <h2>Quality screen</h2>
+      <p>Fund ≥ 4 or 10d score ≥ 75 — compact cards, no narratives.</p>
+    </div>`;
+
+  const wrap = document.createElement("div");
+  wrap.className = "spotlight";
+  const meta = document.createElement("div");
+  meta.className = "spotlight-hd";
+  meta.innerHTML = `
+    <h3>${list.length} name${list.length === 1 ? "" : "s"}</h3>
+    <div class="meta">sorted by change</div>`;
+  wrap.appendChild(meta);
+
+  const grid = document.createElement("div");
+  grid.className = "spot-grid";
+
+  if (!list.length) {
+    grid.innerHTML = `<p class="rational muted">No gainers meet Fund ≥ 4 or 10d ≥ 75 today.</p>`;
+  } else {
+    list.forEach((g, i) => {
+      const card = document.createElement("article");
+      card.className = "spot-card";
+      card.style.animationDelay = (i * 0.03) + "s";
+      const themes = chainsOf(g);
+      const themeHtml = themes.slice(0, 4).map(t => `<span class="leaf-tag">${esc(t)}</span>`).join("");
+      card.innerHTML = `
+        <div class="top">
+          <div>
+            <div class="sym">${esc(g.symbol)}</div>
+            <div class="nm">${esc(g.name)}</div>
+          </div>
+          <div class="chg">${fmtPct(g.change_pct)}</div>
+        </div>
+        <div class="row-meta">
+          <span>${fmtPrice(g.price)}</span>
+          ${fundBadgeHtml(g.fundamental)}
+          ${scoreBadgeHtml(g.score_10d)}
+        </div>
+        ${ohlcChartHtml(g.symbol)}
+        ${themeHtml ? `<div class="leaf-tags">${themeHtml}</div>` : ""}`;
+      grid.appendChild(card);
+    });
+  }
+  wrap.appendChild(grid);
+  sec.appendChild(wrap);
+  return sec;
+}
+
+function pointsToHtml(points) {
+  const lines = String(points || "").split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+  if (!lines.length) return "";
+  const items = lines.map(l => {
+    const text = l.replace(/^[•\-\*\u2013\u2014]\s*/, "").replace(/^\d+[.)]\s*/, "");
+    return `<li>${esc(text)}</li>`;
+  }).join("");
+  return `<ul class="rational-points">${items}</ul>`;
+}
+
+function renderRationalBlock(g) {
+  const rat = (g.rational || "").trim();
+  const points = (g.rational_points || "").trim();
+  const open = !!spotlightExpanded[g.symbol];
+  const usablePoints = points && !points.startsWith("(");
+
+  if (!rat && !usablePoints) {
+    return `<div class="rational muted">No narrative available.</div>`;
+  }
+
+  if (usablePoints) {
+    const ptsHtml = pointsToHtml(points);
+    if (!rat) return ptsHtml;
+    if (open) {
+      return `${ptsHtml}<div class="rational-full">${esc(rat)}</div>
+        <button type="button" class="more" data-sym="${esc(g.symbol)}">Show less</button>`;
+    }
+    return `${ptsHtml}<button type="button" class="more" data-sym="${esc(g.symbol)}">Read more</button>`;
+  }
+
+  // Fallback when points missing: truncated rational + Read more
+  if (open || rat.length <= 220) {
+    return `<div class="rational">${esc(rat)}${rat.length > 220 ? ` <button type="button" class="more" data-sym="${esc(g.symbol)}">Show less</button>` : ""}</div>`;
+  }
+  return `<div class="rational">${esc(truncate(rat, 220))} <button type="button" class="more" data-sym="${esc(g.symbol)}">Read more</button></div>`;
+}
+
+function renderSpotlight() {
+  const sec = document.createElement("section");
+  sec.className = "section";
+  sec.id = "spotlight";
+  const theme = themeStats.find(t => t.name === activeTheme);
+  const title = theme ? theme.name : "All gainers";
+  const list = (theme ? theme.list : G.slice()).slice().sort((a, b) => (b.change_pct || 0) - (a.change_pct || 0));
+  const avgChg = avg(list.map(g => g.change_pct || 0));
+
+  const wrap = document.createElement("div");
+  wrap.className = "spotlight";
+  wrap.innerHTML = `
+    <div class="spotlight-hd">
+      <h3>Hot Theme Breakdown · ${esc(title)}</h3>
+      <div class="meta">${list.length} names · avg <span class="pos">${fmtPct(avgChg)}</span></div>
+    </div>`;
+
+  const grid = document.createElement("div");
+  grid.className = "spot-grid";
+
+  if (!list.length) {
+    grid.innerHTML = `<p class="rational muted">No gainers in this theme.</p>`;
+  } else {
+    list.forEach((g, i) => {
+      const card = document.createElement("article");
+      card.className = "spot-card";
+      card.style.animationDelay = (i * 0.03) + "s";
+      const leaves = leavesOf(g, activeTheme);
+      const leafHtml = leaves.slice(0, 6).map(n => `<span class="leaf-tag">${esc(n)}</span>`).join("");
+      card.innerHTML = `
+        <div class="top">
+          <div>
+            <div class="sym">${esc(g.symbol)}</div>
+            <div class="nm">${esc(g.name)}</div>
+          </div>
+          <div class="chg">${fmtPct(g.change_pct)}</div>
+        </div>
+        <div class="row-meta">
+          <span>${fmtPrice(g.price)}</span>
+          ${fundBadgeHtml(g.fundamental)}
+          ${scoreBadgeHtml(g.score_10d)}
+        </div>
+        ${ohlcChartHtml(g.symbol)}
+        ${leafHtml ? `<div class="leaf-tags">${leafHtml}</div>` : ""}
+        ${renderRationalBlock(g)}`;
+      grid.appendChild(card);
+    });
+  }
+  wrap.appendChild(grid);
+  sec.appendChild(wrap);
+
+  setTimeout(() => {
+    wrap.querySelectorAll(".more").forEach(btn => {
+      btn.onclick = (e) => {
+        e.stopPropagation();
+        const sym = btn.dataset.sym;
+        spotlightExpanded[sym] = !spotlightExpanded[sym];
+        const y = window.scrollY;
+        render();
+        window.scrollTo(0, y);
+      };
+    });
+  }, 0);
+  return sec;
+}
+
+function renderFooter() {
+  const f = document.createElement("footer");
+  f.innerHTML = `Embedded from <code>${esc(SOURCE_FILE)}</code> · scraped ${esc(DATA.scraped_at || "—")} · standalone dashboard`;
+  return f;
+}
+
+render();
+</script>
+</body>
+</html>
