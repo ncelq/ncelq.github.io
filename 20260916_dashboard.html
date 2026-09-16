@@ -1,0 +1,7513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Today's Gainer Stories · 20260916</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Sand B1 Whisper: #F2E2BA + light brown/grey, light catalysts & story highlights */
+:root {
+  --sand: #F2E2BA;
+  --bg: #F0EFEC;
+  --bg-wash: #F7F1E4;
+  --panel: #FBFAF8;
+  --ink: #3C3A36;
+  --muted: #78746C;
+  --line: #D8D4CE;
+  --line-strong: #C8C4BC;
+  --accent: #A08060;
+  --accent-soft: #F8F3E8;
+  --accent-deep: #8A7358;
+  --pos: #16a34a;
+  --pos-soft: #dcfce7;
+  --warm: #C4A882;
+  --warm-soft: #F8F3EA;
+  --highlight: #F8F6F2;
+  --catalyst-bg: #FAF8F4;
+  --shadow: 0 1px 2px rgba(60,58,54,.03), 0 8px 20px rgba(160,128,96,.07);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --font: "Source Sans 3", system-ui, sans-serif;
+  --display: "Fraunces", Georgia, serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; padding: 0;
+  background:
+    radial-gradient(ellipse 900px 420px at 12% -10%, #F2E2BA, transparent 58%),
+    radial-gradient(ellipse 720px 400px at 95% 4%, #E8E6E2, transparent 55%),
+    var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1120px; margin: 0 auto; padding: 32px 22px 64px; }
+
+.hero {
+  position: relative;
+  padding: 8px 4px 8px;
+  margin-bottom: 28px;
+  animation: rise .55s ease both;
+}
+.hero .eyebrow {
+  font-size: 12px; font-weight: 600; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--accent); margin: 0 0 10px;
+}
+.hero h1 {
+  font-family: var(--display);
+  font-size: clamp(1.85rem, 4vw, 2.55rem);
+  font-weight: 700; line-height: 1.15;
+  margin: 0 0 14px; letter-spacing: -0.02em;
+}
+.hero-meta {
+  display: flex; flex-wrap: wrap; gap: 10px 18px;
+  align-items: baseline; color: var(--muted); font-size: 13px;
+}
+.hero-meta strong { color: var(--ink); font-weight: 600; }
+.hero-meta .sep { opacity: .35; }
+.index-briefs {
+  margin-top: 16px;
+}
+.index-brief {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  box-shadow: var(--shadow);
+}
+.index-brief .sym {
+  font-size: 11px; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--accent-deep); margin: 0 0 6px;
+}
+.index-brief .rational-points {
+  margin: 0; padding: 0 0 0 1.1em;
+  font-size: 13px; color: var(--ink); line-height: 1.45;
+}
+.index-brief .rational-points li { margin: 0 0 4px; }
+.index-brief .rational-points li:last-child { margin-bottom: 0; }
+.index-brief .muted { margin: 0; font-size: 13px; }
+.index-brief .theme-overview {
+  margin: 0;
+  font-size: 13px; color: var(--ink); line-height: 1.45;
+  white-space: pre-wrap;
+  font-family: inherit;
+}
+.index-brief .brief-section + .brief-section {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+}
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 10px;
+}
+.highlight-card {
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 12px 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 100%;
+}
+.highlight-card .h-title {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: .95rem;
+  margin: 0;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+.highlight-card .h-tickers {
+  display: flex; flex-wrap: wrap; gap: 4px;
+}
+.highlight-card .h-ticker {
+  font-size: 10.5px; font-weight: 600;
+  font-family: var(--mono);
+  background: var(--bg);
+  color: var(--accent-deep);
+  border: 1px solid var(--line);
+  padding: 1px 6px; border-radius: 4px;
+}
+.highlight-card .h-bullets {
+  margin: 0; padding: 0 0 0 1.05em;
+  font-size: 12.5px; color: var(--ink); line-height: 1.4;
+}
+.highlight-card .h-bullets li { margin: 0 0 3px; }
+.highlight-card .h-bullets li:last-child { margin-bottom: 0; }
+.highlight-card .h-takeaway {
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px dashed var(--line);
+  font-size: 12.5px; font-weight: 600;
+  color: var(--accent-deep); line-height: 1.35;
+}
+.highlight-card .h-takeaway::before {
+  content: "📌 ";
+}
+
+.section { margin-top: 30px; animation: rise .55s ease both; }
+.section:nth-of-type(2) { animation-delay: .05s; }
+.section:nth-of-type(3) { animation-delay: .1s; }
+.section:nth-of-type(4) { animation-delay: .15s; }
+.section-hd { margin-bottom: 14px; }
+.section-hd h2 {
+  font-family: var(--display); font-size: 1.35rem; font-weight: 700;
+  margin: 0 0 4px; letter-spacing: -0.01em;
+}
+.section-hd p { margin: 0; color: var(--muted); font-size: 13.5px; }
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: stretch;
+}
+.theme-board {
+  display: flex; flex-direction: column;
+  height: 100%;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 13px;
+  cursor: pointer;
+  text-align: left;
+  font: inherit; color: inherit;
+  box-shadow: var(--shadow);
+  transition: border-color .2s, transform .2s, background .2s;
+}
+.theme-board:hover { border-color: color-mix(in srgb, var(--accent) 40%, var(--line)); transform: translateY(-1px); }
+.theme-board.active {
+  background: var(--panel);
+  border-color: var(--accent-deep);
+  box-shadow: none;
+  outline: 1px solid var(--accent-deep);
+  outline-offset: 0;
+}
+.theme-board .t-name {
+  font-family: var(--display); font-weight: 700; font-size: .98rem; margin: 0 0 4px;
+}
+.theme-board .t-stats {
+  display: flex; justify-content: space-between; gap: 6px;
+  font-size: 11.5px; color: var(--muted); margin-bottom: 8px;
+}
+.theme-board .t-avg { color: var(--pos); font-weight: 700; }
+.theme-board .theme-catalysts {
+  padding: 0; background: none; border: none; margin-bottom: 8px;
+}
+.theme-board .t-leaves {
+  display: flex; flex-wrap: wrap; gap: 3px;
+  margin-top: auto; border-top: 1px dashed var(--line); padding-top: 8px;
+}
+.leaf-chip {
+  font-size: 10.5px; font-weight: 500;
+  background: var(--warm-soft); color: var(--warm);
+  padding: 1px 6px; border-radius: 4px;
+}
+.theme-board .theme-catalysts .cat-label {
+  font-size: 10px; font-weight: 600; letter-spacing: .05em;
+  text-transform: uppercase; color: var(--muted); margin: 0 0 4px;
+}
+.theme-board .theme-catalysts ul {
+  margin: 0; padding: 0 0 0 1em; font-size: 11.5px; line-height: 1.35;
+  text-align: left;
+}
+.theme-board .theme-catalysts li { margin: 0 0 2px; }
+.theme-board .theme-catalysts li:last-child { margin-bottom: 0; }
+
+.spotlight {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  box-shadow: var(--shadow);
+}
+.spotlight-hd {
+  display: flex; flex-wrap: wrap; align-items: baseline;
+  justify-content: space-between; gap: 10px;
+  margin-bottom: 16px; padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+.spotlight-hd h3 {
+  font-family: var(--display); font-size: 1.25rem; margin: 0;
+}
+.spotlight-hd .meta { color: var(--muted); font-size: 13px; }
+.spotlight-hd .meta .pos { color: var(--pos); font-weight: 700; }
+.spot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+.spot-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 14px 15px;
+  background: var(--panel);
+  transition: opacity .25s ease, transform .25s ease;
+  animation: fadeSlide .35s ease both;
+}
+.spot-card .top {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;
+}
+.spot-card .sym {
+  font-family: var(--mono); font-weight: 700; font-size: 15px;
+}
+.spot-card .nm { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+.spot-card .chg {
+  color: var(--pos); font-weight: 700; font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.spot-card .row-meta {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;
+  font-size: 11.5px; color: var(--muted);
+}
+.mini-chart {
+  margin-top: 10px;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  height: auto;
+  line-height: 0;
+}
+.mini-chart svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.tag {
+  display: inline-block; padding: 1px 7px; border-radius: 4px;
+  background: var(--accent-soft); color: var(--ink); font-weight: 500;
+}
+.leaf-tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 4px; }
+.leaf-tag {
+  font-size: 10.5px; padding: 1px 6px; border-radius: 4px;
+  background: var(--warm-soft); color: var(--warm); font-weight: 500;
+}
+.rational {
+  margin-top: 10px; font-size: 13px; color: var(--ink); line-height: 1.55;
+}
+.rational.muted { color: var(--muted); font-style: italic; }
+button.more {
+  background: none; border: none; color: var(--accent); font: inherit;
+  font-weight: 600; cursor: pointer; padding: 0; margin-top: 6px; display: inline-block;
+}
+button.more:hover { color: var(--accent-deep); text-decoration: underline; }
+.rational-points {
+  margin: 10px 0 0; padding: 0 0 0 1.1em;
+  font-size: 13px; color: var(--ink); line-height: 1.45;
+}
+.rational-points li { margin: 0 0 4px; }
+.rational-full {
+  margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--line);
+  font-size: 13px; color: var(--ink); line-height: 1.55;
+}
+
+.fund-badge {
+  font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 5px;
+  font-variant-numeric: tabular-nums;
+}
+.fund-badge.hi {
+  background: #dcfce7; color: #16a34a;
+}
+.fund-badge.mid {
+  background: #fef3c7; color: #d97706;
+}
+.fund-badge.lo {
+  background: #fee2e2; color: #dc2626;
+}
+.score-badge {
+  font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 5px;
+  font-variant-numeric: tabular-nums;
+}
+.score-badge.hi {
+  background: #dcfce7; color: #16a34a;
+}
+.score-badge.mid {
+  background: #fef3c7; color: #d97706;
+}
+.score-badge.lo {
+  background: #fee2e2; color: #dc2626;
+}
+.score-badge.na {
+  background: #EDEBE7; color: var(--muted);
+}
+
+footer {
+  margin-top: 36px; padding-top: 16px;
+  border-top: 1px solid var(--line);
+  text-align: center; color: var(--muted); font-size: 12px;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+  .theme-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .wrap { padding: 22px 14px 48px; }
+  .theme-grid { grid-template-columns: 1fr; }
+  .spot-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const DATA = {
+  "scraped_at": "2026-09-16T01:42:56",
+  "min_change_pct": 5.0,
+  "gainers": [
+    {
+      "symbol": "SWKS",
+      "name": "Skyworks Solutions, Inc.",
+      "price": "90.00",
+      "change_pct": 13.55,
+      "score_10d": 67.24,
+      "fundamental": 2,
+      "rational": "Skyworks Solutions shares surged roughly 13.5% to $90.00, sharply rebounding from Monday's 10% AI-slowdown-driven selloff, as investors cheered fresh progress on its pending Qorvo merger. Management confirmed the deal has cleared U.S. antitrust review and is now awaiting only Chinese regulatory approval, with CEO Philip Brace expressing confidence the roughly $500M-synergy transaction will close before year-end; the rally was reinforced by strong Apple RF-content demand tied to the new foldable iPhone launch, a newly authorized multi-billion-dollar buyback, and continued heavy short-covering given the stock's elevated short interest, even as some analysts flag valuation concerns with shares trading well above consensus price targets.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610025,
+          "chain_name": "VR/AR",
+          "plate_id": 10010324,
+          "name": "Connection Chip"
+        },
+        {
+          "chain_id": 9610026,
+          "chain_name": "Apple’s industry chain",
+          "plate_id": 10010343,
+          "name": "RF Front-End Module"
+        },
+        {
+          "chain_id": 9610026,
+          "chain_name": "Apple’s industry chain",
+          "plate_id": 10010350,
+          "name": "RF Chip"
+        },
+        {
+          "chain_id": 9610033,
+          "chain_name": "Semiconductors",
+          "plate_id": 10010461,
+          "name": "Analog Chip"
+        },
+        {
+          "chain_id": 9610035,
+          "chain_name": "5G",
+          "plate_id": 10010482,
+          "name": "RF Components"
+        },
+        {
+          "chain_id": 9610035,
+          "chain_name": "5G",
+          "plate_id": 10010491,
+          "name": "Terminal Accessories"
+        }
+      ],
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "rational_points": "(summary unavailable)"
+    },
+    {
+      "symbol": "FPS",
+      "name": "Forgent Power Solutions, Inc.",
+      "price": "31.36",
+      "change_pct": 9.5,
+      "score_10d": 35.25,
+      "fundamental": 2,
+      "rational": "Forgent Power Solutions shares surged nearly 10% after the data center power distribution equipment maker reported record fiscal Q4 and FY2026 results that topped guidance, including Q4 revenue of $462M (+94% YoY), bookings of $1.5B (+375% YoY, 3.3x book-to-bill), and an all-time high backlog of $3.0B. Management issued FY2027 guidance well above Wall Street estimates (revenue of $2.4-$2.6B vs. $2.09B consensus, adjusted EPS of $1.26-$1.40 vs. $1.17 consensus), fueled by surging demand tied to AI-driven data center buildout and expansion plans for its Powertrain Solutions manufacturing capacity in Tijuana, Mexico. The rally came despite a broader industrials and market pullback, with the sector under pressure ahead of the Fed's rate decision amid rising Treasury yields and oil prices, though investor enthusiasm around Forgent's accelerating backlog and margin expansion outweighed macro headwinds; large institutional buyers including California State Teachers Retirement System also disclosed a sizable new stake in the stock.",
+      "industrial_leaves": [],
+      "industry": "Electrical Equipment & Parts",
+      "sector": "Industrials",
+      "rational_points": "(summary unavailable)"
+    },
+    {
+      "symbol": "QRVO",
+      "name": "Qorvo, Inc.",
+      "price": "118.06",
+      "change_pct": 9.34,
+      "score_10d": 69.03,
+      "fundamental": 5,
+      "rational": "Qorvo shares surged over 9% after Skyworks Solutions confirmed its pending merger with Qorvo has entered the final stages of regulatory review, having cleared U.S. antitrust waiting periods and secured debt financing on favorable terms, alongside a newly authorized multi-billion-dollar share repurchase program to support earnings accretion. The rally stood out against a broader semiconductor selloff driven by AI development slowdown concerns and rising Treasury yields, with peers like Micron and Nvidia declining sharply, underscoring how deal-specific catalysts overrode negative sector sentiment for Qorvo.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610001,
+          "chain_name": "Electric Vehicles",
+          "plate_id": 10010185,
+          "name": "Direct Current"
+        },
+        {
+          "chain_id": 9610025,
+          "chain_name": "VR/AR",
+          "plate_id": 10010324,
+          "name": "Connection Chip"
+        },
+        {
+          "chain_id": 9610026,
+          "chain_name": "Apple’s industry chain",
+          "plate_id": 10010343,
+          "name": "RF Front-End Module"
+        },
+        {
+          "chain_id": 9610026,
+          "chain_name": "Apple’s industry chain",
+          "plate_id": 10010350,
+          "name": "RF Chip"
+        },
+        {
+          "chain_id": 9610033,
+          "chain_name": "Semiconductors",
+          "plate_id": 10010461,
+          "name": "Analog Chip"
+        },
+        {
+          "chain_id": 9610035,
+          "chain_name": "5G",
+          "plate_id": 10010482,
+          "name": "RF Components"
+        },
+        {
+          "chain_id": 9610035,
+          "chain_name": "5G",
+          "plate_id": 10010491,
+          "name": "Terminal Accessories"
+        },
+        {
+          "chain_id": 9610046,
+          "chain_name": "Drone",
+          "plate_id": 10102985,
+          "name": "Component Manufacturer"
+        }
+      ],
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "rational_points": "(summary unavailable)"
+    },
+    {
+      "symbol": "RIG",
+      "name": "Transocean Ltd.",
+      "price": "5.94",
+      "change_pct": 8.99,
+      "score_10d": 33.56,
+      "fundamental": 0,
+      "rational": "Transocean shares surged nearly 9% after the company announced a new $80 million ultra-deepwater drilling contract for the Deepwater Conqueror in Equatorial Guinea, a 170-day campaign starting in 2027 that extends the rig's utilization directly from its current U.S. Gulf work. The rally was amplified by a broader offshore-driller sector rotation as crude oil surged past $105 amid Middle East supply disruption fears, with peers Valaris and W&T Offshore also gaining roughly 6% even as the wider market fell on surging Treasury yields above 5%. Investors are weighing the positive contracting momentum and management's outlook for deepwater utilization moving into the 90% range by 2027 against a mixed institutional backdrop, with a consensus 'Hold' rating and $6.68 price target following a Q2 report that slightly beat EPS estimates but showed revenue down 2.2% year-over-year.",
+      "industrial_leaves": [],
+      "industry": "Oil & Gas Drilling",
+      "sector": "Energy",
+      "rational_points": "(summary unavailable)"
+    },
+    {
+      "symbol": "TENB",
+      "name": "Tenable Holdings, Inc.",
+      "price": "38.09",
+      "change_pct": 8.58,
+      "score_10d": 30.12,
+      "fundamental": 0,
+      "rational": "Tenable shares surged 8.58% to $38.09, extending a sharp multi-day rally that began with a 16.5% jump the prior session as investors rotated out of AI-infrastructure/semiconductor names into cybersecurity and enterprise software following calls for a slowdown in AI development. The move coincided with Tenable's completion of an upsized $800 million 0.25% convertible notes offering (2031 maturity, $44.84 conversion price), proceeds from which funded a $170.5 million share buyback, retirement of term loans under its 2021 credit facility, and capped call transactions to limit dilution; the deal followed news the offering had been increased to $725M+ with a greenshoe option days earlier. Sector-wide strength was broad-based, with peers like SentinelOne (+16%), Qualys (+15%), and NetScout (+14%) also rallying as the Dow Jones U.S. Software Index gained over 3% even as the Nasdaq fell amid AI-slowdown jitters, while Tenable separately touted its eighth consecutive year atop IDC's device vulnerability management market share rankings, reinforcing its AI-driven exposure management positioning even as Wedbush initiated coverage with an Underperform rating and $29 price target.",
+      "industrial_leaves": [],
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "rational_points": "(summary unavailable)"
+    },
+    {
+      "symbol": "VAL",
+      "name": "Valaris Limited",
+      "price": "88.23",
+      "change_pct": 8.56,
+      "score_10d": 34.59,
+      "fundamental": 0,
+      "rational": "Valaris shares surged 8.6% to close near $88, extending gains in after-hours trading, as a sector-wide rally lifted offshore drillers amid rising Brent crude prices tied to Middle East supply concerns and a new $80 million ultra-deepwater contract win by peer Transocean. The move came even as broader equity markets slipped on surging Treasury yields (above 5%) and hawkish Fed rate-hike expectations, underscoring investors rotating into energy names. Valaris remains at the center of its pending all-stock merger with Transocean (15.235 Transocean shares per Valaris share), a deal now facing scrutiny from several shareholder-rights law firms probing whether the exchange ratio delivers fair value, adding a legal overhang even as strong Q2 results (98% revenue efficiency, record ~$4.9 billion backlog, EPS beat) support bullish sentiment on offshore drilling fundamentals.",
+      "industrial_leaves": [],
+      "industry": "Oil & Gas Drilling",
+      "sector": "Energy",
+      "rational_points": "(summary unavailable)"
+    },
+    {
+      "symbol": "KRMN",
+      "name": "Karman Holdings Inc.",
+      "price": "37.47",
+      "change_pct": 7.86,
+      "score_10d": 34.31,
+      "fundamental": 1,
+      "rational": "Karman Holdings shares surged nearly 8% after Guggenheim Securities initiated coverage with a Buy rating and $63 price target, citing the stock's steep year-to-date decline (down over 52%) and more attractive valuation as a compelling entry point for a best-in-class space and missile components maker. The upgrade comes amid a broader defense sector rally and adds to Karman's recent momentum following strong Q2 fiscal 2026 results (58% YoY revenue growth to $182M, backlog reaching $1.3B), though investors remain cautious about the company's weak cash flow generation and elevated debt levels highlighted in a recent short-seller report from JCap.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610085,
+          "chain_name": "Commercial Space",
+          "plate_id": 10104226,
+          "name": "Core Components & Materials"
+        }
+      ],
+      "industry": "Aerospace & Defense",
+      "sector": "Industrials",
+      "rational_points": "(summary unavailable)"
+    },
+    {
+      "symbol": "MRCY",
+      "name": "Mercury Systems, Inc.",
+      "price": "87.01",
+      "change_pct": 7.38,
+      "score_10d": 43.56,
+      "fundamental": 1,
+      "rational": "Mercury Systems shares surged over 7% after Guggenheim initiated coverage with a Buy rating and a $115 price target, part of a broader bullish call on 22 aerospace and defense stocks tied to expectations for robust defense and aircraft production demand, even as the firm cautioned on aerospace aftermarket exposure. The rally stands out against a difficult backdrop for broader markets, with the S&P 500, Dow, and Nasdaq all closing lower as surging oil prices, a 10-year Treasury yield above 5%, and anticipation of the Fed's rate decision weighed on risk sentiment; Mercury's defense-focused, government-backed revenue base appears to be providing a haven from these macro pressures. The move also follows the company's mid-August earnings report, which beat revenue estimates ($289.78M vs. $266.09M expected) despite a narrow EPS miss, reinforcing the growth narrative Guggenheim is highlighting.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610007,
+          "chain_name": "Military & Defense",
+          "plate_id": 10010087,
+          "name": "Radar"
+        },
+        {
+          "chain_id": 9610007,
+          "chain_name": "Military & Defense",
+          "plate_id": 10010091,
+          "name": "Aviation"
+        }
+      ],
+      "industry": "Aerospace & Defense",
+      "sector": "Industrials",
+      "rational_points": "(summary unavailable)"
+    },
+    {
+      "symbol": "CVI",
+      "name": "CVR Energy, Inc.",
+      "price": "52.17",
+      "change_pct": 7.28,
+      "score_10d": 80.21,
+      "fundamental": 0,
+      "rational": "CVR Energy shares surged nearly 7.3% to close near 52-week highs, tracking a broad rally across the refining sector as crude prices spiked toward $100-plus on escalating Strait of Hormuz tensions, widening crack spreads and record refining margins. The move follows CVR's strong Q2 beat (EPS $0.34 vs $0.26 consensus, revenue up 55.5% YoY to $2.74B) and comes even as analysts remain skeptical on valuation—CVI still carries a consensus 'Strong Sell' rating with a $30.50 price target—while peers like Valero and Marathon Petroleum also hit fresh highs on similar margin tailwinds, though BTIG warned refiners broadly face correction risk after their sharp run-up.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610019,
+          "chain_name": "Petroleum",
+          "plate_id": 10010154,
+          "name": "Petroleum Refining"
+        },
+        {
+          "chain_id": 9610053,
+          "chain_name": "Plant Cultivation",
+          "plate_id": 10102479,
+          "name": "Fertilizers & Pesticides"
+        }
+      ],
+      "industry": "Oil & Gas Refining & Marketing",
+      "sector": "Energy",
+      "rational_points": "(summary unavailable)"
+    },
+    {
+      "symbol": "QLYS",
+      "name": "Qualys, Inc.",
+      "price": "185.37",
+      "change_pct": 7.21,
+      "score_10d": 30.37,
+      "fundamental": 0,
+      "rational": "Qualys shares rallied sharply, extending Monday's 14.5% surge, as investors rotated out of AI-linked semiconductor and hardware names into enterprise software and cybersecurity stocks after AI industry leaders called for slower model development, sparking a rotation trade that favored recurring-revenue software companies. The move also helped offset lingering pressure from last week's Wedbush downgrade (to Neutral, $175 PT) and Wall Street Zen's cut to Hold, which had knocked shares down on concerns about Qualys' core cybersecurity growth trajectory; despite the mixed analyst sentiment (consensus Hold, avg. PT $173.87), bulls like Scotiabank ($220 PT) and Jefferies ($185 PT) remain constructive, and the stock's outsized gain outpaced cybersecurity peers such as Tenable and NetScout amid the broader software rally.",
+      "industrial_leaves": [],
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "rational_points": "(summary unavailable)"
+    },
+    {
+      "symbol": "WAY",
+      "name": "Waystar Holding Corp.",
+      "price": "26.67",
+      "change_pct": 7.11,
+      "score_10d": 38.51,
+      "fundamental": 1,
+      "rational": "Waystar shares surged over 7% after Reuters reported the healthcare payment software company is exploring strategic alternatives, including a potential sale, and has hired Evercore to advise on the process. The take-private speculation comes just two years after Waystar's 2024 IPO and follows a roughly 24-35% decline in the stock over the past year amid sector-wide concerns about AI disrupting software business models; EQT (13%), CPPIB (10%), and BlackRock (8%) are the largest shareholders, and analysts including Citi (Buy, $28 PT) and Barclays (Equal-Weight, $30 PT) responded to the news, with several noting the deal talks remain early-stage and no transaction is guaranteed.",
+      "industrial_leaves": [],
+      "industry": "Information Technology Services",
+      "sector": "Technology",
+      "rational_points": "(summary unavailable)"
+    },
+    {
+      "symbol": "SDRL",
+      "name": "Seadrill Limited",
+      "price": "49.76",
+      "change_pct": 6.17,
+      "score_10d": 39.86,
+      "fundamental": 0,
+      "rational": "Seadrill shares surged 6.2% to $49.76, extending gains into after-hours trading, as offshore drillers broadly rallied even while the wider market slipped amid surging Treasury yields above 5% and Brent crude climbing past $108 a barrel on Middle East supply concerns. Peers Transocean, Valaris and W&T Offshore posted similarly outsized gains without company-specific news, signaling sector-wide capital rotation into offshore energy names as oil prices spike; Valaris' Q2 beat and record ~$4.9 billion backlog and Transocean's new $80 million Equatorial Guinea contract reinforced bullish sentiment on deepwater drilling demand and utilization heading into 2027. Some analysts now flag Seadrill as modestly overvalued relative to GF Value estimates after the rally, even as insider selling over the past year adds a note of caution.",
+      "industrial_leaves": [],
+      "industry": "Oil & Gas Drilling",
+      "sector": "Energy",
+      "rational_points": "(summary unavailable)"
+    },
+    {
+      "symbol": "PBF",
+      "name": "PBF Energy Inc.",
+      "price": "74.72",
+      "change_pct": 6.14,
+      "score_10d": 35.18,
+      "fundamental": 1,
+      "rational": "PBF Energy shares rebounded sharply, recovering most of Monday's insider-selling-driven decline as the market digested the successful pricing of its $500 million 0% exchangeable notes due 2032. The debt refinancing, aimed at replacing higher-cost 7.875% notes due 2030 with capped calls to limit dilution, was viewed as a credit-positive move, while surging crude and refined product prices (Brent near $109, record diesel prices) tied to Middle East supply disruptions and tight refining margins continued to support refiner stocks broadly. Gains came despite a cautious BTIG note flagging refiners including PBF for stretched risk-reward after their strong run, and continued reports of insider/10%-holder share sales by Control Empresarial de Capitales, underscoring a mixed sentiment backdrop even as fundamentals (record Q2 margins, Martinez refinery restart) remain supportive.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610019,
+          "chain_name": "Petroleum",
+          "plate_id": 10010154,
+          "name": "Petroleum Refining"
+        }
+      ],
+      "industry": "Oil & Gas Refining & Marketing",
+      "sector": "Energy",
+      "rational_points": "(summary unavailable)"
+    },
+    {
+      "symbol": "NE",
+      "name": "Noble Corporation plc",
+      "price": "46.55",
+      "change_pct": 6.08,
+      "score_10d": 38.59,
+      "fundamental": 0,
+      "rational": "Noble Corporation shares surged over 6% amid a broad sector-wide rally in offshore drillers, with peer Valaris jumping nearly 6% and Transocean gaining over 6% on new contract news, as surging oil prices (WTI above $100, Brent above $107-108 amid Middle East supply disruptions) boosted sentiment across the drilling and oilfield services complex. The rally in energy names came even as broader U.S. equity markets fell for a second straight session, pressured by the 10-year Treasury yield breaching 5% and lingering AI-valuation concerns, underscoring that oil-price-driven strength is currently offsetting macro headwinds for offshore drillers like Noble.",
+      "industrial_leaves": [],
+      "industry": "Oil & Gas Drilling",
+      "sector": "Energy",
+      "rational_points": "(summary unavailable)"
+    },
+    {
+      "symbol": "SM",
+      "name": "SM Energy Company",
+      "price": "41.29",
+      "change_pct": 5.79,
+      "score_10d": 54.53,
+      "fundamental": 1,
+      "rational": "SM Energy shares surged 5.79% to close near a 52-week high of $41.29, extending a stretch of strong gains fueled by consecutive bullish analyst actions and a sharp rally in crude oil prices tied to escalating Middle East supply disruptions. KeyBanc raised its price target to $46 (Overweight) and UBS lifted its target to $48 (Buy) within the same 48-hour window, reinforcing confidence in the company's post-Civitas merger execution. Investors continue to reward SM Energy's balance-sheet progress, including redemption of all senior notes due through mid-2028, 95% completion of merger synergy targets, and raised second-half production guidance following a standout Q2 that featured record operating cash flow and realized oil prices near $97/barrel. The move mirrored broader strength across E&P peers as WTI and Brent climbed on Middle East supply fears, even as the wider market (Russell indices, S&P 500) traded lower amid a 10-year Treasury yield spike above 5% and AI-sector selloff, underscoring energy's role as a standout outperformer in an otherwise risk-off tape.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610019,
+          "chain_name": "Petroleum",
+          "plate_id": 10010156,
+          "name": "Petroleum Exploration"
+        },
+        {
+          "chain_id": 9610019,
+          "chain_name": "Petroleum",
+          "plate_id": 10010157,
+          "name": "Petroleum Extraction"
+        }
+      ],
+      "industry": "Oil & Gas Exploration & Production",
+      "sector": "Energy",
+      "rational_points": "(summary unavailable)"
+    },
+    {
+      "symbol": "MUR",
+      "name": "Murphy Oil Corporation",
+      "price": "40.40",
+      "change_pct": 5.76,
+      "score_10d": 57.1,
+      "fundamental": 0,
+      "rational": "Murphy Oil shares surged nearly 6% as crude oil prices spiked past $103/bbl (Brent near $107-109) following renewed Middle East supply disruptions, including strikes on Saudi energy infrastructure and an outage on Saudi Arabia's East-West pipeline, lifting the broader E&P sector alongside peers like APA and Crescent Energy. The rally was reinforced by bullish analyst action, with KeyBanc raising its price target to $47 (Overweight) and Wells Fargo to $42 (Equal Weight) citing progress on Murphy's Vietnam Lac Da Vang project (on track for first oil in Q4 2026) and Cote d'Ivoire resource expansion, even as Barclays maintained a Sell rating at $34 and some valuation models flag the stock as overvalued after the move.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610019,
+          "chain_name": "Petroleum",
+          "plate_id": 10010156,
+          "name": "Petroleum Exploration"
+        },
+        {
+          "chain_id": 9610019,
+          "chain_name": "Petroleum",
+          "plate_id": 10010157,
+          "name": "Petroleum Extraction"
+        }
+      ],
+      "industry": "Oil & Gas Exploration & Production",
+      "sector": "Energy",
+      "rational_points": "(summary unavailable)"
+    },
+    {
+      "symbol": "CE",
+      "name": "Celanese Corporation",
+      "price": "47.22",
+      "change_pct": 5.45,
+      "score_10d": 36.92,
+      "fundamental": 0,
+      "rational": "Celanese shares surged roughly 5.5% in after-hours/late trading, rebounding sharply after a two-day pullback tied to profit-taking following KeyBanc's bullish Overweight initiation with a $57 price target. Investors continue to weigh the company's debt-reduction progress, including the planned sale of an additional 19% stake in its Nutrinova joint venture to Mitsui for roughly $152 million, against a still-heavy debt load and margin pressures, with shares trading well below the average analyst target of $63.27 despite recent EPS beats.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610006,
+          "chain_name": "Photovoltaics",
+          "plate_id": 10010114,
+          "name": "EVA Film"
+        }
+      ],
+      "industry": "Chemicals - Specialty",
+      "sector": "Basic Materials",
+      "rational_points": "(summary unavailable)"
+    },
+    {
+      "symbol": "CRGY",
+      "name": "Crescent Energy Company",
+      "price": "15.37",
+      "change_pct": 5.35,
+      "score_10d": 60.39,
+      "fundamental": 0,
+      "rational": "Crescent Energy shares surged 5.35% to close near a 52-week high of $15.47, riding a sector-wide rally in oil and gas E&P names as crude prices spiked amid escalating Middle East supply disruptions, with Brent crude jumping roughly 3% toward $109/barrel. The move came alongside peers SM Energy, Talos Energy, and Solaris Energy Infrastructure also posting strong gains, even as broader equity markets fell on surging 10-year Treasury yields above 5% and anticipation of a Fed rate decision. Investor sentiment around Crescent remains constructive following its early-August Q2 beat (EPS of $0.69 vs. $0.59 estimate, revenue of $1.39B up 55.3% YoY) and raised FY26 production guidance, with analysts maintaining a consensus 'Moderate Buy' rating and average price target near $16.42; institutional buying, including a new stake from Virginia Retirement Systems, underscores continued confidence in the name.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610019,
+          "chain_name": "Petroleum",
+          "plate_id": 10010156,
+          "name": "Petroleum Exploration"
+        },
+        {
+          "chain_id": 9610019,
+          "chain_name": "Petroleum",
+          "plate_id": 10010157,
+          "name": "Petroleum Extraction"
+        }
+      ],
+      "industry": "Oil & Gas Exploration & Production",
+      "sector": "Energy",
+      "rational_points": "(summary unavailable)"
+    },
+    {
+      "symbol": "APA",
+      "name": "APA Corporation",
+      "price": "47.41",
+      "change_pct": 5.29,
+      "score_10d": 52.76,
+      "fundamental": 1,
+      "rational": "APA Corporation shares surged near 52-week highs as a sharp rally in crude oil prices lifted the entire E&P sector, with the Zacks Oil & Gas Exploration industry gaining favorable analyst attention amid rising 2026 EPS estimates (up to $5.70 from $5.14 over the past 60 days). Brent crude climbed above $109/barrel and WTI topped $100 amid escalating Middle East supply concerns, pushing energy stocks like APA and peers (Crescent Energy, Diamondback) sharply higher even as broader equity markets fell on surging Treasury yields (10-year above 5%) and Fed rate-hike expectations ahead of Wednesday's FOMC decision. Despite the rally, analyst sentiment on APA remains mixed with a consensus 'Hold' rating and price targets clustered in the $39-$48 range, reflecting caution around APA's longer-term revenue decline trajectory even as near-term commodity tailwinds and improving operating efficiency drive the stock's outperformance.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610019,
+          "chain_name": "Petroleum",
+          "plate_id": 10010156,
+          "name": "Petroleum Exploration"
+        },
+        {
+          "chain_id": 9610019,
+          "chain_name": "Petroleum",
+          "plate_id": 10010157,
+          "name": "Petroleum Extraction"
+        }
+      ],
+      "industry": "Oil & Gas Exploration & Production",
+      "sector": "Energy",
+      "rational_points": "(summary unavailable)"
+    },
+    {
+      "symbol": "CRUS",
+      "name": "Cirrus Logic, Inc.",
+      "price": "122.21",
+      "change_pct": 5.05,
+      "score_10d": 64.21,
+      "fundamental": 3,
+      "rational": "Cirrus Logic shares rallied sharply, rebounding from oversold territory near 52-week lows as bargain hunters stepped in and a broader risk-on wave lifted semiconductor peers such as Skyworks, Qorvo, and MaxLinear. The stock had slumped roughly 27% over the prior three months after August guidance flagged softer fiscal 2027 PC-related revenue due to constrained supply of a key industry platform, memory/component shortages, and OEM model delays, but investors are now weighing that against an attractive valuation, a shrinking share count from ongoing buybacks, and technical signals suggesting short-term bullish momentum despite the stock still trading below its 50- and 200-day moving averages. The bounce came even as the broader market and Nasdaq stayed under pressure from a 10-year Treasury yield topping 5%, surging oil prices, and anxiety ahead of the Fed's rate decision.",
+      "industrial_leaves": [
+        {
+          "chain_id": 9610026,
+          "chain_name": "Apple’s industry chain",
+          "plate_id": 10010349,
+          "name": "Audio Chip"
+        }
+      ],
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "rational_points": "(summary unavailable)"
+    }
+  ],
+  "theme_catalysts": {
+    "Apple’s industry chain": "",
+    "Petroleum": ""
+  },
+  "market_update": "",
+  "index_briefs": {
+    "QQQ": {
+      "description": "QQQ closed modestly lower as surging Treasury yields and oil prices pressured tech valuations ahead of the Fed's widely anticipated rate decision Wednesday. The 10-year yield briefly topped 5.04%—its highest since 2007—while Brent crude climbed toward $109, intensifying inflation concerns and prompting investors to trim risk in high-multiple growth names. Semiconductor and AI-linked names remained volatile following weekend commentary from AI leaders (Altman, Amodei, Musk) calling for slower AI development, though chips modestly rebounded intraday even as memory names like Micron continued to slide on infrastructure-spending worries; meanwhile, cybersecurity names outperformed as investors rotated within tech, a notable divergence from the broader Nasdaq-100 softness."
+    },
+    "VOO": {
+      "description": "Vanguard S&P 500 ETF closed modestly lower alongside broader equity indexes as surging Treasury yields (10-year briefly topping 5%, highest since 2007) and a spike in oil prices above $100/barrel weighed on risk sentiment ahead of Wednesday's widely expected Fed rate hike. Despite the pullback, VOO's underlying secular story remains strong: the fund has pulled in record inflows this year (over $131B YTD, on pace to surpass last year's $137B record), supported by robust Q2 earnings growth exceeding 50% and forward P/E near its five-year average, even as AI-sector volatility—triggered by industry calls to slow AI development—rattled tech-heavy peers like the Nasdaq more than the broad-market fund."
+    }
+  },
+  "theme_overview": {
+    "text": "【🧠 PETROLEUM EXPLORATION】\nCVI(80.2)\n• LLM overview unavailable — counts only\n📌 unavailable — run LLM overview\n\n【🧠 PETROLEUM EXTRACTION】\nCVI(80.2)\n• LLM overview unavailable — counts only\n📌 unavailable — run LLM overview\n\n【🧠 CONNECTION CHIP】\nCVI(80.2)\n• LLM overview unavailable — counts only\n📌 unavailable — run LLM overview",
+    "themes": [
+      {
+        "emoji": "🧠",
+        "title": "PETROLEUM EXPLORATION",
+        "tickers": [
+          "CVI(80.2)"
+        ],
+        "bullets": [
+          "LLM overview unavailable — counts only"
+        ],
+        "takeaway": "unavailable — run LLM overview"
+      },
+      {
+        "emoji": "🧠",
+        "title": "PETROLEUM EXTRACTION",
+        "tickers": [
+          "CVI(80.2)"
+        ],
+        "bullets": [
+          "LLM overview unavailable — counts only"
+        ],
+        "takeaway": "unavailable — run LLM overview"
+      },
+      {
+        "emoji": "🧠",
+        "title": "CONNECTION CHIP",
+        "tickers": [
+          "CVI(80.2)"
+        ],
+        "bullets": [
+          "LLM overview unavailable — counts only"
+        ],
+        "takeaway": "unavailable — run LLM overview"
+      }
+    ]
+  },
+  "ohlc_30d": {
+    "APA": {
+      "bars": [
+        [
+          37.44,
+          37.7,
+          36.37,
+          36.42
+        ],
+        [
+          36.35,
+          36.96,
+          36.04,
+          36.15
+        ],
+        [
+          34.63,
+          35.93,
+          34.36,
+          34.74
+        ],
+        [
+          34.62,
+          35.35,
+          34.12,
+          34.93
+        ],
+        [
+          36.52,
+          36.78,
+          35.78,
+          36.7
+        ],
+        [
+          36.18,
+          36.43,
+          35.6,
+          36.33
+        ],
+        [
+          36.45,
+          37.43,
+          36.01,
+          37.32
+        ],
+        [
+          36.5,
+          37.42,
+          36.12,
+          36.87
+        ],
+        [
+          35.91,
+          36.11,
+          35.29,
+          35.8
+        ],
+        [
+          35.85,
+          35.95,
+          34.54,
+          34.66
+        ],
+        [
+          36.56,
+          36.71,
+          35.46,
+          36.53
+        ],
+        [
+          35.99,
+          37.9,
+          35.69,
+          37.63
+        ],
+        [
+          38.24,
+          41.18,
+          38.21,
+          41.02
+        ],
+        [
+          40.49,
+          41.24,
+          40.35,
+          40.62
+        ],
+        [
+          40.11,
+          40.51,
+          39.77,
+          39.97
+        ],
+        [
+          39.4,
+          40.07,
+          39.08,
+          40.0
+        ],
+        [
+          40.5,
+          41.0,
+          40.05,
+          40.47
+        ],
+        [
+          40.54,
+          41.6,
+          40.41,
+          41.58
+        ],
+        [
+          42.02,
+          42.39,
+          41.1,
+          42.37
+        ],
+        [
+          42.86,
+          45.0,
+          42.85,
+          43.45
+        ],
+        [
+          44.76,
+          45.05,
+          44.2,
+          44.39
+        ],
+        [
+          44.52,
+          44.84,
+          43.38,
+          43.39
+        ],
+        [
+          42.93,
+          43.47,
+          41.8,
+          42.96
+        ],
+        [
+          41.38,
+          42.39,
+          41.33,
+          41.35
+        ],
+        [
+          40.68,
+          42.04,
+          40.46,
+          41.19
+        ],
+        [
+          41.23,
+          42.53,
+          40.76,
+          42.38
+        ],
+        [
+          42.48,
+          42.95,
+          42.05,
+          42.54
+        ],
+        [
+          43.67,
+          44.11,
+          42.42,
+          43.15
+        ],
+        [
+          44.16,
+          44.4,
+          43.28,
+          44.3
+        ],
+        [
+          43.75,
+          45.13,
+          43.69,
+          44.7
+        ],
+        [
+          44.52,
+          44.63,
+          44.05,
+          44.18
+        ],
+        [
+          43.68,
+          43.81,
+          42.73,
+          42.77
+        ],
+        [
+          43.69,
+          44.49,
+          43.01,
+          43.55
+        ],
+        [
+          44.44,
+          44.89,
+          44.23,
+          44.84
+        ],
+        [
+          46.09,
+          46.1,
+          43.94,
+          44.53
+        ],
+        [
+          44.0,
+          44.91,
+          44.0,
+          44.73
+        ],
+        [
+          45.64,
+          46.59,
+          44.82,
+          45.03
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        33.1331,
+        35.2061,
+        35.3108,
+        35.3108,
+        36.5017,
+        37.095,
+        37.845,
+        39.0275,
+        39.7519,
+        39.7519,
+        39.7519,
+        39.7519,
+        39.7519,
+        39.7519,
+        39.7519,
+        39.7519,
+        39.7519,
+        40.0676,
+        40.5957,
+        40.5957,
+        40.5957,
+        40.5957,
+        40.5957,
+        40.5957,
+        41.1303
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        40.859,
+        39.9518,
+        39.4913,
+        39.4913,
+        39.4913,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "CE": {
+      "bars": [
+        [
+          48.6671,
+          49.6264,
+          46.7884,
+          47.318
+        ],
+        [
+          47.298,
+          47.9376,
+          46.1988,
+          46.3986
+        ],
+        [
+          45.7691,
+          45.7691,
+          44.33,
+          44.37
+        ],
+        [
+          44.63,
+          45.45,
+          43.39,
+          43.5
+        ],
+        [
+          44.57,
+          44.76,
+          43.14,
+          43.93
+        ],
+        [
+          45.21,
+          45.21,
+          44.0,
+          44.81
+        ],
+        [
+          45.48,
+          45.48,
+          42.73,
+          44.72
+        ],
+        [
+          44.22,
+          44.78,
+          43.62,
+          43.89
+        ],
+        [
+          43.86,
+          45.53,
+          42.64,
+          45.24
+        ],
+        [
+          45.26,
+          45.26,
+          41.11,
+          43.14
+        ],
+        [
+          43.22,
+          45.55,
+          42.89,
+          43.95
+        ],
+        [
+          44.13,
+          45.15,
+          43.51,
+          43.89
+        ],
+        [
+          44.34,
+          44.56,
+          43.6,
+          44.46
+        ],
+        [
+          44.31,
+          46.26,
+          44.31,
+          44.84
+        ],
+        [
+          45.09,
+          45.25,
+          43.16,
+          43.31
+        ],
+        [
+          43.17,
+          44.51,
+          43.02,
+          44.3
+        ],
+        [
+          44.69,
+          45.86,
+          44.33,
+          45.66
+        ],
+        [
+          45.52,
+          45.52,
+          44.01,
+          44.99
+        ],
+        [
+          45.9,
+          46.11,
+          44.35,
+          44.65
+        ],
+        [
+          45.08,
+          46.85,
+          45.08,
+          46.26
+        ],
+        [
+          46.51,
+          47.6,
+          45.82,
+          46.98
+        ],
+        [
+          47.0,
+          47.84,
+          46.77,
+          46.8
+        ],
+        [
+          47.58,
+          47.59,
+          44.98,
+          45.26
+        ],
+        [
+          44.88,
+          44.88,
+          43.9,
+          44.52
+        ],
+        [
+          44.28,
+          44.95,
+          44.07,
+          44.7
+        ],
+        [
+          44.58,
+          44.88,
+          43.99,
+          44.87
+        ],
+        [
+          45.27,
+          45.91,
+          44.08,
+          45.0
+        ],
+        [
+          45.71,
+          46.06,
+          44.83,
+          45.48
+        ],
+        [
+          45.29,
+          45.45,
+          43.99,
+          44.13
+        ],
+        [
+          44.04,
+          47.12,
+          44.04,
+          46.66
+        ],
+        [
+          47.28,
+          47.7,
+          45.11,
+          45.2
+        ],
+        [
+          44.7,
+          45.96,
+          44.56,
+          44.67
+        ],
+        [
+          45.2,
+          45.7,
+          44.32,
+          44.53
+        ],
+        [
+          44.89,
+          45.89,
+          44.05,
+          44.45
+        ],
+        [
+          44.51,
+          46.6,
+          44.44,
+          45.72
+        ],
+        [
+          46.14,
+          47.1,
+          46.08,
+          46.09
+        ],
+        [
+          45.61,
+          45.84,
+          44.66,
+          44.78
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        49.8951,
+        49.8951,
+        49.8951,
+        49.8951,
+        49.8951,
+        49.8951,
+        49.8951,
+        49.8951,
+        49.4606,
+        49.4606,
+        49.4606,
+        49.4606,
+        49.4606,
+        49.4606,
+        49.4606,
+        49.4606,
+        49.4606,
+        49.1335,
+        48.5701,
+        48.5701,
+        48.5701,
+        48.5701,
+        48.5701,
+        48.5701,
+        48.5701,
+        48.5701,
+        48.5701,
+        48.5701,
+        48.5701,
+        48.5701
+      ]
+    },
+    "CRGY": {
+      "bars": [
+        [
+          11.5057,
+          11.575,
+          11.2087,
+          11.278
+        ],
+        [
+          11.2384,
+          11.4463,
+          11.1294,
+          11.1591
+        ],
+        [
+          10.8126,
+          10.9215,
+          10.3373,
+          10.3769
+        ],
+        [
+          10.3868,
+          10.4908,
+          10.1294,
+          10.3175
+        ],
+        [
+          10.7235,
+          10.9611,
+          10.5403,
+          10.9413
+        ],
+        [
+          10.773,
+          11.0849,
+          10.6888,
+          11.0601
+        ],
+        [
+          11.0997,
+          11.372,
+          10.9859,
+          11.3572
+        ],
+        [
+          10.8918,
+          11.3374,
+          10.8918,
+          11.3176
+        ],
+        [
+          11.4265,
+          11.6196,
+          11.0948,
+          11.169
+        ],
+        [
+          11.179,
+          11.2087,
+          10.8076,
+          10.872
+        ],
+        [
+          11.278,
+          11.4166,
+          11.07,
+          11.2186
+        ],
+        [
+          11.0403,
+          11.6443,
+          11.0205,
+          11.4562
+        ],
+        [
+          11.674,
+          12.1741,
+          11.6542,
+          12.0899
+        ],
+        [
+          11.9909,
+          12.3572,
+          11.9909,
+          12.2978
+        ],
+        [
+          12.278,
+          12.2879,
+          11.9018,
+          11.9414
+        ],
+        [
+          11.7929,
+          11.9018,
+          11.6443,
+          11.783
+        ],
+        [
+          11.9612,
+          12.184,
+          11.8582,
+          12.08
+        ],
+        [
+          12.17,
+          12.7,
+          12.05,
+          12.69
+        ],
+        [
+          12.9,
+          12.95,
+          12.65,
+          12.95
+        ],
+        [
+          13.05,
+          13.43,
+          13.05,
+          13.43
+        ],
+        [
+          13.69,
+          13.975,
+          13.47,
+          13.81
+        ],
+        [
+          13.85,
+          14.12,
+          13.76,
+          14.06
+        ],
+        [
+          13.85,
+          13.94,
+          13.48,
+          13.85
+        ],
+        [
+          13.43,
+          13.64,
+          13.345,
+          13.45
+        ],
+        [
+          13.2,
+          13.535,
+          13.071,
+          13.37
+        ],
+        [
+          13.32,
+          13.76,
+          13.19,
+          13.65
+        ],
+        [
+          13.65,
+          13.755,
+          13.39,
+          13.54
+        ],
+        [
+          13.92,
+          14.02,
+          13.6,
+          13.69
+        ],
+        [
+          14.0,
+          14.09,
+          13.8,
+          14.07
+        ],
+        [
+          13.96,
+          14.535,
+          13.902,
+          14.27
+        ],
+        [
+          14.13,
+          14.245,
+          13.91,
+          13.96
+        ],
+        [
+          13.85,
+          13.9,
+          13.585,
+          13.77
+        ],
+        [
+          14.25,
+          14.4,
+          14.05,
+          14.19
+        ],
+        [
+          14.45,
+          14.47,
+          14.17,
+          14.24
+        ],
+        [
+          14.6,
+          14.6,
+          14.105,
+          14.41
+        ],
+        [
+          14.3,
+          14.67,
+          14.3,
+          14.66
+        ],
+        [
+          14.99,
+          15.04,
+          14.53,
+          14.59
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        10.9227,
+        11.4857,
+        11.8943,
+        12.3045,
+        12.6065,
+        12.6065,
+        12.6065,
+        12.6065,
+        12.6065,
+        12.6065,
+        12.6065,
+        12.6065,
+        12.7239,
+        12.7239,
+        12.7239,
+        12.7592,
+        12.9956,
+        12.9956,
+        13.1841,
+        13.4268
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        12.4726,
+        12.4726,
+        12.368,
+        12.368,
+        12.368,
+        12.368,
+        12.368,
+        12.368,
+        12.368,
+        12.368,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "CRUS": {
+      "bars": [
+        [
+          137.09,
+          137.09,
+          131.63,
+          133.53
+        ],
+        [
+          133.53,
+          136.71,
+          132.89,
+          133.61
+        ],
+        [
+          134.33,
+          136.33,
+          132.86,
+          136.12
+        ],
+        [
+          134.69,
+          136.83,
+          133.1,
+          136.16
+        ],
+        [
+          134.32,
+          136.39,
+          131.75,
+          134.07
+        ],
+        [
+          134.39,
+          137.04,
+          131.07,
+          131.86
+        ],
+        [
+          132.21,
+          133.84,
+          128.84,
+          129.35
+        ],
+        [
+          127.99,
+          129.07,
+          125.44,
+          127.33
+        ],
+        [
+          129.08,
+          133.76,
+          127.05,
+          133.59
+        ],
+        [
+          132.09,
+          134.38,
+          128.78,
+          129.42
+        ],
+        [
+          122.15,
+          129.65,
+          119.85,
+          123.51
+        ],
+        [
+          125.79,
+          126.57,
+          122.67,
+          124.92
+        ],
+        [
+          124.96,
+          125.9,
+          121.69,
+          121.84
+        ],
+        [
+          123.58,
+          125.77,
+          120.82,
+          121.99
+        ],
+        [
+          124.8,
+          125.99,
+          121.22,
+          121.89
+        ],
+        [
+          121.98,
+          123.35,
+          120.76,
+          121.22
+        ],
+        [
+          123.0,
+          123.0,
+          119.97,
+          121.09
+        ],
+        [
+          120.97,
+          121.96,
+          119.61,
+          119.87
+        ],
+        [
+          118.71,
+          119.89,
+          116.0,
+          116.88
+        ],
+        [
+          118.16,
+          119.44,
+          116.28,
+          118.07
+        ],
+        [
+          117.89,
+          119.95,
+          116.44,
+          116.9
+        ],
+        [
+          117.18,
+          117.26,
+          114.67,
+          115.33
+        ],
+        [
+          114.51,
+          114.71,
+          111.46,
+          111.64
+        ],
+        [
+          112.84,
+          113.01,
+          110.58,
+          111.43
+        ],
+        [
+          111.66,
+          112.46,
+          109.92,
+          110.34
+        ],
+        [
+          111.56,
+          111.93,
+          108.81,
+          110.88
+        ],
+        [
+          110.85,
+          110.85,
+          108.12,
+          108.48
+        ],
+        [
+          108.92,
+          109.75,
+          108.08,
+          109.51
+        ],
+        [
+          107.9,
+          109.37,
+          106.26,
+          109.07
+        ],
+        [
+          109.3,
+          114.53,
+          109.3,
+          113.06
+        ],
+        [
+          112.31,
+          114.29,
+          111.66,
+          113.13
+        ],
+        [
+          113.13,
+          114.09,
+          111.27,
+          113.21
+        ],
+        [
+          114.14,
+          114.55,
+          110.41,
+          110.76
+        ],
+        [
+          110.0,
+          111.17,
+          108.21,
+          110.72
+        ],
+        [
+          109.6,
+          116.57,
+          108.77,
+          116.48
+        ],
+        [
+          117.0,
+          120.46,
+          116.83,
+          118.79
+        ],
+        [
+          115.97,
+          118.82,
+          114.71,
+          116.34
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        103.2329,
+        105.7247,
+        105.7247
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        141.1858,
+        141.1858,
+        141.1858,
+        141.1858,
+        141.1858,
+        139.9507,
+        139.1242,
+        139.0544,
+        135.5846,
+        133.9047,
+        131.8623,
+        129.1704,
+        128.6491,
+        128.6491,
+        125.9507,
+        123.4768,
+        121.4114,
+        120.3073,
+        119.5479,
+        118.4385,
+        116.8826,
+        116.2282,
+        116.2282,
+        116.2282,
+        116.2282,
+        116.2282,
+        116.2282,
+        null,
+        null,
+        null
+      ]
+    },
+    "CVI": {
+      "bars": [
+        [
+          35.9343,
+          35.9343,
+          33.7114,
+          33.831
+        ],
+        [
+          33.4224,
+          34.14,
+          32.5651,
+          33.3426
+        ],
+        [
+          32.5252,
+          34.0404,
+          32.5053,
+          33.9606
+        ],
+        [
+          34.0603,
+          34.6185,
+          32.6249,
+          33.6317
+        ],
+        [
+          34.5487,
+          35.3262,
+          34.17,
+          34.5089
+        ],
+        [
+          35.8844,
+          39.7819,
+          35.715,
+          37.9578
+        ],
+        [
+          38.2568,
+          38.7452,
+          35.2066,
+          35.5056
+        ],
+        [
+          34.7082,
+          35.1568,
+          32.6249,
+          32.7844
+        ],
+        [
+          32.2063,
+          33.3426,
+          31.7577,
+          33.223
+        ],
+        [
+          33.1333,
+          33.2429,
+          31.0699,
+          31.0998
+        ],
+        [
+          31.6182,
+          31.6879,
+          30.3622,
+          31.2693
+        ],
+        [
+          30.6812,
+          31.5783,
+          29.7043,
+          31.05
+        ],
+        [
+          31.86,
+          32.84,
+          31.86,
+          32.42
+        ],
+        [
+          32.78,
+          34.39,
+          32.51,
+          34.05
+        ],
+        [
+          33.55,
+          35.16,
+          33.55,
+          35.04
+        ],
+        [
+          34.74,
+          35.63,
+          34.13,
+          35.6
+        ],
+        [
+          35.82,
+          35.82,
+          35.06,
+          35.26
+        ],
+        [
+          35.31,
+          36.87,
+          34.86,
+          36.42
+        ],
+        [
+          36.97,
+          37.13,
+          35.7,
+          36.66
+        ],
+        [
+          36.69,
+          37.3,
+          36.19,
+          36.7
+        ],
+        [
+          37.16,
+          37.5,
+          35.79,
+          35.83
+        ],
+        [
+          36.18,
+          40.17,
+          36.14,
+          39.51
+        ],
+        [
+          39.09,
+          40.0,
+          37.68,
+          38.03
+        ],
+        [
+          37.55,
+          38.39,
+          37.38,
+          37.89
+        ],
+        [
+          37.32,
+          40.7,
+          37.32,
+          40.03
+        ],
+        [
+          40.04,
+          40.3,
+          38.94,
+          39.76
+        ],
+        [
+          39.85,
+          42.2,
+          39.85,
+          41.76
+        ],
+        [
+          43.47,
+          43.47,
+          40.22,
+          41.86
+        ],
+        [
+          42.94,
+          43.15,
+          41.14,
+          42.87
+        ],
+        [
+          42.58,
+          44.33,
+          42.58,
+          42.92
+        ],
+        [
+          42.45,
+          43.64,
+          42.11,
+          43.58
+        ],
+        [
+          42.89,
+          44.65,
+          42.44,
+          44.5
+        ],
+        [
+          45.0,
+          46.28,
+          44.88,
+          46.12
+        ],
+        [
+          46.68,
+          47.85,
+          44.94,
+          47.73
+        ],
+        [
+          48.76,
+          50.27,
+          48.2,
+          48.6
+        ],
+        [
+          48.36,
+          52.4,
+          48.2,
+          49.66
+        ],
+        [
+          50.25,
+          51.11,
+          47.47,
+          48.63
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        32.3002,
+        32.3002,
+        32.3002,
+        32.3002,
+        33.4133,
+        34.54,
+        34.5437,
+        35.1615,
+        36.9049,
+        36.9049,
+        37.3424,
+        39.5931,
+        39.7223,
+        42.3255,
+        42.3255,
+        42.3255
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        42.6492,
+        40.3076,
+        39.6043,
+        37.6053,
+        36.9819,
+        36.9819,
+        36.9819,
+        36.9819,
+        36.9819,
+        36.9819,
+        36.9819,
+        36.9819,
+        36.9819,
+        36.9819,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "FPS": {
+      "bars": [
+        [
+          38.45,
+          40.3,
+          38.23,
+          38.96
+        ],
+        [
+          39.11,
+          39.11,
+          35.08,
+          35.89
+        ],
+        [
+          36.34,
+          36.91,
+          34.48,
+          36.22
+        ],
+        [
+          35.0,
+          35.17,
+          31.85,
+          32.41
+        ],
+        [
+          31.66,
+          31.75,
+          29.01,
+          29.25
+        ],
+        [
+          30.71,
+          33.58,
+          30.65,
+          33.28
+        ],
+        [
+          34.52,
+          35.3,
+          32.64,
+          33.27
+        ],
+        [
+          32.55,
+          36.3,
+          32.01,
+          36.29
+        ],
+        [
+          37.88,
+          40.26,
+          37.0,
+          39.4
+        ],
+        [
+          39.0,
+          39.92,
+          38.25,
+          38.49
+        ],
+        [
+          37.5,
+          39.75,
+          36.9,
+          37.72
+        ],
+        [
+          39.13,
+          39.99,
+          36.85,
+          38.71
+        ],
+        [
+          39.3,
+          39.31,
+          37.54,
+          37.6
+        ],
+        [
+          38.15,
+          39.07,
+          37.54,
+          37.72
+        ],
+        [
+          39.38,
+          40.0,
+          38.0,
+          38.27
+        ],
+        [
+          38.0,
+          38.51,
+          37.22,
+          37.56
+        ],
+        [
+          38.54,
+          39.73,
+          37.98,
+          39.66
+        ],
+        [
+          39.95,
+          40.19,
+          38.64,
+          38.83
+        ],
+        [
+          37.44,
+          37.88,
+          35.89,
+          36.18
+        ],
+        [
+          36.64,
+          37.05,
+          33.66,
+          34.46
+        ],
+        [
+          34.51,
+          34.56,
+          32.85,
+          33.36
+        ],
+        [
+          33.75,
+          34.08,
+          32.63,
+          33.18
+        ],
+        [
+          32.92,
+          33.0,
+          31.43,
+          32.19
+        ],
+        [
+          33.11,
+          33.37,
+          31.86,
+          32.19
+        ],
+        [
+          32.28,
+          32.99,
+          31.92,
+          32.21
+        ],
+        [
+          33.72,
+          33.98,
+          31.5,
+          31.62
+        ],
+        [
+          31.65,
+          31.81,
+          30.02,
+          30.4
+        ],
+        [
+          30.52,
+          30.68,
+          29.73,
+          30.54
+        ],
+        [
+          30.17,
+          30.74,
+          29.12,
+          29.27
+        ],
+        [
+          29.02,
+          29.46,
+          28.52,
+          29.42
+        ],
+        [
+          29.5,
+          30.87,
+          28.24,
+          30.6
+        ],
+        [
+          30.87,
+          31.72,
+          30.51,
+          31.35
+        ],
+        [
+          32.17,
+          32.94,
+          31.28,
+          32.31
+        ],
+        [
+          32.03,
+          32.5,
+          30.96,
+          30.99
+        ],
+        [
+          30.19,
+          30.39,
+          28.76,
+          29.2
+        ],
+        [
+          30.0,
+          32.03,
+          29.8,
+          31.82
+        ],
+        [
+          29.67,
+          30.08,
+          27.99,
+          28.64
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        44.6076,
+        44.6076,
+        44.6076,
+        44.6076,
+        44.6076,
+        44.6076,
+        44.6076,
+        44.6076,
+        44.2397,
+        44.2397,
+        44.2397,
+        43.5667,
+        42.9087,
+        40.6528,
+        39.6534,
+        38.2513,
+        38.2513,
+        37.5023,
+        37.5023,
+        36.4916,
+        35.0999,
+        34.8162,
+        33.3597,
+        33.3597,
+        33.3597,
+        33.3597,
+        33.3597,
+        33.3597,
+        33.3597,
+        33.3597
+      ]
+    },
+    "KRMN": {
+      "bars": [
+        [
+          47.19,
+          50.015,
+          47.19,
+          49.72
+        ],
+        [
+          49.54,
+          49.98,
+          47.175,
+          47.44
+        ],
+        [
+          48.2,
+          50.84,
+          47.839,
+          50.57
+        ],
+        [
+          50.42,
+          50.42,
+          47.5,
+          49.54
+        ],
+        [
+          49.19,
+          49.75,
+          45.389,
+          45.59
+        ],
+        [
+          45.57,
+          47.7,
+          44.64,
+          47.22
+        ],
+        [
+          48.87,
+          48.87,
+          45.78,
+          48.15
+        ],
+        [
+          47.84,
+          50.97,
+          47.586,
+          50.44
+        ],
+        [
+          51.96,
+          54.71,
+          51.13,
+          53.99
+        ],
+        [
+          54.46,
+          57.17,
+          53.18,
+          55.12
+        ],
+        [
+          54.29,
+          57.24,
+          53.9,
+          55.14
+        ],
+        [
+          56.1,
+          59.55,
+          51.4,
+          58.23
+        ],
+        [
+          58.23,
+          62.7,
+          57.99,
+          62.16
+        ],
+        [
+          61.24,
+          63.14,
+          60.34,
+          61.94
+        ],
+        [
+          62.09,
+          63.59,
+          60.74,
+          61.91
+        ],
+        [
+          61.11,
+          62.65,
+          59.156,
+          60.5
+        ],
+        [
+          61.09,
+          62.56,
+          60.92,
+          62.01
+        ],
+        [
+          62.5,
+          63.73,
+          61.14,
+          61.78
+        ],
+        [
+          60.02,
+          61.405,
+          58.7,
+          59.43
+        ],
+        [
+          59.39,
+          59.605,
+          56.83,
+          58.2
+        ],
+        [
+          57.33,
+          57.615,
+          52.43,
+          54.36
+        ],
+        [
+          54.6,
+          55.793,
+          53.145,
+          53.4
+        ],
+        [
+          52.93,
+          53.63,
+          51.15,
+          51.37
+        ],
+        [
+          52.1,
+          52.77,
+          49.06,
+          49.2
+        ],
+        [
+          49.29,
+          50.77,
+          47.83,
+          48.38
+        ],
+        [
+          47.53,
+          48.54,
+          46.42,
+          47.42
+        ],
+        [
+          46.71,
+          47.45,
+          45.45,
+          45.57
+        ],
+        [
+          45.22,
+          45.22,
+          41.44,
+          41.45
+        ],
+        [
+          40.5,
+          43.0,
+          40.3,
+          41.09
+        ],
+        [
+          40.99,
+          41.61,
+          39.75,
+          40.42
+        ],
+        [
+          41.15,
+          41.6,
+          40.0,
+          40.52
+        ],
+        [
+          40.34,
+          41.3,
+          39.195,
+          39.98
+        ],
+        [
+          41.16,
+          41.83,
+          39.65,
+          39.69
+        ],
+        [
+          39.45,
+          39.45,
+          35.18,
+          35.22
+        ],
+        [
+          34.73,
+          36.42,
+          34.21,
+          34.39
+        ],
+        [
+          34.73,
+          35.61,
+          33.99,
+          35.28
+        ],
+        [
+          34.7,
+          36.72,
+          34.51,
+          34.74
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        46.221,
+        49.047,
+        50.5077,
+        50.5077,
+        51.6724,
+        52.9418,
+        52.9418,
+        52.9418,
+        52.9418,
+        52.9418,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        59.0643,
+        59.0643,
+        59.0643,
+        59.0643,
+        59.0643,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        62.0354,
+        60.9316,
+        59.0174,
+        56.3581,
+        54.6086,
+        52.5464,
+        50.5873,
+        48.778,
+        48.0735,
+        47.2814,
+        47.2814,
+        45.8803,
+        43.3965,
+        42.0761,
+        42.0761
+      ]
+    },
+    "MRCY": {
+      "bars": [
+        [
+          98.85,
+          107.2,
+          98.61,
+          106.34
+        ],
+        [
+          106.34,
+          108.33,
+          102.98,
+          103.27
+        ],
+        [
+          104.22,
+          106.53,
+          101.57,
+          103.8
+        ],
+        [
+          103.45,
+          103.69,
+          97.8,
+          99.38
+        ],
+        [
+          99.44,
+          100.72,
+          89.92,
+          90.17
+        ],
+        [
+          91.0,
+          96.81,
+          90.07,
+          95.97
+        ],
+        [
+          97.76,
+          100.03,
+          94.56,
+          97.1
+        ],
+        [
+          100.22,
+          106.66,
+          99.49,
+          105.79
+        ],
+        [
+          109.04,
+          113.58,
+          109.0,
+          112.8
+        ],
+        [
+          113.36,
+          115.34,
+          107.33,
+          107.44
+        ],
+        [
+          107.36,
+          112.36,
+          107.36,
+          108.83
+        ],
+        [
+          109.48,
+          110.17,
+          106.2,
+          108.64
+        ],
+        [
+          109.55,
+          110.54,
+          107.7,
+          108.64
+        ],
+        [
+          108.48,
+          109.97,
+          106.8,
+          109.15
+        ],
+        [
+          111.95,
+          112.67,
+          109.16,
+          111.64
+        ],
+        [
+          111.08,
+          112.87,
+          108.12,
+          109.79
+        ],
+        [
+          110.17,
+          112.07,
+          108.49,
+          111.12
+        ],
+        [
+          110.31,
+          115.38,
+          108.31,
+          113.36
+        ],
+        [
+          111.71,
+          113.87,
+          103.7,
+          105.0
+        ],
+        [
+          104.67,
+          108.56,
+          97.39,
+          101.25
+        ],
+        [
+          99.9,
+          99.9,
+          92.82,
+          94.23
+        ],
+        [
+          95.23,
+          96.03,
+          91.25,
+          91.36
+        ],
+        [
+          90.86,
+          92.77,
+          88.84,
+          89.59
+        ],
+        [
+          90.99,
+          91.12,
+          86.26,
+          87.74
+        ],
+        [
+          87.74,
+          90.28,
+          87.0,
+          89.76
+        ],
+        [
+          90.28,
+          91.0,
+          88.8,
+          90.47
+        ],
+        [
+          90.62,
+          90.7,
+          87.97,
+          88.54
+        ],
+        [
+          88.98,
+          89.02,
+          86.16,
+          87.33
+        ],
+        [
+          86.53,
+          88.46,
+          82.58,
+          82.8
+        ],
+        [
+          82.8,
+          82.8,
+          80.96,
+          82.57
+        ],
+        [
+          83.75,
+          85.35,
+          81.6,
+          84.71
+        ],
+        [
+          84.4,
+          85.62,
+          81.71,
+          82.42
+        ],
+        [
+          82.99,
+          85.77,
+          81.21,
+          83.46
+        ],
+        [
+          83.26,
+          84.0,
+          79.8,
+          80.76
+        ],
+        [
+          80.25,
+          81.88,
+          79.58,
+          80.43
+        ],
+        [
+          81.64,
+          82.78,
+          79.98,
+          80.61
+        ],
+        [
+          78.47,
+          82.58,
+          78.47,
+          81.03
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        126.0431,
+        126.0431,
+        126.0431,
+        126.0431,
+        126.0431,
+        125.426,
+        122.992,
+        122.992,
+        122.992,
+        122.992,
+        122.992,
+        122.992,
+        122.992,
+        119.6077,
+        114.6608,
+        109.5181,
+        106.3698,
+        104.3599,
+        103.3399,
+        101.4624,
+        98.8306,
+        98.3604,
+        92.8903,
+        92.8903,
+        92.8903,
+        92.8903,
+        92.8903,
+        91.4811,
+        91.4811,
+        91.23
+      ]
+    },
+    "MUR": {
+      "bars": [
+        [
+          39.3278,
+          39.8029,
+          38.8031,
+          39.0011
+        ],
+        [
+          38.7932,
+          39.3674,
+          38.3478,
+          38.5557
+        ],
+        [
+          37.3282,
+          38.1498,
+          37.0114,
+          37.1203
+        ],
+        [
+          37.4767,
+          37.6648,
+          35.8632,
+          36.269
+        ],
+        [
+          37.5658,
+          38.3874,
+          37.4668,
+          38.2983
+        ],
+        [
+          37.5163,
+          38.1597,
+          37.1797,
+          37.8231
+        ],
+        [
+          38.0805,
+          39.3872,
+          37.5658,
+          39.3377
+        ],
+        [
+          37.9419,
+          39.0704,
+          37.7242,
+          38.3379
+        ],
+        [
+          37.3678,
+          38.031,
+          36.6353,
+          37.9914
+        ],
+        [
+          37.9221,
+          38.1597,
+          35.6355,
+          35.6751
+        ],
+        [
+          33.7548,
+          34.4378,
+          32.3689,
+          32.7055
+        ],
+        [
+          32.359,
+          33.9824,
+          32.2106,
+          33.0321
+        ],
+        [
+          33.8537,
+          35.3881,
+          33.636,
+          35.1307
+        ],
+        [
+          34.9624,
+          35.784,
+          34.3091,
+          35.3584
+        ],
+        [
+          34.9129,
+          35.4078,
+          34.7842,
+          34.903
+        ],
+        [
+          34.2002,
+          34.5962,
+          34.0121,
+          34.4378
+        ],
+        [
+          34.418,
+          34.8634,
+          34.0913,
+          34.22
+        ],
+        [
+          34.31,
+          34.91,
+          33.91,
+          34.82
+        ],
+        [
+          35.65,
+          35.75,
+          34.82,
+          35.18
+        ],
+        [
+          35.58,
+          36.9,
+          35.53,
+          36.87
+        ],
+        [
+          37.43,
+          38.66,
+          37.35,
+          38.28
+        ],
+        [
+          38.34,
+          38.54,
+          37.35,
+          37.41
+        ],
+        [
+          37.12,
+          37.4,
+          35.58,
+          36.0
+        ],
+        [
+          35.0,
+          35.53,
+          34.6,
+          34.62
+        ],
+        [
+          34.1,
+          35.17,
+          33.79,
+          34.69
+        ],
+        [
+          34.79,
+          36.24,
+          34.4,
+          35.95
+        ],
+        [
+          36.17,
+          36.17,
+          35.21,
+          35.63
+        ],
+        [
+          36.76,
+          36.93,
+          35.63,
+          36.42
+        ],
+        [
+          37.23,
+          37.63,
+          36.73,
+          37.6
+        ],
+        [
+          36.85,
+          38.03,
+          36.55,
+          37.69
+        ],
+        [
+          37.69,
+          37.94,
+          37.06,
+          37.32
+        ],
+        [
+          37.09,
+          37.2,
+          36.15,
+          36.44
+        ],
+        [
+          37.38,
+          38.31,
+          37.24,
+          37.58
+        ],
+        [
+          38.13,
+          38.7,
+          38.03,
+          38.46
+        ],
+        [
+          39.15,
+          39.37,
+          37.75,
+          38.83
+        ],
+        [
+          38.35,
+          38.65,
+          37.99,
+          38.5
+        ],
+        [
+          39.31,
+          39.46,
+          38.07,
+          38.2
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        33.7672,
+        33.8741,
+        33.8741,
+        33.8741,
+        33.8741,
+        33.8741,
+        33.8741,
+        33.8741,
+        33.8741,
+        33.8741,
+        33.8741,
+        33.8741,
+        33.8741,
+        34.403,
+        34.403,
+        34.5501,
+        34.8951
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        43.0129,
+        42.0718,
+        42.0718,
+        39.9683,
+        39.3491,
+        39.3491,
+        39.3491,
+        39.3491,
+        38.6691,
+        38.3302,
+        38.0496,
+        38.0496,
+        38.0496,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "NE": {
+      "bars": [
+        [
+          42.4737,
+          43.6612,
+          42.4737,
+          42.6617
+        ],
+        [
+          42.7804,
+          43.1466,
+          42.1372,
+          42.8101
+        ],
+        [
+          42.3846,
+          42.9487,
+          42.1768,
+          42.6617
+        ],
+        [
+          39.8314,
+          40.9893,
+          38.6142,
+          38.7923
+        ],
+        [
+          39.683,
+          40.6033,
+          38.9358,
+          40.5835
+        ],
+        [
+          40.8309,
+          41.2861,
+          39.871,
+          41.009
+        ],
+        [
+          41.4346,
+          42.1273,
+          40.9299,
+          41.9591
+        ],
+        [
+          41.1872,
+          41.3851,
+          39.8017,
+          39.9997
+        ],
+        [
+          39.4554,
+          40.4747,
+          39.3663,
+          40.4054
+        ],
+        [
+          40.7814,
+          40.8062,
+          38.9903,
+          39.4851
+        ],
+        [
+          40.1976,
+          41.0783,
+          40.1976,
+          40.2668
+        ],
+        [
+          40.1976,
+          41.0585,
+          39.8512,
+          40.346
+        ],
+        [
+          41.0585,
+          43.1565,
+          40.9992,
+          43.0971
+        ],
+        [
+          43.3841,
+          44.1857,
+          42.9487,
+          44.0174
+        ],
+        [
+          43.6117,
+          44.0867,
+          43.0823,
+          43.6216
+        ],
+        [
+          43.7107,
+          43.9482,
+          42.6617,
+          43.8294
+        ],
+        [
+          44.0768,
+          45.1852,
+          43.9086,
+          44.631
+        ],
+        [
+          44.73,
+          45.0169,
+          44.3341,
+          44.7102
+        ],
+        [
+          45.0565,
+          45.1159,
+          44.6607,
+          44.7794
+        ],
+        [
+          45.2445,
+          46.0511,
+          44.9576,
+          45.393
+        ],
+        [
+          46.0758,
+          46.7487,
+          45.7245,
+          46.4914
+        ],
+        [
+          46.6597,
+          47.293,
+          45.7591,
+          45.7888
+        ],
+        [
+          45.5216,
+          45.6899,
+          43.9086,
+          45.5018
+        ],
+        [
+          44.73,
+          45.8779,
+          44.5518,
+          45.3831
+        ],
+        [
+          44.8685,
+          45.3979,
+          44.2945,
+          44.7102
+        ],
+        [
+          44.5023,
+          46.343,
+          44.2648,
+          46.2539
+        ],
+        [
+          46.1451,
+          46.2539,
+          44.8091,
+          45.2841
+        ],
+        [
+          46.2045,
+          46.6102,
+          45.1555,
+          45.3534
+        ],
+        [
+          46.1055,
+          46.3133,
+          45.5216,
+          46.1154
+        ],
+        [
+          45.8878,
+          48.0055,
+          45.3138,
+          47.58
+        ],
+        [
+          47.65,
+          47.99,
+          46.58,
+          46.59
+        ],
+        [
+          47.06,
+          47.06,
+          45.28,
+          45.61
+        ],
+        [
+          46.32,
+          46.97,
+          45.62,
+          45.89
+        ],
+        [
+          46.58,
+          46.86,
+          45.03,
+          45.46
+        ],
+        [
+          46.24,
+          46.242,
+          44.965,
+          45.74
+        ],
+        [
+          45.36,
+          46.152,
+          44.69,
+          45.28
+        ],
+        [
+          45.19,
+          45.255,
+          43.53,
+          43.88
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        40.2436,
+        40.9359,
+        41.7422,
+        42.191,
+        42.7348,
+        42.7493,
+        42.7493,
+        42.7493,
+        42.7493,
+        42.7493,
+        42.7493,
+        42.7493,
+        42.7493,
+        42.7493,
+        42.7493,
+        42.7493,
+        42.7493,
+        42.7493,
+        42.7493,
+        42.7493,
+        42.7493
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        45.7631,
+        44.629,
+        44.629,
+        44.629,
+        44.629,
+        44.629,
+        44.629,
+        44.629,
+        44.629,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "PBF": {
+      "bars": [
+        [
+          66.5828,
+          66.7223,
+          61.412,
+          61.7209
+        ],
+        [
+          61.3423,
+          63.0061,
+          60.1766,
+          61.4021
+        ],
+        [
+          60.087,
+          62.8666,
+          57.7357,
+          62.5279
+        ],
+        [
+          63.315,
+          64.2515,
+          59.8379,
+          60.7744
+        ],
+        [
+          62.3286,
+          64.0423,
+          61.96,
+          63.1157
+        ],
+        [
+          64.7596,
+          74.4636,
+          64.1917,
+          72.8297
+        ],
+        [
+          73.3278,
+          73.7761,
+          69.4422,
+          72.0127
+        ],
+        [
+          68.8644,
+          72.481,
+          66.9116,
+          67.6589
+        ],
+        [
+          66.1046,
+          66.5829,
+          64.0124,
+          65.6463
+        ],
+        [
+          65.4969,
+          66.9017,
+          60.8242,
+          60.9438
+        ],
+        [
+          62.3685,
+          62.3884,
+          59.6586,
+          61.0135
+        ],
+        [
+          60.2563,
+          63.1954,
+          58.6622,
+          61.4818
+        ],
+        [
+          63.7035,
+          66.5231,
+          62.6674,
+          66.0448
+        ],
+        [
+          66.264,
+          69.2928,
+          65.9851,
+          69.0935
+        ],
+        [
+          68.6552,
+          71.1559,
+          68.1969,
+          70.0799
+        ],
+        [
+          69.6315,
+          74.2344,
+          69.0935,
+          74.085
+        ],
+        [
+          74.23,
+          74.5,
+          71.26,
+          71.85
+        ],
+        [
+          72.93,
+          75.68,
+          71.95,
+          75.07
+        ],
+        [
+          75.5,
+          75.68,
+          72.91,
+          75.2
+        ],
+        [
+          74.87,
+          75.61,
+          72.5,
+          73.91
+        ],
+        [
+          74.5,
+          74.99,
+          69.25,
+          69.56
+        ],
+        [
+          70.33,
+          74.05,
+          70.02,
+          73.53
+        ],
+        [
+          72.41,
+          73.5,
+          68.93,
+          69.51
+        ],
+        [
+          69.06,
+          70.29,
+          66.32,
+          66.51
+        ],
+        [
+          65.12,
+          71.07,
+          63.95,
+          69.73
+        ],
+        [
+          69.98,
+          70.2,
+          67.56,
+          68.59
+        ],
+        [
+          68.87,
+          72.21,
+          68.87,
+          71.28
+        ],
+        [
+          73.97,
+          75.5,
+          70.2,
+          72.99
+        ],
+        [
+          75.0,
+          76.16,
+          72.23,
+          74.99
+        ],
+        [
+          75.89,
+          77.94,
+          74.71,
+          75.48
+        ],
+        [
+          74.75,
+          76.23,
+          72.81,
+          75.33
+        ],
+        [
+          74.5,
+          75.21,
+          72.24,
+          74.34
+        ],
+        [
+          76.5,
+          77.6,
+          75.73,
+          76.77
+        ],
+        [
+          77.92,
+          77.98,
+          75.39,
+          76.51
+        ],
+        [
+          78.44,
+          78.97,
+          75.9,
+          77.08
+        ],
+        [
+          77.55,
+          82.61,
+          77.17,
+          78.3
+        ],
+        [
+          77.0,
+          77.58,
+          70.03,
+          70.4
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        61.8409,
+        63.2369,
+        63.429,
+        63.429,
+        63.429,
+        63.429,
+        63.429,
+        63.429,
+        63.429,
+        63.429,
+        63.429,
+        63.429,
+        64.1676,
+        64.1676,
+        64.1676,
+        65.9102,
+        66.6764,
+        67.626,
+        68.3858,
+        68.3858
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        86.5973,
+        80.7082,
+        79.979,
+        75.1579,
+        74.9295,
+        74.9295,
+        74.9295,
+        74.9295,
+        74.9295,
+        74.9295,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "QLYS": {
+      "bars": [
+        [
+          142.12,
+          142.44,
+          133.04,
+          133.74
+        ],
+        [
+          134.53,
+          137.51,
+          131.98,
+          137.48
+        ],
+        [
+          138.86,
+          140.6,
+          134.64,
+          134.79
+        ],
+        [
+          135.01,
+          139.12,
+          131.91,
+          135.75
+        ],
+        [
+          137.35,
+          138.55,
+          133.03,
+          135.13
+        ],
+        [
+          131.99,
+          143.41,
+          131.0,
+          141.71
+        ],
+        [
+          141.71,
+          145.33,
+          137.81,
+          144.75
+        ],
+        [
+          147.95,
+          155.74,
+          146.36,
+          154.89
+        ],
+        [
+          152.26,
+          162.74,
+          150.62,
+          161.06
+        ],
+        [
+          198.42,
+          201.54,
+          181.09,
+          183.25
+        ],
+        [
+          180.0,
+          184.4,
+          174.96,
+          181.78
+        ],
+        [
+          183.45,
+          184.39,
+          178.3,
+          183.48
+        ],
+        [
+          182.15,
+          192.73,
+          182.09,
+          185.8
+        ],
+        [
+          185.8,
+          189.6,
+          180.4,
+          188.31
+        ],
+        [
+          185.13,
+          188.84,
+          183.28,
+          187.15
+        ],
+        [
+          188.59,
+          196.59,
+          186.71,
+          195.88
+        ],
+        [
+          196.3,
+          196.72,
+          185.79,
+          186.05
+        ],
+        [
+          184.12,
+          185.23,
+          178.26,
+          183.31
+        ],
+        [
+          185.62,
+          188.81,
+          182.79,
+          187.98
+        ],
+        [
+          188.03,
+          188.73,
+          181.47,
+          186.68
+        ],
+        [
+          185.0,
+          187.28,
+          181.54,
+          182.21
+        ],
+        [
+          181.75,
+          183.59,
+          176.61,
+          181.98
+        ],
+        [
+          182.18,
+          182.95,
+          175.61,
+          178.46
+        ],
+        [
+          178.34,
+          180.0,
+          173.54,
+          175.94
+        ],
+        [
+          174.21,
+          178.64,
+          172.75,
+          176.67
+        ],
+        [
+          182.02,
+          190.99,
+          180.0,
+          188.59
+        ],
+        [
+          186.42,
+          188.23,
+          183.52,
+          187.05
+        ],
+        [
+          187.0,
+          190.52,
+          184.31,
+          186.14
+        ],
+        [
+          183.25,
+          187.53,
+          176.28,
+          177.01
+        ],
+        [
+          175.27,
+          181.16,
+          166.37,
+          170.83
+        ],
+        [
+          173.26,
+          174.89,
+          168.71,
+          174.35
+        ],
+        [
+          172.51,
+          175.0,
+          170.42,
+          171.65
+        ],
+        [
+          169.73,
+          173.04,
+          165.51,
+          170.32
+        ],
+        [
+          169.19,
+          171.68,
+          167.5,
+          170.17
+        ],
+        [
+          167.58,
+          173.56,
+          160.61,
+          161.57
+        ],
+        [
+          160.23,
+          160.3,
+          149.13,
+          150.28
+        ],
+        [
+          153.34,
+          175.52,
+          153.34,
+          172.91
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        139.1026,
+        139.1026,
+        142.098,
+        149.9948,
+        150.0386,
+        155.6689,
+        161.4467,
+        161.4467,
+        161.4467,
+        161.4467,
+        161.4467,
+        161.4467,
+        161.4467,
+        161.4467,
+        161.4467,
+        161.4467,
+        161.4467,
+        162.3836,
+        165.1389,
+        165.1389,
+        165.1389,
+        165.1389,
+        165.1389,
+        165.1389,
+        165.1389,
+        null,
+        null,
+        null
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        177.7787,
+        177.7787,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        190.3248,
+        182.9927,
+        182.9927
+      ]
+    },
+    "QRVO": {
+      "bars": [
+        [
+          88.54,
+          89.3,
+          86.09,
+          86.73
+        ],
+        [
+          86.08,
+          87.75,
+          86.08,
+          86.51
+        ],
+        [
+          86.83,
+          90.09,
+          86.36,
+          89.76
+        ],
+        [
+          89.76,
+          92.34,
+          89.08,
+          91.76
+        ],
+        [
+          86.405,
+          92.39,
+          85.512,
+          89.5
+        ],
+        [
+          90.5,
+          90.82,
+          88.256,
+          90.74
+        ],
+        [
+          91.59,
+          91.59,
+          88.89,
+          90.57
+        ],
+        [
+          89.31,
+          89.9,
+          88.355,
+          89.49
+        ],
+        [
+          90.62,
+          95.59,
+          90.23,
+          95.04
+        ],
+        [
+          95.27,
+          96.1,
+          94.04,
+          95.25
+        ],
+        [
+          94.65,
+          96.4,
+          94.42,
+          95.33
+        ],
+        [
+          95.81,
+          99.15,
+          95.524,
+          99.08
+        ],
+        [
+          98.97,
+          99.04,
+          96.9,
+          96.995
+        ],
+        [
+          97.3,
+          98.59,
+          96.08,
+          96.68
+        ],
+        [
+          97.33,
+          98.5,
+          95.805,
+          98.24
+        ],
+        [
+          97.98,
+          98.87,
+          97.76,
+          98.44
+        ],
+        [
+          99.065,
+          99.07,
+          96.251,
+          98.11
+        ],
+        [
+          97.5,
+          98.82,
+          95.94,
+          96.04
+        ],
+        [
+          95.0,
+          96.49,
+          93.46,
+          95.7
+        ],
+        [
+          95.85,
+          98.4,
+          95.82,
+          96.81
+        ],
+        [
+          96.86,
+          98.2,
+          95.84,
+          96.31
+        ],
+        [
+          96.3,
+          96.95,
+          94.83,
+          95.56
+        ],
+        [
+          95.09,
+          95.66,
+          93.91,
+          95.37
+        ],
+        [
+          95.5,
+          95.53,
+          91.86,
+          94.34
+        ],
+        [
+          94.54,
+          95.26,
+          93.445,
+          95.135
+        ],
+        [
+          95.14,
+          96.5,
+          94.88,
+          96.18
+        ],
+        [
+          96.33,
+          96.49,
+          93.38,
+          94.73
+        ],
+        [
+          94.76,
+          96.83,
+          93.94,
+          96.08
+        ],
+        [
+          95.03,
+          96.865,
+          93.67,
+          96.4
+        ],
+        [
+          96.4,
+          102.04,
+          96.1,
+          100.63
+        ],
+        [
+          99.8,
+          101.528,
+          99.255,
+          100.38
+        ],
+        [
+          101.0,
+          103.55,
+          100.485,
+          102.84
+        ],
+        [
+          103.18,
+          104.545,
+          102.35,
+          104.07
+        ],
+        [
+          103.86,
+          105.39,
+          103.035,
+          105.24
+        ],
+        [
+          103.88,
+          114.28,
+          103.61,
+          112.36
+        ],
+        [
+          112.835,
+          120.52,
+          112.595,
+          116.65
+        ],
+        [
+          114.11,
+          115.08,
+          107.84,
+          107.98
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        87.59,
+        89.0248,
+        89.0248,
+        89.0248,
+        91.1339,
+        91.1339,
+        91.1339,
+        91.1339,
+        91.1339,
+        91.1339,
+        91.1339,
+        91.1339,
+        91.1339,
+        91.1339,
+        91.1339,
+        91.1339,
+        91.1339,
+        91.1339,
+        91.1339,
+        91.1339,
+        92.4121,
+        94.5972,
+        95.8085,
+        95.8085,
+        99.7084,
+        99.7084
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        98.5113,
+        98.5113,
+        98.5113,
+        98.5113,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "RIG": {
+      "bars": [
+        [
+          5.38,
+          5.42,
+          5.3,
+          5.32
+        ],
+        [
+          5.34,
+          5.42,
+          5.31,
+          5.35
+        ],
+        [
+          5.24,
+          5.42,
+          5.21,
+          5.28
+        ],
+        [
+          5.21,
+          5.24,
+          4.98,
+          4.99
+        ],
+        [
+          5.09,
+          5.14,
+          4.88,
+          4.95
+        ],
+        [
+          5.0,
+          5.09,
+          4.91,
+          5.08
+        ],
+        [
+          5.14,
+          5.34,
+          5.09,
+          5.32
+        ],
+        [
+          5.19,
+          5.25,
+          5.09,
+          5.15
+        ],
+        [
+          5.05,
+          5.29,
+          5.05,
+          5.22
+        ],
+        [
+          5.26,
+          5.29,
+          5.08,
+          5.14
+        ],
+        [
+          5.44,
+          5.49,
+          5.15,
+          5.16
+        ],
+        [
+          5.15,
+          5.41,
+          5.13,
+          5.26
+        ],
+        [
+          5.36,
+          5.76,
+          5.36,
+          5.72
+        ],
+        [
+          5.68,
+          5.88,
+          5.65,
+          5.81
+        ],
+        [
+          5.75,
+          5.79,
+          5.65,
+          5.7
+        ],
+        [
+          5.65,
+          5.78,
+          5.57,
+          5.72
+        ],
+        [
+          5.76,
+          5.98,
+          5.75,
+          5.76
+        ],
+        [
+          5.8,
+          5.87,
+          5.72,
+          5.87
+        ],
+        [
+          5.95,
+          5.99,
+          5.79,
+          5.82
+        ],
+        [
+          5.9,
+          5.95,
+          5.83,
+          5.84
+        ],
+        [
+          5.99,
+          6.06,
+          5.93,
+          6.01
+        ],
+        [
+          6.05,
+          6.14,
+          5.91,
+          5.92
+        ],
+        [
+          5.82,
+          5.85,
+          5.66,
+          5.77
+        ],
+        [
+          5.66,
+          5.81,
+          5.66,
+          5.75
+        ],
+        [
+          5.68,
+          5.74,
+          5.58,
+          5.6
+        ],
+        [
+          5.63,
+          5.82,
+          5.57,
+          5.74
+        ],
+        [
+          5.74,
+          5.86,
+          5.68,
+          5.8
+        ],
+        [
+          5.95,
+          5.98,
+          5.75,
+          5.81
+        ],
+        [
+          5.9,
+          5.99,
+          5.8,
+          5.92
+        ],
+        [
+          5.86,
+          6.27,
+          5.79,
+          6.22
+        ],
+        [
+          6.27,
+          6.27,
+          6.01,
+          6.02
+        ],
+        [
+          5.96,
+          5.96,
+          5.77,
+          5.85
+        ],
+        [
+          5.92,
+          6.02,
+          5.76,
+          5.76
+        ],
+        [
+          5.85,
+          5.93,
+          5.69,
+          5.71
+        ],
+        [
+          5.84,
+          5.86,
+          5.66,
+          5.77
+        ],
+        [
+          5.77,
+          5.83,
+          5.59,
+          5.67
+        ],
+        [
+          5.72,
+          5.72,
+          5.44,
+          5.45
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        5.1153,
+        5.2302,
+        5.2976,
+        5.3857,
+        5.3956,
+        5.3956,
+        5.3956,
+        5.3956,
+        5.3956,
+        5.3956,
+        5.3956,
+        5.3956,
+        5.3956,
+        5.3956,
+        5.3956,
+        5.3956,
+        5.3956,
+        5.3956,
+        5.3956,
+        5.3956
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        5.8183,
+        5.8183,
+        5.8183,
+        5.8183,
+        5.8183,
+        5.8183,
+        5.8183,
+        5.8183,
+        5.8183,
+        5.8183,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "SDRL": {
+      "bars": [
+        [
+          45.22,
+          45.715,
+          44.9,
+          45.51
+        ],
+        [
+          45.54,
+          45.88,
+          44.5,
+          44.93
+        ],
+        [
+          44.09,
+          44.5,
+          42.87,
+          42.98
+        ],
+        [
+          42.85,
+          42.96,
+          40.93,
+          41.01
+        ],
+        [
+          42.23,
+          43.13,
+          40.49,
+          41.34
+        ],
+        [
+          41.455,
+          43.61,
+          41.455,
+          43.24
+        ],
+        [
+          44.07,
+          45.27,
+          43.48,
+          44.84
+        ],
+        [
+          45.36,
+          45.38,
+          42.35,
+          42.6
+        ],
+        [
+          41.96,
+          42.614,
+          41.524,
+          42.49
+        ],
+        [
+          42.58,
+          43.0,
+          41.37,
+          41.5
+        ],
+        [
+          42.7,
+          43.58,
+          42.18,
+          42.94
+        ],
+        [
+          42.55,
+          43.92,
+          42.39,
+          43.24
+        ],
+        [
+          46.59,
+          47.44,
+          45.08,
+          46.76
+        ],
+        [
+          46.06,
+          47.35,
+          45.47,
+          46.7
+        ],
+        [
+          46.3,
+          47.12,
+          45.6,
+          46.72
+        ],
+        [
+          46.07,
+          47.21,
+          46.07,
+          47.01
+        ],
+        [
+          47.36,
+          48.76,
+          47.36,
+          47.98
+        ],
+        [
+          48.1,
+          48.11,
+          46.375,
+          46.9
+        ],
+        [
+          47.68,
+          47.985,
+          46.38,
+          46.49
+        ],
+        [
+          46.67,
+          47.511,
+          46.11,
+          46.26
+        ],
+        [
+          47.25,
+          48.13,
+          47.22,
+          47.89
+        ],
+        [
+          48.29,
+          48.95,
+          47.18,
+          47.29
+        ],
+        [
+          46.71,
+          47.465,
+          45.865,
+          46.76
+        ],
+        [
+          46.07,
+          47.91,
+          46.07,
+          47.09
+        ],
+        [
+          47.18,
+          47.27,
+          46.145,
+          46.59
+        ],
+        [
+          46.25,
+          48.595,
+          46.01,
+          48.38
+        ],
+        [
+          48.26,
+          48.86,
+          47.53,
+          47.6
+        ],
+        [
+          48.7,
+          49.53,
+          48.2,
+          48.72
+        ],
+        [
+          49.39,
+          49.59,
+          48.95,
+          49.13
+        ],
+        [
+          49.2,
+          51.075,
+          48.588,
+          50.49
+        ],
+        [
+          50.67,
+          50.98,
+          49.68,
+          50.07
+        ],
+        [
+          49.5,
+          49.96,
+          48.69,
+          49.08
+        ],
+        [
+          49.8,
+          50.25,
+          48.06,
+          48.21
+        ],
+        [
+          48.88,
+          49.71,
+          47.98,
+          48.02
+        ],
+        [
+          49.07,
+          49.22,
+          47.37,
+          48.46
+        ],
+        [
+          48.5,
+          48.81,
+          47.32,
+          47.9
+        ],
+        [
+          48.275,
+          48.275,
+          46.3,
+          46.87
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        42.5851,
+        42.5851,
+        42.5851,
+        42.5851,
+        42.5851,
+        42.8758,
+        42.8758,
+        42.8758,
+        42.8758,
+        42.8758,
+        43.0755,
+        43.5779,
+        44.6522,
+        44.6522,
+        45.3585,
+        45.3585,
+        45.3585,
+        45.3585,
+        45.3585,
+        45.3585,
+        45.3585
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        50.436,
+        47.8148,
+        47.7168,
+        47.7168,
+        47.7168,
+        47.7168,
+        47.7168,
+        47.7168,
+        47.7168,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "SM": {
+      "bars": [
+        [
+          33.9601,
+          33.9999,
+          33.0952,
+          33.3139
+        ],
+        [
+          33.2245,
+          33.7215,
+          32.7473,
+          32.9958
+        ],
+        [
+          31.5344,
+          32.0613,
+          30.1028,
+          30.1227
+        ],
+        [
+          30.4508,
+          30.5005,
+          29.1683,
+          29.4765
+        ],
+        [
+          30.8981,
+          31.6835,
+          30.5005,
+          31.5344
+        ],
+        [
+          30.7788,
+          31.604,
+          30.7689,
+          31.4449
+        ],
+        [
+          31.8128,
+          32.3595,
+          31.4052,
+          32.3297
+        ],
+        [
+          31.1865,
+          31.8824,
+          30.7391,
+          31.7432
+        ],
+        [
+          30.6695,
+          31.4748,
+          30.3414,
+          30.8683
+        ],
+        [
+          30.918,
+          30.9479,
+          28.7906,
+          28.8502
+        ],
+        [
+          30.421,
+          30.421,
+          28.035,
+          28.5321
+        ],
+        [
+          28.1543,
+          29.4367,
+          28.0449,
+          28.711
+        ],
+        [
+          29.4566,
+          31.6935,
+          29.4566,
+          31.5742
+        ],
+        [
+          31.3057,
+          32.4291,
+          31.3057,
+          32.3198
+        ],
+        [
+          32.2303,
+          32.4788,
+          31.942,
+          32.2303
+        ],
+        [
+          32.2303,
+          32.4291,
+          31.4052,
+          32.2303
+        ],
+        [
+          32.5286,
+          34.0794,
+          32.5286,
+          33.5525
+        ],
+        [
+          33.7514,
+          35.2923,
+          33.6321,
+          35.2724
+        ],
+        [
+          35.7993,
+          35.9285,
+          34.9543,
+          35.2823
+        ],
+        [
+          35.6999,
+          36.5051,
+          35.4613,
+          35.9285
+        ],
+        [
+          36.8034,
+          38.0262,
+          36.7636,
+          37.4198
+        ],
+        [
+          37.5888,
+          37.9268,
+          36.6244,
+          36.9823
+        ],
+        [
+          36.3958,
+          36.6543,
+          35.4215,
+          36.2467
+        ],
+        [
+          35.0835,
+          36.0578,
+          34.994,
+          35.4712
+        ],
+        [
+          34.6461,
+          36.018,
+          34.2783,
+          35.1531
+        ],
+        [
+          35.3022,
+          36.6742,
+          34.8648,
+          36.5946
+        ],
+        [
+          36.694,
+          36.8332,
+          35.9385,
+          36.4057
+        ],
+        [
+          37.5589,
+          37.7975,
+          36.535,
+          36.9625
+        ],
+        [
+          37.9268,
+          37.9765,
+          37.1016,
+          37.8174
+        ],
+        [
+          37.2806,
+          38.7122,
+          37.2309,
+          38.066
+        ],
+        [
+          37.4993,
+          38.0858,
+          37.2408,
+          37.38
+        ],
+        [
+          36.92,
+          37.13,
+          36.28,
+          36.44
+        ],
+        [
+          37.3,
+          38.45,
+          37.27,
+          37.76
+        ],
+        [
+          38.5,
+          38.69,
+          37.97,
+          37.98
+        ],
+        [
+          38.6,
+          38.88,
+          37.55,
+          38.18
+        ],
+        [
+          37.49,
+          38.25,
+          37.42,
+          38.1
+        ],
+        [
+          39.0,
+          39.96,
+          38.76,
+          39.03
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        29.8213,
+        31.2301,
+        31.9076,
+        32.765,
+        32.8264,
+        32.8264,
+        32.8264,
+        32.8264,
+        32.8264,
+        32.8264,
+        32.9384,
+        33.6077,
+        33.912,
+        33.9849,
+        33.9849,
+        33.9849,
+        34.486,
+        34.486,
+        34.486,
+        35.3153
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        35.4145,
+        35.0372,
+        34.584,
+        34.5536,
+        33.7789,
+        33.7789,
+        33.7789,
+        33.7789,
+        33.7789,
+        33.7789,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "SWKS": {
+      "bars": [
+        [
+          62.4,
+          62.9,
+          59.73,
+          60.47
+        ],
+        [
+          60.23,
+          61.41,
+          59.95,
+          60.21
+        ],
+        [
+          60.29,
+          63.7,
+          60.24,
+          63.44
+        ],
+        [
+          63.85,
+          65.52,
+          62.63,
+          64.68
+        ],
+        [
+          58.59,
+          64.08,
+          57.5,
+          61.19
+        ],
+        [
+          61.32,
+          62.54,
+          59.86,
+          62.48
+        ],
+        [
+          63.34,
+          63.34,
+          60.42,
+          62.28
+        ],
+        [
+          60.9,
+          61.63,
+          59.92,
+          61.29
+        ],
+        [
+          62.11,
+          67.23,
+          61.69,
+          66.79
+        ],
+        [
+          66.56,
+          67.8,
+          65.38,
+          66.99
+        ],
+        [
+          66.33,
+          68.0,
+          66.12,
+          66.84
+        ],
+        [
+          67.46,
+          70.66,
+          67.13,
+          70.62
+        ],
+        [
+          70.62,
+          70.75,
+          68.67,
+          68.79
+        ],
+        [
+          69.0,
+          70.3,
+          67.7,
+          68.33
+        ],
+        [
+          68.61,
+          69.93,
+          67.23,
+          69.68
+        ],
+        [
+          69.14,
+          70.32,
+          69.01,
+          69.76
+        ],
+        [
+          70.4,
+          70.41,
+          67.67,
+          69.62
+        ],
+        [
+          69.41,
+          70.33,
+          67.61,
+          67.73
+        ],
+        [
+          66.77,
+          68.03,
+          64.8,
+          67.43
+        ],
+        [
+          67.74,
+          70.23,
+          67.51,
+          68.48
+        ],
+        [
+          67.94,
+          70.0,
+          67.37,
+          67.94
+        ],
+        [
+          67.92,
+          68.58,
+          66.18,
+          67.14
+        ],
+        [
+          66.61,
+          67.22,
+          65.46,
+          66.86
+        ],
+        [
+          66.97,
+          66.97,
+          63.06,
+          65.7
+        ],
+        [
+          65.75,
+          66.67,
+          64.65,
+          66.62
+        ],
+        [
+          67.0,
+          68.11,
+          66.03,
+          67.36
+        ],
+        [
+          67.35,
+          67.68,
+          64.47,
+          65.79
+        ],
+        [
+          66.43,
+          67.7,
+          64.86,
+          67.01
+        ],
+        [
+          66.0,
+          67.84,
+          64.65,
+          67.41
+        ],
+        [
+          66.39,
+          73.26,
+          66.39,
+          71.67
+        ],
+        [
+          71.15,
+          72.65,
+          70.27,
+          71.5
+        ],
+        [
+          71.09,
+          74.8,
+          71.09,
+          74.02
+        ],
+        [
+          75.0,
+          75.85,
+          73.5,
+          75.38
+        ],
+        [
+          75.27,
+          76.66,
+          74.18,
+          76.54
+        ],
+        [
+          76.11,
+          85.89,
+          74.79,
+          84.03
+        ],
+        [
+          84.27,
+          92.3,
+          83.95,
+          88.35
+        ],
+        [
+          86.06,
+          86.73,
+          79.04,
+          79.26
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        59.039,
+        60.758,
+        60.758,
+        60.758,
+        62.2902,
+        62.2902,
+        62.2902,
+        62.2902,
+        62.2902,
+        62.2902,
+        62.2902,
+        62.2902,
+        62.2902,
+        62.2902,
+        62.2902,
+        62.2902,
+        62.2902,
+        62.2902,
+        62.2902,
+        62.2902,
+        62.3518,
+        64.9676,
+        66.2795,
+        66.2795,
+        70.4772,
+        70.4772
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        70.3612,
+        70.3612,
+        70.3612,
+        70.3612,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "TENB": {
+      "bars": [
+        [
+          33.32,
+          33.57,
+          31.57,
+          31.62
+        ],
+        [
+          31.2,
+          32.48,
+          30.71,
+          32.25
+        ],
+        [
+          32.33,
+          33.57,
+          32.33,
+          32.44
+        ],
+        [
+          32.43,
+          32.69,
+          31.18,
+          31.37
+        ],
+        [
+          31.7,
+          32.59,
+          31.12,
+          31.48
+        ],
+        [
+          27.86,
+          34.33,
+          27.5,
+          32.55
+        ],
+        [
+          32.5,
+          33.47,
+          31.8,
+          32.64
+        ],
+        [
+          33.75,
+          35.0,
+          33.3,
+          34.97
+        ],
+        [
+          34.96,
+          36.57,
+          34.96,
+          35.94
+        ],
+        [
+          36.75,
+          36.87,
+          35.31,
+          36.0
+        ],
+        [
+          34.8,
+          36.38,
+          34.52,
+          36.17
+        ],
+        [
+          35.94,
+          36.59,
+          34.76,
+          36.38
+        ],
+        [
+          36.51,
+          39.35,
+          36.42,
+          36.7
+        ],
+        [
+          36.94,
+          38.15,
+          36.51,
+          37.84
+        ],
+        [
+          37.27,
+          37.87,
+          36.5,
+          37.0
+        ],
+        [
+          37.49,
+          40.12,
+          37.02,
+          40.03
+        ],
+        [
+          40.01,
+          40.19,
+          38.07,
+          38.33
+        ],
+        [
+          37.42,
+          38.06,
+          35.18,
+          35.29
+        ],
+        [
+          35.27,
+          36.38,
+          35.0,
+          36.34
+        ],
+        [
+          36.3,
+          36.31,
+          34.64,
+          35.28
+        ],
+        [
+          35.03,
+          35.32,
+          34.03,
+          34.11
+        ],
+        [
+          33.94,
+          34.45,
+          32.51,
+          34.38
+        ],
+        [
+          34.44,
+          35.0,
+          33.25,
+          33.94
+        ],
+        [
+          33.94,
+          34.04,
+          31.97,
+          32.79
+        ],
+        [
+          32.32,
+          34.36,
+          32.14,
+          33.66
+        ],
+        [
+          36.35,
+          38.37,
+          35.87,
+          37.62
+        ],
+        [
+          37.49,
+          38.27,
+          36.47,
+          37.67
+        ],
+        [
+          37.21,
+          38.7,
+          37.17,
+          38.15
+        ],
+        [
+          37.26,
+          38.08,
+          35.27,
+          35.47
+        ],
+        [
+          35.09,
+          35.09,
+          32.81,
+          34.24
+        ],
+        [
+          34.8,
+          35.16,
+          33.19,
+          34.49
+        ],
+        [
+          33.92,
+          34.67,
+          33.19,
+          34.25
+        ],
+        [
+          33.68,
+          34.55,
+          32.84,
+          33.7
+        ],
+        [
+          33.79,
+          34.12,
+          33.15,
+          33.67
+        ],
+        [
+          32.41,
+          33.94,
+          31.72,
+          32.03
+        ],
+        [
+          31.88,
+          32.16,
+          29.97,
+          30.11
+        ],
+        [
+          30.92,
+          35.13,
+          30.9,
+          35.08
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        41.8363,
+        41.8363,
+        41.8363,
+        41.6444,
+        41.6444,
+        41.6444,
+        41.6444,
+        41.6444,
+        41.6444,
+        41.6444,
+        41.6444,
+        41.6444,
+        41.6289,
+        40.2579,
+        39.1222,
+        39.1222,
+        38.7156,
+        38.7156,
+        38.7156,
+        38.7156,
+        38.7156,
+        38.7156,
+        38.7156,
+        38.7156,
+        38.7156,
+        38.7156,
+        38.7156,
+        38.4442,
+        36.9181,
+        36.9181
+      ]
+    },
+    "VAL": {
+      "bars": [
+        [
+          79.83,
+          80.62,
+          78.99,
+          79.15
+        ],
+        [
+          79.23,
+          80.53,
+          78.95,
+          79.53
+        ],
+        [
+          78.2,
+          80.35,
+          77.24,
+          78.47
+        ],
+        [
+          77.29,
+          77.4,
+          74.38,
+          74.46
+        ],
+        [
+          76.0,
+          76.31,
+          72.79,
+          74.18
+        ],
+        [
+          75.0,
+          75.745,
+          73.345,
+          75.58
+        ],
+        [
+          76.29,
+          79.56,
+          75.6,
+          79.19
+        ],
+        [
+          77.8,
+          78.49,
+          76.06,
+          76.82
+        ],
+        [
+          75.32,
+          78.82,
+          75.32,
+          78.14
+        ],
+        [
+          79.28,
+          79.28,
+          76.1,
+          76.97
+        ],
+        [
+          81.93,
+          82.0,
+          77.09,
+          77.21
+        ],
+        [
+          77.0,
+          81.09,
+          76.86,
+          78.78
+        ],
+        [
+          80.0,
+          86.23,
+          80.0,
+          85.55
+        ],
+        [
+          85.55,
+          88.21,
+          85.02,
+          86.8
+        ],
+        [
+          85.5,
+          86.51,
+          84.41,
+          85.21
+        ],
+        [
+          83.57,
+          86.2,
+          83.0,
+          85.13
+        ],
+        [
+          86.48,
+          89.24,
+          85.52,
+          85.62
+        ],
+        [
+          86.19,
+          87.27,
+          85.21,
+          87.08
+        ],
+        [
+          88.02,
+          88.92,
+          86.16,
+          86.37
+        ],
+        [
+          86.94,
+          88.31,
+          86.425,
+          86.92
+        ],
+        [
+          88.18,
+          89.85,
+          88.04,
+          89.0
+        ],
+        [
+          89.98,
+          91.22,
+          87.71,
+          87.76
+        ],
+        [
+          86.97,
+          86.97,
+          83.96,
+          85.81
+        ],
+        [
+          84.49,
+          86.51,
+          84.09,
+          85.72
+        ],
+        [
+          84.32,
+          85.06,
+          83.18,
+          83.6
+        ],
+        [
+          83.69,
+          86.76,
+          83.22,
+          85.44
+        ],
+        [
+          85.99,
+          87.0,
+          84.69,
+          86.29
+        ],
+        [
+          88.42,
+          88.97,
+          85.5,
+          86.37
+        ],
+        [
+          87.65,
+          89.09,
+          86.18,
+          88.04
+        ],
+        [
+          87.1,
+          93.16,
+          86.03,
+          92.52
+        ],
+        [
+          92.5,
+          93.03,
+          89.69,
+          89.74
+        ],
+        [
+          87.99,
+          88.6,
+          85.07,
+          86.74
+        ],
+        [
+          87.61,
+          89.325,
+          85.3,
+          85.51
+        ],
+        [
+          87.0,
+          87.98,
+          84.63,
+          84.96
+        ],
+        [
+          86.35,
+          87.05,
+          84.12,
+          85.71
+        ],
+        [
+          85.38,
+          86.295,
+          83.13,
+          83.73
+        ],
+        [
+          84.13,
+          84.63,
+          80.79,
+          81.27
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        73.6586,
+        73.9502,
+        73.9502,
+        76.0232,
+        76.1774,
+        77.9231,
+        78.6998,
+        80.2467,
+        80.3088,
+        80.3088,
+        80.3088,
+        80.3088,
+        80.3088,
+        80.3088,
+        80.3088,
+        80.3088,
+        80.3088,
+        80.3088,
+        80.3088,
+        80.3088,
+        80.3088,
+        80.3088,
+        80.3088,
+        80.3088
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        86.3752,
+        86.3752,
+        86.3752,
+        86.3752,
+        86.3752,
+        86.3752,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "WAY": {
+      "bars": [
+        [
+          21.1,
+          21.72,
+          20.64,
+          21.58
+        ],
+        [
+          22.04,
+          22.59,
+          21.87,
+          22.51
+        ],
+        [
+          23.15,
+          23.47,
+          22.82,
+          23.125
+        ],
+        [
+          23.83,
+          24.34,
+          23.58,
+          23.69
+        ],
+        [
+          23.54,
+          24.57,
+          23.28,
+          24.52
+        ],
+        [
+          21.47,
+          22.455,
+          20.141,
+          20.94
+        ],
+        [
+          21.85,
+          22.325,
+          21.08,
+          21.11
+        ],
+        [
+          22.04,
+          22.75,
+          21.72,
+          22.66
+        ],
+        [
+          22.93,
+          23.83,
+          22.65,
+          23.77
+        ],
+        [
+          23.875,
+          23.895,
+          23.03,
+          23.38
+        ],
+        [
+          23.23,
+          23.78,
+          23.02,
+          23.37
+        ],
+        [
+          24.25,
+          25.18,
+          24.16,
+          24.23
+        ],
+        [
+          23.93,
+          24.95,
+          23.93,
+          24.7
+        ],
+        [
+          24.38,
+          25.1,
+          24.27,
+          24.3
+        ],
+        [
+          24.11,
+          25.17,
+          24.06,
+          24.54
+        ],
+        [
+          24.52,
+          25.218,
+          24.19,
+          25.08
+        ],
+        [
+          25.62,
+          25.87,
+          24.72,
+          24.78
+        ],
+        [
+          24.7,
+          25.05,
+          24.5,
+          24.68
+        ],
+        [
+          25.22,
+          25.395,
+          24.21,
+          24.32
+        ],
+        [
+          24.53,
+          25.09,
+          24.47,
+          24.84
+        ],
+        [
+          24.79,
+          25.235,
+          24.69,
+          24.84
+        ],
+        [
+          24.7,
+          25.21,
+          24.47,
+          25.01
+        ],
+        [
+          25.49,
+          25.84,
+          24.75,
+          25.35
+        ],
+        [
+          25.31,
+          25.51,
+          23.97,
+          24.21
+        ],
+        [
+          24.57,
+          24.715,
+          23.5,
+          24.17
+        ],
+        [
+          24.98,
+          25.617,
+          24.76,
+          25.25
+        ],
+        [
+          25.44,
+          26.87,
+          25.415,
+          26.24
+        ],
+        [
+          26.06,
+          26.86,
+          25.75,
+          26.18
+        ],
+        [
+          25.9,
+          26.33,
+          25.6,
+          25.76
+        ],
+        [
+          25.81,
+          26.58,
+          25.5,
+          25.72
+        ],
+        [
+          26.14,
+          26.42,
+          25.45,
+          26.08
+        ],
+        [
+          26.04,
+          26.179,
+          25.02,
+          25.07
+        ],
+        [
+          25.0,
+          25.04,
+          24.138,
+          24.24
+        ],
+        [
+          24.14,
+          24.31,
+          23.46,
+          23.86
+        ],
+        [
+          23.77,
+          24.1,
+          22.955,
+          23.06
+        ],
+        [
+          23.13,
+          23.696,
+          23.09,
+          23.47
+        ],
+        [
+          23.89,
+          24.98,
+          23.66,
+          24.9
+        ]
+      ],
+      "st_up": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "st_down": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        27.5261,
+        27.5261,
+        27.5261,
+        27.1866,
+        27.1866,
+        27.1866,
+        27.1866,
+        27.1866,
+        27.1866,
+        27.1866,
+        27.1866,
+        27.1866,
+        27.1866,
+        27.1866,
+        27.1866,
+        27.1866,
+        27.1866,
+        27.1866,
+        27.1866,
+        27.1866,
+        27.1866,
+        27.1866,
+        27.1866,
+        27.1866,
+        27.1866,
+        27.1866,
+        26.895,
+        26.6438,
+        26.2072,
+        26.2072
+      ]
+    }
+  }
+};
+const SOURCE_FILE = "20260916_yahoo_gainers_20260916014402.json";
+
+const G = DATA.gainers || [];
+const OHLC = DATA.ohlc_30d || {};
+
+function esc(s) {
+  return String(s == null ? "" : s)
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+function avg(arr) {
+  if (!arr.length) return 0;
+  return arr.reduce((a, b) => a + b, 0) / arr.length;
+}
+function fmtPct(n) {
+  if (n == null || isNaN(n)) return "—";
+  const v = Number(n);
+  return (v >= 0 ? "+" : "") + v.toFixed(2) + "%";
+}
+function fmtPrice(p) {
+  if (p == null || p === "") return "—";
+  const n = Number(p);
+  if (isNaN(n)) return esc(p);
+  return "$" + n.toFixed(2);
+}
+function scoreTone(s) {
+  if (s == null || isNaN(s)) return "na";
+  const v = Number(s);
+  if (v >= 75) return "hi";
+  if (v >= 50) return "mid";
+  return "lo";
+}
+function fmtFund(f) {
+  const n = f == null || f === "" || isNaN(Number(f)) ? 0 : Number(f);
+  return `${n}/6`;
+}
+function fundTone(f) {
+  const n = f == null || f === "" || isNaN(Number(f)) ? 0 : Number(f);
+  if (n >= 4) return "hi";
+  if (n >= 2) return "mid";
+  return "lo";
+}
+function scoreBadgeHtml(s) {
+  const tone = scoreTone(s);
+  const label = s == null || isNaN(s) ? "—" : Number(s).toFixed(1);
+  return `<span class="score-badge ${tone}">10d ${label}</span>`;
+}
+function fundBadgeHtml(f) {
+  return `<span class="fund-badge ${fundTone(f)}">Fund ${fmtFund(f)}</span>`;
+}
+
+/** Mini OHLC + SuperTrend candle chart SVG */
+function ohlcChartHtml(symbol) {
+  const entry = OHLC[symbol];
+  const bars = Array.isArray(entry) ? entry : (entry && entry.bars);
+  if (!Array.isArray(bars) || bars.length < 2) return "";
+  const stUp = (!Array.isArray(entry) && entry.st_up) || [];
+  const stDown = (!Array.isArray(entry) && entry.st_down) || [];
+  const w = 300, h = 200, padX = 2, padY = 8; // 3:2
+  let lo = Infinity, hi = -Infinity;
+  bars.forEach((b, i) => {
+    if (!b || b.length < 4) return;
+    lo = Math.min(lo, b[2]);
+    hi = Math.max(hi, b[1]);
+    const u = stUp[i], d = stDown[i];
+    if (u != null && !isNaN(u)) { lo = Math.min(lo, u); hi = Math.max(hi, u); }
+    if (d != null && !isNaN(d)) { lo = Math.min(lo, d); hi = Math.max(hi, d); }
+  });
+  if (!(hi > lo)) return "";
+  const n = bars.length;
+  const slot = (w - padX * 2) / n;
+  const bodyW = Math.max(1.5, Math.min(6, slot * 0.55));
+  const yScale = (v) => padY + (hi - v) / (hi - lo) * (h - padY * 2);
+  const upC = "#2ecc71", downC = "#e74c3c";
+  const stFillUp = "#a8e6c1", stFillDown = "#f5b4b0";
+  const stUpC = "#8fd9a8", stDownC = "#f0a0a0";
+
+  function stFill(stArr, boundIdx, color) {
+    let html = "";
+    let i = 0;
+    while (i < n) {
+      while (i < n && (stArr[i] == null || isNaN(stArr[i]))) i++;
+      if (i >= n) break;
+      const start = i;
+      while (i < n && stArr[i] != null && !isNaN(stArr[i])) i++;
+      const end = i;
+      let d = "";
+      for (let j = start; j < end; j++) {
+        const x = padX + j * slot + slot / 2;
+        d += (j === start ? "M" : "L") + ` ${x.toFixed(1)} ${yScale(stArr[j]).toFixed(1)} `;
+      }
+      for (let j = end - 1; j >= start; j--) {
+        const b = bars[j];
+        if (!b) continue;
+        const x = padX + j * slot + slot / 2;
+        d += `L ${x.toFixed(1)} ${yScale(b[boundIdx]).toFixed(1)} `;
+      }
+      d += "Z";
+      html += `<path d="${d}" fill="${color}" fill-opacity="0.15"/>`;
+    }
+    return html;
+  }
+
+  function stLine(stArr, color) {
+    let html = "", seg = "";
+    const flush = () => {
+      if (seg) {
+        html += `<polyline points="${seg.trim()}" fill="none" stroke="${color}" stroke-width="1.2"/>`;
+        seg = "";
+      }
+    };
+    for (let i = 0; i < n; i++) {
+      const v = stArr[i];
+      if (v == null || isNaN(v)) { flush(); continue; }
+      const x = padX + i * slot + slot / 2;
+      seg += `${x.toFixed(1)},${yScale(v).toFixed(1)} `;
+    }
+    flush();
+    return html;
+  }
+
+  let parts = "";
+  parts += stFill(stUp, 2, stFillUp);
+  parts += stFill(stDown, 1, stFillDown);
+  parts += stLine(stUp, stUpC);
+  parts += stLine(stDown, stDownC);
+
+  bars.forEach((b, i) => {
+    if (!b || b.length < 4) return;
+    const [o, high, low, c] = b.map(Number);
+    if ([o, high, low, c].some(x => isNaN(x))) return;
+    const x = padX + i * slot + slot / 2;
+    const color = c >= o ? upC : downC;
+    const yH = yScale(high), yL = yScale(low);
+    const yO = yScale(o), yC = yScale(c);
+    const top = Math.min(yO, yC), bot = Math.max(yO, yC);
+    const bodyH = Math.max(1, bot - top);
+    parts += `<line x1="${x.toFixed(1)}" y1="${yH.toFixed(1)}" x2="${x.toFixed(1)}" y2="${yL.toFixed(1)}" stroke="${color}" stroke-width="1"/>`;
+    parts += `<rect x="${(x - bodyW / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bodyW.toFixed(1)}" height="${bodyH.toFixed(1)}" fill="${color}"/>`;
+  });
+  return `<div class="mini-chart" title="Last ${n} sessions OHLC + SuperTrend"><svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true">${parts}</svg></div>`;
+}
+
+function chainsOf(g) {
+  const set = new Set();
+  (g.industrial_leaves || []).forEach(l => {
+    if (l && l.chain_name) set.add(l.chain_name);
+  });
+  return [...set];
+}
+function leavesOf(g, theme) {
+  const leaves = g.industrial_leaves || [];
+  const names = [];
+  const seen = new Set();
+  leaves.forEach(l => {
+    if (!l || !l.name || seen.has(l.name)) return;
+    if (theme && l.chain_name !== theme) return;
+    seen.add(l.name);
+    names.push(l.name);
+  });
+  return names;
+}
+
+const themeMap = {};
+G.forEach(g => {
+  chainsOf(g).forEach(c => {
+    (themeMap[c] ||= { tickers: {} }).tickers[g.symbol] = true;
+  });
+});
+const themeStats = Object.entries(themeMap).map(([name, d]) => {
+  const list = G.filter(g => d.tickers[g.symbol]);
+  const leafCounts = {};
+  list.forEach(g => {
+    (g.industrial_leaves || []).forEach(l => {
+      if (l && l.chain_name === name && l.name) {
+        leafCounts[l.name] = (leafCounts[l.name] || 0) + 1;
+      }
+    });
+  });
+  const leaves = Object.entries(leafCounts)
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .map(([leaf]) => leaf);
+  return {
+    name,
+    syms: Object.keys(d.tickers).sort((a, b) => {
+      const ga = G.find(x => x.symbol === a);
+      const gb = G.find(x => x.symbol === b);
+      return (gb?.change_pct || 0) - (ga?.change_pct || 0);
+    }),
+    leaves,
+    list,
+    avgChg: avg(list.map(g => g.change_pct || 0)),
+  };
+})
+  .filter(t => t.syms.length >= 3)
+  .sort((a, b) => b.syms.length - a.syms.length || b.avgChg - a.avgChg);
+const topTheme = themeStats[0] || null;
+
+let activeTheme = topTheme ? topTheme.name : null;
+let spotlightExpanded = {};
+
+const app = document.getElementById("app");
+
+function truncate(text, n) {
+  if (!text) return "";
+  if (text.length <= n) return text;
+  return text.slice(0, n).replace(/\s+\S*$/, "") + "…";
+}
+
+function render() {
+  app.innerHTML = "";
+  app.appendChild(renderHero());
+  app.appendChild(renderThemes());
+  app.appendChild(renderSpotlight());
+  app.appendChild(renderQuality());
+  app.appendChild(renderFooter());
+}
+
+function renderHero() {
+  const el = document.createElement("header");
+  el.className = "hero";
+  const scraped = DATA.scraped_at || "—";
+  const minPct = DATA.min_change_pct != null ? DATA.min_change_pct : 5;
+  const update = (DATA.market_update || "").trim();
+  const overviewRaw = DATA.theme_overview;
+  const overviewObj = (overviewRaw && typeof overviewRaw === "object")
+    ? overviewRaw
+    : { text: typeof overviewRaw === "string" ? overviewRaw : "", themes: [] };
+  const overviewText = String(overviewObj.text || "").trim();
+  const overviewThemes = Array.isArray(overviewObj.themes) ? overviewObj.themes : [];
+  const sections = [];
+  if (update && !update.startsWith("(")) {
+    sections.push(`<div class="brief-section">
+      <div class="sym">Market update</div>${pointsToHtml(update)}
+    </div>`);
+  }
+  const highlightInner = renderHotThemeHighlights(overviewThemes, overviewText);
+  if (highlightInner) {
+    sections.push(`<div class="brief-section">${highlightInner}</div>`);
+  }
+  const briefHtml = sections.length
+    ? `<div class="index-briefs"><div class="index-brief">${sections.join("")}</div></div>`
+    : "";
+  el.innerHTML = `
+    <p class="eyebrow">Top gainers · theme-first</p>
+    <h1>Today's Hot Theme (20260916)</h1>
+    <div class="hero-meta">
+      <span><strong>${G.length}</strong> gainers</span>
+      <span class="sep">·</span>
+      <span><strong>${themeStats.length}</strong> themes</span>
+      <span class="sep">·</span>
+      <span>Top theme: <strong>${esc(topTheme ? topTheme.name : "—")}</strong></span>
+      <span class="sep">·</span>
+      <span>Scraped ${esc(scraped)} · ≥ ${minPct}%</span>
+    </div>
+    ${briefHtml}`;
+  return el;
+}
+
+function normThemeKey(s) {
+  return String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+}
+
+/** Map overview/LLM title → exact Hot Theme Today chain_name when possible. */
+function resolveHighlightTitle(rawTitle) {
+  const names = themeStats.map(t => t.name);
+  const target = normThemeKey(rawTitle);
+  if (!target || !names.length) return String(rawTitle || "").trim();
+  const exact = names.find(n => normThemeKey(n) === target);
+  if (exact) return exact;
+  const core = target.replace(/\s*\(.*$/, "").trim();
+  const coreHit = names.find(n => normThemeKey(n) === core);
+  if (coreHit) return coreHit;
+  const scored = names.map(n => {
+    const nn = normThemeKey(n);
+    let score = 0;
+    if (core && (core.startsWith(nn) || nn.startsWith(core))) score += 4;
+    if (core && (core.includes(nn) || nn.includes(core))) score += 2;
+    const ta = new Set(core.split(/\s+/).filter(Boolean));
+    const tb = new Set(nn.split(/\s+/).filter(Boolean));
+    let overlap = 0;
+    ta.forEach(tok => { if (tb.has(tok)) overlap++; });
+    score += overlap * 2;
+    // Prefer longer theme names on ties (more specific)
+    return { n, score, len: nn.length };
+  }).filter(x => x.score > 0)
+    .sort((a, b) => b.score - a.score || b.len - a.len);
+  return scored.length ? scored[0].n : String(rawTitle || "").trim();
+}
+
+function renderHotThemeHighlights(themes, fallbackText) {
+  const usableThemes = (themes || []).filter(t => t && String(t.title || "").trim());
+  if (usableThemes.length) {
+    const cards = usableThemes.map(t => {
+      const title = resolveHighlightTitle(t.title);
+      const tickers = Array.isArray(t.tickers) ? t.tickers : [];
+      const bullets = Array.isArray(t.bullets) ? t.bullets : [];
+      const takeaway = String(t.takeaway || "").trim();
+      const tickerHtml = tickers.length
+        ? `<div class="h-tickers">${tickers.map(x => `<span class="h-ticker">${esc(String(x))}</span>`).join("")}</div>`
+        : "";
+      const bulletHtml = bullets.length
+        ? `<ul class="h-bullets">${bullets.map(b => `<li>${esc(String(b))}</li>`).join("")}</ul>`
+        : "";
+      const takeHtml = takeaway ? `<div class="h-takeaway">${esc(takeaway)}</div>` : "";
+      return `<article class="highlight-card">
+        <h3 class="h-title">${esc(title)}</h3>
+        ${tickerHtml}${bulletHtml}${takeHtml}
+      </article>`;
+    }).join("");
+    return `<div class="sym">Hot Theme Highlights</div>
+      <div class="highlight-grid">${cards}</div>`;
+  }
+  const text = String(fallbackText || "").trim();
+  if (text && !text.startsWith("(")) {
+    return `<div class="sym">Hot Theme Highlights</div>
+      <pre class="theme-overview">${esc(text)}</pre>`;
+  }
+  return "";
+}
+
+function renderThemes() {
+  const sec = document.createElement("section");
+  sec.className = "section";
+  sec.id = "themes";
+  sec.innerHTML = `
+    <div class="section-hd">
+      <h2>Hot Theme Today</h2>
+    </div>`;
+  const grid = document.createElement("div");
+  grid.className = "theme-grid";
+  const catalystsMap = DATA.theme_catalysts || {};
+  themeStats.forEach(t => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "theme-board" + (t.name === activeTheme ? " active" : "");
+    const leafList = t.leaves || [];
+    const preview = leafList.slice(0, 4).map(n => `<span class="leaf-chip">${esc(n)}</span>`).join("");
+    const extra = leafList.length > 4 ? `<span class="leaf-chip">+${leafList.length - 4}</span>` : "";
+    const catHtml = pointsToHtml(catalystsMap[t.name] || "");
+    const catBlock = catHtml
+      ? `<div class="theme-catalysts"><div class="cat-label">Key catalysts</div>${catHtml}</div>`
+      : "";
+    btn.innerHTML = `
+      <div class="t-name">${esc(t.name)}</div>
+      <div class="t-stats">
+        <span>${t.syms.length} name${t.syms.length === 1 ? "" : "s"}</span>
+        <span class="t-avg">${fmtPct(t.avgChg)}</span>
+      </div>
+      ${catBlock}
+      <div class="t-leaves">${preview}${extra}</div>`;
+    btn.onclick = () => {
+      if (activeTheme === t.name) {
+        activeTheme = null;
+      } else {
+        activeTheme = t.name;
+      }
+      spotlightExpanded = {};
+      const y = window.scrollY;
+      render();
+      window.scrollTo(0, y);
+    };
+    grid.appendChild(btn);
+  });
+  sec.appendChild(grid);
+  return sec;
+}
+
+
+function fundNum(f) {
+  if (f == null || f === "" || isNaN(Number(f))) return 0;
+  return Number(f);
+}
+
+function isQualityPick(g) {
+  const fund = fundNum(g.fundamental);
+  const score = g.score_10d;
+  const scoreOk = score != null && !isNaN(Number(score)) && Number(score) >= 75;
+  return fund >= 4 || scoreOk;
+}
+
+function renderQuality() {
+  const sec = document.createElement("section");
+  sec.className = "section";
+  sec.id = "quality";
+  const list = G.filter(isQualityPick)
+    .slice()
+    .sort((a, b) => (b.change_pct || 0) - (a.change_pct || 0));
+
+  sec.innerHTML = `
+    <div class="section-hd">
+      <h2>Quality screen</h2>
+      <p>Fund ≥ 4 or 10d score ≥ 75 — compact cards, no narratives.</p>
+    </div>`;
+
+  const wrap = document.createElement("div");
+  wrap.className = "spotlight";
+  const meta = document.createElement("div");
+  meta.className = "spotlight-hd";
+  meta.innerHTML = `
+    <h3>${list.length} name${list.length === 1 ? "" : "s"}</h3>
+    <div class="meta">sorted by change</div>`;
+  wrap.appendChild(meta);
+
+  const grid = document.createElement("div");
+  grid.className = "spot-grid";
+
+  if (!list.length) {
+    grid.innerHTML = `<p class="rational muted">No gainers meet Fund ≥ 4 or 10d ≥ 75 today.</p>`;
+  } else {
+    list.forEach((g, i) => {
+      const card = document.createElement("article");
+      card.className = "spot-card";
+      card.style.animationDelay = (i * 0.03) + "s";
+      const themes = chainsOf(g);
+      const themeHtml = themes.slice(0, 4).map(t => `<span class="leaf-tag">${esc(t)}</span>`).join("");
+      card.innerHTML = `
+        <div class="top">
+          <div>
+            <div class="sym">${esc(g.symbol)}</div>
+            <div class="nm">${esc(g.name)}</div>
+          </div>
+          <div class="chg">${fmtPct(g.change_pct)}</div>
+        </div>
+        <div class="row-meta">
+          <span>${fmtPrice(g.price)}</span>
+          ${fundBadgeHtml(g.fundamental)}
+          ${scoreBadgeHtml(g.score_10d)}
+        </div>
+        ${ohlcChartHtml(g.symbol)}
+        ${themeHtml ? `<div class="leaf-tags">${themeHtml}</div>` : ""}`;
+      grid.appendChild(card);
+    });
+  }
+  wrap.appendChild(grid);
+  sec.appendChild(wrap);
+  return sec;
+}
+
+function pointsToHtml(points) {
+  const lines = String(points || "").split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+  if (!lines.length) return "";
+  const items = lines.map(l => {
+    const text = l.replace(/^[•\-\*\u2013\u2014]\s*/, "").replace(/^\d+[.)]\s*/, "");
+    return `<li>${esc(text)}</li>`;
+  }).join("");
+  return `<ul class="rational-points">${items}</ul>`;
+}
+
+function renderRationalBlock(g) {
+  const rat = (g.rational || "").trim();
+  const points = (g.rational_points || "").trim();
+  const open = !!spotlightExpanded[g.symbol];
+  const usablePoints = points && !points.startsWith("(");
+
+  if (!rat && !usablePoints) {
+    return `<div class="rational muted">No narrative available.</div>`;
+  }
+
+  if (usablePoints) {
+    const ptsHtml = pointsToHtml(points);
+    if (!rat) return ptsHtml;
+    if (open) {
+      return `${ptsHtml}<div class="rational-full">${esc(rat)}</div>
+        <button type="button" class="more" data-sym="${esc(g.symbol)}">Show less</button>`;
+    }
+    return `${ptsHtml}<button type="button" class="more" data-sym="${esc(g.symbol)}">Read more</button>`;
+  }
+
+  // Fallback when points missing: truncated rational + Read more
+  if (open || rat.length <= 220) {
+    return `<div class="rational">${esc(rat)}${rat.length > 220 ? ` <button type="button" class="more" data-sym="${esc(g.symbol)}">Show less</button>` : ""}</div>`;
+  }
+  return `<div class="rational">${esc(truncate(rat, 220))} <button type="button" class="more" data-sym="${esc(g.symbol)}">Read more</button></div>`;
+}
+
+function renderSpotlight() {
+  const sec = document.createElement("section");
+  sec.className = "section";
+  sec.id = "spotlight";
+  const theme = themeStats.find(t => t.name === activeTheme);
+  const title = theme ? theme.name : "All gainers";
+  const list = (theme ? theme.list : G.slice()).slice().sort((a, b) => (b.change_pct || 0) - (a.change_pct || 0));
+  const avgChg = avg(list.map(g => g.change_pct || 0));
+
+  const wrap = document.createElement("div");
+  wrap.className = "spotlight";
+  wrap.innerHTML = `
+    <div class="spotlight-hd">
+      <h3>Hot Theme Breakdown · ${esc(title)}</h3>
+      <div class="meta">${list.length} names · avg <span class="pos">${fmtPct(avgChg)}</span></div>
+    </div>`;
+
+  const grid = document.createElement("div");
+  grid.className = "spot-grid";
+
+  if (!list.length) {
+    grid.innerHTML = `<p class="rational muted">No gainers in this theme.</p>`;
+  } else {
+    list.forEach((g, i) => {
+      const card = document.createElement("article");
+      card.className = "spot-card";
+      card.style.animationDelay = (i * 0.03) + "s";
+      const leaves = leavesOf(g, activeTheme);
+      const leafHtml = leaves.slice(0, 6).map(n => `<span class="leaf-tag">${esc(n)}</span>`).join("");
+      card.innerHTML = `
+        <div class="top">
+          <div>
+            <div class="sym">${esc(g.symbol)}</div>
+            <div class="nm">${esc(g.name)}</div>
+          </div>
+          <div class="chg">${fmtPct(g.change_pct)}</div>
+        </div>
+        <div class="row-meta">
+          <span>${fmtPrice(g.price)}</span>
+          ${fundBadgeHtml(g.fundamental)}
+          ${scoreBadgeHtml(g.score_10d)}
+        </div>
+        ${ohlcChartHtml(g.symbol)}
+        ${leafHtml ? `<div class="leaf-tags">${leafHtml}</div>` : ""}
+        ${renderRationalBlock(g)}`;
+      grid.appendChild(card);
+    });
+  }
+  wrap.appendChild(grid);
+  sec.appendChild(wrap);
+
+  setTimeout(() => {
+    wrap.querySelectorAll(".more").forEach(btn => {
+      btn.onclick = (e) => {
+        e.stopPropagation();
+        const sym = btn.dataset.sym;
+        spotlightExpanded[sym] = !spotlightExpanded[sym];
+        const y = window.scrollY;
+        render();
+        window.scrollTo(0, y);
+      };
+    });
+  }, 0);
+  return sec;
+}
+
+function renderFooter() {
+  const f = document.createElement("footer");
+  f.innerHTML = `Embedded from <code>${esc(SOURCE_FILE)}</code> · scraped ${esc(DATA.scraped_at || "—")} · standalone dashboard`;
+  return f;
+}
+
+render();
+</script>
+</body>
+</html>
